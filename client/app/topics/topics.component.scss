@@ -1,0 +1,15 @@
+.table td, .table th {
+   text-align: center;
+   width: 25%;  
+}
+
+.topic-card {
+	width: 30%;
+	margin: 10px;
+}
+
+.card-block{
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: space-between
+}

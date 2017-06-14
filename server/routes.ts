@@ -1,24 +1,26 @@
 import * as express from 'express';
 
-import CatCtrl from './controllers/cat';
 import UserCtrl from './controllers/user';
-import Cat from './models/cat';
+import TopicCtrl from './controllers/topic';
 import User from './models/user';
+import Topic from './models/topic'
 
 export default function setRoutes(app) {
 
   const router = express.Router();
 
-  const catCtrl = new CatCtrl();
   const userCtrl = new UserCtrl();
+  const topicCtrl = new TopicCtrl();
 
-  // Cats
-  router.route('/cats').get(catCtrl.getAll);
-  router.route('/cats/count').get(catCtrl.count);
-  router.route('/cat').post(catCtrl.insert);
-  router.route('/cat/:id').get(catCtrl.get);
-  router.route('/cat/:id').put(catCtrl.update);
-  router.route('/cat/:id').delete(catCtrl.delete);
+
+  // Topics
+  router.route('/topics').get(topicCtrl.getAll);
+  router.route('/topics/count').get(topicCtrl.count);
+  router.route('/topic').post(topicCtrl.insert);
+  router.route('/topic/:id').get(topicCtrl.get);
+  router.route('/topic/:id').put(topicCtrl.update);
+  router.route('/topic/:id').delete(topicCtrl.delete);
+
 
   // Users
   router.route('/login').post(userCtrl.login);
