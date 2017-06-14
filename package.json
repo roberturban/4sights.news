@@ -1,9 +1,10 @@
 {
-  "name": "angular2-full-stack",
-  "version": "4.0.0",
-  "license": "MIT",
-  "author": "Davide Violante",
-  "description": "Angular Full Stack project built using Angular 4, Express, Mongoose and Node.",
+  "name": "4sights.news SEBA application",
+  "version": "0.0.1",
+  "author": {
+    "name":"rob.me",
+  },
+  "description": "",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
@@ -32,7 +33,6 @@
     "angular2-jwt": "^0.2.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.2",
-    "bootstrap": "4.0.0-alpha.5",
     "core-js": "^2.4.1",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
