@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>ADD TOPIC</h2>
+    <form [formGroup]="addTopicForm" (ngSubmit)="dialogRef.close(addTopicForm)" style="text-align:center">
+      <div class="form-group">
+          <input class="form-control" type="text" name="title" formControlName="title" placeholder="title">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="date" name="timestamp" formControlName="timestamp" placeholder="timestamp">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="image" formControlName="image" placeholder="assets/img/">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="number" name="news_article_count" formControlName="news_article_count" placeholder="News Article Count" step="any" min="0">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="location" formControlName="location" placeholder="location">
+      </div>
+      <div class="form-group">
+        <select multiple name="topics" class="form-control" formControlName="categories">
+          <option *ngFor="let categoryAvailable of categoriesAvailable" [value]="categoryAvailable">{{categoryAvailable}}</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!addTopicForm.valid"><i class="fa fa-floppy-o"></i>Add</button>
+      <button class="btn btn-sm btn-warning" (click)="dialogRef.close(false)"><i class="fa fa-times"></i>Cancel</button>
+    </form>
+</div>
