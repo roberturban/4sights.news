@@ -1,1 +1,1 @@
-# angular-2--boilerplate-test
+# 4sights.news SEBA Master Web Application

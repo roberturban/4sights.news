@@ -1,9 +1,9 @@
-<div class="container">
+<div>
 
-  <nav class="navbar navbar-dark bg-primary">
+  <!-- <nav class="navbar navbar-dark bg-primary">
     <div class="nav navbar-nav">
       <a routerLink="/" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-        <i class="fa fa-home"></i> Home
+        <i class="fa fa-home"></i> Home2
       </a>
       <a routerLink="/topics" class="nav-item nav-link" routerLinkActive="active">
         <i class="fa fa-list"></i> Topics
@@ -24,7 +24,17 @@
         <i class="fa fa-sign-out"></i> Logout
       </a>
     </div>
-  </nav>
+  </nav> -->
+
+  <md-toolbar color="primary" style="padding-left:0px">
+    <button class="app-icon-button" style="background:none;border:none;padding: 0px 0px;" routerLink="/topics">
+      <img src="../assets/img/logo_small.png" style="height:64px; margin:0px;"/>
+    </button>
+
+    <span class="fill-remaining-space"></span>
+    <button md-button routerLink="/register" routerLinkActive="active" *ngIf="!auth.loggedIn" >Register</button>
+    <button md-button routerLink="/login" routerLinkActive="active" *ngIf="!auth.loggedIn">Login</button>
+  </md-toolbar>
 
   <router-outlet></router-outlet>
 
