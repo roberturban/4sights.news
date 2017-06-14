@@ -12,10 +12,14 @@ import { ToastComponent } from '../shared/toast/toast.component';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
-  username = new FormControl('', [Validators.required,
+  name = new FormControl('', [Validators.required,
                                   Validators.minLength(2),
                                   Validators.maxLength(30),
-                                  Validators.pattern('[a-zA-Z0-9_-\\s]*')]);
+                                  Validators.pattern('[a-zA-Z_-\\s]*')]);
+  surname = new FormControl('', [Validators.required,
+                                  Validators.minLength(2),
+                                  Validators.maxLength(30),
+                                  Validators.pattern('[a-zA-Z_-\\s]*')]);
   email = new FormControl('', [Validators.required,
                                Validators.minLength(3),
                                Validators.maxLength(100)]);
@@ -24,6 +28,8 @@ export class RegisterComponent implements OnInit {
 
   role = new FormControl('', [Validators.required]);
 
+  categories = new FormControl('', [Validators.required]);
+
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               public toast: ToastComponent,
@@ -31,16 +37,23 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      username: this.username,
+      name: this.name,
+      surname: this.surname,
       email: this.email,
       password: this.password,
-      role: this.role
+      role: this.role,
+      categories: this.categories
     });
   }
 
-  setClassUsername() {
-    return { 'has-danger': !this.username.pristine && !this.username.valid };
+  setClassName() {
+    return { 'has-danger': !this.name.pristine && !this.name.valid };
   }
+
+  setClassSurname() {
+    return { 'has-danger': !this.surname.pristine && !this.surname.valid };
+  }
+
   setClassEmail() {
     return { 'has-danger': !this.email.pristine && !this.email.valid };
   }

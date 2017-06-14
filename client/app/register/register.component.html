@@ -4,9 +4,13 @@
   <h4 class="card-header">Register</h4>
   <div class="card-block">
     <form [formGroup]="registerForm" (ngSubmit)="register()">
-      <div class="input-group" [ngClass]="setClassUsername()">
+      <div class="input-group" [ngClass]="setClassName()">
         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input class="form-control" type="text" name="username" formControlName="username" placeholder="Username" autofocus>
+        <input class="form-control" type="text" name="name" formControlName="name" placeholder="Name" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassSurname()">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input class="form-control" type="text" name="surname" formControlName="surname" placeholder="Surname" autofocus>
       </div>
       <div class="input-group" [ngClass]="setClassEmail()">
         <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
@@ -27,4 +31,6 @@
       <button class="btn btn-primary" type="submit" [disabled]="!registerForm.valid"><i class="fa fa-user-plus"></i> Register</button>
     </form>
   </div>
+
+  Already a member? <a routerLink="/login">Log in here</a>
 </div>

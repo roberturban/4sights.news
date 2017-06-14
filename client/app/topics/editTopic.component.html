@@ -2,30 +2,34 @@
 <h2>EDIT TOPIC</h2>
 <form #form="ngForm" (ngSubmit)="dialogRef.close(dialog_topic)" style="display:inline">
   <div class="form-group">
-     <label> Title </label>
-     <input class="form-control" type="text" name="title" [(ngModel)]="dialog_topic.title" placeholder="title" required>
+     <md-input-container class="input-full-width"> 
+      <input mdInput class="form-control" type="text" name="title" [(ngModel)]="dialog_topic.title" placeholder="Title" required>
+    </md-input-container>
   </div>
   <div class="form-group">
-    <label>Timestamp</label>
-    <input class="form-control" type="date" name="timestamp" [(ngModel)]="dialog_topic.timestamp" placeholder="timestamp" required>
+    <md-input-container class="input-full-width"> 
+      <input mdInput class="form-control" type="date" name="timestamp" [(ngModel)]="dialog_topic.timestamp" placeholder="timestamp" required>
+    </md-input-container>
   </div>
   <div class="form-group">
-    <label>Image</label>
-    <input class="form-control" type="text" name="image" [(ngModel)]="dialog_topic.image" placeholder="assets/img/" required>
+    <md-input-container class="input-full-width"> 
+      <input mdInput class="form-control" type="text" name="image" [(ngModel)]="dialog_topic.image" placeholder="assets/img/" required>
+    </md-input-container>
   </div>
   <div class="form-group">
-    <label>News Article Count</label>
-    <input class="form-control" type="number" name="news_article_count" [(ngModel)]="dialog_topic.news_article_count" placeholder="News Article Count" step="any" min="0" required>
+    <md-input-container class="input-full-width"> 
+      <input mdInput class="form-control" type="number" name="news_article_count" [(ngModel)]="dialog_topic.news_article_count" placeholder="News Article Count" step="any" min="0" required>
+    </md-input-container>
   </div>
   <div class="form-group">
-    <label>Location</label>
-    <input class="form-control" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="location" required>
+    <md-input-container class="input-full-width"> 
+      <input mdInput class="form-control" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="location" required>
+    </md-input-container>
   </div>
   <div class="form-group">
-    <label>Categories</label>
-    <select multiple name="topics" class="form-control" [(ngModel)]="dialog_topic.categories">
-      <option *ngFor="let categoryAvailable of categoriesAvailable" [value]="categoryAvailable">{{categoryAvailable}}</option>
-    </select>
+      <select multiple name="topics" class="form-control" [(ngModel)]="dialog_topic.categories">
+        <option *ngFor="let categoryAvailable of categoriesAvailable" [value]="categoryAvailable">{{categoryAvailable}}</option>
+      </select>
   </div>
   <button class="btn btn-sm btn-primary" type="submit" [disabled]="!form.form.valid"><i class="fa fa-floppy-o"></i> Save</button>
 
