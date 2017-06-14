@@ -2,6 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 
 import { RoutingModule } from './routing.module';
@@ -44,8 +45,8 @@ import { TestStyleComponent } from './test-styles/teststyle.component';
     SharedModule,
     BrowserAnimationsModule,
     BrowserModule,
-    MaterialModule
-
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [
     AuthService,

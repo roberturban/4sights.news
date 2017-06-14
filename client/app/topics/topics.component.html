@@ -20,8 +20,8 @@
 
           <md-card-actions>
             <p></p>
-            <button class="btn btn-sm btn-warning" (click)="open_edit(topic)">Edit Topic</button>
-            <button class="btn btn-sm btn-danger" (click)="deleteTopic(topic)"><i class="fa fa-trash"></i> Delete</button>
+            <button md-raised-button color="primary" (click)="open_edit(topic)"><md-icon>build</md-icon> Edit Topic</button>
+            <button md-raised-button color="warn" (click)="deleteTopic(topic)"><md-icon>delete</md-icon> Delete</button>
             
           </md-card-actions>
     </md-card>
@@ -37,6 +37,6 @@
 
   </div>
 
-  <button class="btn btn-sm btn-warning" (click)="open_add()">Add Topic</button>
+  <button md-raised-button color="primary" (click)="open_add()">Add Topic</button>
 
 </div>

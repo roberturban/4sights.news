@@ -1,36 +1,53 @@
 <app-toast [message]="toast.message"></app-toast>
 
-<div class="card">
-  <h4 class="card-header">Register</h4>
-  <div class="card-block">
+  <div>
+  <h4>Register</h4>
+  </div>
+  <div >
     <form [formGroup]="registerForm" (ngSubmit)="register()">
-      <div class="input-group" [ngClass]="setClassName()">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input class="form-control" type="text" name="name" formControlName="name" placeholder="Name" autofocus>
+      <div class="input-group" [ngClass]="setClassName()">   
+        <md-input-container> 
+          <input mdInput class="form-control" type="text" name="name" formControlName="name" placeholder="Name" autofocus>
+        </md-input-container>
       </div>
+      
       <div class="input-group" [ngClass]="setClassSurname()">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input class="form-control" type="text" name="surname" formControlName="surname" placeholder="Surname" autofocus>
+        <md-input-container > 
+          <input mdInput class="form-control" type="text" name="surname" formControlName="surname" placeholder="Surname" autofocus>
+        </md-input-container> 
       </div>
       <div class="input-group" [ngClass]="setClassEmail()">
-        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-        <input class="form-control" type="email" name="email" formControlName="email" placeholder="Email">
+        <md-input-container> 
+          <input mdInput class="form-control" type="email" name="email" formControlName="email" placeholder="Email">
+        </md-input-container>
       </div>
       <div class="input-group" [ngClass]="setClassPassword()">
-        <span class="input-group-addon"><i class="fa fa-key"></i></span>
-        <input class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
+        <md-input-container> 
+          <input mdInput class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
+        </md-input-container>
       </div>
       <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
-        <select class="form-control" name="role" formControlName="role">
-          <option value="" selected disabled>Role</option>
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select>
+        <md-select class="form-control" name="role" formControlName="role" placeholder="Role">
+          <md-option value="" selected disabled>Role</md-option>
+          <md-option value="user">User</md-option>
+          <md-option value="admin">Admin</md-option>
+        </md-select>
       </div>
-      <button class="btn btn-primary" type="submit" [disabled]="!registerForm.valid"><i class="fa fa-user-plus"></i> Register</button>
+      <p></p>
+      <div class="input-group">
+        <md-select multiple class="form-control" name="categories" formControlName="categories" placeholder="Categories">
+          <md-option value="" selected disabled>Categories</md-option>
+          <md-option value="Economy">Economy</md-option>
+          <md-option value="Politics">Politics</md-option>
+          <md-option value="Sports">Sports</md-option>
+          <md-option value="Panorama">Panorama</md-option>
+          <md-option value="Technology">Technology</md-option>
+        </md-select>
+      </div>
+      <p></p>
+      <button md-button type="submit" [disabled]="!registerForm.valid"><i class="fa fa-user-plus"></i> Register</button>
     </form>
   </div>
-
+  <div>
   Already a member? <a routerLink="/login">Log in here</a>
-</div>
+  </div>

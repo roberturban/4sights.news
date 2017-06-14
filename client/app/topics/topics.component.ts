@@ -109,6 +109,7 @@ export class TopicsComponent implements OnInit {
     
     this.dialogRef.afterClosed().subscribe(
       result => {
+        console.log(result,"Result message");
         this.dialogRef = null;
         if (!result){
           this.cancelEditing_topic();
@@ -128,6 +129,7 @@ export class TopicsComponent implements OnInit {
     
     this.dialogRef.afterClosed().subscribe(
       result => {
+        console.log(result,"Result message");
         this.dialogRef = null;
         if (!result){
           this.cancelEditing_topic();
