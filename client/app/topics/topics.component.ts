@@ -161,7 +161,8 @@ export class TopicsComponent implements OnInit {
 // MD Dialog Component -- Maybe better to be refactored to editTopic.component.ts
 @Component({
   selector: 'dialogEdit',
-  templateUrl: './editTopic.component.html'
+  templateUrl: './editTopic.component.html',
+  styleUrls: ['./topics.component.scss']
 })
 export class DialogEdit{
 
@@ -184,7 +185,8 @@ export class DialogEdit{
 // Dialog for Adding of Topic
  @Component({
   selector: 'dialogAdd',
-  templateUrl: './addTopic.component.html'
+  templateUrl: './addTopic.component.html',
+  styleUrls: ['./topics.component.scss']
 })
 export class DialogAdd implements OnInit{
 
