@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "success": true,
+    "code": 200,
+    "timestamp": "2017-06-10T21:05:17GMT+01:00"
+  },
+  "data": [
+    {
+      "id": "593802a7a9f1ad004906c2e2",
+      "title": "FBI Director fired",
+      "timestamp": "2017-06-10T21:05:17GMT+01:00",
+      "categories": [
+        {
+          "id": 1,
+          "name": "politics"
+        },
+        {
+          "id": 2,
+          "name": "economy"
+        }
+      ],
+      "news_artical_count": 5,
+      "image": "https://cnn.com/comey-fired.png",
+      "location": "Washington"
+    }
+  ]
+}
