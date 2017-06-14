@@ -20,8 +20,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/font-awesome/css/font-awesome.min.css",
-        "styles.scss"
+        "styles.scss",
+        "theme.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
