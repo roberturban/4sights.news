@@ -1,10 +1,9 @@
 {
-  "name": "4sights.news SEBA application",
-  "version": "0.0.1",
-  "author": {
-    "name":"rob.me",
-  },
-  "description": "",
+  "name": "angular2-full-stack",
+  "version": "4.0.0",
+  "license": "MIT",
+  "author": "Davide Violante",
+  "description": "Angular Full Stack project built using Angular 4, Express, Mongoose and Node.",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
