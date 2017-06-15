@@ -2,11 +2,20 @@
 
 <app-toast [message]="toast.message"></app-toast>
 
+<header class="header-content" color="primary" *ngIf="!auth.loggedIn">
+  <img src="../assets/img/logo.png" class="main-logo" />
+  <h2> Intelligent news comparison and structuring</h2>
+  <div class="button-row">
+    <button md-raised-button routerLink="/register" color="accent" style="color:#fff">Register</button>
+    <button md-raised-button routerLink="/login" style="color:#F2545B; margin-left: 20px;">Log In</button>
+  </div>
+</header>
+
 <div class="card" *ngIf="!isLoading">
-  <h4 class="card-header">Current Topics ({{topics.length}})</h4>
-  
+  <!-- <h4 class="card-header">Current Topics ({{topics.length}})</h4> -->
+
   <div class="card-block">
-    
+
     <md-card class="topic-card" *ngFor="let topic of topics">
           <md-card-title-group>
             <md-card-title>{{topic.title}}</md-card-title>
@@ -22,7 +31,7 @@
             <p></p>
             <button class="btn btn-sm btn-warning" (click)="open_edit(topic)">Edit Topic</button>
             <button class="btn btn-sm btn-danger" (click)="deleteTopic(topic)"><i class="fa fa-trash"></i> Delete</button>
-            
+
           </md-card-actions>
     </md-card>
 
@@ -30,7 +39,7 @@
       <tbody *ngIf="topics.length === 0">
         <tr>
           <td colspan="4">There are no topics in the DB. Add a new topic below on the button.</td>
-        </tr>  
+        </tr>
       </tbody>
     </table>
 

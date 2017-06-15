@@ -1,6 +1,6 @@
 .table td, .table th {
    text-align: center;
-   width: 25%;  
+   width: 25%;
 }
 
 .topic-card {
@@ -9,11 +9,36 @@
 }
 
 .card-block{
-	display: flex; 
-	flex-wrap: wrap; 
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between
 }
 
 .input-full-width{
 	width: 100%;
+}
+
+
+.header-content{
+  height:500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.main-logo{
+  height:65px;
+  margin-bottom: 10px;
+}
+
+.button-row{
+  margin-top: 20px;
+}
+
+h2{
+  font-family: Roboto;
+  font-weight: 400;
 }

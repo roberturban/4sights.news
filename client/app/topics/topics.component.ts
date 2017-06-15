@@ -6,6 +6,7 @@ import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 import { ToastComponent } from '../shared/toast/toast.component';
 import { TopicsService } from '../services/topics.service';
 import { TopicService } from '../services/topic.service';
+import { AuthService } from '../services/auth.service';
 
 
 
@@ -19,6 +20,7 @@ export class TopicsComponent implements OnInit {
 
   constructor(private http: Http,
               public toast: ToastComponent,
+              private auth: AuthService,
               private topicsService : TopicsService,
               private topicService: TopicService,
               private formBuilder_topic: FormBuilder,
@@ -39,7 +41,7 @@ export class TopicsComponent implements OnInit {
   isLoading_topic = true;
   isEditing_topic = false;
 
- 
+
   dialogRef: MdDialogRef<any>;
 
 
@@ -106,7 +108,7 @@ export class TopicsComponent implements OnInit {
     this.dialogRef = this.dialog.open(dialog);
     this.enableEditing_topic(del_topic);
     this.dialogRef.componentInstance.dialog_topic = del_topic;
-    
+
     this.dialogRef.afterClosed().subscribe(
       result => {
         this.dialogRef = null;
@@ -117,7 +119,7 @@ export class TopicsComponent implements OnInit {
            this.editTopic(result);
            this.toast.setMessage('item edited successfully.', 'success');
         }
-        
+
     });
   }
 
@@ -125,7 +127,7 @@ export class TopicsComponent implements OnInit {
 
   open_add() {
     this.dialogRef = this.dialogAdd.open(dialogAdd);
-    
+
     this.dialogRef.afterClosed().subscribe(
       result => {
         this.dialogRef = null;
@@ -136,7 +138,7 @@ export class TopicsComponent implements OnInit {
            this.addTopic(result);
            this.toast.setMessage('item edited successfully.', 'success');
         }
-        
+
     });
   }
 
@@ -178,7 +180,7 @@ export class DialogEdit{
 
 
   constructor(public dialogRef: MdDialogRef<any>) {}
-    
+
   }
 
 
@@ -192,11 +194,11 @@ export class DialogAdd implements OnInit{
 
   constructor(public dialogRef: MdDialogRef<any>,
               private formBuilder_topic: FormBuilder,) {
-    
+
   }
-    
+
     addTopicForm: FormGroup;
-    
+
     categoriesAvailable =  [
     'Politics',
     'Technology',
@@ -208,7 +210,7 @@ export class DialogAdd implements OnInit{
     image = new FormControl('', Validators.required);
     news_article_count = new FormControl('', Validators.required);
     location = new FormControl('', Validators.required);
-    categories = new FormControl('', Validators.required);  
+    categories = new FormControl('', Validators.required);
 
     ngOnInit() {
 
@@ -228,4 +230,4 @@ export class DialogAdd implements OnInit{
 
 
 const dialog = DialogEdit;
-const dialogAdd = DialogAdd; 
+const dialogAdd = DialogAdd;
