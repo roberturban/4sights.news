@@ -18,3 +18,33 @@
     padding: 0px 50px;
   }
 }
+
+.input-full-width{
+  width: 100%;
+}
+
+.input-container{
+  margin-bottom: 10px;
+}
+
+.bottom-row{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+md-error{
+  font-family: Roboto;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: #F2545B;
+}
+
+a:hover{
+  color: #F58287;
+}

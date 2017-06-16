@@ -32,17 +32,18 @@
   padding-bottom: 6px;
 }
 
-md-error{
-  font-family: Roboto;
-  font-size: 12px;
-  margin-bottom: 10px;
-}
 
 .bottom-row{
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-end;
+}
+
+md-error{
+  font-family: Roboto;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 a{

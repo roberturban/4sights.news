@@ -1,21 +1,34 @@
 <app-toast [message]="toast.message"></app-toast>
 
 <div class="login-form">
-
   <form class="form-inner" [formGroup]="loginForm" (ngSubmit)="login()">
-    <div class="input-group" [ngClass]="setClassEmail()">
-      <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-      <md-input-container>
-        <input mdInput class="form-control" type="email" name="email" formControlName="email" placeholder="Email" autofocus>
-      </md-input-container>
-    </div>
-    <div class="input-group" [ngClass]="setClassPassword()">
-      <span class="input-group-addon"><i class="fa fa-key"></i></span>
-      <md-input-container>
-        <input mdInput class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
-      </md-input-container>
-    </div>
-    <button md-button type="submit" [disabled]="!loginForm.valid"><i class="fa fa-sign-in"></i> Login</button>
-  </form>
 
+    <div class="input-container">
+      <md-input-container class="input-full-width">
+        <input mdInput class="input-full-width" type="email" name="email" formControlName="email" placeholder="Email" required>
+      </md-input-container>
+      <md-error *ngIf="email.dirty && email.invalid">
+        Enter a valid email
+      </md-error>
+    </div>
+
+    <div class="input-container">
+      <md-input-container class="input-full-width">
+        <input mdInput class="input-full-width" type="password" name="password" formControlName="password" placeholder="Password" required>
+      </md-input-container>
+      <md-error *ngIf="password.dirty && password.invalid">
+        Enter correct password
+      </md-error>
+    </div>
+
+    <div class="bottom-row">
+      <div style="font-family:Roboto;">
+        <a routerLink="/login">Forgot Password?</a>
+      </div>
+      <button md-raised-button color="accent" style="color:#fff" type="submit" [disabled]="!loginForm.valid">
+          Log In
+      </button>
+    </div>
+
+  </form>
 </div>
