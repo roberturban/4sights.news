@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
+import { TopicService } from './services/topic.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,13 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
 
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService,
+  	public topicService : TopicService) { }
+
+  //needs to be modified to get initial view when clicked on logo
+  initialView(){
+  	
+  }
+
 
 }

@@ -14,7 +14,6 @@ import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 import { AppComponent } from './app.component';
 import { TopicsComponent } from './topics/topics.component';
-import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -30,7 +29,6 @@ import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialo
   declarations: [
     AppComponent,
     TopicsComponent,
-    AboutComponent,
     RegisterComponent,
     LoginComponent,
     LogoutComponent,

@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Optional } from '@angular/core';
+import { Component, OnInit, Inject, Optional, Input} from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ToastComponent } from '../shared/toast/toast.component';
 import { TopicService } from '../services/topic.service';
 import { AuthService } from '../services/auth.service';
+import { AppComponent } from '../app.component';
 
 import { ITopics } from '../../../server/interfaces/ITopics';
 
@@ -30,11 +31,9 @@ export class TopicsComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log("constructor");
     this.getTopics();
     //set initial preferences to full, will be checked afterwards
-    this.userCategoryPreferences = this.categoriesAvailable;
-    this.getUserCategoryPreferences();
+    this.setInitialPage();
 
   }
 
@@ -49,7 +48,6 @@ export class TopicsComponent implements OnInit {
   isLoading_topic = true;
   isEditing_topic = false;
   userHasPreferences = false;
-  categoryView = false;
 
   active_category: String;
   private sub: any;
@@ -57,12 +55,7 @@ export class TopicsComponent implements OnInit {
 
   dialogRef: MdDialogRef<any>;
 
-  categoriesAvailable =  [
-    'Politics',
-    'Technology',
-    'Sports',
-    'Economics'
-  ];
+  categoriesAvailable =  this.topicService.categoriesAvailable;
 
   userCategoryPreferences = [];
 
@@ -165,10 +158,18 @@ export class TopicsComponent implements OnInit {
     });
   }
 
+  setInitialPage(){
+    this.userCategoryPreferences = this.categoriesAvailable;
+    this.getUserCategoryPreferences();
+  }
+
   getTopics_category(value) {
+    if(value=='Home'){
+      this.setInitialPage();
+    } else{
     this.active_category = value;
     this.userCategoryPreferences = [value];
-    this.categoryView = true;
+    }
   }
 
   getUserCategoryPreferences(){
