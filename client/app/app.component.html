@@ -1,39 +1,22 @@
 <div>
 
-  <!-- <nav class="navbar navbar-dark bg-primary">
-    <div class="nav navbar-nav">
-      <a routerLink="/" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-        <i class="fa fa-home"></i> Home2
-      </a>
-      <a routerLink="/topics" class="nav-item nav-link" routerLinkActive="active">
-        <i class="fa fa-list"></i> Topics
-      </a>
-      <a routerLink="/login" class="nav-item nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-        <i class="fa fa-sign-in"></i> Login
-      </a>
-      <a routerLink="/register" class="nav-item nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-        <i class="fa fa-user-plus"></i> Register
-      </a>
-      <a routerLink="/account" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
-        <i class="fa fa-user"></i> Account ({{auth.currentUser.name}})
-      </a>
-      <a routerLink="/admin" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
-        <i class="fa fa-lock"></i> Admin
-      </a>
-      <a routerLink="/logout" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
-        <i class="fa fa-sign-out"></i> Logout
-      </a>
-    </div>
-  </nav> -->
-
-  <md-toolbar color="primary" style="padding-left:0px">
+  <md-toolbar class="custom-toolbar">
     <button class="app-icon-button" style="background:none;border:none;padding: 0px 0px;" routerLink="/topics">
-      <img src="../assets/img/logo_small.png" style="height:64px; margin:0px;"/>
+      <img src="../assets/img/logo_small.png" class="small-logo"/>
     </button>
 
     <span class="fill-remaining-space"></span>
     <button md-button routerLink="/register" routerLinkActive="active" *ngIf="!auth.loggedIn" >Register</button>
     <button md-button routerLink="/login" routerLinkActive="active" *ngIf="!auth.loggedIn">Login</button>
+    <button md-button routerLink="/admin" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
+      <i class="material-icons">perm_identity</i>
+    </button>
+    <button md-button routerLink="/account" routerLinkActive="active" *ngIf="auth.loggedIn">
+      Account
+    </button>
+    <button md-button routerLink="/logout" routerLinkActive="active" *ngIf="auth.loggedIn">
+      <i class="material-icons">lock_outline</i>
+    </button>
   </md-toolbar>
 
   <router-outlet></router-outlet>

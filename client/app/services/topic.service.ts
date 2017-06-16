@@ -10,6 +10,16 @@ export class TopicService {
   private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
   private options = new RequestOptions({ headers: this.headers });
 
+  categoriesAvailable =  [
+    'Politics',
+    'Economics',
+    'Technology',
+    'Sports',
+    'Finance',
+    'Culture',
+    'Science'
+  ];
+
   constructor(private http: Http) { }
 
   getTopics(): Observable<any> {
@@ -36,4 +46,6 @@ export class TopicService {
     return this.http.delete(`/api/topic/${topic._id}`, this.options);
   }
 
+
 }
+
