@@ -12,7 +12,7 @@
 </header>
 
 <button *ngFor="let category of categoriesAvailable" md-button color="primary" [routerLink]="['/topics', category]">{{category}}</button>
-  <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference}}</button></div>
+<div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference}}</button></div>
 
 <div class="card-block" *ngIf="!isLoading">
 
