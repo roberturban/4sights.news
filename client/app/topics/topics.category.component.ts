@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, Optional } from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
+import { ActivatedRoute } from '@angular/router';
 
 import { ToastComponent } from '../shared/toast/toast.component';
 import { TopicService } from '../services/topic.service';
@@ -13,11 +14,11 @@ import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.compo
 
 
 @Component({
-  selector: 'app-topics',
-  templateUrl: './topics.component.html',
+  selector: 'app-category-topics',
+  templateUrl: './topics.category.component.html',
   styleUrls: ['./topics.component.scss']
 })
-export class TopicsComponent implements OnInit {
+export class TopicsCategoryComponent implements OnInit {
 
 
   constructor(private http: Http,
@@ -26,17 +27,19 @@ export class TopicsComponent implements OnInit {
               private formBuilder_topic: FormBuilder,
               public dialog: MdDialog,
               public dialogAdd: MdDialog,
-              public auth: AuthService) { }
+              public auth: AuthService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
 
     this.getTopics();
-    //set initial preferences to full, will be checked afterwards
-    this.userCategoryPreferences = this.categoriesAvailable;
-    this.getUserCategoryPreferences();
+    this.sub = this.route.params.subscribe(params => {
+       this.active_category = params['category'];
+       this.getTopics_category(this.active_category);
+       // In a real app: dispatch action to load the details here.
+    });
 
   }
-
 
     //Topics
   topic = {};
@@ -47,7 +50,10 @@ export class TopicsComponent implements OnInit {
   topic_cancel = {};
   isLoading_topic = true;
   isEditing_topic = false;
-  userHasPreferences = false;
+
+
+  active_category: String;
+  private sub: any;
 
  
   dialogRef: MdDialogRef<any>;
@@ -143,6 +149,7 @@ export class TopicsComponent implements OnInit {
   }
 
   // Dialog for Adding Topics
+
   open_add() {
     this.dialogRef = this.dialogAdd.open(dialogAdd);
     
@@ -160,9 +167,9 @@ export class TopicsComponent implements OnInit {
     });
   }
 
+
   getTopics_category(value) {
     //had to make a promise due to asynchronous call
-
     this.topicService.getTopics().subscribe(
       data => this.filterTopicsByCategory(value,data),
       error => console.log(error),
@@ -182,13 +189,6 @@ export class TopicsComponent implements OnInit {
     this.filter_topics = [];
   };  
 
-  getUserCategoryPreferences(){
-    //initiate with full
-    if(this.auth.currentUser.categories.length > 0){
-      this.userCategoryPreferences = this.auth.currentUser.categories;
-      this.userHasPreferences = true;
-    }
-  };
 
   /*filterTopicsByCategories(values,data){
     for (var i = 0; i < data.length; i++) {

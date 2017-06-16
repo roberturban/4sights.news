@@ -13,7 +13,8 @@ import { TopicService } from './services/topic.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 import { AppComponent } from './app.component';
-import { TopicsComponent, DialogEdit, DialogAdd } from './topics/topics.component';
+import { TopicsComponent } from './topics/topics.component';
+import { TopicsCategoryComponent } from './topics/topics.category.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -22,11 +23,15 @@ import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoryFilterPipe } from './services/category-filter.pipe';
+import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TopicsComponent,
+    TopicsCategoryComponent,
     AboutComponent,
     RegisterComponent,
     LoginComponent,

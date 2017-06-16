@@ -6,10 +6,10 @@
 
   <button *ngFor="let category of categoriesAvailable" md-button color="primary" [routerLink]="['/topics', category]">{{category}}</button>
   <button  md-raised-button color="primary" (click)="open_add()">Add Topic</button>
-  <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference}}</button></div>
+  {{active_category}}
   <div class="card-block">
     
-    <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
+    <md-card class="topic-card" *ngFor="let topic of topics">
 
           <md-card-title-group>
             <md-card-title>{{topic.title}}</md-card-title>
