@@ -1,6 +1,6 @@
 .registration-form{
   width: 100%;
-  min-height: 600px;
+  margin-top:100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,7 +17,6 @@
     width: 100%;
     padding: 0px 50px;
   }
-
 }
 
 .input-full-width{
@@ -44,4 +43,13 @@ md-error{
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-end;
+}
+
+a{
+  text-decoration: none;
+  color: #F2545B;
+}
+
+a:hover{
+  color: #F58287;
 }
