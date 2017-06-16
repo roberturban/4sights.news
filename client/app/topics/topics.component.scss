@@ -32,10 +32,40 @@
 
 .button-row{
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 200px;
+  justify-content: space-between;
 }
 
 h2 {
   font-family: Roboto;
   font-weight: 400;
   text-align: center;
+}
+
+.left-button-responsive{
+  color:#fff;
+  margin-top: 15px;
+}
+
+.right-button-responsive{
+  color:#F2545B;
+  margin-top: 15px;
+}
+
+@media (max-width: 350px){
+  h2{
+    font-size: 18px;
+    max-width: 80%;
+  }
+  .button-row{
+    width: 100px;
+    margin-top:10px;
+    justify-content: center;
+  }
+  .main-logo{
+    height: 45px;
+  }
 }
