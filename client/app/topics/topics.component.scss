@@ -1,19 +1,42 @@
 .table td, .table th {
    text-align: center;
-   width: 25%;  
-}
-
-.topic-card {
-	width: 30%;
-	margin: 10px;
+   width: 25%;
 }
 
 .card-block{
-	display: flex; 
-	flex-wrap: wrap; 
-	justify-content: space-between
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+  margin: 0px 50px;
 }
 
-.input-full-width{
-	width: 100%;
+
+.topic-card {
+	width: 300px;
+	margin: 20px;
+}
+
+.header-content{
+  height:500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.main-logo{
+  height:65px;
+  margin-bottom: 10px;
+}
+
+.button-row{
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: Roboto;
+  font-weight: 400;
+  text-align: center;
 }

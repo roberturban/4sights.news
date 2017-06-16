@@ -19,7 +19,6 @@ import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.compo
 })
 export class TopicsComponent implements OnInit {
 
-
   constructor(private http: Http,
               public toast: ToastComponent,
               private topicService: TopicService,
@@ -38,7 +37,7 @@ export class TopicsComponent implements OnInit {
   }
 
 
-    //Topics
+  //Topics
   topic = {};
   topics = [];
   filter_topic: ITopics;
@@ -49,7 +48,7 @@ export class TopicsComponent implements OnInit {
   isEditing_topic = false;
   userHasPreferences = false;
 
- 
+
   dialogRef: MdDialogRef<any>;
 
   categoriesAvailable =  [
@@ -127,36 +126,36 @@ export class TopicsComponent implements OnInit {
     this.dialogRef = this.dialog.open(dialog);
     this.enableEditing_topic(del_topic);
     this.dialogRef.componentInstance.dialog_topic = del_topic;
-    
+
     this.dialogRef.afterClosed().subscribe(
       result => {
         this.dialogRef = null;
-        if (!result){
+        if (!result) {
           this.cancelEditing_topic();
           this.toast.setMessage('item cancled.', 'warning');
         } else {
-           this.editTopic(result);
-           this.toast.setMessage('item edited successfully.', 'success');
+          this.editTopic(result);
+          this.toast.setMessage('item edited successfully.', 'success');
         }
-        
-    });
+
+      });
   }
 
   // Dialog for Adding Topics
   open_add() {
     this.dialogRef = this.dialogAdd.open(dialogAdd);
-    
+
     this.dialogRef.afterClosed().subscribe(
       result => {
         this.dialogRef = null;
-        if (!result){
+        if (!result) {
           this.cancelEditing_topic();
           this.toast.setMessage('item cancled.', 'warning');
         } else {
-           this.addTopic(result);
-           this.toast.setMessage('item edited successfully.', 'success');
+          this.addTopic(result);
+          this.toast.setMessage('item edited successfully.', 'success');
         }
-        
+
     });
   }
 
@@ -180,7 +179,7 @@ export class TopicsComponent implements OnInit {
     }
     this.topics = this.filter_topics;
     this.filter_topics = [];
-  };  
+  };
 
   getUserCategoryPreferences(){
     //initiate with full
@@ -203,5 +202,4 @@ export class TopicsComponent implements OnInit {
 }
 
 const dialog = DialogEdit;
-const dialogAdd = DialogAdd; 
-
+const dialogAdd = DialogAdd;

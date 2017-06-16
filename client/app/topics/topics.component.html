@@ -1,42 +1,55 @@
 <app-loading [condition]="isLoading"></app-loading>
 
-<app-toast [message]="toast.message"></app-toast>
+<!-- <app-toast [message]="toast.message"></app-toast> -->
 
-<div class="card" *ngIf="!isLoading">
-
-  <button *ngFor="let category of categoriesAvailable" md-button color="primary" [routerLink]="['/topics', category]">{{category}}</button>
-  <button  md-raised-button color="primary" (click)="open_add()">Add Topic</button>
-  <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference}}</button></div>
-  <div class="card-block">
-    
-    <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
-
-          <md-card-title-group>
-            <md-card-title>{{topic.title}}</md-card-title>
-            <md-card-subtitle>{{topic.location}}, {{topic.timestamp}}</md-card-subtitle>
-          </md-card-title-group>
-
-          <img md-card-image src="{{topic.image}}">
-
-          <button *ngFor="let category of topic.categories" md-button>{{category}}</button>
-          <p>Sources Available: {{topic.news_article_count}}</p>
-
-          <md-card-actions>
-            <p></p>
-            <button *ngIf="auth.loggedIn && auth.isAdmin" md-raised-button color="primary" (click)="open_edit(topic)"><md-icon>build</md-icon> Edit Topic</button>
-            <button *ngIf="auth.loggedIn && auth.isAdmin" md-raised-button color="warn" (click)="deleteTopic(topic)"><md-icon>delete</md-icon> Delete</button>       
-          </md-card-actions>
-          
-    </md-card>
-
-    <table class="table table-bordered table-striped">
-      <tbody *ngIf="topics.length === 0">
-        <tr>
-          <td colspan="4">There are no topics in the DB. Add a new topic below on the button.</td>
-        </tr>  
-      </tbody>
-    </table>
+<header class="header-content" color="primary" *ngIf="!auth.loggedIn">
+  <img src="../assets/img/logo.png" class="main-logo" />
+  <h2> Intelligent news comparison and structuring</h2>
+  <div class="button-row">
+    <button md-raised-button routerLink="/register" color="accent" style="color:#fff">Register</button>
+    <button md-raised-button routerLink="/login" style="color:#F2545B; margin-left: 20px;">Log In</button>
   </div>
+</header>
+
+<button *ngFor="let category of categoriesAvailable" md-button color="primary" [routerLink]="['/topics', category]">{{category}}</button>
+  <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference}}</button></div>
+
+<div class="card-block" *ngIf="!isLoading">
+
+  <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
+    <img md-card-image src="{{topic.image}}">
+    <md-card-title-group>
+      <md-card-title>{{topic.title}}</md-card-title>
+      <md-card-subtitle>{{topic.location}}, {{topic.timestamp}}</md-card-subtitle>
+    </md-card-title-group>
+
+    <button *ngFor="let category of topic.categories" md-button>{{category}}</button>
+    <p *ngIf="auth.loggedIn && auth.isAdmin">Sources Available: {{topic.news_article_count}}</p>
+    <md-card-actions *ngIf="auth.loggedIn && auth.isAdmin">
+      <button md-button (click)="open_edit(topic)">Edit Topic</button>
+      <button md-button (click)="deleteTopic(topic)">
+        <i class="fa fa-trash"></i> Delete
+      </button>
+    </md-card-actions>
+  </md-card>
+
+</div>
+
+
+
+<div style="margin:50px 70px;" *ngIf="!isLoading">
+
+  <table class="table table-bordered table-striped">
+    <tbody *ngIf="topics.length === 0">
+      <tr>
+        <td colspan="4">There are no topics in the DB. Add a new topic below on the button.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button md-fab *ngIf="auth.loggedIn && auth.isAdmin" (click)="open_add()" color="primary">
+    <md-icon class="md-24">add</md-icon>
+  </button>
 
 </div>
 <li *ngFor="let item of items"> {{item}} </li>
