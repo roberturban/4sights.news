@@ -1,22 +1,21 @@
 <app-toast [message]="toast.message"></app-toast>
 
-<div class="card">
-  <h4 class="card-header">Login for 4sights</h4>
-  <div class="card-block">
-    <form [formGroup]="loginForm" (ngSubmit)="login()">
-      <div class="input-group" [ngClass]="setClassEmail()">
-        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-        <md-input-container>
-          <input mdInput class="form-control" type="email" name="email" formControlName="email" placeholder="Email" autofocus>
-        </md-input-container>
-      </div>
-      <div class="input-group" [ngClass]="setClassPassword()">
-        <span class="input-group-addon"><i class="fa fa-key"></i></span>
-        <md-input-container>
-          <input mdInput class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
-        </md-input-container>
-      </div>
-      <button md-button type="submit" [disabled]="!loginForm.valid"><i class="fa fa-sign-in"></i> Login</button>
-    </form>
-  </div>
+<div class="login-form">
+
+  <form class="form-inner" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="input-group" [ngClass]="setClassEmail()">
+      <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+      <md-input-container>
+        <input mdInput class="form-control" type="email" name="email" formControlName="email" placeholder="Email" autofocus>
+      </md-input-container>
+    </div>
+    <div class="input-group" [ngClass]="setClassPassword()">
+      <span class="input-group-addon"><i class="fa fa-key"></i></span>
+      <md-input-container>
+        <input mdInput class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
+      </md-input-container>
+    </div>
+    <button md-button type="submit" [disabled]="!loginForm.valid"><i class="fa fa-sign-in"></i> Login</button>
+  </form>
+
 </div>

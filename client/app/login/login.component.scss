@@ -1,0 +1,20 @@
+.login-form{
+  width: 100%;
+  margin-top:100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-inner{
+  width: 100%;
+  padding: 0px 25%;
+}
+
+@media (max-width: 600px){
+  .form-inner{
+    width: 80%;
+    padding: 0px 50px;
+  }
+}

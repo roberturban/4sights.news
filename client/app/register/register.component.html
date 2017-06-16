@@ -1,72 +1,72 @@
 <app-toast [message]="toast.message"></app-toast>
 
 
-  <div class="registration-form">
-    <form class="form-inner" [formGroup]="registerForm" (ngSubmit)="register()">
+<div class="registration-form">
+  <form class="form-inner" [formGroup]="registerForm" (ngSubmit)="register()">
 
-      <div class="input-container">
-        <md-input-container class="input-full-width">
-          <input mdInput class="input-full-width" type="text" name="name" formControlName="name" placeholder="Name" required>
-        </md-input-container>
-        <md-error *ngIf="name.dirty && name.invalid">
-          Name must contain more than one characters
-        </md-error>
+    <div class="input-container">
+      <md-input-container class="input-full-width">
+        <input mdInput class="input-full-width" type="text" name="name" formControlName="name" placeholder="Name" required>
+      </md-input-container>
+      <md-error *ngIf="name.dirty && name.invalid">
+        Name must contain more than one characters
+      </md-error>
+    </div>
+
+    <div class="input-container">
+      <md-input-container class="input-full-width">
+        <input mdInput class="input-full-width" type="text" name="surname" formControlName="surname" placeholder="Surname" required>
+      </md-input-container>
+      <md-error *ngIf="surname.dirty && surname.invalid">
+        Surname must contain more than one characters
+      </md-error>
+    </div>
+
+    <div class="input-container">
+      <md-input-container class="input-full-width">
+        <input mdInput class="input-full-width" type="email" name="email" formControlName="email" placeholder="Email" required>
+      </md-input-container>
+      <md-error *ngIf="email.dirty && email.invalid">
+        Enter a valid email
+      </md-error>
+    </div>
+
+    <div class="input-container">
+      <md-input-container class="input-full-width">
+        <input mdInput class="input-full-width" type="password" name="password" formControlName="password" placeholder="Password" required>
+      </md-input-container>
+      <md-error *ngIf="password.dirty && password.invalid">
+        Password must contain more than six characters
+      </md-error>
+    </div>
+
+    <div class="input-container">
+      <md-select class="input-full-width special-input-wrapper" name="role" formControlName="role" placeholder="Role" required>
+        <md-option value="" selected disabled>Role</md-option>
+        <md-option value="user">User</md-option>
+        <md-option value="admin">Admin</md-option>
+      </md-select>
+    </div>
+
+    <div class="input-container">
+      <md-select multiple class="input-full-width special-input-wrapper" name="categories" formControlName="categories" placeholder="Categories" required>
+        <md-option value="" selected disabled>Categories</md-option>
+        <md-option value="Economy">Economy</md-option>
+        <md-option value="Politics">Politics</md-option>
+        <md-option value="Sports">Sports</md-option>
+        <md-option value="Panorama">Panorama</md-option>
+        <md-option value="Technology">Technology</md-option>
+      </md-select>
+    </div>
+
+    <div class="bottom-row">
+      <div style="font-family:Roboto;">
+        Already a member? <a routerLink="/login">Log in here</a>
       </div>
-
-      <div class="input-container">
-        <md-input-container class="input-full-width">
-          <input mdInput class="input-full-width" type="text" name="surname" formControlName="surname" placeholder="Surname" required>
-        </md-input-container>
-        <md-error *ngIf="surname.dirty && surname.invalid">
-          Surname must contain more than one characters
-        </md-error>
-      </div>
-
-      <div class="input-container">
-        <md-input-container class="input-full-width">
-          <input mdInput class="input-full-width" type="email" name="email" formControlName="email" placeholder="Email" required>
-        </md-input-container>
-        <md-error *ngIf="email.dirty && email.invalid">
-          Enter a valid email
-        </md-error>
-      </div>
-
-      <div class="input-container">
-        <md-input-container class="input-full-width">
-          <input mdInput class="input-full-width" type="password" name="password" formControlName="password" placeholder="Password" required>
-        </md-input-container>
-        <md-error *ngIf="password.dirty && password.invalid">
-          Password must contain more than six characters
-        </md-error>
-      </div>
-
-      <div class="input-container">
-        <md-select class="input-full-width special-input-wrapper" name="role" formControlName="role" placeholder="Role" required>
-          <md-option value="" selected disabled>Role</md-option>
-          <md-option value="user">User</md-option>
-          <md-option value="admin">Admin</md-option>
-        </md-select>
-      </div>
-
-      <div class="input-container">
-        <md-select multiple class="input-full-width special-input-wrapper" name="categories" formControlName="categories" placeholder="Categories" required>
-          <md-option value="" selected disabled>Categories</md-option>
-          <md-option value="Economy">Economy</md-option>
-          <md-option value="Politics">Politics</md-option>
-          <md-option value="Sports">Sports</md-option>
-          <md-option value="Panorama">Panorama</md-option>
-          <md-option value="Technology">Technology</md-option>
-        </md-select>
-      </div>
-
-      <div class="bottom-row">
-        <div style="font-family:Roboto;">
-          Already a member? <a routerLink="/login">Log in here</a>
-        </div>
-        <button md-raised-button color="accent" style="color:#fff" type="submit" [disabled]="!registerForm.valid">
+      <button md-raised-button color="accent" style="color:#fff" type="submit" [disabled]="!registerForm.valid">
           Register
         </button>
-      </div>
+    </div>
 
-    </form>
-  </div>
+  </form>
+</div>
