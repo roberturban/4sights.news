@@ -6,8 +6,7 @@ import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 import { ToastComponent } from '../shared/toast/toast.component';
 import { TopicsService } from '../services/topics.service';
 import { TopicService } from '../services/topic.service';
-
-
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-topics',
@@ -16,30 +15,27 @@ import { TopicService } from '../services/topic.service';
 })
 export class TopicsComponent implements OnInit {
 
-
   constructor(private http: Http,
-              public toast: ToastComponent,
-              private topicsService : TopicsService,
-              private topicService: TopicService,
-              private formBuilder_topic: FormBuilder,
-              public dialog: MdDialog,
-              public dialogAdd: MdDialog) { }
+    public toast: ToastComponent,
+    private auth: AuthService,
+    private topicsService: TopicsService,
+    private topicService: TopicService,
+    private formBuilder_topic: FormBuilder,
+    public dialog: MdDialog,
+    public dialogAdd: MdDialog) { }
 
   ngOnInit() {
-
     //this.getTopics_data();
     this.getTopics();
   }
 
 
-    //Topics
+  //Topics
   topic = {};
   topics = [];
   topic_cancel = {};
   isLoading_topic = true;
   isEditing_topic = false;
-
- 
   dialogRef: MdDialogRef<any>;
 
 
@@ -106,55 +102,39 @@ export class TopicsComponent implements OnInit {
     this.dialogRef = this.dialog.open(dialog);
     this.enableEditing_topic(del_topic);
     this.dialogRef.componentInstance.dialog_topic = del_topic;
-    
+
     this.dialogRef.afterClosed().subscribe(
       result => {
         this.dialogRef = null;
-        if (!result){
+        if (!result) {
           this.cancelEditing_topic();
           this.toast.setMessage('item cancled.', 'warning');
         } else {
-           this.editTopic(result);
-           this.toast.setMessage('item edited successfully.', 'success');
+          this.editTopic(result);
+          this.toast.setMessage('item edited successfully.', 'success');
         }
-        
-    });
+
+      });
   }
 
   // Dialog for Adding Topics
 
   open_add() {
     this.dialogRef = this.dialogAdd.open(dialogAdd);
-    
+
     this.dialogRef.afterClosed().subscribe(
       result => {
         this.dialogRef = null;
-        if (!result){
+        if (!result) {
           this.cancelEditing_topic();
           this.toast.setMessage('item cancled.', 'warning');
         } else {
-           this.addTopic(result);
-           this.toast.setMessage('item edited successfully.', 'success');
+          this.addTopic(result);
+          this.toast.setMessage('item edited successfully.', 'success');
         }
-        
-    });
+
+      });
   }
-
-
-
-
-  /* ------------ FIRST TRY WITH LOCAL JSON
-  topics_data = {};
-
-  getTopics_data() {
-
-    this.topicsService.getTopics().subscribe(
-      data => this.topics_data = data,
-      error => console.log(error)
-    );
-    console.log(this.topics_data);
-  }
-  */
 
 }
 
@@ -164,54 +144,52 @@ export class TopicsComponent implements OnInit {
   templateUrl: './editTopic.component.html',
   styleUrls: ['./topics.component.scss']
 })
-export class DialogEdit{
+export class DialogEdit {
 
   public dialog_topic;
 
-  //besser wenn man irgendwie das auslagert
-  categoriesAvailable =  [
+  // Mock Up to query from database
+  categoriesAvailable = [
     'Politics',
     'Technology',
     'Sports',
     'Economics'
   ];
 
+  constructor(public dialogRef: MdDialogRef<any>) { }
 
-  constructor(public dialogRef: MdDialogRef<any>) {}
-    
-  }
+}
 
 
 // Dialog for Adding of Topic
- @Component({
+@Component({
   selector: 'dialogAdd',
   templateUrl: './addTopic.component.html',
   styleUrls: ['./topics.component.scss']
 })
-export class DialogAdd implements OnInit{
+export class DialogAdd implements OnInit {
 
   constructor(public dialogRef: MdDialogRef<any>,
-              private formBuilder_topic: FormBuilder,) {
-    
+    private formBuilder_topic: FormBuilder, ) {
+
   }
-    
-    addTopicForm: FormGroup;
-    
-    categoriesAvailable =  [
+
+  addTopicForm: FormGroup;
+
+  categoriesAvailable = [
     'Politics',
     'Technology',
     'Sports',
     'Economics'
-    ];
-    title = new FormControl('', Validators.required);
-    timestamp = new FormControl('', Validators.required);
-    image = new FormControl('', Validators.required);
-    news_article_count = new FormControl('', Validators.required);
-    location = new FormControl('', Validators.required);
-    categories = new FormControl('', Validators.required);  
+  ];
+  title = new FormControl('', Validators.required);
+  timestamp = new FormControl('', Validators.required);
+  image = new FormControl('', Validators.required);
+  news_article_count = new FormControl('', Validators.required);
+  location = new FormControl('', Validators.required);
+  categories = new FormControl('', Validators.required);
 
-    ngOnInit() {
-
+  ngOnInit() {
     //this.getTopics_data();
     //this.getTopics();
     this.addTopicForm = this.formBuilder_topic.group({
@@ -224,8 +202,8 @@ export class DialogAdd implements OnInit{
     });
   }
 
-  }
+}
 
 
 const dialog = DialogEdit;
-const dialogAdd = DialogAdd; 
+const dialogAdd = DialogAdd;
