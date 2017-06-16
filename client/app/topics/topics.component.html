@@ -5,6 +5,7 @@
 <header class="header-content" color="primary" *ngIf="!auth.loggedIn">
   <img src="../assets/img/logo.png" class="main-logo" />
   <h2> Intelligent news comparison and structuring</h2>
+  {{message}}
   <div class="button-row">
     <button md-raised-button routerLink="/register" class="left-button-responsive" color="accent">
       Register
@@ -15,7 +16,9 @@
   </div>
 </header>
 
-<button *ngFor="let category of categoriesAvailable" md-button color="primary" [routerLink]="['/topics', category]">{{category}}</button>
+<button md-button color="primary" (click)="getTopics_category('Home')">Home</button>
+<button *ngFor="let category of categoriesAvailable" md-button color="primary" (click)="getTopics_category(category)">{{category}}</button>
+
 <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference}}</button></div>
 
 <div class="card-block" *ngIf="!isLoading">
@@ -29,7 +32,7 @@
 
     <button *ngFor="let category of topic.categories" md-button>{{category}}</button>
     <p *ngIf="auth.loggedIn && auth.isAdmin">Sources Available: {{topic.news_article_count}}</p>
-    <md-card-actions *ngIf="auth.loggedIn && auth.isAdmin">
+    <md-card-actions>
       <button md-button (click)="open_edit(topic)">Edit Topic</button>
       <button md-button (click)="deleteTopic(topic)">
         <i class="fa fa-trash"></i> Delete

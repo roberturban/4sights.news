@@ -1,11 +1,13 @@
-import { Component, OnInit, Inject, Optional } from '@angular/core';
+import { Component, OnInit, Inject, Optional, Input} from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
+import { ActivatedRoute } from '@angular/router';
 
 import { ToastComponent } from '../shared/toast/toast.component';
 import { TopicService } from '../services/topic.service';
 import { AuthService } from '../services/auth.service';
+import { AppComponent } from '../app.component';
 
 import { ITopics } from '../../../server/interfaces/ITopics';
 
@@ -25,14 +27,13 @@ export class TopicsComponent implements OnInit {
               private formBuilder_topic: FormBuilder,
               public dialog: MdDialog,
               public dialogAdd: MdDialog,
-              public auth: AuthService) { }
+              public auth: AuthService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
-
     this.getTopics();
     //set initial preferences to full, will be checked afterwards
-    this.userCategoryPreferences = this.categoriesAvailable;
-    this.getUserCategoryPreferences();
+    this.setInitialPage();
 
   }
 
@@ -48,15 +49,13 @@ export class TopicsComponent implements OnInit {
   isEditing_topic = false;
   userHasPreferences = false;
 
+  active_category: String;
+  private sub: any;
+
 
   dialogRef: MdDialogRef<any>;
 
-  categoriesAvailable =  [
-    'Politics',
-    'Technology',
-    'Sports',
-    'Economics'
-  ];
+  categoriesAvailable =  this.topicService.categoriesAvailable;
 
   userCategoryPreferences = [];
 
@@ -159,27 +158,19 @@ export class TopicsComponent implements OnInit {
     });
   }
 
-  getTopics_category(value) {
-    //had to make a promise due to asynchronous call
-
-    this.topicService.getTopics().subscribe(
-      data => this.filterTopicsByCategory(value,data),
-      error => console.log(error),
-      () => this.isLoading_topic = false
-    );
+  setInitialPage(){
+    this.userCategoryPreferences = this.categoriesAvailable;
+    this.getUserCategoryPreferences();
   }
 
-  filterTopicsByCategory(value,data){
-    for (var i = 0; i < data.length; i++) {
-      this.filter_topic = data[i];
-
-      if (this.filter_topic.categories.find(category => category == value)) {
-        this.filter_topics.push(this.filter_topic);
-      }
+  getTopics_category(value) {
+    if(value=='Home'){
+      this.setInitialPage();
+    } else{
+    this.active_category = value;
+    this.userCategoryPreferences = [value];
     }
-    this.topics = this.filter_topics;
-    this.filter_topics = [];
-  };
+  }
 
   getUserCategoryPreferences(){
     //initiate with full
@@ -188,16 +179,6 @@ export class TopicsComponent implements OnInit {
       this.userHasPreferences = true;
     }
   };
-
-  /*filterTopicsByCategories(values,data){
-    for (var i = 0; i < data.length; i++) {
-      this.filter_topic = data[i];
-      if (this.filter_topic.categories.find(category => values.some(f => f == category))) {
-        this.filter_topics.push(this.filter_topic);
-      }
-    }
-    this.topics = this.filter_topics;
-  };  */
 
 }
 
