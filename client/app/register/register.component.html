@@ -1,29 +1,34 @@
 <app-toast [message]="toast.message"></app-toast>
 
-  <div>
-  <h4>Register</h4>
-  </div>
+
   <div >
     <form [formGroup]="registerForm" (ngSubmit)="register()">
-      <div [ngClass]="setClassName()">   
-        <md-input-container> 
-          <input mdInput class="form-control" type="text" name="name" formControlName="name" placeholder="Name" autofocus>
+
+      <div>
+        <md-input-container>
+          <input mdInput class="form-control" type="text" name="name" formControlName="name" placeholder="Name" required>
+        </md-input-container>
+        <!-- <md-error *ngIf="setClassName()">
+          Name must contain more than two characters
+        </md-error> -->
+        <md-error *ngIf="name.hasError('required') && name.touched">
+          Field is required
+        </md-error>
+      </div>
+
+      <div class="input-group">
+        <md-input-container >
+          <input mdInput class="form-control" type="text" name="surname" formControlName="surname" placeholder="Surname" required>
         </md-input-container>
       </div>
-      
-      <div class="input-group" [ngClass]="setClassSurname()">
-        <md-input-container > 
-          <input mdInput class="form-control" type="text" name="surname" formControlName="surname" placeholder="Surname" autofocus>
-        </md-input-container> 
-      </div>
-      <div class="input-group" [ngClass]="setClassEmail()">
-        <md-input-container> 
-          <input mdInput class="form-control" type="email" name="email" formControlName="email" placeholder="Email">
+      <div class="input-group">
+        <md-input-container>
+          <input mdInput class="form-control" type="email" name="email" formControlName="email" placeholder="Email" required>
         </md-input-container>
       </div>
       <div class="input-group" [ngClass]="setClassPassword()">
-        <md-input-container> 
-          <input mdInput class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
+        <md-input-container>
+          <input mdInput class="form-control" type="password" name="password" formControlName="password" placeholder="Password" required>
         </md-input-container>
       </div>
       <div class="input-group">

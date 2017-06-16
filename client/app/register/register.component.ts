@@ -4,6 +4,8 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { UserService } from '../services/user.service';
 import { ToastComponent } from '../shared/toast/toast.component';
 
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -12,17 +14,22 @@ import { ToastComponent } from '../shared/toast/toast.component';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
+
   name = new FormControl('', [Validators.required,
                                   Validators.minLength(2),
                                   Validators.maxLength(30),
                                   Validators.pattern('[a-zA-Z_-\\s]*')]);
+
   surname = new FormControl('', [Validators.required,
                                   Validators.minLength(2),
                                   Validators.maxLength(30),
                                   Validators.pattern('[a-zA-Z_-\\s]*')]);
+
   email = new FormControl('', [Validators.required,
-                               Validators.minLength(3),
-                               Validators.maxLength(100)]);
+                                Validators.minLength(3),
+                                Validators.maxLength(100),
+                                Validators.pattern(EMAIL_REGEX)]);
+
   password = new FormControl('', [Validators.required,
                                   Validators.minLength(6)]);
 
@@ -47,18 +54,19 @@ export class RegisterComponent implements OnInit {
   }
 
   setClassName() {
-    return { 'has-danger': !this.name.pristine && !this.name.valid };
+    console.log(this.name.hasError('required') && this.name.dirty);
+    return this.name.hasError('required') && this.name.dirty;
   }
 
   setClassSurname() {
-    return { 'has-danger': !this.surname.pristine && !this.surname.valid };
+    return !this.surname.pristine && !this.surname.valid ;
   }
 
   setClassEmail() {
-    return { 'has-danger': !this.email.pristine && !this.email.valid };
+    return !this.email.pristine && !this.email.valid;
   }
   setClassPassword() {
-    return { 'has-danger': !this.password.pristine && !this.password.valid };
+    return !this.password.pristine && !this.password.valid;
   }
 
   register() {
