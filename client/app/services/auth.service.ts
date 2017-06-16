@@ -16,7 +16,7 @@ export class AuthService {
      name: '', 
      surname: '', 
      role: '',
-     categories: '' };
+     categories: [] };
 
   constructor(private userService: UserService,
               private router: Router) {
@@ -47,7 +47,7 @@ export class AuthService {
       name: '', 
       surname: '', 
       role: '',
-      categories: '' };
+      categories: [] };
     this.router.navigate(['/']);
   }
 

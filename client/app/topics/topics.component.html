@@ -3,11 +3,14 @@
 <app-toast [message]="toast.message"></app-toast>
 
 <div class="card" *ngIf="!isLoading">
+
+  <button *ngFor="let category of categoriesAvailable" md-button color="primary" (click)="getTopics_category(category)">{{category}}</button>
+
   <h4 class="card-header">Current Topics ({{topics.length}})</h4>
   
   <div class="card-block">
     
-    <md-card class="topic-card" *ngFor="let topic of topics">
+    <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
           <md-card-title-group>
             <md-card-title>{{topic.title}}</md-card-title>
             <md-card-subtitle>{{topic.location}}, {{topic.timestamp}}</md-card-subtitle>
@@ -21,8 +24,7 @@
           <md-card-actions>
             <p></p>
             <button md-raised-button color="primary" (click)="open_edit(topic)"><md-icon>build</md-icon> Edit Topic</button>
-            <button md-raised-button color="warn" (click)="deleteTopic(topic)"><md-icon>delete</md-icon> Delete</button>
-            
+            <button md-raised-button color="warn" (click)="deleteTopic(topic)"><md-icon>delete</md-icon> Delete</button>       
           </md-card-actions>
     </md-card>
 
@@ -40,3 +42,4 @@
   <button md-raised-button color="primary" (click)="open_add()">Add Topic</button>
 
 </div>
+<li *ngFor="let item of items"> {{item}} </li>

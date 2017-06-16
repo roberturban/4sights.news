@@ -6,7 +6,9 @@ import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 import { ToastComponent } from '../shared/toast/toast.component';
 import { TopicsService } from '../services/topics.service';
 import { TopicService } from '../services/topic.service';
+import { AuthService } from '../services/auth.service';
 
+import { ITopics } from '../../../server/interfaces/ITopics';
 
 
 @Component({
@@ -23,24 +25,40 @@ export class TopicsComponent implements OnInit {
               private topicService: TopicService,
               private formBuilder_topic: FormBuilder,
               public dialog: MdDialog,
-              public dialogAdd: MdDialog) { }
+              public dialogAdd: MdDialog,
+              public auth: AuthService) { }
 
   ngOnInit() {
 
     //this.getTopics_data();
     this.getTopics();
+    this.userCategoryPreferences = this.categoriesAvailable;
+    this.getUserCategoryPreferences();
+
   }
 
 
     //Topics
   topic = {};
   topics = [];
+  filter_topic: ITopics;
+  filter_topics = [];
+
   topic_cancel = {};
   isLoading_topic = true;
   isEditing_topic = false;
 
  
   dialogRef: MdDialogRef<any>;
+
+  categoriesAvailable =  [
+    'Politics',
+    'Technology',
+    'Sports',
+    'Economics'
+  ];
+
+  userCategoryPreferences = [];
 
 
   getTopics() {
@@ -71,6 +89,7 @@ export class TopicsComponent implements OnInit {
   cancelEditing_topic() {
     this.isEditing_topic = false;
     this.topic = {};
+    this.topics = [];
     this.toast.setMessage('item editing cancelled.', 'warning');
     // reload the Topics to reset the editing
     this.getTopics();
@@ -143,22 +162,50 @@ export class TopicsComponent implements OnInit {
   }
 
 
-
-
-  /* ------------ FIRST TRY WITH LOCAL JSON
-  topics_data = {};
-
-  getTopics_data() {
-
-    this.topicsService.getTopics().subscribe(
-      data => this.topics_data = data,
-      error => console.log(error)
+  getTopics_category(value) {
+    //had to make a promise due to asynchronous call
+    this.topicService.getTopics().subscribe(
+      data => this.filterTopicsByCategory(value,data),
+      error => console.log(error),
+      () => this.isLoading_topic = false
     );
-    console.log(this.topics_data);
   }
-  */
+
+  filterTopicsByCategory(value,data){
+    for (var i = 0; i < data.length; i++) {
+      this.filter_topic = data[i];
+      if (this.filter_topic.categories.find(category => category == value)) {
+        this.filter_topics.push(this.filter_topic);
+      }
+    }
+    this.topics = this.filter_topics;
+    this.filter_topics = [];
+  };  
+
+  getUserCategoryPreferences(){
+    //initiate with full
+
+    if(this.auth.currentUser.categories.length > 0){
+      console.log('test!!!');
+      this.userCategoryPreferences = this.auth.currentUser.categories;
+    }
+
+    console.log(this.userCategoryPreferences,this.auth.currentUser.categories,this.categoriesAvailable);
+  };
+
+  /*filterTopicsByCategories(values,data){
+    for (var i = 0; i < data.length; i++) {
+      this.filter_topic = data[i];
+      if (this.filter_topic.categories.find(category => values.some(f => f == category))) {
+        this.filter_topics.push(this.filter_topic);
+      }
+    }
+    this.topics = this.filter_topics;
+  };  */
 
 }
+  
+  
 
 // MD Dialog Component -- Maybe better to be refactored to editTopic.component.ts
 @Component({
@@ -231,3 +278,4 @@ export class DialogAdd implements OnInit{
 
 const dialog = DialogEdit;
 const dialogAdd = DialogAdd; 
+

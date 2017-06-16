@@ -5,7 +5,7 @@
   </div>
   <div >
     <form [formGroup]="registerForm" (ngSubmit)="register()">
-      <div class="input-group" [ngClass]="setClassName()">   
+      <div [ngClass]="setClassName()">   
         <md-input-container> 
           <input mdInput class="form-control" type="text" name="name" formControlName="name" placeholder="Name" autofocus>
         </md-input-container>

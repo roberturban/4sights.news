@@ -22,8 +22,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { TestStyleComponent } from './test-styles/teststyle.component';
-
+import { CategoryFilterPipe } from './services/category-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -36,9 +35,9 @@ import { TestStyleComponent } from './test-styles/teststyle.component';
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
-    TestStyleComponent,
     DialogEdit,
-    DialogAdd
+    DialogAdd,
+    CategoryFilterPipe
   ],
   imports: [
     RoutingModule,
