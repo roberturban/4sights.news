@@ -34,13 +34,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  setClassEmail() {
-    return { 'has-danger': !this.email.pristine && !this.email.valid };
-  }
-  setClassPassword() {
-    return { 'has-danger': !this.password.pristine && !this.password.valid };
-  }
-
   login() {
     this.auth.login(this.loginForm.value).subscribe(
       res => this.router.navigate(['/']),

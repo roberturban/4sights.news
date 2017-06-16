@@ -70,9 +70,9 @@ $md-4sightsaccent: (
 
 $my-app-primary: mat-palette($md-4sightsprimary);
 $my-app-accent:  mat-palette($md-4sightsaccent);
-// $my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-warn:    mat-palette($md-4sightsaccent);
 $my-app-background: mat-palette($md-4sightsaccent, A100, A200, A400);
 
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-background);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 
 @include angular-material-theme($my-app-theme);

@@ -2,7 +2,7 @@
 <h2>EDIT TOPIC</h2>
 <form #form="ngForm" (ngSubmit)="dialogRef.close(dialog_topic)" style="display:inline">
   <div class="form-group">
-     <md-input-container class="input-full-width"> 
+     <md-input-container> 
       <input mdInput class="form-control" type="text" name="title" [(ngModel)]="dialog_topic.title" placeholder="Title" required>
     </md-input-container>
   </div>
@@ -26,13 +26,13 @@
       <input mdInput class="form-control" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="location" required>
     </md-input-container>
   </div>
-  <div class="form-group">
-      <select multiple name="topics" class="form-control" [(ngModel)]="dialog_topic.categories">
-        <option *ngFor="let categoryAvailable of categoriesAvailable" [value]="categoryAvailable">{{categoryAvailable}}</option>
-      </select>
-  </div>
-  <button class="btn btn-sm btn-primary" type="submit" [disabled]="!form.form.valid"><i class="fa fa-floppy-o"></i> Save</button>
 
-<button class="btn btn-sm btn-warning" (click)="dialogRef.close(false)"><i class="fa fa-times"></i> Cancel</button>
+  <div class="form-group">
+      <md-select multiple name="topics" class="form-control" [(ngModel)]="dialog_topic.categories" placeholder="Categories">
+        <md-option *ngFor="let categoryAvailable of categoriesAvailable" [value]="categoryAvailable">{{categoryAvailable}}</md-option>
+      </md-select>
+  </div>  
+  <button md-raised-button color="primary" type="submit" [disabled]="!form.form.valid"><md-icon>save</md-icon> Save</button>
+  <button md-raised-button color="warn" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
 </form>
 </div>
