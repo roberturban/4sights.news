@@ -1,9 +1,9 @@
 {
-  "name": "angular2-full-stack",
-  "version": "4.0.0",
-  "license": "MIT",
-  "author": "Davide Violante",
-  "description": "Angular Full Stack project built using Angular 4, Express, Mongoose and Node.",
+  "name": "4sights.news",
+  "version": "0.0.1",
+  "license": "",
+  "author": "SEBA Team 26",
+  "description": "4sights.news application based on SEBA Master course at TUM",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
