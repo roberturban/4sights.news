@@ -171,21 +171,6 @@ export class TopicsComponent implements OnInit {
     this.categoryView = true;
   }
 
-  filterTopicsByCategory(value,data){
-    this.active_category = value;
-    this.userCategoryPreferences = [value];
-    this.getTopics_category(this.active_category);
-    for (var i = 0; i < data.length; i++) {
-      this.filter_topic = data[i];
-
-      if (this.filter_topic.categories.find(category => category == value)) {
-        this.filter_topics.push(this.filter_topic);
-      }
-    }
-    this.topics = this.filter_topics;
-    this.filter_topics = [];
-  };
-
   getUserCategoryPreferences(){
     //initiate with full
     if(this.auth.currentUser.categories.length > 0){
