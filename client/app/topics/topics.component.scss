@@ -3,21 +3,18 @@
    width: 25%;
 }
 
-.topic-card {
-	width: 30%;
-	margin: 10px;
-}
-
 .card-block{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between
+	justify-content: flex-start;
+  margin: 0px 50px;
 }
 
-.input-full-width{
-	width: 100%;
-}
 
+.topic-card {
+	width: 300px;
+	margin: 20px;
+}
 
 .header-content{
   height:500px;
@@ -38,7 +35,8 @@
   margin-top: 20px;
 }
 
-h2{
+h2 {
   font-family: Roboto;
   font-weight: 400;
+  text-align: center;
 }
