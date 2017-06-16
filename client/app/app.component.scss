@@ -11,3 +11,15 @@ html {
 .fill-remaining-space{
   flex: 1 1 auto;
 }
+
+.small-logo{
+  height:66px;
+  margin: 0px;
+}
+
+@media (max-width:600px){
+  .small-logo{
+    height: 58px;
+    margin: 0px;
+  }
+}

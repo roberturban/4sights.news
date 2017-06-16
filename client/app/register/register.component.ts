@@ -53,21 +53,6 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  setClassName() {
-    console.log(this.name.hasError('required') && this.name.dirty);
-    return this.name.hasError('required') && this.name.dirty;
-  }
-
-  setClassSurname() {
-    return !this.surname.pristine && !this.surname.valid ;
-  }
-
-  setClassEmail() {
-    return !this.email.pristine && !this.email.valid;
-  }
-  setClassPassword() {
-    return !this.password.pristine && !this.password.valid;
-  }
 
   register() {
     this.userService.register(this.registerForm.value).subscribe(
