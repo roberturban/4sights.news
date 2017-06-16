@@ -7,6 +7,7 @@ import { ITopics } from '../../../server/interfaces/ITopics';
 })
 export class CategoryFilterPipe implements PipeTransform {
 	filter_topics = [];
+	return_topics = [];
 	filter_topic: ITopics;
 
     transform(items: ITopics[], filter: Array<String>): any {
@@ -17,7 +18,9 @@ export class CategoryFilterPipe implements PipeTransform {
 		        this.filter_topics.push(this.filter_topic);
 		      }
 	    }
-    return this.filter_topics;
+	    this.return_topics = this.filter_topics;
+	    this.filter_topics = [];
+    return this.return_topics;
 
     }
 }

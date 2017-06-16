@@ -4,7 +4,6 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
 import { ToastComponent } from '../shared/toast/toast.component';
-import { TopicsService } from '../services/topics.service';
 import { TopicService } from '../services/topic.service';
 import { AuthService } from '../services/auth.service';
 
@@ -21,7 +20,6 @@ export class TopicsComponent implements OnInit {
 
   constructor(private http: Http,
               public toast: ToastComponent,
-              private topicsService : TopicsService,
               private topicService: TopicService,
               private formBuilder_topic: FormBuilder,
               public dialog: MdDialog,
@@ -32,6 +30,7 @@ export class TopicsComponent implements OnInit {
 
     //this.getTopics_data();
     this.getTopics();
+    //set initial preferences to full, will be checked afterwards
     this.userCategoryPreferences = this.categoriesAvailable;
     this.getUserCategoryPreferences();
 
@@ -62,6 +61,7 @@ export class TopicsComponent implements OnInit {
 
 
   getTopics() {
+
     this.topicService.getTopics().subscribe(
       data => this.topics = data,
       error => console.log(error),
@@ -164,6 +164,7 @@ export class TopicsComponent implements OnInit {
 
   getTopics_category(value) {
     //had to make a promise due to asynchronous call
+
     this.topicService.getTopics().subscribe(
       data => this.filterTopicsByCategory(value,data),
       error => console.log(error),
@@ -174,6 +175,7 @@ export class TopicsComponent implements OnInit {
   filterTopicsByCategory(value,data){
     for (var i = 0; i < data.length; i++) {
       this.filter_topic = data[i];
+
       if (this.filter_topic.categories.find(category => category == value)) {
         this.filter_topics.push(this.filter_topic);
       }
@@ -184,13 +186,9 @@ export class TopicsComponent implements OnInit {
 
   getUserCategoryPreferences(){
     //initiate with full
-
     if(this.auth.currentUser.categories.length > 0){
-      console.log('test!!!');
       this.userCategoryPreferences = this.auth.currentUser.categories;
     }
-
-    console.log(this.userCategoryPreferences,this.auth.currentUser.categories,this.categoriesAvailable);
   };
 
   /*filterTopicsByCategories(values,data){

@@ -9,7 +9,6 @@ import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
-import { TopicsService } from './services/topics.service';
 import { TopicService } from './services/topic.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
@@ -52,7 +51,6 @@ import { CategoryFilterPipe } from './services/category-filter.pipe';
     AuthGuardLogin,
     AuthGuardAdmin,
     UserService,
-    TopicsService,
     TopicService
   ],
   entryComponents: [
