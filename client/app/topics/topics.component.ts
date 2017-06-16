@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, Optional } from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
+import { ActivatedRoute } from '@angular/router';
 
 import { ToastComponent } from '../shared/toast/toast.component';
 import { TopicService } from '../services/topic.service';
@@ -25,10 +26,11 @@ export class TopicsComponent implements OnInit {
               private formBuilder_topic: FormBuilder,
               public dialog: MdDialog,
               public dialogAdd: MdDialog,
-              public auth: AuthService) { }
+              public auth: AuthService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
-
+    console.log("constructor");
     this.getTopics();
     //set initial preferences to full, will be checked afterwards
     this.userCategoryPreferences = this.categoriesAvailable;
@@ -47,6 +49,10 @@ export class TopicsComponent implements OnInit {
   isLoading_topic = true;
   isEditing_topic = false;
   userHasPreferences = false;
+  categoryView = false;
+
+  active_category: String;
+  private sub: any;
 
 
   dialogRef: MdDialogRef<any>;
@@ -160,16 +166,15 @@ export class TopicsComponent implements OnInit {
   }
 
   getTopics_category(value) {
-    //had to make a promise due to asynchronous call
-
-    this.topicService.getTopics().subscribe(
-      data => this.filterTopicsByCategory(value,data),
-      error => console.log(error),
-      () => this.isLoading_topic = false
-    );
+    this.active_category = value;
+    this.userCategoryPreferences = [value];
+    this.categoryView = true;
   }
 
   filterTopicsByCategory(value,data){
+    this.active_category = value;
+    this.userCategoryPreferences = [value];
+    this.getTopics_category(this.active_category);
     for (var i = 0; i < data.length; i++) {
       this.filter_topic = data[i];
 
@@ -188,16 +193,6 @@ export class TopicsComponent implements OnInit {
       this.userHasPreferences = true;
     }
   };
-
-  /*filterTopicsByCategories(values,data){
-    for (var i = 0; i < data.length; i++) {
-      this.filter_topic = data[i];
-      if (this.filter_topic.categories.find(category => values.some(f => f == category))) {
-        this.filter_topics.push(this.filter_topic);
-      }
-    }
-    this.topics = this.filter_topics;
-  };  */
 
 }
 

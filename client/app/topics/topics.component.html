@@ -11,7 +11,8 @@
   </div>
 </header>
 
-<button *ngFor="let category of categoriesAvailable" md-button color="primary" [routerLink]="['/topics', category]">{{category}}</button>
+<button *ngFor="let category of categoriesAvailable" md-button color="primary" (click)="getTopics_category(category)">{{category}}</button>
+<button md-button color="primary" (click)="getTopics_category('Technology')">Test</button>
 <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference}}</button></div>
 
 <div class="card-block" *ngIf="!isLoading">
@@ -24,8 +25,8 @@
     </md-card-title-group>
 
     <button *ngFor="let category of topic.categories" md-button>{{category}}</button>
-    <p *ngIf="auth.loggedIn && auth.isAdmin">Sources Available: {{topic.news_article_count}}</p>
-    <md-card-actions *ngIf="auth.loggedIn && auth.isAdmin">
+    <p>Sources Available: {{topic.news_article_count}}</p>
+    <md-card-actions>
       <button md-button (click)="open_edit(topic)">Edit Topic</button>
       <button md-button (click)="deleteTopic(topic)">
         <i class="fa fa-trash"></i> Delete
@@ -47,7 +48,7 @@
     </tbody>
   </table>
 
-  <button md-fab *ngIf="auth.loggedIn && auth.isAdmin" (click)="open_add()" color="primary">
+  <button md-fab (click)="open_add()" color="primary">
     <md-icon class="md-24">add</md-icon>
   </button>
 
