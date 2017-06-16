@@ -16,8 +16,10 @@
   </div>
 </header>
 
-<button md-button color="primary" (click)="getTopics_category('Home')">Home</button>
-<button *ngFor="let category of categoriesAvailable" md-button color="primary" (click)="getTopics_category(category)">{{category}}</button>
+<md-toolbar class="categories-toolbar">
+  <button md-button color="primary" (click)="getTopics_category('Home')">Home</button>
+  <button *ngFor="let category of categoriesAvailable" md-button color="primary" (click)="getTopics_category(category)">{{category}}</button>
+</md-toolbar>
 
 <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference}}</button></div>
 
