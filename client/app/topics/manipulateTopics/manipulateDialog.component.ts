@@ -16,9 +16,12 @@ export class DialogEdit{
   //besser wenn man irgendwie das auslagert
   categoriesAvailable =  [
     'Politics',
+    'Economics',
     'Technology',
     'Sports',
-    'Economics'
+    'Finance',
+    'Culture',
+    'Science'
   ];
 
   constructor(public dialogRef: MdDialogRef<any>) {}
@@ -43,10 +46,14 @@ export class DialogAdd implements OnInit{
     
     categoriesAvailable =  [
     'Politics',
+    'Economics',
     'Technology',
     'Sports',
-    'Economics'
+    'Finance',
+    'Culture',
+    'Science'
     ];
+    
     title = new FormControl('', Validators.required);
     timestamp = new FormControl('', Validators.required);
     image = new FormControl('', Validators.required);

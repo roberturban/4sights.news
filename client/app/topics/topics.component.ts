@@ -167,8 +167,8 @@ export class TopicsComponent implements OnInit {
     if(value=='Home'){
       this.setInitialPage();
     } else{
-    this.active_category = value;
-    this.userCategoryPreferences = [value];
+      this.active_category = value;
+      this.userCategoryPreferences = [value];
     }
   }
 
