@@ -1,6 +1,6 @@
 import * as bcrypt from 'bcryptjs';
 import * as mongoose from 'mongoose';
-import isEmail from 'validator/lib/isEmail';
+import { isEmail } from 'validator';
 
 const Schema = mongoose.Schema;
 const uniqueValidator = require('mongoose-unique-validator');
@@ -16,6 +16,7 @@ const userSchema = new Schema({
   },
   email: {
     type: String,
+    required: true,
     unique: true,
     lowercase: true,
     trim: true,
