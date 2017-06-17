@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service';
 import { AppComponent } from '../app.component';
 
 import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
+import {CategoryService} from "../services/category.service";
 
 
 @Component({
@@ -26,15 +27,23 @@ export class TopicsComponent implements OnInit {
               public dialog: MdDialog,
               public dialogAdd: MdDialog,
               public auth: AuthService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private categoryService: CategoryService) { }
 
   ngOnInit() {
     this.getTopics();
     /*set initial preferences to full, will be checked afterwards*/
     this.setInitialPage();
-
+    this.loadAvailableCategories();
   }
 
+  loadAvailableCategories() {
+    this.categoryService.getCategories().subscribe(
+      data => this.categoriesAvailable = data,
+      error => console.log(error),
+      () => console.log('categories loaded')
+    );
+  }
 
   //Topics
   topic = {};
@@ -52,7 +61,7 @@ export class TopicsComponent implements OnInit {
 
   dialogRef: MdDialogRef<any>;
 
-  categoriesAvailable =  this.topicService.categoriesAvailable;
+  categoriesAvailable = [];
 
   userCategoryPreferences = [];
 
