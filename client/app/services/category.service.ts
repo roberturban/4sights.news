@@ -14,16 +14,6 @@ export class CategoryService {
   private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
   private options = new RequestOptions({ headers: this.headers });
 
-  categoriesAvailable =  [
-    'Politics',
-    'Economics',
-    'Technology',
-    'Sports',
-    'Finance',
-    'Culture',
-    'Science'
-  ];
-
   constructor(private http: Http) { }
 
   getCategories(): Observable<any> {
