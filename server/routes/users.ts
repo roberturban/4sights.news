@@ -5,7 +5,6 @@ import UserCtrl from '../controllers/user';
 
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user');
 const userCtrl = new UserCtrl();
 
 router.route('/').get(userCtrl.getAll);
