@@ -33,9 +33,9 @@ userSchema.methods.comparePassword = function(candidatePassword, callback) {
 
 // Omit the password when returning a user
 userSchema.set('toJSON', {
-  transform: function(doc, ret, options) {
-    delete ret.password;
-    return ret;
+  transform: function(doc, user, options) {
+    delete user.password;
+    return user;
   }
 });
 

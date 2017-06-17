@@ -31,19 +31,19 @@ export class TopicService {
   }
 
   addTopic(topic): Observable<any> {
-    return this.http.post('/api/topic', JSON.stringify(topic), this.options);
+    return this.http.post('/api/topics', JSON.stringify(topic), this.options);
   }
 
   getTopic(topic): Observable<any> {
-    return this.http.get(`/api/topic/${topic._id}`).map(res => res.json());
+    return this.http.get(`/api/topics/${topic._id}`).map(res => res.json());
   }
 
   editTopic(topic): Observable<any> {
-    return this.http.put(`/api/topic/${topic._id}`, JSON.stringify(topic), this.options);
+    return this.http.put(`/api/topics/${topic._id}`, JSON.stringify(topic), this.options);
   }
 
   deleteTopic(topic): Observable<any> {
-    return this.http.delete(`/api/topic/${topic._id}`, this.options);
+    return this.http.delete(`/api/topics/${topic._id}`, this.options);
   }
 
 
