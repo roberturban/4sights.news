@@ -8,6 +8,7 @@ import * as path from 'path';
 const appRoutes = require('./routes/app');
 const userRoutes = require('./routes/users');
 const topicRoutes = require('./routes/topics');
+const categoryRoutes = require('./routes/categories');
 
 const app = express();
 dotenv.load({ path: '.env' });
@@ -28,6 +29,7 @@ db.once('open', () => {
 
   app.use('/api/users', userRoutes);
   app.use('/api/topics', topicRoutes);
+  app.use('/api/categories', categoryRoutes);
   app.use('/', appRoutes);
 
   app.listen(app.get('port'), () => {
