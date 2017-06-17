@@ -1,13 +1,33 @@
 import * as bcrypt from 'bcryptjs';
 import * as mongoose from 'mongoose';
+const Schema = mongoose.Schema;
 
-const userSchema = new mongoose.Schema({
-  name: String,
-  surname: String,
-  email: { type: String, unique: true, lowercase: true, trim: true },
-  password: String,
+const userSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  surname: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    unique: true,
+    lowercase: true,
+    trim: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
   role: String,
-  categories: [String]
+  categories: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Category'
+    }
+  ]
 });
 
 // Before saving the user, hash the password
