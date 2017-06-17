@@ -6,26 +6,33 @@ export default class TopicCtrl extends BaseCtrl {
   model = Topic;
 
   insert = (req, res) => {
-    console.log(req.headers.authorization);
-    console.log(typeof req.headers.authorization);
-    jwt.verify(req.headers.authorization.split(" ")[1], process.env.SECRET_TOKEN, function(err, decoded) {
+    const token = req.headers.authorization.split(" ")[1]; //first part of string is "Bearer "
+    const model = this.model; //cannot access model otherwise in the following callback
+    jwt.verify(token, process.env.SECRET_TOKEN, function(err, decoded) {
       if(err) {
         return res.status(401).json({
           title: 'Not Authenticated',
           error: err
         });
       }
-    });
 
-    const obj = new this.model(req.body);
-    obj.save((err, item) => {
-      if (err && err.code === 11000) {
-        res.sendStatus(400);
+      if(decoded.user.role != 'admin') {
+        return res.status(405).json({
+          title: 'Not Allowed',
+          error: {message: 'Not allowed'}
+        });
       }
-      if (err) {
-        return console.error(err);
-      }
-      res.status(200).json(item);
+      
+      const obj = new model(req.body);
+      obj.save((err, item) => {
+        if (err && err.code === 11000) {
+          res.sendStatus(400);
+        }
+        if (err) {
+          return console.error(err);
+        }
+        res.status(200).json(item);
+      });
     });
   };
 }
