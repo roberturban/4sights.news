@@ -21,6 +21,11 @@ Run Development Server with Hot Reloading (Starts DB, server, client)
 $ npm run dev
 ```
 
+Seed Database with predefined `categories`
+``` bash
+$ npm run db:seed
+```
+
 Run Production
 ``` bash
 $ npm run prod
