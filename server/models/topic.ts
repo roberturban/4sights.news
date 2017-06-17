@@ -1,5 +1,4 @@
-import * as mongoose from 'mongoose'; 
-import { ITopics } from '../interfaces/ITopics';
+import * as mongoose from 'mongoose';
 
 const topicSchema = new mongoose.Schema({
   title: String,
@@ -11,10 +10,6 @@ const topicSchema = new mongoose.Schema({
 });
 
 const Topic = mongoose.model('Topic', topicSchema);
-
-/*type TopicType = ITopics & mongoose.Document;
-
-var _model = mongoose.model <TopicType> ('Topic', _schema);*/
 
 export default Topic;
 
