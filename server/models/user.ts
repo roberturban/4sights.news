@@ -26,7 +26,11 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  role: String,
+  role: {
+    type: String,
+    required: true,
+    enum: ['admin', 'user']
+  },
   categories: [
     {
       type: Schema.Types.ObjectId,
