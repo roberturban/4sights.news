@@ -9,8 +9,6 @@ import { TopicService } from '../services/topic.service';
 import { AuthService } from '../services/auth.service';
 import { AppComponent } from '../app.component';
 
-import { ITopics } from '../../../server/interfaces/ITopics';
-
 import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
 
 
@@ -32,7 +30,7 @@ export class TopicsComponent implements OnInit {
 
   ngOnInit() {
     this.getTopics();
-    //set initial preferences to full, will be checked afterwards
+    /*set initial preferences to full, will be checked afterwards*/
     this.setInitialPage();
 
   }
@@ -41,7 +39,6 @@ export class TopicsComponent implements OnInit {
   //Topics
   topic = {};
   topics = [];
-  filter_topic: ITopics;
   filter_topics = [];
 
   topic_cancel = {};
