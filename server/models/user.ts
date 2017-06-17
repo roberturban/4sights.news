@@ -1,6 +1,7 @@
 import * as bcrypt from 'bcryptjs';
 import * as mongoose from 'mongoose';
 const Schema = mongoose.Schema;
+const uniqueValidator = require('mongoose-unique-validator');
 
 const userSchema = new Schema({
   name: {
@@ -29,6 +30,9 @@ const userSchema = new Schema({
     }
   ]
 });
+
+// Apply the uniqueValidator plugin to userSchema.
+userSchema.plugin(uniqueValidator);
 
 // Before saving the user, hash the password
 userSchema.pre('save', function(next) {
