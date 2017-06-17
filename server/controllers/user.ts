@@ -18,4 +18,14 @@ export default class UserCtrl extends BaseCtrl {
     });
   };
 
+  // Get all
+  getAll = (req, res) => {
+    this.model.find()
+      // .populate('categories')
+      .exec(function (err, docs) {
+        if (err) { return console.error(err); }
+        res.json(docs);
+    });
+  };
+
 }
