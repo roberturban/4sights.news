@@ -7,8 +7,17 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class TopicService {
 
-  private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
-  private options = new RequestOptions({ headers: this.headers });
+  private getHeaders = function() {
+    return new Headers({
+      'Content-Type': 'application/json',
+      'Charset': 'UTF-8',
+      'Authorization': localStorage.getItem('token') ? 'Bearer ' + localStorage.getItem('token') : null
+    });
+  }
+
+  private getOptions = function() {
+    return new RequestOptions({headers: this.getHeaders()});
+  }
 
   categoriesAvailable =  [
     'Politics',
@@ -23,27 +32,27 @@ export class TopicService {
   constructor(private http: Http) { }
 
   getTopics(): Observable<any> {
-    return this.http.get('/api/topics').map(res => res.json());
+    return this.http.get('/api/topics', this.getOptions()).map(res => res.json());
   }
 
   countTopics(): Observable<any> {
-    return this.http.get('/api/topics/count').map(res => res.json());
+    return this.http.get('/api/topics/count', this.getOptions()).map(res => res.json());
   }
 
   addTopic(topic): Observable<any> {
-    return this.http.post('/api/topics', JSON.stringify(topic), this.options);
+    return this.http.post('/api/topics', JSON.stringify(topic), this.getOptions());
   }
 
   getTopic(topic): Observable<any> {
-    return this.http.get(`/api/topics/${topic._id}`).map(res => res.json());
+    return this.http.get(`/api/topics/${topic._id}`, this.getOptions()).map(res => res.json());
   }
 
   editTopic(topic): Observable<any> {
-    return this.http.put(`/api/topics/${topic._id}`, JSON.stringify(topic), this.options);
+    return this.http.put(`/api/topics/${topic._id}`, JSON.stringify(topic), this.getOptions());
   }
 
   deleteTopic(topic): Observable<any> {
-    return this.http.delete(`/api/topics/${topic._id}`, this.options);
+    return this.http.delete(`/api/topics/${topic._id}`, this.getOptions());
   }
 
 
