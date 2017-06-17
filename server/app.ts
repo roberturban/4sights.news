@@ -31,7 +31,7 @@ db.once('open', () => {
   app.use('/', appRoutes);
 
   app.listen(app.get('port'), () => {
-    console.log('Angular Full Stack listening on port ' + app.get('port'));
+    console.log('4sights.news listening on port ' + app.get('port'));
   });
 
 });
