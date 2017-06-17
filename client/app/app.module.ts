@@ -22,6 +22,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoryFilterPipe } from './services/category-filter.pipe';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
+import {CategoryService} from "./services/category.service";
 
 
 
@@ -52,7 +53,8 @@ import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialo
     AuthGuardLogin,
     AuthGuardAdmin,
     UserService,
-    TopicService
+    TopicService,
+    CategoryService
   ],
   entryComponents: [
     DialogEdit,
