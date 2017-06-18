@@ -1,3 +1,6 @@
+/**
+ * Created by Christopher on 18.06.2017.
+ */
 import * as bcrypt from 'bcryptjs';
 import * as mongoose from 'mongoose';
 import { isEmail } from 'validator';

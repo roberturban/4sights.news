@@ -1,5 +1,8 @@
-import Topic from '../models/topic';
-import BaseCtrl from './base';
+/**
+ * Created by Christopher on 18.06.2017.
+ */
+import Topic from './topicModel';
+import BaseCtrl from '../baseController';
 import * as jwt from 'jsonwebtoken';
 
 export default class TopicCtrl extends BaseCtrl {
@@ -34,6 +37,26 @@ export default class TopicCtrl extends BaseCtrl {
         res.status(200).json(item);
       });
     });
+  };
+
+  // Get all
+  getAll = (req, res) => {
+    this.model.find()
+      .populate('categories')
+      .exec(function (err, docs) {
+        if (err) { return console.error(err); }
+        res.json(docs);
+      });
+  };
+
+  // Get by id
+  get = (req, res) => {
+    this.model.findOne({_id: req.params.id})
+      .populate('categories')
+      .exec(function (err, docs) {
+        if (err) { return console.error(err); }
+        res.json(docs);
+      });
   };
 
   update = (req, res) => {

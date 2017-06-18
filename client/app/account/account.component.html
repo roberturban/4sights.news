@@ -2,29 +2,36 @@
 
 <app-toast [message]="toast.message"></app-toast>
 
-<div class="card" *ngIf="!isLoading">
-  <h4 class="card-header">Account settings</h4>
-  <div class="card-block">
+<div class="edit-form">
+  <div class="form-inner">
     <form #accountForm="ngForm" (ngSubmit)="save(user)">
-      <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input class="form-control" type="text" name="name" [(ngModel)]="user.name" placeholder="Name" required>
+      <div class="input-container">
+        <md-input-container class="input-full-width">
+            <input mdInput class="input-full-width" type="text" name="name" [(ngModel)]="user.name" placeholder="Name" required>
+        </md-input-container>
       </div>
-      <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-        <input class="form-control" type="email" name="email" [(ngModel)]="user.email" placeholder="Email" required>
+      <div class="input-container">
+      <md-input-container class="input-full-width">
+          <input mdInput class="input-full-width" type="email" name="email" [(ngModel)]="user.email" placeholder="Email" required>
+      </md-input-container>
       </div>
-      <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
-        <select class="form-control" name="role" [(ngModel)]="user.role">
-          <option value="" disabled>Role</option>
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select>
+      <div class="input-container">
+          <md-select name="role" class="input-full-width special-input-wrapper" [(ngModel)]="user.role" placeholder="Role">
+            <md-option value="" disabled>Role</md-option>
+            <md-option value="user">User</md-option>
+            <md-option value="admin">Admin</md-option>
+          </md-select>
       </div>
-      <button class="btn btn-primary" type="submit" [disabled]="!accountForm.form.valid">
-        <i class="fa fa-save"></i> Save
+      <!--<div class="input-container">
+        <md-select multiple name="categories" class="input-full-width special-input-wrapper" [(ngModel)]="user.categories" placeholder="Preferences">
+          <md-option *ngFor="let category of categoriesAvailable" [value]="category">{{ category.name }}</md-option>
+        </md-select>
+    </div>-->
+      <div class="bottom-row">
+        <button md-raised-button color="accent" style="color:#fff" type="submit" [disabled]="!accountForm.form.valid"> Save
       </button>
+    </div>
+      
     </form>
   </div>
 </div>

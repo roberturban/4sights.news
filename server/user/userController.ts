@@ -1,22 +1,30 @@
-import * as dotenv from 'dotenv';
+/**
+ * Created by Christopher on 18.06.2017.
+ */
 import * as jwt from 'jsonwebtoken';
 
-import User from '../models/user';
-import BaseCtrl from './base';
+import User from './userModel';
+import BaseController from '../baseController';
 
-export default class UserCtrl extends BaseCtrl {
+export default class UserCtrl extends BaseController {
   model = User;
 
   login = (req, res) => {
-    console.log("Login (UserCtrl): " + req.headers);
-    this.model.findOne({ email: req.body.email }, (err, user) => {
-      if (!user) { return res.sendStatus(403); }
-      user.comparePassword(req.body.password, (error, isMatch) => {
-        if (!isMatch) { return res.sendStatus(403); }
-        const token = jwt.sign({ user: user }, process.env.SECRET_TOKEN); // , { expiresIn: 10 } seconds
-        res.status(200).json({ token: token });
+    console.log("Login (UserController): " + req.headers);
+    this.model.findOne({email: req.body.email})
+      .populate('categories')
+      .exec(function (err, user) {
+        if (!user) {
+          return res.sendStatus(403);
+        }
+        user.comparePassword(req.body.password, (error, isMatch) => {
+          if (!isMatch) {
+            return res.sendStatus(403);
+          }
+          const token = jwt.sign({user: user}, process.env.SECRET_TOKEN); // , { expiresIn: 10 } seconds
+          res.status(200).json({token: token});
+        });
       });
-    });
   };
 
   getAll = (req, res) => {
@@ -72,10 +80,12 @@ export default class UserCtrl extends BaseCtrl {
       }
 
       console.log("get user - verification success");
-      model.findOne({ _id: req.params.id }, (err, user) => {
-        if (err) { return console.error(err); }
-        res.json(user);
-      });
+      model.findOne({_id: req.params.id})
+        .populate('categories')
+        .exec(function (err, docs) {
+          if (err) { return console.error(err); }
+          res.json(docs);
+        });
     });
   };
 

@@ -1,5 +1,6 @@
-.edit-form{
-  margin-top:50px;
+.manipulation-form{
+  width: 45em;
+  margin-top:10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -8,7 +9,7 @@
 
 .form-inner{
   width: 100%;
-  padding: 0px 25%;
+  padding: 0px 10%;
 }
 
 @media (max-width: 600px){
@@ -33,8 +34,7 @@
 
 
 .bottom-row{
-  display: flex;
-  justify-content: space-between;
+  margin-top:20px;
   flex-direction: row;
   align-items: flex-end;
 }
