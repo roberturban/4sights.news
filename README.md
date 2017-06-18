@@ -12,10 +12,21 @@ Reference Point
 - angular2-full-stack boilerplate
 
 Install
-`` npm Install ``
+``` bash
+$ npm Install
+```
 
 Run Development Server with Hot Reloading (Starts DB, server, client)
-``npm run dev``
+``` bash
+$ npm run dev
+```
+
+Seed Database with predefined `categories`
+``` bash
+$ npm run db:seed
+```
 
 Run Production
-``npm run prod``
+``` bash
+$ npm run prod
+```

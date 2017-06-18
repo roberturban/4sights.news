@@ -1,5 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ITopics } from '../../../server/interfaces/ITopics';
+
+interface ITopics {
+  title: String,
+  timestamp: Date,
+  image: String,
+  news_article_count: Number,
+  location: String,
+  categories: [String]
+};
+
 
 @Pipe({
     name: 'filterCategories',
@@ -11,8 +20,8 @@ export class CategoryFilterPipe implements PipeTransform {
 	filter_topic: ITopics;
 
     transform(items: ITopics[], filter: Array<String>): any {
-        
-	  	for (var i = 0; i < items.length; i++) {
+
+	  	for (let i = 0; i < items.length; i++) {
 	  		this.filter_topic = items[i];
 		      if (this.filter_topic.categories.find(category => filter.some(f => f == category))) {
 		        this.filter_topics.push(this.filter_topic);
