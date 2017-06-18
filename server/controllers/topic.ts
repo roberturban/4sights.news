@@ -46,6 +46,16 @@ export default class TopicCtrl extends BaseCtrl {
       });
   };
 
+  // Get by id
+  get = (req, res) => {
+    this.model.findOne({_id: req.params.id})
+      .populate('categories')
+      .exec(function (err, docs) {
+        if (err) { return console.error(err); }
+        res.json(docs);
+      });
+  };
+
   update = (req, res) => {
     const token = req.headers.authorization.split(" ")[1]; //first part of string is "Bearer "
     const model = this.model; //cannot access model otherwise in the following callback
