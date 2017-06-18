@@ -1,0 +1,49 @@
+[
+  {
+    "_id": {
+      "$oid": "594694b597ed2f3e6c77b9e4"
+    },
+    "name": "Lass",
+    "surname": "Christopher",
+    "email": "christopher.lass@tum.de",
+    "password": "$2a$10$JOTyOifp2Idn.4EQp5iCYekovh3UYlxCU5x9ktZTo4PvqXx.WujaG",
+    "role": "admin",
+    "categories": [
+      {
+        "$oid": "5946923f73f7de4aa41ae512"
+      },
+      {
+        "$oid": "5946923f73f7de4aa41ae513"
+      },
+      {
+        "$oid": "5946923f73f7de4aa41ae514"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "594694ed97ed2f3e6c77b9e5"
+    },
+    "name": "Doe",
+    "surname": "John",
+    "email": "john.doe@gmail.com",
+    "password": "$2a$10$vvJLP8pXnBL/tsbXkOz7HeizHrGWQgBaA2Sc/B5lI6Va4SYebDChy",
+    "role": "user",
+    "categories": [
+      {
+        "$oid": "5946923f73f7de4aa41ae512"
+      },
+      {
+        "$oid": "5946923f73f7de4aa41ae513"
+      },
+      {
+        "$oid": "5946923f73f7de4aa41ae517"
+      },
+      {
+        "$oid": "5946923f73f7de4aa41ae518"
+      }
+    ],
+    "__v": 0
+  }
+]
