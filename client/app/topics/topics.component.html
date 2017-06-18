@@ -34,7 +34,7 @@
 
     <button *ngFor="let category of topic.categories" md-button>{{category.name}}</button>
     <p *ngIf="auth.loggedIn && auth.isAdmin">Sources Available: {{topic.news_article_count}}</p>
-    <md-card-actions>
+    <md-card-actions *ngIf="auth.loggedIn && auth.isAdmin">
       <button md-button (click)="open_edit(topic)">Edit Topic</button>
       <button md-button (click)="deleteTopic(topic)">
         <i class="fa fa-trash"></i> Delete

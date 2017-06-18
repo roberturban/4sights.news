@@ -8,7 +8,7 @@ const router = express.Router();
 const userCtrl = new UserCtrl();
 
 router.route('/').get(userCtrl.getAll);
-router.route('/').post(userCtrl.insert);
+router.route('/').post(userCtrl.insert); //register
 
 router.route('/:id').get(userCtrl.get);
 router.route('/:id').put(userCtrl.update);
