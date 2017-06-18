@@ -8,7 +8,7 @@ import {CategoryService} from "../../services/category.service";
 @Component({
   selector: 'dialogEdit',
   templateUrl: './editTopic.component.html',
-  styleUrls: ['../topics.component.scss']
+  styleUrls: ['./manipulateDialog.component.scss']
 })
 export class DialogEdit implements OnInit {
 
@@ -40,7 +40,7 @@ export class DialogEdit implements OnInit {
 @Component({
   selector: 'dialogAdd',
   templateUrl: './addTopic.component.html',
-  styleUrls: ['../topics.component.scss']
+  styleUrls: ['./manipulateDialog.component.scss']
 })
 export class DialogAdd implements OnInit {
 
