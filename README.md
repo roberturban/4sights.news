@@ -17,7 +17,7 @@ We have tested this application with node versions ranging from legacy versions,
 However please consider using the latest version of `node` (`>=8.1.0`) and `npm` (`>=5.0.0`).  
 `npm` versions before `5.0.0` ignore the lock file which could lead to unexpected dependency trees.
 ``` bash
-$ npm Install
+$ npm install
 ```
 
 ### Run Development Server with Hot Reloading (Starts DB, server, client)
@@ -34,11 +34,11 @@ $ npm run db:seed
 ```
 _Note:_ Please be sure to have `mongod` running on your system. Either execute `npm run dev` or `mongod` before you try to run the seed command.  
 
-#####Admin account:
+__Admin account:__  
 Login: `christopher.lass@tum.de`  
 Password: `123456`
 
-#####Normal user account:
+__Normal user account:__  
 Login: `john.doe@gmail.com`   
 Password: `123456`
 
