@@ -2,11 +2,16 @@
 
 <app-toast [message]="toast.message"></app-toast>
 
-<div class="card" *ngIf="!isLoading">
-  <h4 class="card-header">Registered users ({{users.length}})</h4>
-  <div class="card-block">
-    <table class="table table-bordered table-striped">
-      <thead class="thead-default">
+<div class="demo-table-container mat-elevation-z4" *ngIf="!isLoading">
+
+
+  <h3 style="" md-subheader>
+    Registered users ({{users.length}})
+  </h3>
+
+  <div class="">
+    <cdk-table class="">
+      <thead class="">
         <tr>
           <th>Name</th>
           <th>Surname</th>
@@ -18,7 +23,7 @@
       <tbody *ngIf="users.length === 0">
         <tr>
           <td colspan="5">There are no registered users.</td>
-        </tr>  
+        </tr>
       </tbody>
       <tbody>
         <tr *ngFor="let user of users">
@@ -27,12 +32,13 @@
           <td>{{user.email}}</td>
           <td>{{user.role}}</td>
           <td>
-            <button class="btn btn-sm btn-danger" (click)="deleteUser(user)" [disabled]="auth.currentUser._id === user._id">
+            <button md-raised-button color="accent" (click)="deleteUser(user)" [disabled]="auth.currentUser._id === user._id">
               <i class="fa fa-trash"></i>
             </button>
           </td>
-        </tr>  
+        </tr>
       </tbody>
-    </table>
+    </cdk-table>
   </div>
+
 </div>

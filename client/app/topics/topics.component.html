@@ -28,16 +28,27 @@
   <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
     <img md-card-image src="{{topic.image}}">
     <md-card-title-group>
-      <md-card-title>{{topic.title}}</md-card-title>
+      <md-card-title>
+        <div>
+          {{topic.title}}
+          <p class="count mat-fab mat-primary" *ngIf="auth.loggedIn && auth.isAdmin">  {{topic.news_article_count}} </p>
+        </div>
+      </md-card-title>
       <md-card-subtitle>{{topic.location}}, {{topic.timestamp}}</md-card-subtitle>
     </md-card-title-group>
 
-    <button *ngFor="let category of topic.categories" md-button>{{category.name}}</button>
-    <p *ngIf="auth.loggedIn && auth.isAdmin">Sources Available: {{topic.news_article_count}}</p>
+    <div class="categories-row">
+      <button md-raised-button *ngFor="let category of topic.categories" (click)="getTopics_category(category)">
+        {{category.name}}
+      </button>
+    </div>
+
     <md-card-actions *ngIf="auth.loggedIn && auth.isAdmin">
-      <button md-button (click)="open_edit(topic)">Edit Topic</button>
-      <button md-button (click)="deleteTopic(topic)">
-        <i class="fa fa-trash"></i> Delete
+      <button md-raised-button color="primary" (click)="open_edit(topic)">
+      <i class="material-icons">settings</i>  Edit Topic
+      </button>
+      <button md-raised-button color="warn" style="margin-left:10px; color: #fff;" (click)="deleteTopic(topic)">
+        <i class="material-icons">delete</i> Delete
       </button>
     </md-card-actions>
   </md-card>
