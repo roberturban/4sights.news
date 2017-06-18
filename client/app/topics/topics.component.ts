@@ -34,7 +34,6 @@ export class TopicsComponent implements OnInit {
     this.getTopics();
     /*set initial preferences to full, will be checked afterwards*/
     this.loadAvailableCategories();
-    setTimeout(1000);
   }
 
   loadAvailableCategories() {
@@ -70,6 +69,7 @@ export class TopicsComponent implements OnInit {
 
 
   getTopics() {
+
     this.topicService.getTopics().subscribe(
       data => this.topics = data,
       error => console.log(error),

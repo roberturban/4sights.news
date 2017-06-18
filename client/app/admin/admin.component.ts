@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ToastComponent } from '../shared/toast/toast.component';
 import { AuthService } from '../services/auth.service';
@@ -7,8 +7,7 @@ import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
 

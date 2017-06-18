@@ -1,33 +1,3 @@
-.count{
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #f58287;
-  color: #fff;
-  margin: 0px 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  text-align: center;
-  -webkit-box-pack: center;
-      -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 14px;
-  display: inline-flex;
-  justify-content: center;
-  line-height: 24px;
-}
-
-.categories-row{
-  display: flex;
-  margin:10px 0px 16px 0px;
-}
-
 .table td, .table th {
    text-align: center;
    width: 25%;
@@ -36,7 +6,7 @@
 .card-block{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
   margin: 0px 50px;
 }
 
