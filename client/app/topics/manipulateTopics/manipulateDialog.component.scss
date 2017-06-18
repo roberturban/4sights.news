@@ -1,0 +1,55 @@
+.manipulation-form{
+  width: 45em;
+  margin-top:10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-inner{
+  width: 100%;
+  padding: 0px 10%;
+}
+
+@media (max-width: 600px){
+  .form-inner{
+    width: 80%;
+    padding: 0px 50px;
+  }
+}
+
+.input-full-width{
+  width: 100%;
+}
+
+.input-container{
+  margin-bottom: 10px;
+}
+
+.special-input-wrapper{
+  margin: 1em 0;
+  padding-bottom: 6px;
+}
+
+
+.bottom-row{
+  margin-top:20px;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+md-error{
+  font-family: Roboto;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: #F2545B;
+}
+
+a:hover{
+  color: #F58287;
+}
