@@ -1,37 +1,9 @@
 [
-  {
-    "_id": "59459572d12c122ed8dc6b9a",
-    "name": "Politics",
-    "__v": 0
-  },
-  {
-    "_id": "594597094496d628206f602a",
-    "name": "Economics",
-    "__v": 0
-  },
-  {
-    "_id": "5945970f4496d628206f602b",
-    "name": "Technology",
-    "__v": 0
-  },
-  {
-    "_id": "594597154496d628206f602c",
-    "name": "Sports",
-    "__v": 0
-  },
-  {
-    "_id": "5945971c4496d628206f602d",
-    "name": "Finance",
-    "__v": 0
-  },
-  {
-    "_id": "594597224496d628206f602e",
-    "name": "Culture",
-    "__v": 0
-  },
-  {
-    "_id": "594597284496d628206f602f",
-    "name": "Science",
-    "__v": 0
-  }
+  {"_id":{"$oid":"5946923f73f7de4aa41ae512"},"name":"Politics","__v":0},
+  {"_id":{"$oid":"5946923f73f7de4aa41ae513"},"name":"Economics","__v":0},
+  {"_id":{"$oid":"5946923f73f7de4aa41ae514"},"name":"Technology","__v":0},
+  {"_id":{"$oid":"5946923f73f7de4aa41ae515"},"name":"Sports","__v":0},
+  {"_id":{"$oid":"5946923f73f7de4aa41ae516"},"name":"Finance","__v":0},
+  {"_id":{"$oid":"5946923f73f7de4aa41ae517"},"name":"Culture","__v":0},
+  {"_id":{"$oid":"5946923f73f7de4aa41ae518"},"name":"Science","__v":0}
 ]
