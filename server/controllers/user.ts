@@ -72,10 +72,12 @@ export default class UserCtrl extends BaseCtrl {
       }
 
       console.log("get user - verification success");
-      model.findOne({ _id: req.params.id }, (err, user) => {
-        if (err) { return console.error(err); }
-        res.json(user);
-      });
+      model.findOne({_id: req.params.id})
+        .populate('categories')
+        .exec(function (err, docs) {
+          if (err) { return console.error(err); }
+          res.json(docs);
+        });
     });
   };
 
