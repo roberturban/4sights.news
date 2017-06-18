@@ -1,4 +1,7 @@
-abstract class BaseCtrl {
+/**
+ * Created by Christopher on 18.06.2017.
+ */
+abstract class BaseController {
 
   abstract model: any;
 
@@ -58,4 +61,4 @@ abstract class BaseCtrl {
   };
 }
 
-export default BaseCtrl;
+export default BaseController;

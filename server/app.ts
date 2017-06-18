@@ -5,10 +5,9 @@ import * as morgan from 'morgan';
 import * as mongoose from 'mongoose';
 import * as path from 'path';
 
-const appRoutes = require('./routes/app');
-const userRoutes = require('./routes/users');
-const topicRoutes = require('./routes/topics');
-const categoryRoutes = require('./routes/categories');
+const userRoutes = require('./user/userRoutes');
+const topicRoutes = require('./topic/topicRoutes');
+const categoryRoutes = require('./category/categoryRoutes');
 
 const app = express();
 dotenv.load({ path: '.env' });
@@ -30,7 +29,9 @@ db.once('open', () => {
   app.use('/api/users', userRoutes);
   app.use('/api/topics', topicRoutes);
   app.use('/api/categories', categoryRoutes);
-  app.use('/', appRoutes);
+  app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
 
   app.listen(app.get('port'), () => {
     console.log('4sights.news listening on port ' + app.get('port'));

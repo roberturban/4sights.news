@@ -1,11 +1,11 @@
 /**
  * Created by Christopher on 17.06.2017.
  */
-import TopicCtrl from '../controllers/topic';
+import TopicController from './topicController';
 
 const express = require('express');
 const router = express.Router();
-const topicCtrl = new TopicCtrl();
+const topicCtrl = new TopicController();
 
 router.route('/').get(topicCtrl.getAll);
 router.route('/').post(topicCtrl.insert);

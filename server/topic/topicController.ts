@@ -1,5 +1,8 @@
-import Topic from '../models/topic';
-import BaseCtrl from './base';
+/**
+ * Created by Christopher on 18.06.2017.
+ */
+import Topic from './topicModel';
+import BaseCtrl from '../baseController';
 import * as jwt from 'jsonwebtoken';
 
 export default class TopicCtrl extends BaseCtrl {
