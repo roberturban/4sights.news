@@ -9,14 +9,20 @@ export default class UserCtrl extends BaseCtrl {
 
   login = (req, res) => {
     console.log("Login (UserCtrl): " + req.headers);
-    this.model.findOne({ email: req.body.email }, (err, user) => {
-      if (!user) { return res.sendStatus(403); }
-      user.comparePassword(req.body.password, (error, isMatch) => {
-        if (!isMatch) { return res.sendStatus(403); }
-        const token = jwt.sign({ user: user }, process.env.SECRET_TOKEN); // , { expiresIn: 10 } seconds
-        res.status(200).json({ token: token });
+    this.model.findOne({email: req.body.email})
+      .populate('categories')
+      .exec(function (err, user) {
+        if (!user) {
+          return res.sendStatus(403);
+        }
+        user.comparePassword(req.body.password, (error, isMatch) => {
+          if (!isMatch) {
+            return res.sendStatus(403);
+          }
+          const token = jwt.sign({user: user}, process.env.SECRET_TOKEN); // , { expiresIn: 10 } seconds
+          res.status(200).json({token: token});
+        });
       });
-    });
   };
 
   getAll = (req, res) => {
@@ -39,10 +45,10 @@ export default class UserCtrl extends BaseCtrl {
           error: {message: 'Not allowed'}
         });
       }
-      
+
       console.log("getAll users - verification success");
       model.find()
-        // .populate('categories')
+        .populate('categories')
         .exec(function (err, docs) {
           if (err) { return console.error(err); }
           res.json(docs);
@@ -70,12 +76,14 @@ export default class UserCtrl extends BaseCtrl {
           error: {message: 'Not allowed'}
         });
       }
-      
+
       console.log("get user - verification success");
-      model.findOne({ _id: req.params.id }, (err, user) => {
-        if (err) { return console.error(err); }
-        res.json(user);
-      });
+      model.findOne({_id: req.params.id})
+        .populate('categories')
+        .exec(function (err, docs) {
+          if (err) { return console.error(err); }
+          res.json(docs);
+        });
     });
   };
 
@@ -99,7 +107,7 @@ export default class UserCtrl extends BaseCtrl {
           error: {message: 'Not allowed'}
         });
       }
-      
+
       console.log("update user - verification success");
       model.findOneAndUpdate({ _id: req.params.id }, req.body, (err) => {
         if (err) { return console.error(err); }
@@ -128,7 +136,7 @@ export default class UserCtrl extends BaseCtrl {
           error: {message: 'Not allowed'}
         });
       }
-      
+
       console.log("delete user - verification success");
       model.findOneAndRemove({ _id: req.params.id }, (err) => {
         if (err) { return console.error(err); }
@@ -157,7 +165,7 @@ export default class UserCtrl extends BaseCtrl {
           error: {message: 'Not allowed'}
         });
       }
-      
+
       console.log("count users - verification success");
       model.count((err, count) => {
         if (err) { return console.error(err); }

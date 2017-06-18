@@ -6,8 +6,12 @@ interface ITopics {
   image: String,
   news_article_count: Number,
   location: String,
-  categories: [String]
-};
+  categories: [ICategory]
+}
+
+interface ICategory {
+  name: String,
+}
 
 
 @Pipe({
@@ -19,11 +23,11 @@ export class CategoryFilterPipe implements PipeTransform {
 	return_topics = [];
 	filter_topic: ITopics;
 
-    transform(items: ITopics[], filter: Array<String>): any {
+    transform(items: ITopics[], filter: Array<ICategory>): any {
 
 	  	for (let i = 0; i < items.length; i++) {
 	  		this.filter_topic = items[i];
-		      if (this.filter_topic.categories.find(category => filter.some(f => f == category))) {
+		      if (this.filter_topic.categories.find(category => filter.some(f => f.name == category.name))) {
 		        this.filter_topics.push(this.filter_topic);
 		      }
 	    }

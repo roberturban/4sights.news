@@ -1,0 +1,20 @@
+[
+  {
+    "_id": {
+      "$oid": "5946967147fbb80b00a7d744"
+    },
+    "title": "Trump says he is being investigated over Comey firing",
+    "timestamp": {
+      "$date": "2017-06-18T00:00:00.000Z"
+    },
+    "image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170616110924-trump-confirm-obstruction-investigation-jones-nr-00002505-exlarge-169.jpg",
+    "news_article_count": 5,
+    "location": "Washington",
+    "categories": [
+      {
+        "$oid": "5946923f73f7de4aa41ae512"
+      }
+    ],
+    "__v": 0
+  }
+]
