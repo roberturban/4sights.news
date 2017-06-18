@@ -70,7 +70,7 @@ export default class UserCtrl extends BaseCtrl {
       }
       
       console.log("get user - verification success");
-      this.model.findOne({ _id: req.params.id }, (err, user) => {
+      model.findOne({ _id: req.params.id }, (err, user) => {
         if (err) { return console.error(err); }
         res.json(user);
       });
@@ -99,9 +99,67 @@ export default class UserCtrl extends BaseCtrl {
       }
       
       console.log("update user - verification success");
-      this.model.findOne({ _id: req.params.id }, (err, user) => {
+      model.findOneAndUpdate({ _id: req.params.id }, req.body, (err) => {
         if (err) { return console.error(err); }
-        res.json(user);
+        res.sendStatus(200);
+      });
+    });
+  };
+
+  delete = (req, res) => {
+    const token = req.headers.authorization.split(" ")[1]; //first part of string is "Bearer "
+    const model = this.model; //cannot access model otherwise in the following callback
+    console.log("delete user");
+    jwt.verify(token, process.env.SECRET_TOKEN, function(err, decoded) {
+      if(err) {
+        console.log("delete user - verification failed");
+        return res.status(401).json({
+          title: 'Not Authenticated',
+          error: err
+        });
+      }
+
+      if(decoded.user.role != 'admin' || decoded.user.id != req.params.id) {
+        console.log("delete user - unvalid role or unvalid user");
+        return res.status(405).json({
+          title: 'Not Allowed',
+          error: {message: 'Not allowed'}
+        });
+      }
+      
+      console.log("delete user - verification success");
+      model.findOneAndRemove({ _id: req.params.id }, (err) => {
+        if (err) { return console.error(err); }
+        res.sendStatus(200);
+      });
+    });
+  };
+
+  count = (req, res) => {
+    const token = req.headers.authorization.split(" ")[1]; //first part of string is "Bearer "
+    const model = this.model; //cannot access model otherwise in the following callback
+    console.log("count users");
+    jwt.verify(token, process.env.SECRET_TOKEN, function(err, decoded) {
+      if(err) {
+        console.log("count users - verification failed");
+        return res.status(401).json({
+          title: 'Not Authenticated',
+          error: err
+        });
+      }
+
+      if(decoded.user.role != 'admin') {
+        console.log("count users - unvalid role");
+        return res.status(405).json({
+          title: 'Not Allowed',
+          error: {message: 'Not allowed'}
+        });
+      }
+      
+      console.log("count users - verification success");
+      model.count((err, count) => {
+        if (err) { return console.error(err); }
+        res.json(count);
       });
     });
   };
