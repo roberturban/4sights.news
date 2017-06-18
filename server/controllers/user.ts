@@ -41,7 +41,7 @@ export default class UserCtrl extends BaseCtrl {
       }
       
       console.log("getAll users - verification success");
-      this.model.find()
+      model.find()
         // .populate('categories')
         .exec(function (err, docs) {
           if (err) { return console.error(err); }
