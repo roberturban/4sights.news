@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>ADD TOPIC</h2>
+    <form [formGroup]="addTopicForm" (ngSubmit)="dialogRef.close(addTopicForm)" style="display:inline">
+      <div class="form-group">
+        <md-input-container>
+          <input mdInput class="form-control" type="text" name="title" formControlName="title" placeholder="title">
+        </md-input-container>
+      </div>
+      <div class="form-group">
+        <md-input-container class="input-full-width">
+          <input mdInput class="form-control" type="date" name="timestamp" formControlName="timestamp" placeholder="timestamp">
+        </md-input-container>
+      </div>
+      <div class="form-group">
+        <md-input-container class="input-full-width">
+          <input mdInput class="form-control" type="text" name="image" formControlName="image" placeholder="assets/img/">
+        </md-input-container>
+      </div>
+      <div class="form-group">
+        <md-input-container class="input-full-width">
+          <input mdInput class="form-control" type="number" name="news_article_count" formControlName="news_article_count" placeholder="News Article Count" step="any" min="0">
+        </md-input-container>
+      </div>
+      <div class="form-group">
+        <md-input-container class="input-full-width">
+          <input mdInput class="form-control" type="text" name="location" formControlName="location" placeholder="location">
+        </md-input-container>
+      </div>
+      <div class="form-group">
+        <md-select multiple name="topics" class="form-control" formControlName="categories" placeholder="Categories">
+          <md-option *ngFor="let category of categoriesAvailable" value="{{ category._id }}">{{ category.name }}</md-option>
+        </md-select>
+      </div>
+      <button md-raised-button color="primary" type="submit" [disabled]="!addTopicForm.valid"><md-icon>save</md-icon> Add</button>
+      <button md-raised-button color="warn" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
+    </form>
+</div>

@@ -1,12 +1,46 @@
 import * as bcrypt from 'bcryptjs';
 import * as mongoose from 'mongoose';
+import { isEmail } from 'validator';
 
-const userSchema = new mongoose.Schema({
-  username: String,
-  email: { type: String, unique: true, lowercase: true, trim: true },
-  password: String,
-  role: String
+const Schema = mongoose.Schema;
+const uniqueValidator = require('mongoose-unique-validator');
+
+const userSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  surname: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    trim: true,
+    validate: [ isEmail, 'Invalid email' ]
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String,
+    required: true,
+    enum: ['admin', 'user']
+  },
+  categories: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Category'
+    }
+  ]
 });
+
+// Apply the uniqueValidator plugin to userSchema.
+userSchema.plugin(uniqueValidator);
 
 // Before saving the user, hash the password
 userSchema.pre('save', function(next) {
@@ -31,9 +65,9 @@ userSchema.methods.comparePassword = function(candidatePassword, callback) {
 
 // Omit the password when returning a user
 userSchema.set('toJSON', {
-  transform: function(doc, ret, options) {
-    delete ret.password;
-    return ret;
+  transform: function(doc, user, options) {
+    delete user.password;
+    return user;
   }
 });
 

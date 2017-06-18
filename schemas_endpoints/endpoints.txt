@@ -1,0 +1,6 @@
+Endpoints:
+
+POST	base_url/users
+GET		base_url/topics
+GET		base_url/topics?user_id=593802a7a9f1ad004906c2e2
+GET		base_url/topics/{topic_id}

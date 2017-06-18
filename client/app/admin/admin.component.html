@@ -8,7 +8,8 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-default">
         <tr>
-          <th>Username</th>
+          <th>Name</th>
+          <th>Surname</th>
           <th>Email</th>
           <th>Role</th>
           <th>Actions</th>
@@ -16,12 +17,13 @@
       </thead>
       <tbody *ngIf="users.length === 0">
         <tr>
-          <td colspan="4">There are no registered users.</td>
+          <td colspan="5">There are no registered users.</td>
         </tr>  
       </tbody>
       <tbody>
         <tr *ngFor="let user of users">
-          <td>{{user.username}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.surname}}</td>
           <td>{{user.email}}</td>
           <td>{{user.role}}</td>
           <td>

@@ -1,0 +1,27 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.custom-toolbar{
+  padding-left:0px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.fill-remaining-space{
+  flex: 1 1 auto;
+}
+
+.small-logo{
+  height:66px;
+  margin: 0px;
+}
+
+@media (max-width:600px){
+  .small-logo{
+    height: 58px;
+    margin: 0px;
+  }
+}
+
+$font-family: Roboto;

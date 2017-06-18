@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { ToastComponent } from '../shared/toast/toast.component';
+import {CategoryService} from '../services/category.service';
+
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 @Component({
   selector: 'app-register',
@@ -12,40 +15,55 @@ import { ToastComponent } from '../shared/toast/toast.component';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
-  username = new FormControl('', [Validators.required,
+
+  name = new FormControl('', [Validators.required,
                                   Validators.minLength(2),
                                   Validators.maxLength(30),
-                                  Validators.pattern('[a-zA-Z0-9_-\\s]*')]);
+                                  Validators.pattern('[a-zA-Z_-\\s]*')]);
+
+  surname = new FormControl('', [Validators.required,
+                                  Validators.minLength(2),
+                                  Validators.maxLength(30),
+                                  Validators.pattern('[a-zA-Z_-\\s]*')]);
+
   email = new FormControl('', [Validators.required,
-                               Validators.minLength(3),
-                               Validators.maxLength(100)]);
+                                Validators.minLength(3),
+                                Validators.maxLength(100),
+                                Validators.pattern(EMAIL_REGEX)]);
+
   password = new FormControl('', [Validators.required,
                                   Validators.minLength(6)]);
 
   role = new FormControl('', [Validators.required]);
 
+  categories = new FormControl('', [Validators.required]);
+
+  categoriesAvailable = [];
+
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               public toast: ToastComponent,
-              private userService: UserService) { }
+              private userService: UserService,
+              private categoryService: CategoryService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      username: this.username,
+      name: this.name,
+      surname: this.surname,
       email: this.email,
       password: this.password,
-      role: this.role
+      role: this.role,
+      categories: this.categories
     });
+    this.loadAvailableCategories();
   }
 
-  setClassUsername() {
-    return { 'has-danger': !this.username.pristine && !this.username.valid };
-  }
-  setClassEmail() {
-    return { 'has-danger': !this.email.pristine && !this.email.valid };
-  }
-  setClassPassword() {
-    return { 'has-danger': !this.password.pristine && !this.password.valid };
+  loadAvailableCategories() {
+    this.categoryService.getCategories().subscribe(
+      data => this.categoriesAvailable = data,
+      error => console.log(error),
+      () => console.log('categories loaded')
+    );
   }
 
   register() {
