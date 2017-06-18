@@ -61,7 +61,7 @@ export default class UserCtrl extends BaseCtrl {
         });
       }
 
-      if(decoded.user.role != 'admin' || decoded.user.id != req.params.id) {
+      if(decoded.user.role != 'admin' && decoded.user._id != req.params.id) {
         console.log("get user - unvalid role or unvalid user");
         return res.status(405).json({
           title: 'Not Allowed',
@@ -90,7 +90,7 @@ export default class UserCtrl extends BaseCtrl {
         });
       }
 
-      if(decoded.user.role != 'admin' || decoded.user.id != req.params.id) {
+      if(decoded.user.role != 'admin' && decoded.user._id != req.params.id) {
         console.log("update user - unvalid role or unvalid user");
         return res.status(405).json({
           title: 'Not Allowed',
@@ -119,7 +119,7 @@ export default class UserCtrl extends BaseCtrl {
         });
       }
 
-      if(decoded.user.role != 'admin' || decoded.user.id != req.params.id) {
+      if(decoded.user.role != 'admin' && decoded.user._id != req.params.id) {
         console.log("delete user - unvalid role or unvalid user");
         return res.status(405).json({
           title: 'Not Allowed',
