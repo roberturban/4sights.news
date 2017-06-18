@@ -4,7 +4,6 @@ abstract class BaseCtrl {
 
   // Get all
   getAll = (req, res) => {
-    console.log(req.headers.authorization)
     this.model.find({}, (err, docs) => {
       if (err) { return console.error(err); }
       res.json(docs);

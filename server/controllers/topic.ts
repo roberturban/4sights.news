@@ -56,47 +56,10 @@ export default class TopicCtrl extends BaseCtrl {
           error: {message: 'Not allowed'}
         });
       }
-      
-      model.findById(req.params.id, function(err, topic) {
-        console.log("Update topic - find topic");
-        if (err) {
-          console.log("Update topic - find topic problem");
-          return res.status(500).json({
-              title: 'An error occurred',
-              error: err
-          });
-        }
-        if (!topic) {
-          console.log("Update topic - no topic found");
-          return res.status(500).json({
-              title: 'Topic not found!',
-              error: {message: 'Topic not found'}
-          });
-        }
 
-        console.log("Update topic - save topic");
-        var newtopic = req.body;
-        topic.title = newtopic.title;
-        topic.timestamp = newtopic.timestamp;
-        topic.image = newtopic.image;
-        topic.news_article_count = newtopic.news_article_count;
-        topic.location = newtopic.location;
-        topic.categories = newtopic.categories;
-        console.log("Update topic - topic: " + JSON.stringify(topic));
-        topic.save(function (err, result) {
-            if (err) {
-              console.log("Update topic - save topic error");
-              return res.status(500).json({
-                  title: 'An error occurred',
-                  error: err
-              });
-            }
-            console.log("Update topic - success");
-            res.status(200).json({
-                message: 'Updated topic',
-                obj: result
-            });
-        });
+      model.findOneAndUpdate({ _id: req.params.id }, req.body, (err) => {
+        if (err) { return console.error(err); }
+        res.sendStatus(200);
       });
     });
   };
@@ -121,39 +84,10 @@ export default class TopicCtrl extends BaseCtrl {
           error: {message: 'Not allowed'}
         });
       }
-      
-      model.findById(req.params.id, function(err, topic) {
-        console.log("Delete topic - find topic");
-        if (err) {
-          console.log("Update topic - find topic problem");
-          return res.status(500).json({
-              title: 'An error occurred',
-              error: err
-          });
-        }
-        if (!topic) {
-          console.log("Delete topic - no topic found");
-          return res.status(500).json({
-              title: 'Topic not found!',
-              error: {message: 'Topic not found'}
-          });
-        }
 
-        console.log("Delete topic - delete topic");
-        topic.remove(function (err, result) {
-            if (err) {
-              console.log("Delete topic - delete topic error");
-              return res.status(500).json({
-                  title: 'An error occurred',
-                  error: err
-              });
-            }
-            console.log("Delete topic - success");
-            res.status(200).json({
-                message: 'Topic deleted',
-                obj: result
-            });
-        });
+      model.findOneAndRemove({ _id: req.params.id }, (err) => {
+        if (err) { return console.error(err); }
+        res.sendStatus(200);
       });
     });
   };
