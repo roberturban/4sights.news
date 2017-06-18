@@ -33,13 +33,15 @@ export class TopicsComponent implements OnInit {
   ngOnInit() {
     this.getTopics();
     /*set initial preferences to full, will be checked afterwards*/
-    this.setInitialPage();
     this.loadAvailableCategories();
   }
 
   loadAvailableCategories() {
     this.categoryService.getCategories().subscribe(
-      data => this.categoriesAvailable = data,
+      data => {
+        this.categoriesAvailable = data;
+        this.setInitialPage();
+      },
       error => console.log(error),
       () => console.log('categories loaded')
     );
@@ -158,6 +160,7 @@ export class TopicsComponent implements OnInit {
           this.toast.setMessage('item cancled.', 'warning');
         } else {
           this.addTopic(result);
+          this.getTopics();
           this.toast.setMessage('item edited successfully.', 'success');
         }
 

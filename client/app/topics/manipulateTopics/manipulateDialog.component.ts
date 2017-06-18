@@ -5,6 +5,12 @@ import {CategoryService} from "../../services/category.service";
 
 
 // MD Dialog Component -- Maybe better to be refactored to editTopic.component.ts
+
+interface ICategory {
+  _id: String,
+  name: String
+}
+
 @Component({
   selector: 'dialogEdit',
   templateUrl: './editTopic.component.html',
@@ -14,7 +20,10 @@ export class DialogEdit implements OnInit {
 
   public dialog_topic;
 
-  //besser wenn man irgendwie das auslagert
+  compareFn(c1: ICategory, c2: ICategory): boolean {
+    return c1._id === c2._id;
+  }
+
   categoriesAvailable = [];
 
   constructor(public dialogRef: MdDialogRef<any>,
@@ -62,8 +71,6 @@ export class DialogAdd implements OnInit {
 
   ngOnInit() {
 
-    //this.getTopics_data();
-    //this.getTopics();
     this.addTopicForm = this.formBuilder_topic.group({
       title: this.title,
       timestamp: this.timestamp,
