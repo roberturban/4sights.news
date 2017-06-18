@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { ToastComponent } from '../shared/toast/toast.component';
+import {CategoryService} from '../services/category.service';
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -37,10 +38,13 @@ export class RegisterComponent implements OnInit {
 
   categories = new FormControl('', [Validators.required]);
 
+  categoriesAvailable = [];
+
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               public toast: ToastComponent,
-              private userService: UserService) { }
+              private userService: UserService,
+              private categoryService: CategoryService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -51,8 +55,16 @@ export class RegisterComponent implements OnInit {
       role: this.role,
       categories: this.categories
     });
+    this.loadAvailableCategories();
   }
 
+  loadAvailableCategories() {
+    this.categoryService.getCategories().subscribe(
+      data => this.categoriesAvailable = data,
+      error => console.log(error),
+      () => console.log('categories loaded')
+    );
+  }
 
   register() {
     this.userService.register(this.registerForm.value).subscribe(

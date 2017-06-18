@@ -41,9 +41,11 @@ export default class UserCtrl extends BaseCtrl {
       }
       
       console.log("getAll users - verification success");
-      model.find({}, (err, users) => {
-        if (err) { return console.error(err); }
-        res.json(users);
+      this.model.find()
+        // .populate('categories')
+        .exec(function (err, docs) {
+          if (err) { return console.error(err); }
+          res.json(docs);
       });
     });
   };

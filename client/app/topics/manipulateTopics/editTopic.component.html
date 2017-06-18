@@ -2,36 +2,36 @@
 <h2>EDIT TOPIC</h2>
 <form #form="ngForm" (ngSubmit)="dialogRef.close(dialog_topic)" style="display:inline">
   <div class="form-group">
-     <md-input-container> 
+     <md-input-container>
       <input mdInput class="form-control" type="text" name="title" [(ngModel)]="dialog_topic.title" placeholder="Title" required>
     </md-input-container>
   </div>
   <div class="form-group">
-    <md-input-container class="input-full-width"> 
+    <md-input-container class="input-full-width">
       <input mdInput class="form-control" type="date" name="timestamp" [(ngModel)]="dialog_topic.timestamp" placeholder="timestamp" required>
     </md-input-container>
   </div>
   <div class="form-group">
-    <md-input-container class="input-full-width"> 
+    <md-input-container class="input-full-width">
       <input mdInput class="form-control" type="text" name="image" [(ngModel)]="dialog_topic.image" placeholder="assets/img/" required>
     </md-input-container>
   </div>
   <div class="form-group">
-    <md-input-container class="input-full-width"> 
+    <md-input-container class="input-full-width">
       <input mdInput class="form-control" type="number" name="news_article_count" [(ngModel)]="dialog_topic.news_article_count" placeholder="News Article Count" step="any" min="0" required>
     </md-input-container>
   </div>
   <div class="form-group">
-    <md-input-container class="input-full-width"> 
+    <md-input-container class="input-full-width">
       <input mdInput class="form-control" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="location" required>
     </md-input-container>
   </div>
 
   <div class="form-group">
       <md-select multiple name="topics" class="form-control" [(ngModel)]="dialog_topic.categories" placeholder="Categories">
-        <md-option *ngFor="let categoryAvailable of categoriesAvailable" [value]="categoryAvailable">{{categoryAvailable}}</md-option>
+        <md-option *ngFor="let category of categoriesAvailable" value="{{ category._id }}">{{ category.name }}</md-option>
       </md-select>
-  </div>  
+  </div>
   <button md-raised-button color="primary" type="submit" [disabled]="!form.form.valid"><md-icon>save</md-icon> Save</button>
   <button md-raised-button color="warn" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
 </form>

@@ -1,20 +1,36 @@
-import * as mongoose from 'mongoose'; 
-import { ITopics } from '../interfaces/ITopics';
+import * as mongoose from 'mongoose';
+const Schema = mongoose.Schema;
 
-const topicSchema = new mongoose.Schema({
-  title: String,
-  timestamp: Date,
-  image: String,
-  news_article_count: Number,
-  location: String,
-  categories: [String]
+const topicSchema = new Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  timestamp: {
+    type: Date,
+    required: true
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true
+  },
+  news_article_count: {
+    type: Number,
+    required: true,
+  },
+  categories: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Category'
+    }
+  ]
 });
 
 const Topic = mongoose.model('Topic', topicSchema);
-
-/*type TopicType = ITopics & mongoose.Document;
-
-var _model = mongoose.model <TopicType> ('Topic', _schema);*/
 
 export default Topic;
 

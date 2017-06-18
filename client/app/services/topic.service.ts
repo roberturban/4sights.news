@@ -19,16 +19,6 @@ export class TopicService {
     return new RequestOptions({headers: this.getHeaders()});
   }
 
-  categoriesAvailable =  [
-    'Politics',
-    'Economics',
-    'Technology',
-    'Sports',
-    'Finance',
-    'Culture',
-    'Science'
-  ];
-
   constructor(private http: Http) { }
 
   getTopics(): Observable<any> {

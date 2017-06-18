@@ -13,7 +13,8 @@
     "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
     "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p server && node dist/server/app.js\"",
     "lint": "ng lint",
-    "lintbe": "tslint server/**/**.ts{,x}"
+    "lintbe": "tslint server/**/**.ts{,x}",
+    "db:seed": "seed"
   },
   "private": true,
   "dependencies": {
@@ -39,9 +40,11 @@
     "jquery": "^3.2.1",
     "jsonwebtoken": "^7.4.1",
     "mongoose": "^4.10.4",
+    "mongoose-unique-validator": "^1.0.5",
     "morgan": "^1.8.2",
     "rxjs": "^5.1.0",
     "tether": "1.4.0",
+    "validator": "^7.0.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -60,6 +63,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-mongo-seeds": "^2.3.1",
     "nodemon": "1.11.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
