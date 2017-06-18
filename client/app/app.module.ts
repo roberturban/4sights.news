@@ -1,7 +1,9 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialModule } from '@angular/material';
+import {  MaterialModule,
+          MdListModule,
+          MdGridListModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 
@@ -46,7 +48,9 @@ import {CategoryService} from "./services/category.service";
     BrowserAnimationsModule,
     BrowserModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MdListModule,
+    MdGridListModule,
   ],
   providers: [
     AuthService,
