@@ -11,32 +11,41 @@ Main components
 Reference Point
 - angular2-full-stack boilerplate
 
-Install
+### Install
+_Note:_  
+We have tested this application with node versions ranging from legacy versions, lts (v6.11.x) to latest (v8.1.2).
+However please consider using the latest version of `node` (`>=8.1.0`) and `npm` (`>=5.0.0`).  
+`npm` versions before `5.0.0` ignores the lock file which could lead to unexpected dependency trees.
 ``` bash
 $ npm Install
 ```
 
-Seed Database with predefined `categories`
+### Seed Database with predefined data
+Example `users`, `categories` and `topics` have been added for your convenience.
+In order to pre-populate your database, simply execute:  
 ``` bash
 $ npm run db:seed
 ```
+_Note:_ Please be sure to have `mongod` running on your system, before you try to run the seed command.
+``` bash
+$ mongod
+```
 
-Example Users, Categories and Topics have been added for your convenience
-Admin account:
+#####Admin account:
+Login: `christopher.lass@tum.de`  
+Password: `123456`
 
-login: `christopher.lass@tum.de`
-password: `123456`
+#####Normal user account:
+Login: `john.doe@gmail.com`   
+Password: `123456`
 
-Normal user account:
-login: `john.doe@gmail.com`
-password: `123456`
-
-Run Development Server with Hot Reloading (Starts DB, server, client)
+### Run Development Server with Hot Reloading (Starts DB, server, client)
+_Note:_ Please be sure to have `mongod` installed on your system. `mongod`'s directory also has to the path environment variable!
 ``` bash
 $ npm run dev
 ```
 
-Run Production
+### Run for production
 ``` bash
 $ npm run prod
 ```
