@@ -1,4 +1,4 @@
-<div class="manipulation-form">
+<div class="manipulation-form" style="font-family:Roboto; !important">
   <h2>EDIT TOPIC</h2>
   <form class="form-inner" #form="ngForm" (ngSubmit)="dialogRef.close(dialog_topic)">
     <div class="input-container">
@@ -8,7 +8,7 @@
     </div>
     <div class="input-container">
       <md-input-container class="input-full-width">
-        <input mdInput class="input-full-width"  type="date" name="timestamp" [(ngModel)]="dialog_topic.timestamp" placeholder="timestamp" required>
+        <input mdInput class="input-full-width"  type="date" name="timestamp" [(ngModel)]="dialog_topic.timestamp" placeholder="Date" required>
       </md-input-container>
     </div>
     <div class="input-container">
@@ -23,7 +23,7 @@
     </div>
     <div class="input-container">
       <md-input-container class="input-full-width">
-        <input mdInput class="input-full-width" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="location" required>
+        <input mdInput class="input-full-width" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="Location" required>
       </md-input-container>
     </div>
     <div class="input-container">
@@ -33,7 +33,7 @@
     </div>
     <div class="bottom-row">
       <button md-raised-button color="primary" type="submit" [disabled]="!form.form.valid"><md-icon>save</md-icon> Save</button>
-      <button md-raised-button color="warn" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
+      <button md-raised-button color="warn" style="margin-left:10px; color: #fff;" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
     </div>
   </form>
 </div>
