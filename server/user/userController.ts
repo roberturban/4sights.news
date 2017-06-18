@@ -1,14 +1,16 @@
-import * as dotenv from 'dotenv';
+/**
+ * Created by Christopher on 18.06.2017.
+ */
 import * as jwt from 'jsonwebtoken';
 
-import User from '../models/user';
-import BaseCtrl from './base';
+import User from './userModel';
+import BaseController from '../baseController';
 
-export default class UserCtrl extends BaseCtrl {
+export default class UserCtrl extends BaseController {
   model = User;
 
   login = (req, res) => {
-    console.log("Login (UserCtrl): " + req.headers);
+    console.log("Login (UserController): " + req.headers);
     this.model.findOne({email: req.body.email})
       .populate('categories')
       .exec(function (err, user) {

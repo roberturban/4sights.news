@@ -1,7 +1,7 @@
 /**
  * Created by Christopher on 17.06.2017.
  */
-import CategoryCtrl from '../controllers/category';
+import CategoryCtrl from './categoryController';
 
 const express = require('express');
 const router = express.Router();
