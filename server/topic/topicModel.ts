@@ -1,6 +1,3 @@
-/**
- * Created by Christopher on 18.06.2017.
- */
 import * as mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
@@ -36,4 +33,3 @@ const topicSchema = new Schema({
 const Topic = mongoose.model('Topic', topicSchema);
 
 export default Topic;
-

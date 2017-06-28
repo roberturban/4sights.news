@@ -5,12 +5,12 @@ import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 
 import { ToastComponent } from '../shared/toast/toast.component';
-import { TopicService } from '../services/topic.service';
+import { TopicsService } from '../services/topics.service';
 import { AuthService } from '../services/auth.service';
-import { AppComponent } from '../app.component';
+import { CategoryService } from "../services/category.service";
 
 import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
-import {CategoryService} from "../services/category.service";
+
 
 
 @Component({
@@ -22,7 +22,7 @@ export class TopicsComponent implements OnInit {
 
   constructor(private http: Http,
               public toast: ToastComponent,
-              private topicService: TopicService,
+              private topicsService: TopicsService,
               private formBuilder_topic: FormBuilder,
               public dialog: MdDialog,
               public dialogAdd: MdDialog,
@@ -70,7 +70,7 @@ export class TopicsComponent implements OnInit {
 
 
   getTopics() {
-    this.topicService.getTopics().subscribe(
+    this.topicsService.getTopics().subscribe(
       data => this.topics = data,
       error => console.log(error),
       () => this.isLoading_topic = false
@@ -78,7 +78,7 @@ export class TopicsComponent implements OnInit {
   }
 
   addTopic(addTopicFormDialog) {
-    this.topicService.addTopic(addTopicFormDialog.value).subscribe(
+    this.topicsService.addTopic(addTopicFormDialog.value).subscribe(
       res => {
         const newTopic = res.json();
         this.topics.push(newTopic);
@@ -104,7 +104,7 @@ export class TopicsComponent implements OnInit {
   }
 
   editTopic(topic) {
-    this.topicService.editTopic(topic).subscribe(
+    this.topicsService.editTopic(topic).subscribe(
       res => {
         this.isEditing_topic = false;
         this.topic = topic;
@@ -116,7 +116,7 @@ export class TopicsComponent implements OnInit {
 
   deleteTopic(topic) {
     if (window.confirm('Are you sure you want to permanently delete this item?')) {
-      this.topicService.deleteTopic(topic).subscribe(
+      this.topicsService.deleteTopic(topic).subscribe(
         res => {
           const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
           this.topics.splice(pos, 1);
