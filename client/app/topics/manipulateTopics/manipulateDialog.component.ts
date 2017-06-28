@@ -59,12 +59,20 @@ export class DialogAdd implements OnInit {
 
   constructor(public dialogRef: MdDialogRef<any>,
               private formBuilder_topic: FormBuilder,
-              private categoryService: CategoryService) {
+              private categoryService: CategoryService,
+              private manipulationService: ManipulationService) {
   }
 
   addTopicForm: FormGroup;
 
   categoriesAvailable = [];
+
+  //Used filter categoriesSelected before registration 
+  categoriesSelected = [];
+  //Necessary for mapping categoriesAvailable Objects with boolean
+  categoriesMap =[];
+
+  pushObject = {};
 
   title = new FormControl('', Validators.required);
   timestamp = new FormControl('', Validators.required);
@@ -88,10 +96,21 @@ export class DialogAdd implements OnInit {
 
   loadAvailableCategories() {
     this.categoryService.getCategories().subscribe(
-      data => this.categoriesAvailable = data,
+      data => {
+        this.categoriesAvailable = data,
+        this.categoriesMap = this.manipulationService.initCategoriesMap([],this.categoriesAvailable)},
       error => console.log(error),
       () => console.log('categories loaded')
     );
   }
+  updateCheckedOptions(value,event){
+      value.value = event.checked;
+  }
 
+
+    
+  submitTopic(){
+    this.addTopicForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
+    this.dialogRef.close(this.addTopicForm); 
+  }
 }
