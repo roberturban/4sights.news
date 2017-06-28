@@ -14,7 +14,8 @@
     "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p server && node dist/server/app.js\"",
     "lint": "ng lint",
     "lintbe": "tslint server/**/**.ts{,x}",
-    "db:seed": "seed"
+    "db:seed": "seed",
+    "scraper": "node dist/server/scraper.js"
   },
   "private": true,
   "dependencies": {
