@@ -31,15 +31,9 @@ const articleSchema = new Schema({
   },
   source: {
     type: Schema.Types.ObjectId,
-    ref: 'Soruce',
+    ref: 'Source',
     required: false
   },
-  categories: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Category'
-    }
-  ]
 });
 
 const Article = mongoose.model('Article', articleSchema);

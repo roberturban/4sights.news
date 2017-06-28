@@ -1,10 +1,11 @@
 import * as https from 'https';
 import Article from './article/articleModel';
+import Source from './source/sourceModel';
 
 module.exports = {
-  startTimedScraping: startTimedScraping,
-  test: test,
-  requestAll: requestAll
+    startTimedScraping: startTimedScraping,
+    test: test,
+    requestAll: requestAll
 };
 
 const apikey = "11358ca80a144ea79d32c7879dd4332c"
@@ -21,31 +22,40 @@ export function test() {
     console.log("Test function called");
 
     const aljazeeraGET = "/v1/articles?source=al-jazeera-english&sortBy=top&apiKey=" + apikey;
+    const aljazeeraObj = Source.findOne({name: "Aljazeera"});
 
-    requestSource(aljazeeraGET);
+    requestSource(aljazeeraGET, aljazeeraObj);
 }
 
 export function requestAll() {
     const aljazeeraGET = "/v1/articles?source=al-jazeera-english&sortBy=top&apiKey=" + apikey;
+    const aljazeeraObj = Source.findOne({name: "Aljazeera"});
     const breitbartGET = "/v1/articles?source=breitbart-news&sortBy=top&apiKey=" + apikey;
+    const breitbartObj = Source.findOne({name: "Breitbart"});
     const cnnGET = "/v1/articles?source=cnn&sortBy=top&apiKey=" + apikey;
+    const cnnObj = Source.findOne({name: "CNN"});
     const bbcGET = "/v1/articles?source=bbc-news&sortBy=top&apiKey=" + apikey;
+    const bbcObj = Source.findOne({name: "BBC"});
     const timesIndiaGET = "/v1/articles?source=the-times-of-india&sortBy=top&apiKey=" + apikey;
+    const timesIndiaObj = Source.findOne({name: "The Times of India"});
     const hinduGET = "/v1/articles?source=the-hindu&sortBy=top&apiKey=" + apikey;
+    const hinduObj = Source.findOne({name: "The Hindu"});
     const nytGET = "/v1/articles?source=the-new-york-times&sortBy=top&apiKey=" + apikey;
+    const nytObj = Source.findOne({name: "The New York Times"});
     const washingtonPostGET = "/v1/articles?source=the-washington-post&sortBy=top&apiKey=" + apikey;
+    const washingtonPostObj = Source.findOne({name: "The Washington Post"});
 
-    requestSource(aljazeeraGET);
-    requestSource(breitbartGET);
-    requestSource(cnnGET);
-    requestSource(bbcGET);
-    requestSource(timesIndiaGET);
-    requestSource(hinduGET);
-    requestSource(nytGET);
-    requestSource(washingtonPostGET);
+    requestSource(aljazeeraGET, aljazeeraObj);
+    requestSource(breitbartGET, breitbartObj);
+    requestSource(cnnGET, cnnObj);
+    requestSource(bbcGET, bbcObj);
+    requestSource(timesIndiaGET, timesIndiaObj);
+    requestSource(hinduGET, hinduObj);
+    requestSource(nytGET, nytObj);
+    requestSource(washingtonPostGET, washingtonPostObj);
 }
 
-function requestSource(param) {
+function requestSource(param, sourceObj) {
     var options = {
         host: "newsapi.org",
         port: 443,
@@ -69,7 +79,7 @@ function requestSource(param) {
             console.log(output)
             var obj = JSON.parse(output);
             console.log("Done: " + obj);
-            saveData(obj);
+            saveData(obj, sourceObj);
         });
     });
 
@@ -80,11 +90,12 @@ function requestSource(param) {
     req.end();
 }
 
-function saveData(responseObj) {
+function saveData(responseObj, sourceObj) {
     var articles = responseObj["articles"];
     console.log(articles);
     for(let index in articles) {
         const article = articles[index];
+
         const title = article["title"];
         const author = article["author"];
         const description = article["description"];
@@ -99,7 +110,8 @@ function saveData(responseObj) {
             url: url,
             author: author,
             published: publishedAt,
-            categories: []
+            categories: [],
+            //source: sourceObj
         });
 
         instance.save((err, item) => {
