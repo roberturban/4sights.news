@@ -6,13 +6,16 @@ import UserController from './userController';
 const express = require('express');
 const router = express.Router();
 const userController = new UserController();
+const auth = require('../middleware/auth');
+const admin = require('../middleware/admin');
+const user = require('../middleware/user');
 
-router.route('/').get(userController.getAll);
+router.route('/').get(auth.required, admin.isAdmin, userController.getAll);
 router.route('/').post(userController.insert);
 
-router.route('/:id').get(userController.get);
-router.route('/:id').put(userController.update);
-router.route('/:id').delete(userController.delete);
+router.route('/:id').get(auth.required, user.isSelfOrAdmin, userController.get);
+router.route('/:id').put(auth.required, user.isSelfOrAdmin, userController.update);
+router.route('/:id').delete(auth.required, user.isSelfOrAdmin, userController.delete);
 
 router.route('/count').get(userController.count);
 
