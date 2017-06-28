@@ -30,6 +30,12 @@ const topicSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'Category'
     }
+  ],
+  news_articles: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Article'
+    }
   ]
 });
 
