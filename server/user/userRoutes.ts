@@ -17,8 +17,6 @@ router.route('/:id').get(auth.required, user.isSelfOrAdmin, userController.get);
 router.route('/:id').put(auth.required, user.isSelfOrAdmin, userController.update);
 router.route('/:id').delete(auth.required, user.isSelfOrAdmin, userController.delete);
 
-router.route('/count').get(userController.count);
-
 router.route('/login').post(userController.login);
 
 module.exports = router;

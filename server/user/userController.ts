@@ -44,33 +44,4 @@ export default class UserCtrl extends BaseController {
         res.json(docs);
       });
   };
-
-  count = (req, res) => {
-    const token = req.headers.authorization.split(" ")[1]; //first part of string is "Bearer "
-    const model = this.model; //cannot access model otherwise in the following callback
-    console.log("count users");
-    jwt.verify(token, process.env.SECRET_TOKEN, function(err, decoded) {
-      if(err) {
-        console.log("count users - verification failed");
-        return res.status(401).json({
-          title: 'Not Authenticated',
-          error: err
-        });
-      }
-
-      if(decoded.user.role != 'admin') {
-        console.log("count users - unvalid role");
-        return res.status(405).json({
-          title: 'Not Allowed',
-          error: {message: 'Not allowed'}
-        });
-      }
-
-      console.log("count users - verification success");
-      model.count((err, count) => {
-        if (err) { return console.error(err); }
-        res.json(count);
-      });
-    });
-  };
 }

@@ -16,6 +16,4 @@ router.route('/:id').get(categoryCtrl.get);
 router.route('/:id').put(auth.required, admin.isAdmin, categoryCtrl.update);
 router.route('/:id').delete(auth.required, admin.isAdmin, categoryCtrl.delete);
 
-router.route('/count').get(categoryCtrl.count);
-
 module.exports = router;
