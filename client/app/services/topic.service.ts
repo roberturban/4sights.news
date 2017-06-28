@@ -25,10 +25,6 @@ export class TopicService {
     return this.http.get('/api/topics', this.getOptions()).map(res => res.json());
   }
 
-  countTopics(): Observable<any> {
-    return this.http.get('/api/topics/count', this.getOptions()).map(res => res.json());
-  }
-
   addTopic(topic): Observable<any> {
     return this.http.post('/api/topics', JSON.stringify(topic), this.getOptions());
   }
