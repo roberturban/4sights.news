@@ -12,6 +12,7 @@ export class ManipulationService {
 
   	}
 
+  	//take mapping back and exclude boolean values
 	mapCheckedOptions(categoriesMapped){
 
 	 this.categoryArray = [];
@@ -24,6 +25,7 @@ export class ManipulationService {
      return this.categoryArray;
   	}
 
+  	//set all categories with boolean values
   	initCategoriesMap(toMapCategories,categoriesAvailable) {
   		this.categoriesMap = [];
 
