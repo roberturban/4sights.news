@@ -16,6 +16,4 @@ router.route('/:id').get(auth.optional, topicCtrl.get);
 router.route('/:id').put(auth.required, admin.isAdmin, topicCtrl.update);
 router.route('/:id').delete(auth.required, admin.isAdmin, topicCtrl.delete);
 
-router.route('/count').get(topicCtrl.count);
-
 module.exports = router;
