@@ -7,6 +7,9 @@ module.exports = {
   requestAll: requestAll
 };
 
+console.log("Start scraper")
+startTimedScraping();
+
 const apikey = "11358ca80a144ea79d32c7879dd4332c"
 
 export function startTimedScraping() {

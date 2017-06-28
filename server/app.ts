@@ -39,7 +39,4 @@ db.once('open', () => {
 
 });
 
-const scraper = require('./scraper');
-scraper.startTimedScraping();
-
 export { app };
