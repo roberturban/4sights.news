@@ -65,7 +65,6 @@ export class TopicsComponent implements OnInit {
   dialogRef: MdDialogRef<any>;
 
   categoriesAvailable = [];
-
   userCategoryPreferences = [];
 
 
@@ -133,6 +132,8 @@ export class TopicsComponent implements OnInit {
     this.dialogRef = this.dialog.open(dialog);
     this.enableEditing_topic(del_topic);
     this.dialogRef.componentInstance.dialog_topic = del_topic;
+    this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
+    this.dialogRef.componentInstance.topicCategories = del_topic.categories;
 
     this.dialogRef.afterClosed().subscribe(
       result => {
@@ -144,7 +145,6 @@ export class TopicsComponent implements OnInit {
           this.editTopic(result);
           this.toast.setMessage('item edited successfully.', 'success');
         }
-
       });
   }
 

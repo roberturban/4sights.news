@@ -48,11 +48,7 @@
       </md-select>
     </div>
 
-    <div class="input-container">
-      <md-select multiple class="input-full-width special-input-wrapper" name="categories" formControlName="categories" placeholder="Categories" required>
-        <md-option *ngFor="let category of categoriesAvailable" value="{{ category._id }}">{{ category.name }}</md-option>
-      </md-select>
-    </div>
+    <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
 
     <div class="bottom-row">
       <div style="font-family:Roboto;">
