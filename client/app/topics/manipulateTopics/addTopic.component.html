@@ -1,5 +1,5 @@
-<div class="manipulation-form">
-  <h2>Add Topic</h2>
+<div class="manipulation-form" style="font-family:Roboto; !important">
+  <h2>ADD TOPIC</h2>
     <form class="form-inner" [formGroup]="addTopicForm" (ngSubmit)="submitTopic()">
       <div class="input-container">
         <md-input-container class="input-full-width">
@@ -27,6 +27,7 @@
         </md-input-container>
       </div>
       <div class="input-container">
+        <div>Categories:</div>
         <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
       </div>
       <div class="bottom-row">

@@ -47,9 +47,10 @@
         <md-option value="admin">Admin</md-option>
       </md-select>
     </div>
-
-    <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
-
+    <div>  
+      Follow categories:
+      <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
+    </div>
     <div class="bottom-row">
       <div style="font-family:Roboto;">
         Already a member? <a routerLink="/login">Log in here</a>

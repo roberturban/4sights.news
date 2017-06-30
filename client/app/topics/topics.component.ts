@@ -10,7 +10,8 @@ import { AuthService } from '../services/auth.service';
 import { AppComponent } from '../app.component';
 
 import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
-import {CategoryService} from "../services/category.service";
+import { DialogFollowCategories } from './followCategories/followCategoryDialog.component';
+import { CategoryService } from "../services/category.service";
 
 
 @Component({
@@ -93,14 +94,6 @@ export class TopicsComponent implements OnInit {
     this.topic = topic;
   }
 
-  cancelEditing_topic() {
-    this.isEditing_topic = false;
-    this.topic = {};
-    this.topics = [];
-    this.toast.setMessage('item editing cancelled.', 'warning');
-    // reload the Topics to reset the editing
-    this.getTopics();
-  }
 
   editTopic(topic) {
     this.topicService.editTopic(topic).subscribe(
@@ -111,6 +104,15 @@ export class TopicsComponent implements OnInit {
       },
       error => console.log(error)
     );
+  }
+
+  cancelEditing_topic() {
+    this.isEditing_topic = false;
+    this.topic = {};
+    this.topics = [];
+    this.toast.setMessage('item editing cancelled.', 'warning');
+    // reload the Topics to reset the editing
+    this.getTopics();
   }
 
   deleteTopic(topic) {
@@ -126,46 +128,6 @@ export class TopicsComponent implements OnInit {
     }
   }
 
-  // Dialog for Editing Topics
-
-  open_edit(del_topic) {
-    this.dialogRef = this.dialog.open(dialog);
-    this.enableEditing_topic(del_topic);
-    this.dialogRef.componentInstance.dialog_topic = del_topic;
-    this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
-    this.dialogRef.componentInstance.topicCategories = del_topic.categories;
-
-    this.dialogRef.afterClosed().subscribe(
-      result => {
-        this.dialogRef = null;
-        if (!result) {
-          this.cancelEditing_topic();
-          this.toast.setMessage('item cancled.', 'warning');
-        } else {
-          this.editTopic(result);
-          this.toast.setMessage('item edited successfully.', 'success');
-        }
-      });
-  }
-
-  // Dialog for Adding Topics
-  open_add() {
-    this.dialogRef = this.dialogAdd.open(dialogAdd);
-
-    this.dialogRef.afterClosed().subscribe(
-      result => {
-        this.dialogRef = null;
-        if (!result) {
-          this.cancelEditing_topic();
-          this.toast.setMessage('item cancled.', 'warning');
-        } else {
-          this.addTopic(result);
-          this.getTopics();
-          this.toast.setMessage('item edited successfully.', 'success');
-        }
-
-    });
-  }
 
   setInitialPage(){
     this.userCategoryPreferences = this.categoriesAvailable;
@@ -187,9 +149,72 @@ export class TopicsComponent implements OnInit {
       this.userCategoryPreferences = this.auth.currentUser.categories;
       this.userHasPreferences = true;
     }
-  };
+  }
+
+
+  // Dialog windows
+  // Dialog for editing topics
+  open_edit(del_topic) {
+    this.dialogRef = this.dialog.open(dialogEdit);
+    this.enableEditing_topic(del_topic);
+    this.dialogRef.componentInstance.dialog_topic = del_topic;
+    this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
+    this.dialogRef.componentInstance.topicCategories = del_topic.categories;
+
+    this.dialogRef.afterClosed().subscribe(
+      result => {
+        this.dialogRef = null;
+        if (!result) {
+          this.cancelEditing_topic();
+          this.toast.setMessage('item cancled.', 'warning');
+        } else {
+          this.editTopic(result);
+          this.toast.setMessage('item edited successfully.', 'success');
+        }
+      });
+  }
+
+  //Dialog for adding topics
+  open_add() {
+    this.dialogRef = this.dialogAdd.open(dialogAdd);
+
+    this.dialogRef.afterClosed().subscribe(
+      result => {
+        this.dialogRef = null;
+        if (!result) {
+          this.cancelEditing_topic();
+          this.toast.setMessage('item cancled.', 'warning');
+        } else {
+          this.addTopic(result);
+          this.getTopics();
+          this.toast.setMessage('item edited successfully.', 'success');
+        }
+
+    });
+  }
+
+  //Dialog for changing subscription of categories
+  open_followCategories() {
+    this.dialogRef = this.dialog.open(dialogFollow);
+    this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
+    this.dialogRef.componentInstance.user = this.auth.currentUser;
+    this.dialogRef.componentInstance.userCategoryPreferences = this.userCategoryPreferences;
+
+    this.dialogRef.afterClosed().subscribe(
+      result => {
+        this.dialogRef = null;
+        if (!result) {
+          this.toast.setMessage('subscription was not updated!.', 'warning');
+        } else {
+          this.toast.setMessage('subscription updated successfully.', 'success');
+        }
+      });
+    }
+
+
 
 }
 
-const dialog = DialogEdit;
+const dialogEdit = DialogEdit;
 const dialogAdd = DialogAdd;
+const dialogFollow = DialogFollowCategories;
