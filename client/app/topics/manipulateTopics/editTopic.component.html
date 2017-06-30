@@ -1,6 +1,9 @@
 <div class="manipulation-form" style="font-family:Roboto; !important">
   <h2>EDIT TOPIC</h2>
-  <form class="form-inner" #form="ngForm" (ngSubmit)="dialogRef.close(dialog_topic)">
+  <div>
+   <img src="{{dialog_topic.image}}" width="50%" height="50%">
+  </div>
+  <form class="form-inner" #form="ngForm" (ngSubmit)="submitChanges()">
     <div class="input-container">
        <md-input-container class="input-full-width">
         <input mdInput class="input-full-width"  type="text" name="title" [(ngModel)]="dialog_topic.title" placeholder="Title" required>
@@ -26,10 +29,8 @@
         <input mdInput class="input-full-width" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="Location" required>
       </md-input-container>
     </div>
-    <div class="input-container">
-        <md-select multiple name="topics" class="input-full-width special-input-wrapper" [compareWith]="compareFn" [(ngModel)]="dialog_topic.categories" placeholder="Categories">
-          <md-option *ngFor="let category of categoriesAvailable" [value]="category">{{ category.name }}</md-option>
-        </md-select>
+    <div><div>Categories:</div>
+     <md-checkbox *ngFor="let category of categoriesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
     </div>
     <div class="bottom-row">
       <button md-raised-button color="primary" type="submit" [disabled]="!form.form.valid"><md-icon>save</md-icon> Save</button>

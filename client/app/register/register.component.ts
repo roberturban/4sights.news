@@ -4,6 +4,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { UserService } from '../services/user.service';
 import { ToastComponent } from '../shared/toast/toast.component';
 import {CategoryService} from '../services/category.service';
+import {ManipulationService} from "../services/manipulation.service";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -38,13 +39,21 @@ export class RegisterComponent implements OnInit {
 
   categories = new FormControl('', [Validators.required]);
 
+
   categoriesAvailable = [];
+  //Used filter categoriesSelected before registration 
+  categoriesSelected = [];
+  //Necessary for mapping categoriesAvailable Objects with boolean
+  categoriesMap =[];
+
+  pushObject = {};
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               public toast: ToastComponent,
               private userService: UserService,
-              private categoryService: CategoryService) { }
+              private categoryService: CategoryService,
+              private manipulationService: ManipulationService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -60,13 +69,18 @@ export class RegisterComponent implements OnInit {
 
   loadAvailableCategories() {
     this.categoryService.getCategories().subscribe(
-      data => this.categoriesAvailable = data,
+      data => {
+        this.categoriesAvailable = data,
+        this.categoriesMap = this.manipulationService.initCategoriesMap([],this.categoriesAvailable)
+      },
       error => console.log(error),
       () => console.log('categories loaded')
     );
   }
 
   register() {
+    this.registerForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
+    console.log(this.registerForm.value);
     this.userService.register(this.registerForm.value).subscribe(
       res => {
         this.toast.setMessage('you successfully registered!', 'success');
@@ -75,4 +89,9 @@ export class RegisterComponent implements OnInit {
       error => this.toast.setMessage('email already exists', 'danger')
     );
   }
+
+  updateCheckedOptions(value,event){
+      value.value = event.checked;
+  }
+
 }
