@@ -25,8 +25,9 @@ export class TopicsComponent implements OnInit {
               public toast: ToastComponent,
               private topicService: TopicService,
               private formBuilder_topic: FormBuilder,
-              public dialog: MdDialog,
+              public dialogEdit: MdDialog,
               public dialogAdd: MdDialog,
+              public dialogFollow: MdDialog,
               public auth: AuthService,
               private route: ActivatedRoute,
               private categoryService: CategoryService) { }
@@ -89,12 +90,6 @@ export class TopicsComponent implements OnInit {
     );
   }
 
-  enableEditing_topic(topic) {
-    this.isEditing_topic = true;
-    this.topic = topic;
-  }
-
-
   editTopic(topic) {
     this.topicService.editTopic(topic).subscribe(
       res => {
@@ -155,8 +150,9 @@ export class TopicsComponent implements OnInit {
   // Dialog windows
   // Dialog for editing topics
   open_edit(del_topic) {
-    this.dialogRef = this.dialog.open(dialogEdit);
-    this.enableEditing_topic(del_topic);
+    this.dialogRef = this.dialogEdit.open(dialogEdit);
+    this.isEditing_topic = true;
+    this.topic = del_topic;
     this.dialogRef.componentInstance.dialog_topic = del_topic;
     this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
     this.dialogRef.componentInstance.topicCategories = del_topic.categories;
@@ -195,7 +191,7 @@ export class TopicsComponent implements OnInit {
 
   //Dialog for changing subscription of categories
   open_followCategories() {
-    this.dialogRef = this.dialog.open(dialogFollow);
+    this.dialogRef = this.dialogFollow.open(dialogFollow);
     this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
     this.dialogRef.componentInstance.user = this.auth.currentUser;
     this.dialogRef.componentInstance.userCategoryPreferences = this.userCategoryPreferences;

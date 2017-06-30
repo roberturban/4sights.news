@@ -1,6 +1,6 @@
 <div class="manipulation-form" style="font-family:Roboto; !important">
-      <div class="input-container">
-        <div>Follow categories:</div>
+      <div class="categoryBox">
+        <div style="margin: 10px 0;">Follow categories:</div>
         <md-checkbox *ngFor="let category of userCategoryPreferencesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)">{{category.category.name}}</md-checkbox>
       </div> 
       <div class="bottom-row">
