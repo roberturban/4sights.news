@@ -1,6 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import {  MaterialModule,
           MdListModule,
           MdGridListModule } from '@angular/material';
@@ -54,6 +55,7 @@ import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialo
     FlexLayoutModule,
     MdListModule,
     MdGridListModule,
+    RouterModule,
   ],
   providers: [
     AuthService,

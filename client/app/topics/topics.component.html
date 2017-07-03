@@ -30,7 +30,9 @@
     <md-card-title-group>
       <md-card-title>
         <div>
-          {{topic.title}}
+          <a [routerLink]="['/topics', 123]">
+            {{topic.title}}
+          </a>
           <p class="count mat-fab mat-primary" *ngIf="auth.loggedIn && auth.isAdmin">  {{topic.news_article_count}} </p>
         </div>
       </md-card-title>

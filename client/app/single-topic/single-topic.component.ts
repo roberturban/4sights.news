@@ -7,10 +7,6 @@ import { SingleTopicService } from '../services/single-topic.service';
 import { AuthService } from '../services/auth.service';
 import { CategoryService } from "../services/category.service";
 
-import { Subscription } from 'rxjs/Subscription';
-// import 'rxjs/add/switchMap';
-
-
 @Component({
   selector: 'app-single-topic',
   templateUrl: './single-topic.component.html',
@@ -22,33 +18,31 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
               public toast: ToastComponent,
               private singleTopicService: SingleTopicService,
               public auth: AuthService,
-              private route: ActivatedRoute,
-              private sub: Subscription,
-              private categoryService: CategoryService) { }
+              private route: ActivatedRoute) { }
 
-  topic = {};
-  topicID = "";
-  isLoading_singleTopic = false;
+  topic: {};
+  topicID: any;
+  isLoading_singleTopic: false;
 
   ngOnInit() {
-    this.route.params
-      .subscribe((params: Params) => console.log(params));
+    this.topicID = this.route.params
+      .subscribe(params => console.log(params));
 
-    this.topicID = this.sub.toString();
+    // this.topicID = this.sub.toString();
     // this.getSingleTopic('123123');
   }
 
   ngOnDestroy() {
-
+    // this.sub.unsubscribe();
   }
 
   getSingleTopic(id) {
-    this.isLoading_singleTopic = true;
-    this.singleTopicService.getSingleTopic(id).subscribe(
-      data => this.topic = data,
-      error => console.log(error),
-      () => this.isLoading_singleTopic = false
-    );
+    // this.isLoading_singleTopic = true;
+    // this.singleTopicService.getSingleTopic(id).subscribe(
+    //   data => this.topic = data,
+    //   error => console.log(error),
+    //   () => this.isLoading_singleTopic = false
+    // );
   }
 
 }
