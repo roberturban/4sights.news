@@ -12,13 +12,13 @@ const user = {
     next();
   },
   isSelfOrAdmin: (req, res, next) => {
-    if (req.payload.user._id === req.params.id || req.payload.user.role === 'admin') {
-      next();
+    if (req.payload.user._id !== req.params.id && req.payload.user.role !== 'admin') {
+      return res.status(405).json({
+        title: 'Not Allowed',
+        error: {message: 'Not allowed'}
+      });
     }
-    return res.status(405).json({
-      title: 'Not Allowed',
-      error: {message: 'Not allowed'}
-    });
+    next();
   }
 };
 
