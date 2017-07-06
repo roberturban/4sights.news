@@ -24,7 +24,7 @@ const articleSchema = new Schema({
   },
   published: {
     type: Date,
-    required: true
+    required: false
   },
   source: {
     type: Schema.Types.ObjectId,
