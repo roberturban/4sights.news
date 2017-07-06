@@ -41,4 +41,19 @@
     </cdk-table>
   </div>
 
+  <div>
+    <button md-raised-button class="editButton" color="accent" (click)="getTopics()" *ngIf="!isEditing" [disabled]="isEditing"> EDIT TOPICS
+    </button>
+  </div>
+  <div *ngIf="isEditing">
+    <div class="editHeader">
+      <h2>AVAILABLE TOPICS</h2>
+    </div>
+    <div class="editBox" *ngFor="let topic of topics">
+      {{topic.title}}
+        <button md-raised-button color="accent" class="editButton" (click)="open_edit(topic)" style="float:right;"> EDIT
+        </button>
+    </div>
+  </div>
+
 </div>

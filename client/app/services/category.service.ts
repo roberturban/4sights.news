@@ -20,10 +20,6 @@ export class CategoryService {
     return this.http.get('/api/categories').map(res => res.json());
   }
 
-  countCategories(): Observable<any> {
-    return this.http.get('/api/categories/count').map(res => res.json());
-  }
-
   addCategory(category): Observable<any> {
     return this.http.post('/api/categories', JSON.stringify(category), this.options);
   }
