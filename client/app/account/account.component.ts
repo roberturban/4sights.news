@@ -39,8 +39,12 @@ export class AccountComponent implements OnInit {
 
   save(user) {
     user.categories = this.manipulationService.mapCheckedOptions(this.userCategoryPreferencesMap);
+    console.log(this.userCategoryPreferencesMap);
+    console.log(user.categories);
     this.userService.editUser(user).subscribe(
-      res => this.toast.setMessage('account settings saved!', 'success'),
+      res => {
+        this.toast.setMessage('account settings saved!', 'success')
+      },
       error => console.log(error)
     );
   }

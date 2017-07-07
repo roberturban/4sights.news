@@ -6,6 +6,8 @@ import { UserService } from '../services/user.service';
 import { TopicService } from '../services/topic.service';
 import { CategoryService } from "../services/category.service";
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
+import { DataSource } from '@angular/cdk';
+
 
 import { DialogEdit } from '../topics/manipulateTopics/manipulateDialog.component';
 
@@ -48,11 +50,26 @@ export class AdminComponent implements OnInit {
   }
 
   deleteUser(user) {
-    this.userService.deleteUser(user).subscribe(
-      data => this.toast.setMessage('user deleted successfully.', 'success'),
-      error => console.log(error),
-      () => this.getUsers()
-    );
+    if (window.confirm('Are you sure you want to permanently delete this user?')) {
+      this.userService.deleteUser(user).subscribe(
+        data => this.toast.setMessage('user deleted successfully.', 'success'),
+        error => console.log(error),
+        () => this.getUsers()
+      );
+    } 
+  }
+
+  deleteTopic(topic) {
+    if (window.confirm('Are you sure you want to permanently delete this item?')) {
+      this.topicService.deleteTopic(topic).subscribe(
+        res => {
+          const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
+          this.topics.splice(pos, 1);
+          this.toast.setMessage('item deleted successfully.', 'success');
+        },
+        error => console.log(error)
+      );
+    }
   }
 
   getTopics() {
@@ -85,6 +102,10 @@ export class AdminComponent implements OnInit {
       error => console.log(error),
       () => console.log('categories loaded')
     );
+  }
+
+  save_reordering(){
+    console.log(this.topics);
   }
 
     // Dialog for editing topics
