@@ -8,7 +8,6 @@ import * as path from 'path';
 const userRoutes = require('./user/userRoutes');
 const topicRoutes = require('./topic/topicRoutes');
 const categoryRoutes = require('./category/categoryRoutes');
-require('./article/articleModel');
 
 const app = express();
 dotenv.load({ path: '.env' });
