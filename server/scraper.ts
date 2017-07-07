@@ -6,7 +6,6 @@ const util = require('util');
 
 module.exports = {
   startTimedScraping: startTimedScraping,
-  test: test,
   requestAll: requestAll
 };
 
@@ -29,14 +28,6 @@ export function startTimedScraping() {
         console.log("<<<<<<<requestAll>>>>>>>>");
         requestAll();
     }, 1000 * 30);
-}
-
-export function test() {
-    console.log("Test function called");
-
-    const aljazeeraGET = "/v1/articles?source=al-jazeera-english&sortBy=top&apiKey=" + apikey;
-
-    requestSource(aljazeeraGET, "Aljazeera");
 }
 
 export function requestAll() {
@@ -105,7 +96,7 @@ function saveData(responseObj, sourceName) {
             const description = article["description"];
             const url = article["url"];
             const urlToImage = article["urlToImage"];
-            const publishedAt = article["publishedAt"];
+            const publishedAt = article["publishedAt"] ? article["publishedAt"] : Date.now;
 
             var instance = new Article({
                 title: title,
