@@ -36,7 +36,6 @@ export class TopicsComponent implements OnInit {
     this.getTopics();
     /*set initial preferences to full, will be checked afterwards*/
     this.loadAvailableCategories();
-    setTimeout(1000);
   }
 
   loadAvailableCategories() {
@@ -74,7 +73,13 @@ export class TopicsComponent implements OnInit {
     this.topicService.getTopics().subscribe(
       data => this.topics = data,
       error => console.log(error),
-      () => this.isLoading_topic = false
+      () => {
+        this.isLoading_topic = false;
+        // Convert Timestamp
+        this.topics.map(tp => {
+          tp.timestamp = new Date(Date.parse(tp.timestamp)).toDateString();
+        });
+      }
     );
   }
 

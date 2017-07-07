@@ -17,9 +17,9 @@
 </header>
 
 <md-toolbar class="categories-toolbar">
-  <button md-button color="primary" (click)="getTopics_category('Home')">Home</button>
+  <button md-button color="primary" (click)="getTopics_category('Home')">All</button>
   <button *ngFor="let category of categoriesAvailable" md-button color="primary" (click)="getTopics_category(category)">{{category.name}}</button>
-  <button md-button (click)="open_followCategories()">
+  <button md-button (click)="open_followCategories()" *ngIf="auth.loggedIn && auth.isAdmin">
       <i class="material-icons">edit</i>
   </button>
 </md-toolbar>
@@ -29,7 +29,7 @@
 <div class="card-block" *ngIf="!isLoading">
 
   <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
-    <img md-card-image src="{{topic.image}}">
+    <img md-card-image src="{{topic.image}}" style="height:200px">
     <md-card-title-group>
       <md-card-title>
         <div>
@@ -41,7 +41,7 @@
     </md-card-title-group>
 
     <div class="categories-row">
-      <button md-raised-button *ngFor="let category of topic.categories" (click)="getTopics_category(category)">
+      <button md-raised-button class="category-button" *ngFor="let category of topic.categories" (click)="getTopics_category(category)">
         {{category.name}}
       </button>
     </div>

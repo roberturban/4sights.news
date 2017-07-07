@@ -26,6 +26,12 @@
 .categories-row{
   display: flex;
   margin:10px 0px 16px 0px;
+  flex:1;
+}
+
+.category-button{
+  height: 40px;
+  align-self: end;
 }
 
 .table td, .table th {
@@ -43,6 +49,8 @@
 .topic-card {
 	width: 300px;
 	margin: 20px;
+  display:flex;
+  flex-direction: column;
 }
 
 .header-content{
