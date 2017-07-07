@@ -25,6 +25,7 @@ const apikey = "11358ca80a144ea79d32c7879dd4332c"
 
 export function startTimedScraping() {
     console.log("Scraper Interval set")
+
     setInterval(function() {
         console.log("<<<<<<<requestAll>>>>>>>>");
         requestAll();
@@ -118,9 +119,9 @@ function saveData(responseObj, sourceName) {
                 source: source
             });
 
-            Article.count({"url": url}, function(err, count){
-                if(err) return console.log("Error counting the number of existing articles");
-                if(count > 0) return console.log("Already stored (" + sourceName + "): \"" + title + "\"");
+            // Article.count({"url": url}, function(err, count){
+            //     if(err) return console.log("Error counting the number of existing articles");
+            //     if(count > 0) return console.log("Already stored (" + sourceName + "): \"" + title + "\"");
 
                 instance.save((err, item) => {
                     // 11000 is the code for duplicate key error
@@ -132,7 +133,7 @@ function saveData(responseObj, sourceName) {
                     }
                     console.log("Item saved (" + sourceName + "): \"" + title + "\"");
                 });
-            });
+            // });
         }
     });
 }
