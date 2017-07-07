@@ -1,4 +1,4 @@
-<div class="app">
+<div class="app" style="">
 
   <md-toolbar class="custom-toolbar">
     <button class="app-icon-button" style="background:none;border:none;padding: 0px 0px;" routerLink="/topics">
@@ -6,7 +6,7 @@
     </button>
 
     <span class="fill-remaining-space"></span>
-    <button md-button routerLink="/register" routerLinkActive="active" *ngIf="!auth.loggedIn" >Register</button>
+    <button md-button routerLink="/register" routerLinkActive="active" *ngIf="!auth.loggedIn">Register</button>
     <button md-button routerLink="/login" routerLinkActive="active" *ngIf="!auth.loggedIn">Login</button>
     <button md-button routerLink="/admin" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
       <i class="material-icons">perm_identity</i>
@@ -19,6 +19,23 @@
     </button>
   </md-toolbar>
 
-  <router-outlet></router-outlet>
+  <div style="flex:1">
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer>
+    <md-toolbar class="license-footer">
+        <span class="footer-sub">
+          <i stlye="font-size:12px" class="material-icons">&#xE90C;</i>
+          <p style="margin-left: 5px"> TUM SEBIS </p>
+        </span>
+        <span class="fill-remaining-space"></span>
+        <span class="footer-sub">
+          <i stlye="font-size:12px" class="material-icons">&#xE90C;</i>
+          <p style="margin-left: 5px"> TUM SEBIS </p>
+        </span>
+
+    </md-toolbar>
+  </footer>
 
 </div>

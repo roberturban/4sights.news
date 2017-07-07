@@ -62,11 +62,14 @@ export class TopicsComponent implements OnInit {
   active_category: String;
   private sub: any;
 
-
   dialogRef: MdDialogRef<any>;
 
   categoriesAvailable = [];
   userCategoryPreferences = [];
+
+  // Menu for Toolbar
+  selected = '';
+  menuButton: boolean;
 
   // Flexbox
   windowWidth: number;
@@ -77,11 +80,20 @@ export class TopicsComponent implements OnInit {
   onResize(event) {
     this.windowWidth = event.target.innerWidth;
     this.calculateLastRowItems();
+    this.calculateMenuButton();
   }
 
   calculateLastRowItems(){
     this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.topics.length % Math.floor((this.windowWidth - 100) / 288);
     this.missingItemsArray = Array.from(Array(this.missingItems),(x,i)=>i);
+  }
+
+  calculateMenuButton(){
+    if (this.windowWidth < 800){
+      this.menuButton = true;
+    } else {
+      this.menuButton = false;
+    }
   }
 
   getTopics() {
@@ -97,6 +109,7 @@ export class TopicsComponent implements OnInit {
         // Calculate CSS Flexbo Last Row Items
         this.windowWidth = window.innerWidth;
         this.calculateLastRowItems();
+        this.calculateMenuButton();
         ;
       }
     );
