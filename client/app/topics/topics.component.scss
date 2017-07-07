@@ -25,13 +25,14 @@
 
 .categories-row{
   display: flex;
-  margin:10px 0px 16px 0px;
   flex:1;
+  flex-flow: row wrap;
 }
 
 .category-button{
   height: 40px;
   align-self: end;
+  margin: 5px;
 }
 
 .table td, .table th {
@@ -47,10 +48,26 @@
 }
 
 .topic-card {
-	width: 300px;
+	flex: 1 0 200px;
 	margin: 20px;
   display:flex;
   flex-direction: column;
+  overflow: hidden;
+  height: 400px;
+}
+
+.topic-card-empty{
+  height:0;
+  margin: 20px;
+  boder:none;
+  flex: 1 0 200px;
+  box-shadow: none !important;
+}
+
+@media(max-width: 680px){
+  .topic-card-empty{
+    display:none;
+  }
 }
 
 .header-content{

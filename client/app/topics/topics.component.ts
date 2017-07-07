@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Optional, Input} from '@angular/core';
+import { Component, OnInit, HostListener, Inject, Optional, Input} from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
@@ -68,6 +68,21 @@ export class TopicsComponent implements OnInit {
   categoriesAvailable = [];
   userCategoryPreferences = [];
 
+  // Flexbox
+  windowWidth: number;
+  missingItems: number;
+  missingItemsArray = [];
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.windowWidth = event.target.innerWidth;
+    this.calculateLastRowItems();
+  }
+
+  calculateLastRowItems(){
+    this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.topics.length % Math.floor((this.windowWidth - 100) / 288);
+    this.missingItemsArray = Array.from(Array(this.missingItems),(x,i)=>i);
+  }
 
   getTopics() {
     this.topicService.getTopics().subscribe(
@@ -78,7 +93,11 @@ export class TopicsComponent implements OnInit {
         // Convert Timestamp
         this.topics.map(tp => {
           tp.timestamp = new Date(Date.parse(tp.timestamp)).toDateString();
-        });
+        })
+        // Calculate CSS Flexbo Last Row Items
+        this.windowWidth = window.innerWidth;
+        this.calculateLastRowItems();
+        ;
       }
     );
   }
