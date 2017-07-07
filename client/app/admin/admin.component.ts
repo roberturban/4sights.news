@@ -6,6 +6,8 @@ import { UserService } from '../services/user.service';
 import { TopicService } from '../services/topic.service';
 import { CategoryService } from "../services/category.service";
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
+import { DataSource } from '@angular/cdk';
+
 
 import { DialogEdit } from '../topics/manipulateTopics/manipulateDialog.component';
 
