@@ -2,6 +2,8 @@ import * as https from 'https';
 import Article from './article/articleModel';
 import Source from './source/sourceModel';
 import * as mongoose from 'mongoose';
+import * as dotenv from 'dotenv';
+import * as express from 'express';
 const util = require('util');
 
 module.exports = {
@@ -9,7 +11,10 @@ module.exports = {
   requestAll: requestAll
 };
 
-mongoose.connect("mongodb://localhost:27017/team26");
+const app = express();
+dotenv.load({ path: '.env' });
+app.set('port', (process.env.PORT || 3000));
+mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection;
 (<any>mongoose).Promise = global.Promise;
 
@@ -28,7 +33,7 @@ export function startTimedScraping() {
     setInterval(function() {
         console.log("<<<<<<<requestAll>>>>>>>>");
         requestAll();
-    }, 1000 * 30);
+    }, 1000 * 60 * 60); //1 hour
 }
 
 export function requestAll() {

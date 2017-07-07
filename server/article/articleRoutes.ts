@@ -7,13 +7,10 @@ const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
 const user = require('../middleware/user');
 
-router.route('/').get(auth.required, admin.isAdmin, userController.getAll);
-router.route('/').post(userController.insert);
+router.route('/').get(admin.isAdmin, articleController.getAll);
+router.route('/').post(admin.isAdmin, articleController.insert);
 
-router.route('/:id').get(auth.required, user.isSelfOrAdmin, userController.get);
-router.route('/:id').put(auth.required, user.isSelfOrAdmin, userController.update);
-router.route('/:id').delete(auth.required, user.isSelfOrAdmin, userController.delete);
-
-router.route('/login').post(userController.login);
+router.route('/:id').get(admin.isAdmin, articleController.get);
+router.route('/:id').put(admin.isAdmin, articleController.update);
 
 module.exports = router;
