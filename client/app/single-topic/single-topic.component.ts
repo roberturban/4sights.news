@@ -22,11 +22,6 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
               public auth: AuthService,
               private route: ActivatedRoute) { }
 
-  displayMode: string = 'default';
-  multi: boolean = false;
-  hideToggle: boolean = false;
-  showPanel3 = true;
-
   topic: {};
   sub: any;
   topicID: any;
