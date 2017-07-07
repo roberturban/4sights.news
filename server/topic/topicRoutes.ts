@@ -8,8 +8,9 @@ const router = express.Router();
 const topicCtrl = new TopicController();
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
+const param = require('../middleware/param');
 
-router.route('/').get(auth.optional, topicCtrl.getAll);
+router.route('/').get(auth.optional, param.user_id, topicCtrl.getAll);
 router.route('/').post(auth.required, admin.isAdmin, topicCtrl.insert);
 
 router.route('/:id').get(auth.optional, topicCtrl.get);

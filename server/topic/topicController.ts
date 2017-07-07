@@ -3,14 +3,20 @@
  */
 import Topic from './topicModel';
 import BaseCtrl from '../baseController';
+const param = require('../middleware/param');
 
 export default class TopicCtrl extends BaseCtrl {
   model = Topic;
 
   // Get all
   getAll = (req, res) => {
-    this.model.find()
-      .populate('categories')
+    let query = this.model.find();
+
+    if (req.query.user_id) {
+      query = query.where('categories').in(req.query.user_id.categories)
+    }
+
+    query.populate('categories')
       .exec(function (err, docs) {
         if (err) { return console.error(err); }
         res.json(docs);
