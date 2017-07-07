@@ -27,6 +27,7 @@ export default class TopicCtrl extends BaseCtrl {
   get = (req, res) => {
     this.model.findOne({_id: req.params.id})
       .populate('categories')
+      .populate('news_articles')
       .exec(function (err, docs) {
         if (err) { return console.error(err); }
         res.json(docs);
