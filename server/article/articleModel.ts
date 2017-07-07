@@ -16,7 +16,8 @@ const articleSchema = new Schema({
   },
   url: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   author: {
     type: String,
@@ -24,7 +25,7 @@ const articleSchema = new Schema({
   },
   published: {
     type: Date,
-    required: true
+    required: false
   },
   source: {
     type: Schema.Types.ObjectId,

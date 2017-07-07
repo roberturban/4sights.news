@@ -19,6 +19,9 @@
 <md-toolbar class="categories-toolbar">
   <button md-button color="primary" (click)="getTopics_category('Home')">Home</button>
   <button *ngFor="let category of categoriesAvailable" md-button color="primary" (click)="getTopics_category(category)">{{category.name}}</button>
+  <button md-button (click)="open_followCategories()">
+      <i class="material-icons">edit</i>
+  </button>
 </md-toolbar>
 
 <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference.name}}</button></div>

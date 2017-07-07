@@ -24,7 +24,6 @@ import { TopicsService } from './services/topics.service';
 import { SingleTopicService } from './services/single-topic.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
-import { CategoryService } from "./services/category.service";
 import { CategoryFilterPipe } from './services/category-filter.pipe';
 
 import { AppComponent } from './app.component';
@@ -37,6 +36,11 @@ import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
+
+import { DialogFollowCategories } from './topics/followCategories/followCategoryDialog.component';
+import { CategoryService } from "./services/category.service";
+import { ManipulationService } from "./services/manipulation.service";
+
 
 
 @NgModule({
@@ -52,6 +56,7 @@ import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialo
     NotFoundComponent,
     DialogEdit,
     DialogAdd,
+    DialogFollowCategories,
     CategoryFilterPipe
   ],
   imports: [
@@ -73,11 +78,13 @@ import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialo
     UserService,
     TopicsService,
     SingleTopicService,
-    CategoryService
+    CategoryService,
+    ManipulationService,
   ],
   entryComponents: [
     DialogEdit,
-    DialogAdd
+    DialogAdd,
+    DialogFollowCategories
   ],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
