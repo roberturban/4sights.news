@@ -21,28 +21,27 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
               private route: ActivatedRoute) { }
 
   topic: {};
+  sub: any;
   topicID: any;
-  isLoading_singleTopic: false;
+  isLoading_singleTopic = false;
 
   ngOnInit() {
-    this.topicID = this.route.params
-      .subscribe(params => console.log(params));
-
-    // this.topicID = this.sub.toString();
-    // this.getSingleTopic('123123');
+    this.sub = this.route.params
+      .subscribe((params:Params) => {this.topicID = params.id});
+    console.log(this.topicID);
   }
 
   ngOnDestroy() {
-    // this.sub.unsubscribe();
+    this.sub.unsubscribe();
   }
 
   getSingleTopic(id) {
-    // this.isLoading_singleTopic = true;
-    // this.singleTopicService.getSingleTopic(id).subscribe(
-    //   data => this.topic = data,
-    //   error => console.log(error),
-    //   () => this.isLoading_singleTopic = false
-    // );
+    this.isLoading_singleTopic = true;
+    this.singleTopicService.getSingleTopic(this.topicID).subscribe(
+      data => this.topic = data,
+      error => console.log(error),
+      () => this.isLoading_singleTopic = false
+    );
   }
 
 }
