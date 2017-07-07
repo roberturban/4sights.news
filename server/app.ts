@@ -8,7 +8,7 @@ import * as path from 'path';
 const userRoutes = require('./user/userRoutes');
 const topicRoutes = require('./topic/topicRoutes');
 const categoryRoutes = require('./category/categoryRoutes');
-const articlesRoutes = require('./articles/articlesRoutes');
+const articleRoutes = require('./article/articleRoutes');
 
 const app = express();
 dotenv.load({ path: '.env' });
@@ -30,7 +30,7 @@ db.once('open', () => {
   app.use('/api/users', userRoutes);
   app.use('/api/topics', topicRoutes);
   app.use('/api/categories', categoryRoutes);
-  app.use('/api/sources', articlesRoutes);
+  app.use('/api/articles', articleRoutes);
   app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
