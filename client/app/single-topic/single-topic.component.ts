@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Inject, Optional, Input} from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation, Inject, Optional, Input} from '@angular/core';
 import { Http } from '@angular/http';
 import { ActivatedRoute, Params } from '@angular/router';
 
@@ -8,9 +8,11 @@ import { AuthService } from '../services/auth.service';
 import { CategoryService } from "../services/category.service";
 
 @Component({
+  moduleId: module.id,
   selector: 'app-single-topic',
   templateUrl: './single-topic.component.html',
-  styleUrls: ['./single-topic.component.scss']
+  styleUrls: ['./single-topic.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class SingleTopicComponent implements OnInit, OnDestroy {
 
@@ -20,6 +22,11 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
               public auth: AuthService,
               private route: ActivatedRoute) { }
 
+  displayMode: string = 'default';
+  multi: boolean = false;
+  hideToggle: boolean = false;
+  showPanel3 = true;
+
   topic: {};
   sub: any;
   topicID: any;
@@ -28,7 +35,6 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.sub = this.route.params
       .subscribe((params:Params) => {this.topicID = params.id});
-    console.log(this.topicID);
   }
 
   ngOnDestroy() {

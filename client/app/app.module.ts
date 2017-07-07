@@ -3,8 +3,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {  MaterialModule,
+          MdGridListModule,
+          MdExpansionModule,
+          MdIconModule,
+          MdInputModule,
           MdListModule,
-          MdGridListModule } from '@angular/material';
+          MdMenuModule,
+          MdNativeDateModule,
+          MdProgressBarModule,
+          MdProgressSpinnerModule,
+           } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 
@@ -54,6 +62,7 @@ import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialo
     MaterialModule,
     FlexLayoutModule,
     MdListModule,
+    MdExpansionModule,
     MdGridListModule,
     RouterModule,
   ],
