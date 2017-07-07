@@ -5,6 +5,7 @@ import {  MaterialModule,
           MdListModule,
           MdGridListModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { DndModule } from 'ng2-dnd';
 
 
 import { RoutingModule } from './routing.module';
@@ -53,6 +54,7 @@ import { ManipulationService } from "./services/manipulation.service";
     FlexLayoutModule,
     MdListModule,
     MdGridListModule,
+    DndModule.forRoot()
   ],
   providers: [
     AuthService,
@@ -61,7 +63,8 @@ import { ManipulationService } from "./services/manipulation.service";
     UserService,
     TopicService,
     CategoryService,
-    ManipulationService
+    ManipulationService,
+    DndModule
   ],
   entryComponents: [
     DialogEdit,
