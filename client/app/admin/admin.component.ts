@@ -3,7 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ToastComponent } from '../shared/toast/toast.component';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
-import { TopicService } from '../services/topic.service';
+import { TopicsService } from '../services/topics.service';
 import { CategoryService } from "../services/category.service";
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
@@ -30,7 +30,7 @@ export class AdminComponent implements OnInit {
   constructor(public auth: AuthService,
               public toast: ToastComponent,
               private userService: UserService,
-              private topicService: TopicService,
+              private topicService: TopicsService,
               private categoryService: CategoryService,
               public dialogEdit: MdDialog) { }
 

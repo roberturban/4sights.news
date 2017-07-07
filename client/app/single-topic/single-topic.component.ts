@@ -30,19 +30,22 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.sub = this.route.params
       .subscribe((params:Params) => {this.topicID = params.id});
+    this.getSingleTopic();
   }
 
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
 
-  getSingleTopic(id) {
+  getSingleTopic() {
+    console.log("start", this.topic);
     this.isLoading_singleTopic = true;
     this.singleTopicService.getSingleTopic(this.topicID).subscribe(
       data => this.topic = data,
       error => console.log(error),
       () => this.isLoading_singleTopic = false
     );
+    console.log("end", this.topic);
   }
 
 }

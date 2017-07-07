@@ -61,7 +61,6 @@ export class TopicsComponent implements OnInit {
   active_category: String;
   private sub: any;
 
-
   dialogRef: MdDialogRef<any>;
 
   categoriesAvailable = [];
@@ -72,8 +71,12 @@ export class TopicsComponent implements OnInit {
     this.topicsService.getTopics().subscribe(
       data => this.topics = data,
       error => console.log(error),
-      () => this.isLoading_topic = false
+      () => {
+        this.isLoading_topic = false;
+        console.log(this.topics);
+      }
     );
+
   }
 
   addTopic(addTopicFormDialog) {
