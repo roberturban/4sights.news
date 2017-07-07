@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 const Schema = mongoose.Schema;
+const uniqueValidator = require('mongoose-unique-validator');
 
 const articleSchema = new Schema({
   title: {
@@ -38,6 +39,8 @@ const articleSchema = new Schema({
     required: false
   }
 });
+
+articleSchema.plugin(uniqueValidator);
 
 const Article = mongoose.model('Article', articleSchema);
 

@@ -9,6 +9,7 @@ const userRoutes = require('./user/userRoutes');
 const topicRoutes = require('./topic/topicRoutes');
 const categoryRoutes = require('./category/categoryRoutes');
 const articleRoutes = require('./article/articleRoutes');
+require('./article/articleModel');
 
 const app = express();
 dotenv.load({ path: '.env' });
