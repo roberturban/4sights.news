@@ -25,6 +25,7 @@ const apikey = "11358ca80a144ea79d32c7879dd4332c"
 
 export function startTimedScraping() {
     console.log("Scraper Interval set")
+
     setInterval(function() {
         console.log("<<<<<<<requestAll>>>>>>>>");
         requestAll();
