@@ -6,7 +6,7 @@ import {  MaterialModule,
           MdGridListModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { DndModule } from 'ng2-dnd';
-
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -54,7 +54,8 @@ import { ManipulationService } from "./services/manipulation.service";
     FlexLayoutModule,
     MdListModule,
     MdGridListModule,
-    DndModule.forRoot()
+    DndModule.forRoot(),
+    Ng2SmartTableModule
   ],
   providers: [
     AuthService,

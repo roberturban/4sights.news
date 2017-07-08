@@ -6,7 +6,6 @@ import { UserService } from '../services/user.service';
 import { TopicService } from '../services/topic.service';
 import { CategoryService } from "../services/category.service";
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
-import { DataSource } from '@angular/cdk';
 
 
 import { DialogEdit } from '../topics/manipulateTopics/manipulateDialog.component';
@@ -28,6 +27,30 @@ export class AdminComponent implements OnInit {
   isEditing_topic = false;
   dialogRef: MdDialogRef<any>;
   categoriesAvailable = [];
+
+  //user table settings
+  settings = {
+      columns: {
+        name: {
+          title: 'Name'
+        },
+        surname: {
+          title: 'Surname'
+        },
+        email: {
+          title: 'Email'
+        },
+        role: {
+          title: 'Role'
+        }
+       },
+       hideSubHeader: true,
+       actions:{
+         add: false,
+         edit: false,
+         delete: false
+       }
+  };
 
   constructor(public auth: AuthService,
               public toast: ToastComponent,
@@ -76,8 +99,7 @@ export class AdminComponent implements OnInit {
     this.topicService.getTopics().subscribe(
       data => {
          this.topics = data,
-         this.isEditing = true,
-         console.log(this.topics)
+         this.isEditing = true
        },
       error => console.log(error)
     );
@@ -104,9 +126,10 @@ export class AdminComponent implements OnInit {
     );
   }
 
-  save_reordering(){
-    console.log(this.topics);
+  close_editing(){
+    this.isEditing = false;
   }
+
 
     // Dialog for editing topics
   open_edit(del_topic) {

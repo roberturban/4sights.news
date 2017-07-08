@@ -4,45 +4,21 @@
 
 <div class="admin-container mat-elevation-z4" *ngIf="!isLoading">
 
+
+
         <div class="header-title">
           Registered users ({{users.length}})
         </div>
+        <ng2-smart-table [settings]="settings" [source]="users"></ng2-smart-table>
 
-                <cdk-table class="user-table">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Surname</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Action</th>
-                </tr>
-              </thead>
-              <tbody *ngIf="users.length === 0">
-                <tr>
-                  <td colspan="5">There are no registered users.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr *ngFor="let user of users">
-                  <td>{{user.name}}</td>
-                  <td>{{user.surname}}</td>
-                  <td>{{user.email}}</td>
-                  <td>{{user.role}}</td>
-                  <td>
-                    <button md-button (click)="deleteUser(user)" [disabled]="auth.currentUser._id === user._id">
-                      <i class="material-icons">delete</i>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </cdk-table>
-
-          <div class="edit-container">
-            <button md-button color="accent" (click)="getTopics()" *ngIf="!isEditing" [disabled]="isEditing"> 
-              EDIT TOPICS
-            </button>
-          </div>
+        <div class="topic-buttons">
+          <button md-button color="accent" (click)="getTopics()" *ngIf="!isEditing"> 
+            EDIT TOPICS
+          </button>
+          <button md-button color="accent" (click)="close_editing()" *ngIf="isEditing"> 
+            CLOSE TOPIC EDITING
+          </button>
+        </div>
 </div>
 <div class="admin-container mat-elevation-z4" *ngIf="isEditing">
   <div class="header-title">Available Topics ({{topics.length}})</div>
