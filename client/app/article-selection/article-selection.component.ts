@@ -22,15 +22,15 @@ export class ArticleSelectionComponent implements OnInit {
               public dialogEdit: MdDialog) { }
 
   ngOnInit() {
-    this.getUsers();
-    this.loadAvailableCategories();
+    // this.getUsers();
+    // this.loadAvailableCategories();
   }
 
   getUsers() {
-    this.userService.getUsers().subscribe(
-      data => this.users = data,
-      error => console.log(error),
-      () => this.isLoading = false
-    );
+    // this.userService.getUsers().subscribe(
+    //   data => this.users = data,
+    //   error => console.log(error),
+    //   () => this.isLoading = false
+    // );
   }
 }
