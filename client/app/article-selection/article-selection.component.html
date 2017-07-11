@@ -1,0 +1,32 @@
+<div class="manipulation-form" style="font-family:Roboto; !important" >
+    <div class="header-title">{{exttopic.title}}</div>
+    <form class="form-inner" #form="ngForm" (ngSubmit)="submitChanges()">
+        <div class="input-container">
+          <md-input-container class="input-full-width">
+            <input mdInput class="input-full-width"  type="text" name="searchterm" [(ngModel)]="searchterm" placeholder="Search">
+          </md-input-container>
+        </div>
+    </form>
+    <div *ngIf="isLoading">loading...</div>
+    <div *ngIf="!isLoading">
+        Number of articles in topic: {{topic.news_articles.length}}
+        <br>
+        <!--Total Number of articles: {{all_articles.length}}-->
+        <table>
+            <tr *ngFor="let article of topic.news_articles">
+                <td>{{article.source.name}}</td>
+                <td>{{article.title}}</td>
+                <td>{{formatDate(article.published)}}</td>
+                <td><input type="checkbox" checked (change)="uncheck(article)"></td>
+                <td (click)="moveup(article)">&#x25B2;</td>
+                <td (click)="movedown(article)">&#x25BC;</td>
+            </tr>
+            <tr *ngFor="let article of all_articles">
+                <td>{{article.source.name}}</td>
+                <td>{{article.title}}</td>
+                <td>{{formatDate(article.published)}}</td>
+                <td><input type="checkbox" (change)="check(article)"></td>
+            </tr>
+        </table>
+    </div>
+</div>

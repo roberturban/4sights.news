@@ -5,14 +5,13 @@ const router = express.Router();
 const articleController = new ArticleController();
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
-const user = require('../middleware/user');
 
-router.route('/').get(admin.isAdmin, articleController.getAll);
-// router.route('/').get(articleController.getAll);
+router.route('/').get(auth.required ,admin.isAdmin, articleController.getAll);
+//router.route('/').get(articleController.getAll);
 
-router.route('/:id').get(admin.isAdmin, articleController.get);
-// router.route('/:id').get(articleController.get);
-router.route('/:id').put(admin.isAdmin, articleController.update);
-// router.route('/:id').put(articleController.update);
+router.route('/:id').get(auth.required, admin.isAdmin, articleController.get);
+//router.route('/:id').get(articleController.get);
+router.route('/:id').put(auth.required, admin.isAdmin, articleController.update);
+//router.route('/:id').put(articleController.update);
 
 module.exports = router;
