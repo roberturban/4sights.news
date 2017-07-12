@@ -1,17 +1,13 @@
-import {Component, OnInit, HostListener, Inject, Optional, Input} from '@angular/core';
-import {Http} from '@angular/http';
-import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
-import {MdDialog, MdDialogConfig, MdDialogRef} from '@angular/material';
-import {ActivatedRoute} from '@angular/router';
+import {Component, OnInit, HostListener} from '@angular/core';
+import {MdDialog, MdDialogRef} from '@angular/material';
 
-import {ToastComponent} from '../shared/toast/toast.component';
 import {TopicService} from '../services/topic.service';
 import {AuthService} from '../services/auth.service';
-import {AppComponent} from '../app.component';
+import {CategoryService} from '../services/category.service';
 
+import {ToastComponent} from '../shared/toast/toast.component';
 import {DialogAdd, DialogEdit} from './manipulateTopics/manipulateDialog.component';
 import {DialogFollowCategories} from './followCategories/followCategoryDialog.component';
-import {CategoryService} from "../services/category.service";
 
 
 @Component({
@@ -21,15 +17,12 @@ import {CategoryService} from "../services/category.service";
 })
 export class TopicsComponent implements OnInit {
 
-  constructor(private http: Http,
-              public toast: ToastComponent,
+  constructor(public toast: ToastComponent,
               private topicService: TopicService,
-              private formBuilder_topic: FormBuilder,
               public dialogEdit: MdDialog,
               public dialogAdd: MdDialog,
               public dialogFollow: MdDialog,
               public auth: AuthService,
-              private route: ActivatedRoute,
               private categoryService: CategoryService) {
   }
 
@@ -159,7 +152,6 @@ export class TopicsComponent implements OnInit {
       );
     }
   }
-
 
   setInitialPage() {
     this.userCategoryPreferences = this.categoriesAvailable;
