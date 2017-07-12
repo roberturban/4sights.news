@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 
 import { ToastComponent } from '../shared/toast/toast.component';
 import { AuthService } from '../services/auth.service';
@@ -7,7 +7,7 @@ import { TopicService } from '../services/topic.service';
 import { CategoryService } from "../services/category.service";
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
-
+import { ViewCell } from 'ng2-smart-table';
 import { DialogEdit } from '../topics/manipulateTopics/manipulateDialog.component';
 
 
@@ -23,7 +23,8 @@ export class AdminComponent implements OnInit {
   topics = [];
   topic = {};
   isLoading = true;
-  isEditing = false;
+  isEditing_topics = false;
+  isEditing_users = true;
   isEditing_topic = false;
   dialogRef: MdDialogRef<any>;
   categoriesAvailable = [];
@@ -42,6 +43,17 @@ export class AdminComponent implements OnInit {
         },
         role: {
           title: 'Role'
+        },
+        button: {
+          title: 'Button',
+          type: 'custom',
+          renderComponent: ButtonViewComponent,
+          onComponentInitFunction(instance) {
+            instance.save.subscribe(user => {
+              console.log(instance);
+              console.log(user);
+            });
+          }
         }
        },
        hideSubHeader: true,
@@ -61,6 +73,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.getUsers();
+    this.getTopics();
     this.loadAvailableCategories();
   }
 
@@ -72,35 +85,22 @@ export class AdminComponent implements OnInit {
     );
   }
 
-  deleteUser(user) {
-    if (window.confirm('Are you sure you want to permanently delete this user?')) {
-      this.userService.deleteUser(user).subscribe(
-        data => this.toast.setMessage('user deleted successfully.', 'success'),
-        error => console.log(error),
-        () => this.getUsers()
-      );
-    } 
-  }
-
   deleteTopic(topic) {
     if (window.confirm('Are you sure you want to permanently delete this item?')) {
-      this.topicService.deleteTopic(topic).subscribe(
-        res => {
-          const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
-          this.topics.splice(pos, 1);
-          this.toast.setMessage('item deleted successfully.', 'success');
-        },
-        error => console.log(error)
-      );
-    }
+        this.topicService.deleteTopic(topic).subscribe(
+          res => {
+            const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
+            this.topics.splice(pos, 1);
+            this.toast.setMessage('item deleted successfully.', 'success');
+          },
+          error => console.log(error)
+        );
+      }
   }
 
   getTopics() {
     this.topicService.getTopics().subscribe(
-      data => {
-         this.topics = data,
-         this.isEditing = true
-       },
+      data => this.topics = data,
       error => console.log(error)
     );
   }
@@ -126,13 +126,25 @@ export class AdminComponent implements OnInit {
     );
   }
 
-  close_editing(){
-    this.isEditing = false;
+  close_editing(form){
+    if(form == 'user'){
+      this.isEditing_users = false;
+    } else {
+      this.isEditing_topics = false;      
+    }
+  }
+
+  open_editing(form){
+    if(form == 'user'){
+      this.isEditing_users = true;
+    } else {
+      this.isEditing_topics = true;
+    }
   }
 
 
     // Dialog for editing topics
-  open_edit(del_topic) {
+  open_edit_topic(del_topic) {
     this.dialogRef = this.dialogEdit.open(dialogEdit);
     this.isEditing_topic = true;
     this.topic = del_topic;
@@ -157,3 +169,43 @@ export class AdminComponent implements OnInit {
 
 
 const dialogEdit = DialogEdit;
+
+
+
+@Component({
+  selector: 'button-view',
+  template: `
+    <button md-button (click)="onClick()"> 
+                      <i class="material-icons">delete</i> 
+    </button>
+  `,
+})
+export class ButtonViewComponent implements ViewCell, OnInit {
+  renderValue: string;
+
+  @Input() value: string | number;
+  @Input() rowData: any;
+
+  @Output() save: EventEmitter<any> = new EventEmitter();
+
+  constructor(
+    public userService: UserService,
+    public toast: ToastComponent){}
+
+  ngOnInit() {
+    this.renderValue = this.value.toString().toUpperCase();
+  }
+
+  onClick() {
+    this.deleteUser(this.rowData);
+  }
+
+  deleteUser(user) {
+      if (window.confirm('Are you sure you want to permanently delete this user?')) {
+        this.userService.deleteUser(user).subscribe(
+          data => this.toast.setMessage('user deleted successfully.', 'success'),
+          error => console.log(error)
+        );
+      } 
+  }
+}

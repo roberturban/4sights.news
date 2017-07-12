@@ -2,31 +2,34 @@
 
 <app-toast [message]="toast.message"></app-toast>
 
-<div class="admin-container mat-elevation-z4" *ngIf="!isLoading">
+<div class="button-bar">
+          <button md-button color="accent" (click)="open_editing('user')" *ngIf="!isEditing_users"> 
+            EDIT USERS
+          </button>
+          <button md-button color="accent" (click)="close_editing('user')" *ngIf="isEditing_users"> 
+            CLOSE USER EDITING
+          </button>
+          <button md-button color="accent" (click)="open_editing('topic')" *ngIf="!isEditing_topics"> 
+            EDIT TOPICS
+          </button>
+          <button md-button color="accent" (click)="close_editing('topic')" *ngIf="isEditing_topics"> 
+            CLOSE TOPIC EDITING
+          </button>
+</div>
 
-
-
+<div class="admin-container mat-elevation-z4" *ngIf="isEditing_users">
         <div class="header-title">
           Registered users ({{users.length}})
         </div>
-        <ng2-smart-table [settings]="settings" [source]="users"></ng2-smart-table>
-
-        <div class="topic-buttons">
-          <button md-button color="accent" (click)="getTopics()" *ngIf="!isEditing"> 
-            EDIT TOPICS
-          </button>
-          <button md-button color="accent" (click)="close_editing()" *ngIf="isEditing"> 
-            CLOSE TOPIC EDITING
-          </button>
-        </div>
+        <ng2-smart-table [settings]="settings" [source]="users" class="smart-table"></ng2-smart-table>
 </div>
-<div class="admin-container mat-elevation-z4" *ngIf="isEditing">
+<div class="admin-container mat-elevation-z4" *ngIf="isEditing_topics">
   <div class="header-title">Available Topics ({{topics.length}})</div>
-        <div *ngIf="isEditing" class="sortable-container" dnd-sortable-container [sortableData]="topics">
+        <div *ngIf="isEditing_topics" class="sortable-container" dnd-sortable-container [sortableData]="topics">
           <div class="editBox" *ngFor="let topic of topics; let i = index" dnd-sortable [sortableIndex]="i" [dragData]="topic">
             {{topic.title}}
             <div>
-              <button md-button color="accent" class="topic-button" (click)="open_edit(topic)"> 
+              <button md-button color="accent" class="topic-button" (click)="open_edit_topic(topic)"> 
                   <i class="material-icons">edit</i>
               </button>
               <button md-button color="accent" class="topic-button" (click)="deleteTopic(topic)"> 

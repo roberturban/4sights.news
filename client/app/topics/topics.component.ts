@@ -149,15 +149,15 @@ export class TopicsComponent implements OnInit {
 
   deleteTopic(topic) {
     if (window.confirm('Are you sure you want to permanently delete this item?')) {
-      this.topicService.deleteTopic(topic).subscribe(
-        res => {
-          const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
-          this.topics.splice(pos, 1);
-          this.toast.setMessage('item deleted successfully.', 'success');
-        },
-        error => console.log(error)
-      );
-    }
+        this.topicService.deleteTopic(topic).subscribe(
+          res => {
+            const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
+            this.topics.splice(pos, 1);
+            this.toast.setMessage('item deleted successfully.', 'success');
+          },
+          error => console.log(error)
+        );
+      }
   }
 
 
