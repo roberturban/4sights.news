@@ -11,7 +11,7 @@
     <div *ngIf="!isLoading">
         Number of articles in topic: {{topic.news_articles.length}}
         <br>
-        <!--Total Number of articles: {{all_articles.length}}-->
+        Total Number of articles: {{all_articles.length}}
         <table>
             <tr *ngFor="let article of topic.news_articles">
                 <td>{{article.source.name}}</td>
@@ -21,7 +21,7 @@
                 <td (click)="moveup(article)">&#x25B2;</td>
                 <td (click)="movedown(article)">&#x25BC;</td>
             </tr>
-            <tr *ngFor="let article of all_articles">
+            <tr *ngFor="let article of all_articles | filterArticles:searchterm">
                 <td>{{article.source.name}}</td>
                 <td>{{article.title}}</td>
                 <td>{{formatDate(article.published)}}</td>

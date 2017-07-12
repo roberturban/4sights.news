@@ -36,8 +36,9 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     );
     this.articleService.getArticles().subscribe(
       data => {
+        console.log("Total number: " + data.length);
         this.all_articles = data.slice(4,7);
-        console.log(data);
+        console.log(this.all_articles);
         this.isLoadingArticles = false;
         this.checkLoading();
       },
@@ -47,7 +48,20 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    console.log("Number of articles to update: " + this.changed_articles.length);
+    this.saveChanges();
+  }
 
+  //TODO: should be called from parent component
+  saveChanges() {
+    for (var i = 0; i < this.changed_articles.length; i++) {
+      this.articleService.editArticle(this.changed_articles[i]).subscribe(
+        res => {
+          console.log("Article saved on server: " + this.changed_articles[i].title);
+        },
+        error => console.log(error)
+      );
+    }
   }
 
   checkLoading() {
@@ -79,27 +93,29 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
   }
 
   uncheck(article) {
-    this.addToChanged(article);
     for (var i = 0; i < this.topic.news_articles.length; i++) {
       if(this.topic.news_articles[i]._id == article._id) {
         this.topic.news_articles.splice(i, 1);
         break;
       }
     }
+    article.topic = null;
     this.all_articles.push(article);
     this.setOrigTopic();
+    this.addToChanged(article);
   }
 
   check(article) {
-    this.addToChanged(article);
     for (var i = 0; i < this.all_articles.length; i++) {
       if(this.all_articles[i]._id == article._id) {
         this.all_articles.splice(i, 1);
         break;
       }
     }
+    article.topic = this.topic._id;
     this.topic.news_articles.push(article);
     this.setOrigTopic();
+    this.addToChanged(article);
   }
 
   moveup(article) {
@@ -140,13 +156,13 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
       console.log(article);
     }
     */
-
     for (var i = 0; i < this.changed_articles.length; i++) {
       if(this.changed_articles[i]._id == article._id) {
         return;
       }
     }
     this.changed_articles.push(article);
-    //console.log("pushed");
+    console.log("pushed");
+    console.log(this.changed_articles);
   }
 }
