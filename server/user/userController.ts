@@ -10,7 +10,6 @@ export default class UserCtrl extends BaseController {
   model = User;
 
   login = (req, res) => {
-    console.log("Login (UserController): " + req.headers);
     this.model.findOne({email: req.body.email})
       .populate('categories')
       .exec(function (err, user) {
