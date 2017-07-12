@@ -42,11 +42,15 @@
 <div class="card-block" *ngIf="!isLoading">
 
   <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
-    <img md-card-image src="{{topic.image}}" style="height:200px">
+    <a [routerLink]="['/topics', topic._id]">
+      <img style="height:150px; object-fit:cover" md-card-image src="{{topic.image}}">
+    </a>
     <md-card-title-group>
       <md-card-title>
         <div>
-          {{topic.title}}
+          <a [routerLink]="['/topics', topic._id]">
+            {{topic.title}}
+          </a>
           <p class="count mat-fab mat-primary" *ngIf="auth.loggedIn && auth.isAdmin">  {{topic.news_article_count}} </p>
         </div>
       </md-card-title>

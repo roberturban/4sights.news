@@ -1,6 +1,4 @@
-/**
- * Created by Christopher on 18.06.2017.
- */
+
 import Topic from './topicModel';
 import BaseCtrl from '../baseController';
 const param = require('../middleware/param');
@@ -29,6 +27,7 @@ export default class TopicCtrl extends BaseCtrl {
 
   // Get by id
   get = (req, res) => {
+    console.log(req);
     this.model.findOne({_id: req.params.id})
       .populate('categories')
       .populate({

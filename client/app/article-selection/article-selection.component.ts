@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, Input, OnInit, OnDestroy } from '@angular/core';
 import { ArticleService } from "../services/article.service";
-import { TopicService } from "../services/topic.service";
+import { SingleTopicService } from "../services/single-topic.service";
 
 @Component({
   selector: 'app-article-selection',
@@ -11,7 +11,7 @@ import { TopicService } from "../services/topic.service";
 export class ArticleSelectionComponent implements OnInit, OnDestroy {
 
   constructor(private articleService: ArticleService,
-              private topicService: TopicService
+              private topicService: SingleTopicService
   ) { }
 
   @Input() exttopic;
@@ -24,7 +24,7 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
   changed_articles = [];
 
   ngOnInit() {
-    this.topicService.getTopic(this.exttopic).subscribe(
+    this.topicService.getSingleTopic(this.exttopic).subscribe(
       data => {
         this.topic = data;
         console.log(data);
