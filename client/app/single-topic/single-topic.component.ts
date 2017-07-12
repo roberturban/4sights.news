@@ -67,9 +67,11 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
   }
 
   selectSources(){
-    this.dialogRef = this.dialogSelectSource.open(SelectSourcesDialog);
-    this.dialogRef.componentInstance.allSources = this.articles;
-    this.dialogRef.componentInstance.currentSources = this.currentArticles;
+    this.dialogRef = this.dialogSelectSource.open(SelectSourcesDialog, {
+      panelClass: 'custom-overlay-pane-class',
+    });
+    this.dialogRef.componentInstance.allArticles = this.articles;
+    this.dialogRef.componentInstance.currentArticles = this.currentArticles;
   }
 
 }

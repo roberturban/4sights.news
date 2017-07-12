@@ -3,6 +3,10 @@ a {
   color: inherit;
 }
 
+.custom-overlay-pane-class{
+  max-height: 90%;
+  overflow-y: scroll;
+}
 
 .single-topic{
   margin: 50px;

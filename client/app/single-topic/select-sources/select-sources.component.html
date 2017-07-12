@@ -1,3 +1,17 @@
 <div class="selection-dialog" style="font-family:Roboto; !important">
-  <div class="header-title"> Select up to 4 sources</div>
+
+  <div class="header-title">
+    Select up to 4 sources
+  </div>
+
+  <div class="image-container">
+    <img
+      *ngFor="let article of allArticles"
+      (click)="onClick(article)"
+      class="article-logo"
+      [style.opacity]="checkIfCurrent(article)"
+      src="{{article.source.logoUrl}}"
+    />
+  </div>
+
 </div>

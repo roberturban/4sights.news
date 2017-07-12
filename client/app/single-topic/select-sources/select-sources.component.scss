@@ -1,16 +1,32 @@
 .selection-dialog{
-  width: 45em;
+  width: 400px;
   margin-top:10px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  flex-flow: column;
+  overflow-y: scroll;
+}
+
+.custom-overlay-pane-class{
+  max-height: 90%;
+  overflow-y: scroll;
 }
 
 .header-title{
-  width: 85%;
   margin: 30px 0 10px 0;
   padding-bottom: 15px;
   border-bottom: 1px solid #ccc;
   text-align: center
+}
+
+.article-logo {
+  height: 100px;
+  object-fit: contain;
+  margin: 10px 0px;
+}
+
+.image-container{
+  display: flex;
+  flex-flow: column;
 }
