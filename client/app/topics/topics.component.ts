@@ -59,7 +59,6 @@ export class TopicsComponent implements OnInit {
   isEditing_topic = false;
   userHasPreferences = false;
 
-  active_category: String;
   private sub: any;
 
   dialogRef: MdDialogRef<any>;
@@ -106,7 +105,7 @@ export class TopicsComponent implements OnInit {
         this.topics.map(tp => {
           tp.timestamp = new Date(Date.parse(tp.timestamp)).toDateString();
         })
-        // Calculate CSS Flexbo Last Row Items
+        // Calculate CSS Flexbox Last Row Items
         this.windowWidth = window.innerWidth;
         this.calculateLastRowItems();
         this.calculateMenuButton();
@@ -170,7 +169,6 @@ export class TopicsComponent implements OnInit {
     if(value=='Home'){
       this.setInitialPage();
     } else{
-      this.active_category = value;
       this.userCategoryPreferences = [value];
     }
   }
