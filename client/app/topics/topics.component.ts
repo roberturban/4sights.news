@@ -1,17 +1,17 @@
-import { Component, OnInit, HostListener, Inject, Optional, Input} from '@angular/core';
-import { Http } from '@angular/http';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit, HostListener, Inject, Optional, Input} from '@angular/core';
+import {Http} from '@angular/http';
+import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import {MdDialog, MdDialogConfig, MdDialogRef} from '@angular/material';
+import {ActivatedRoute} from '@angular/router';
 
-import { ToastComponent } from '../shared/toast/toast.component';
-import { TopicService } from '../services/topic.service';
-import { AuthService } from '../services/auth.service';
-import { AppComponent } from '../app.component';
+import {ToastComponent} from '../shared/toast/toast.component';
+import {TopicService} from '../services/topic.service';
+import {AuthService} from '../services/auth.service';
+import {AppComponent} from '../app.component';
 
-import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
-import { DialogFollowCategories } from './followCategories/followCategoryDialog.component';
-import { CategoryService } from "../services/category.service";
+import {DialogAdd, DialogEdit} from './manipulateTopics/manipulateDialog.component';
+import {DialogFollowCategories} from './followCategories/followCategoryDialog.component';
+import {CategoryService} from "../services/category.service";
 
 
 @Component({
@@ -30,10 +30,11 @@ export class TopicsComponent implements OnInit {
               public dialogFollow: MdDialog,
               public auth: AuthService,
               private route: ActivatedRoute,
-              private categoryService: CategoryService) { }
+              private categoryService: CategoryService) {
+  }
 
   ngOnInit() {
-    if(this.auth.loggedIn) {
+    if (this.auth.loggedIn) {
       this.getTopics(null, this.auth.currentUser);
     } else {
       this.getTopics();
@@ -56,14 +57,11 @@ export class TopicsComponent implements OnInit {
   //Topics
   topic = {};
   topics = [];
-  filter_topics = [];
 
-  topic_cancel = {};
   isLoading_topic = true;
   isEditing_topic = false;
   userHasPreferences = false;
 
-  private sub: any;
 
   dialogRef: MdDialogRef<any>;
 
@@ -71,7 +69,6 @@ export class TopicsComponent implements OnInit {
   userCategoryPreferences = [];
 
   // Menu for Toolbar
-  selected = '';
   menuButton: boolean;
 
   // Flexbox
@@ -86,13 +83,13 @@ export class TopicsComponent implements OnInit {
     this.calculateMenuButton();
   }
 
-  calculateLastRowItems(){
+  calculateLastRowItems() {
     this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.topics.length % Math.floor((this.windowWidth - 100) / 288);
-    this.missingItemsArray = Array.from(Array(this.missingItems),(x,i)=>i);
+    this.missingItemsArray = Array.from(Array(this.missingItems), (x, i) => i);
   }
 
-  calculateMenuButton(){
-    if (this.windowWidth < 800){
+  calculateMenuButton() {
+    if (this.windowWidth < 800) {
       this.menuButton = true;
     } else {
       this.menuButton = false;
@@ -164,23 +161,23 @@ export class TopicsComponent implements OnInit {
   }
 
 
-  setInitialPage(){
+  setInitialPage() {
     this.userCategoryPreferences = this.categoriesAvailable;
     this.getUserCategoryPreferences();
   }
 
   getTopics_category(value) {
-    if(value=='Home'){
+    if (value == 'Home') {
       this.setInitialPage();
-    } else{
+    } else {
       this.getTopics(value);
       this.userCategoryPreferences = [value];
     }
   }
 
-  getUserCategoryPreferences(){
+  getUserCategoryPreferences() {
     //initiate with full
-    if(this.auth.currentUser.categories.length > 0){
+    if (this.auth.currentUser.categories.length > 0) {
       this.userCategoryPreferences = this.auth.currentUser.categories;
       this.userHasPreferences = true;
     }
@@ -226,7 +223,7 @@ export class TopicsComponent implements OnInit {
           this.toast.setMessage('item edited successfully.', 'success');
         }
 
-    });
+      });
   }
 
   //Dialog for changing subscription of categories
@@ -245,8 +242,7 @@ export class TopicsComponent implements OnInit {
           this.toast.setMessage('subscription updated successfully.', 'success');
         }
       });
-    }
-
+  }
 
 
 }
