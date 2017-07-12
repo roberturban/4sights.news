@@ -36,8 +36,9 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     );
     this.articleService.getArticles().subscribe(
       data => {
-        console.log("Total number: " + data.length);
-        this.all_articles = data.slice(4,7);
+        //console.log("Total number: " + data.length);
+        this.all_articles = data;
+        console.log(data);
         console.log(this.all_articles);
         this.isLoadingArticles = false;
         this.checkLoading();

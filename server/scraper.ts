@@ -30,6 +30,7 @@ const apikey = "11358ca80a144ea79d32c7879dd4332c"
 export function startTimedScraping() {
     console.log("Scraper Interval set")
 
+    requestAll();
     setInterval(function() {
         console.log("<<<<<<<requestAll>>>>>>>>");
         requestAll();
@@ -102,7 +103,7 @@ function saveData(responseObj, sourceName) {
             const description = article["description"];
             const url = article["url"];
             const urlToImage = article["urlToImage"];
-            const publishedAt = article["publishedAt"] ? article["publishedAt"] : Date.now;
+            const publishedAt = article["publishedAt"] ? article["publishedAt"] : Date.now();
 
             var instance = new Article({
                 title: title,
