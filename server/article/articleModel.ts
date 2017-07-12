@@ -26,12 +26,12 @@ const articleSchema = new Schema({
   },
   published: {
     type: Date,
-    required: false
+    required: true
   },
   source: {
     type: Schema.Types.ObjectId,
     ref: 'Source',
-    required: false
+    required: true
   },
   topic: {
     type: Schema.Types.ObjectId,

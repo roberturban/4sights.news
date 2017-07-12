@@ -1,3 +1,9 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .count{
   height: 24px;
   width: 24px;
@@ -46,7 +52,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
   align-content: stretch;
-  margin: 0px 50px;
+  margin: 50px 50px;
 }
 
 .topic-card {

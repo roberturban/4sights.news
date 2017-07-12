@@ -1,0 +1,43 @@
+<div class="single-topic" *ngIf="!isLoading_singleTopic">
+
+  <div class="image-card-center">
+    <md-card class="image-card">
+      <img class="article-picture" src="{{topic.image}}"/>
+      <md-card-title-group style="padding: 24px">
+        <md-card-title style="margin-bottom:0px">
+          {{topic.title}}
+        </md-card-title>
+      </md-card-title-group>
+    </md-card>
+  </div>
+  <!-- <md-expansion-panel #myPanel>
+    <md-expansion-panel-header>
+      <mat-panel-title>
+          {{topic.title}}
+      </mat-panel-title>
+    </md-expansion-panel-header>
+    <div>
+      This is the content text that makes sense here.
+    </div>
+  </md-expansion-panel> -->
+
+  <div class="article-block">
+
+      <md-card class="article-card" *ngFor="let article of first_articles">
+        <div class="source-position-logo">
+          <img class="source-logo" src={{article.source.logoUrl}} />
+        </div>
+        <md-card-title-group>
+          <md-card-title>
+            {{article.title}}
+          </md-card-title>
+          <md-card-subtitle>
+            {{article.description}}
+          </md-card-subtitle>
+        </md-card-title-group>
+      </md-card>
+
+
+  </div>
+
+</div>

@@ -1,6 +1,3 @@
-/**
- * Created by Christopher on 17.06.2017.
- */
 import TopicController from './topicController';
 
 const express = require('express');

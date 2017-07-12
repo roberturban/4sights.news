@@ -1,6 +1,3 @@
-/**
- * Created by Christopher on 18.06.2017.
- */
 const admin = {
   isAdmin: (req, res, next) => {
     if (req.payload.user.role !== 'admin') {
