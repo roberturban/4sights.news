@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Optional, Input} from '@angular/core';
+import { Component, OnInit, HostListener, Inject, Optional, Input} from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
@@ -10,7 +10,8 @@ import { AuthService } from '../services/auth.service';
 import { AppComponent } from '../app.component';
 
 import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
-import {CategoryService} from "../services/category.service";
+import { DialogFollowCategories } from './followCategories/followCategoryDialog.component';
+import { CategoryService } from "../services/category.service";
 
 
 @Component({
@@ -24,8 +25,9 @@ export class TopicsComponent implements OnInit {
               public toast: ToastComponent,
               private topicService: TopicService,
               private formBuilder_topic: FormBuilder,
-              public dialog: MdDialog,
+              public dialogEdit: MdDialog,
               public dialogAdd: MdDialog,
+              public dialogFollow: MdDialog,
               public auth: AuthService,
               private route: ActivatedRoute,
               private categoryService: CategoryService) { }
@@ -34,7 +36,6 @@ export class TopicsComponent implements OnInit {
     this.getTopics();
     /*set initial preferences to full, will be checked afterwards*/
     this.loadAvailableCategories();
-    setTimeout(1000);
   }
 
   loadAvailableCategories() {
@@ -61,19 +62,56 @@ export class TopicsComponent implements OnInit {
   active_category: String;
   private sub: any;
 
-
   dialogRef: MdDialogRef<any>;
 
   categoriesAvailable = [];
-
   userCategoryPreferences = [];
 
+  // Menu for Toolbar
+  selected = '';
+  menuButton: boolean;
+
+  // Flexbox
+  windowWidth: number;
+  missingItems: number;
+  missingItemsArray = [];
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.windowWidth = event.target.innerWidth;
+    this.calculateLastRowItems();
+    this.calculateMenuButton();
+  }
+
+  calculateLastRowItems(){
+    this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.topics.length % Math.floor((this.windowWidth - 100) / 288);
+    this.missingItemsArray = Array.from(Array(this.missingItems),(x,i)=>i);
+  }
+
+  calculateMenuButton(){
+    if (this.windowWidth < 800){
+      this.menuButton = true;
+    } else {
+      this.menuButton = false;
+    }
+  }
 
   getTopics() {
     this.topicService.getTopics().subscribe(
       data => this.topics = data,
       error => console.log(error),
-      () => this.isLoading_topic = false
+      () => {
+        this.isLoading_topic = false;
+        // Convert Timestamp
+        this.topics.map(tp => {
+          tp.timestamp = new Date(Date.parse(tp.timestamp)).toDateString();
+        })
+        // Calculate CSS Flexbo Last Row Items
+        this.windowWidth = window.innerWidth;
+        this.calculateLastRowItems();
+        this.calculateMenuButton();
+        ;
+      }
     );
   }
 
@@ -89,20 +127,6 @@ export class TopicsComponent implements OnInit {
     );
   }
 
-  enableEditing_topic(topic) {
-    this.isEditing_topic = true;
-    this.topic = topic;
-  }
-
-  cancelEditing_topic() {
-    this.isEditing_topic = false;
-    this.topic = {};
-    this.topics = [];
-    this.toast.setMessage('item editing cancelled.', 'warning');
-    // reload the Topics to reset the editing
-    this.getTopics();
-  }
-
   editTopic(topic) {
     this.topicService.editTopic(topic).subscribe(
       res => {
@@ -112,6 +136,15 @@ export class TopicsComponent implements OnInit {
       },
       error => console.log(error)
     );
+  }
+
+  cancelEditing_topic() {
+    this.isEditing_topic = false;
+    this.topic = {};
+    this.topics = [];
+    this.toast.setMessage('item editing cancelled.', 'warning');
+    // reload the Topics to reset the editing
+    this.getTopics();
   }
 
   deleteTopic(topic) {
@@ -127,45 +160,6 @@ export class TopicsComponent implements OnInit {
     }
   }
 
-  // Dialog for Editing Topics
-
-  open_edit(del_topic) {
-    this.dialogRef = this.dialog.open(dialog);
-    this.enableEditing_topic(del_topic);
-    this.dialogRef.componentInstance.dialog_topic = del_topic;
-
-    this.dialogRef.afterClosed().subscribe(
-      result => {
-        this.dialogRef = null;
-        if (!result) {
-          this.cancelEditing_topic();
-          this.toast.setMessage('item cancled.', 'warning');
-        } else {
-          this.editTopic(result);
-          this.toast.setMessage('item edited successfully.', 'success');
-        }
-
-      });
-  }
-
-  // Dialog for Adding Topics
-  open_add() {
-    this.dialogRef = this.dialogAdd.open(dialogAdd);
-
-    this.dialogRef.afterClosed().subscribe(
-      result => {
-        this.dialogRef = null;
-        if (!result) {
-          this.cancelEditing_topic();
-          this.toast.setMessage('item cancled.', 'warning');
-        } else {
-          this.addTopic(result);
-          this.getTopics();
-          this.toast.setMessage('item edited successfully.', 'success');
-        }
-
-    });
-  }
 
   setInitialPage(){
     this.userCategoryPreferences = this.categoriesAvailable;
@@ -187,9 +181,73 @@ export class TopicsComponent implements OnInit {
       this.userCategoryPreferences = this.auth.currentUser.categories;
       this.userHasPreferences = true;
     }
-  };
+  }
+
+
+  // Dialog windows
+  // Dialog for editing topics
+  open_edit(del_topic) {
+    this.dialogRef = this.dialogEdit.open(dialogEdit);
+    this.isEditing_topic = true;
+    this.topic = del_topic;
+    this.dialogRef.componentInstance.dialog_topic = del_topic;
+    this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
+    this.dialogRef.componentInstance.topicCategories = del_topic.categories;
+
+    this.dialogRef.afterClosed().subscribe(
+      result => {
+        this.dialogRef = null;
+        if (!result) {
+          this.cancelEditing_topic();
+          this.toast.setMessage('item cancled.', 'warning');
+        } else {
+          this.editTopic(result);
+          this.toast.setMessage('item edited successfully.', 'success');
+        }
+      });
+  }
+
+  //Dialog for adding topics
+  open_add() {
+    this.dialogRef = this.dialogAdd.open(dialogAdd);
+
+    this.dialogRef.afterClosed().subscribe(
+      result => {
+        this.dialogRef = null;
+        if (!result) {
+          this.cancelEditing_topic();
+          this.toast.setMessage('item cancled.', 'warning');
+        } else {
+          this.addTopic(result);
+          this.getTopics();
+          this.toast.setMessage('item edited successfully.', 'success');
+        }
+
+    });
+  }
+
+  //Dialog for changing subscription of categories
+  open_followCategories() {
+    this.dialogRef = this.dialogFollow.open(dialogFollow);
+    this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
+    this.dialogRef.componentInstance.user = this.auth.currentUser;
+    this.dialogRef.componentInstance.userCategoryPreferences = this.userCategoryPreferences;
+
+    this.dialogRef.afterClosed().subscribe(
+      result => {
+        this.dialogRef = null;
+        if (!result) {
+          this.toast.setMessage('subscription was not updated!.', 'warning');
+        } else {
+          this.toast.setMessage('subscription updated successfully.', 'success');
+        }
+      });
+    }
+
+
 
 }
 
-const dialog = DialogEdit;
+const dialogEdit = DialogEdit;
 const dialogAdd = DialogAdd;
+const dialogFollow = DialogFollowCategories;

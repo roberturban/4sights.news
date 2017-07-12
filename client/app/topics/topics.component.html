@@ -18,15 +18,31 @@
 
 <md-toolbar class="categories-toolbar">
   <button md-button color="primary" (click)="getTopics_category('Home')">Home</button>
-  <button *ngFor="let category of categoriesAvailable" md-button color="primary" (click)="getTopics_category(category)">{{category.name}}</button>
+  <div *ngIf='!menuButton'>
+    <button *ngFor="let category of categoriesAvailable"  md-button color="primary" (click)="getTopics_category(category)">
+      {{category.name}}
+    </button>
+  </div>
+  <button md-button (click)="open_followCategories()" *ngIf="auth.loggedIn && auth.isAdmin">
+      <i class="material-icons">edit</i>
+  </button>
+  <button *ngIf="menuButton" md-icon-button [mdMenuTriggerFor]="posXMenu" aria-label="Open x-positioned menu">
+    <md-icon>more_vert</md-icon>
+  </button>
 </md-toolbar>
 
-<div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference.name}}</button></div>
+<md-menu xPosition="before" #posXMenu="mdMenu" class="before">
+  <button md-menu-item *ngFor="let category of categoriesAvailable" [disabled]="category.disabled">
+    {{ category.name }}
+  </button>
+</md-menu>
+
+<!-- <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference.name}}</button></div> -->
 
 <div class="card-block" *ngIf="!isLoading">
 
   <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
-    <img md-card-image src="{{topic.image}}">
+    <img md-card-image src="{{topic.image}}" style="height:200px">
     <md-card-title-group>
       <md-card-title>
         <div>
@@ -37,39 +53,42 @@
       <md-card-subtitle>{{topic.location}}, {{topic.timestamp}}</md-card-subtitle>
     </md-card-title-group>
 
-    <div class="categories-row">
-      <button md-raised-button *ngFor="let category of topic.categories" (click)="getTopics_category(category)">
+    <md-card-actions class="categories-row">
+      <button md-raised-button class="category-button" *ngFor="let category of topic.categories" (click)="getTopics_category(category)">
         {{category.name}}
       </button>
-    </div>
+    </md-card-actions>
 
     <md-card-actions *ngIf="auth.loggedIn && auth.isAdmin">
-      <button md-raised-button color="primary" (click)="open_edit(topic)">
+      <button md-raised-button style="font-size: 12px;" color="primary" (click)="open_edit(topic)">
       <i class="material-icons">settings</i>  Edit Topic
       </button>
-      <button md-raised-button color="warn" style="margin-left:10px; color: #fff;" (click)="deleteTopic(topic)">
+      <button md-raised-button style="font-size: 12px;" color="warn" style="margin-left:10px; color: #fff;" (click)="deleteTopic(topic)">
         <i class="material-icons">delete</i> Delete
       </button>
     </md-card-actions>
   </md-card>
 
+  <md-card class="topic-card-empty" *ngFor="let i of missingItemsArray"></md-card>
+
 </div>
 
 
 
-<div style="margin:50px 70px;" *ngIf="!isLoading">
+<div *ngIf="!isLoading_topic">
 
-  <table class="table table-bordered table-striped">
-    <tbody *ngIf="topics.length === 0">
+  <table style="margin:50px 70px;" class="table table-bordered table-striped" *ngIf="topics.length === 0">
+    <tbody >
       <tr>
         <td colspan="4">There are no topics in the DB. Add a new topic below on the button.</td>
       </tr>
     </tbody>
   </table>
 
-  <button md-fab *ngIf="auth.loggedIn && auth.isAdmin" (click)="open_add()" color="primary">
+  <button style="margin: 50px 0px 50px 70px;" md-fab *ngIf="auth.loggedIn && auth.isAdmin" (click)="open_add()" color="primary">
     <md-icon class="md-24">add</md-icon>
   </button>
 
 </div>
+
 <li *ngFor="let item of items"> {{item}} </li>

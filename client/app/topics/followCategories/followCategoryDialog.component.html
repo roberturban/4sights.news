@@ -1,0 +1,7 @@
+<div class="categoryBox">
+        <div style="margin: 10px 0;">Follow categories:</div>
+      	<div class="checkboxes">
+        	<md-checkbox class="single_box" *ngFor="let category of userCategoryPreferencesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)">{{category.category.name}}</md-checkbox>
+        </div>
+        <button class="button-bottom" md-raised-button color="primary" (click)="save(user)"><md-icon>save</md-icon> Save</button>
+</div>

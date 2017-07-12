@@ -5,6 +5,7 @@ import {  MaterialModule,
           MdListModule,
           MdGridListModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { DndModule } from 'ng2-dnd';
 
 
 import { RoutingModule } from './routing.module';
@@ -24,8 +25,12 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoryFilterPipe } from './services/category-filter.pipe';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
+import { DialogFollowCategories } from './topics/followCategories/followCategoryDialog.component';
 import {CategoryService} from "./services/category.service";
-
+import { ManipulationService } from "./services/manipulation.service";
+import {ArticleSelectionComponent} from './article-selection/article-selection.component';
+import { ArticleService } from "./services/article.service";
+import { ArticleFilterPipe } from './article-selection/article-search-filter.pipe';
 
 
 @NgModule({
@@ -40,7 +45,10 @@ import {CategoryService} from "./services/category.service";
     NotFoundComponent,
     DialogEdit,
     DialogAdd,
-    CategoryFilterPipe
+    DialogFollowCategories,
+    CategoryFilterPipe,
+    ArticleSelectionComponent,
+    ArticleFilterPipe
   ],
   imports: [
     RoutingModule,
@@ -51,6 +59,7 @@ import {CategoryService} from "./services/category.service";
     FlexLayoutModule,
     MdListModule,
     MdGridListModule,
+    DndModule.forRoot()
   ],
   providers: [
     AuthService,
@@ -58,11 +67,15 @@ import {CategoryService} from "./services/category.service";
     AuthGuardAdmin,
     UserService,
     TopicService,
-    CategoryService
+    CategoryService,
+    ManipulationService,
+    DndModule,
+    ArticleService
   ],
   entryComponents: [
     DialogEdit,
-    DialogAdd
+    DialogAdd,
+    DialogFollowCategories
   ],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

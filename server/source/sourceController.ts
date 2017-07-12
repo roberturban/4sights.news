@@ -1,3 +1,7 @@
 import Source from './sourceModel';
 import BaseCtrl from '../baseController';
-import * as jwt from 'jsonwebtoken';
+
+export default class SourceCtrl extends BaseCtrl {
+  model = Source;
+
+}
