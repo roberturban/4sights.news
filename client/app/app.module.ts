@@ -25,7 +25,6 @@ import { TopicsService } from './services/topics.service';
 import { SingleTopicService } from './services/single-topic.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
-import { CategoryFilterPipe } from './services/category-filter.pipe';
 
 import { AppComponent } from './app.component';
 import { TopicsComponent } from './topics/topics.component';
