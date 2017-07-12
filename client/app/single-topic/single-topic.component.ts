@@ -1,11 +1,14 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation, Inject, Optional, Input} from '@angular/core';
 import { Http } from '@angular/http';
 import { ActivatedRoute, Params } from '@angular/router';
+import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
 import { ToastComponent } from '../shared/toast/toast.component';
 import { SingleTopicService } from '../services/single-topic.service';
 import { AuthService } from '../services/auth.service';
 import { CategoryService } from "../services/category.service";
+import { SelectSourcesDialog } from './select-sources/select-sources.component';
+
 
 @Component({
   moduleId: module.id,
@@ -20,14 +23,17 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
               public toast: ToastComponent,
               private singleTopicService: SingleTopicService,
               public auth: AuthService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              public dialogSelectSource: MdDialog) { }
 
   topic: {};
   articles: [any];
-  first_articles = [];
+  currentArticles = [];
   sub: any;
   topicID: any;
   isLoading_singleTopic = false;
+
+  dialogRef: MdDialogRef<any>;
 
   ngOnInit() {
     this.sub = this.route.params
@@ -45,14 +51,23 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
       data => {
         this.topic = data;
         this.articles = this.topic["news_articles"];
-        this.first_articles = this.articles.slice(0,4);
+        this.currentArticles = this.articles.slice(0,4);
       },
       error => console.log(error),
       () => {
         this.isLoading_singleTopic = false;
-        console.log('topic loaded', this.topic, this.articles, this.first_articles);
+        console.log('topic loaded', this.topic, this.articles, this.currentArticles);
       }
     );
+  }
+
+  visitExternalLink(link){
+    console.log(link.url);
+    window.location.href=link.url;
+  }
+
+  selectSources(){
+    this.dialogRef = this.dialogSelectSource.open(SelectSourcesDialog);
   }
 
 }

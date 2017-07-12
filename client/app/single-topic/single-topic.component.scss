@@ -3,6 +3,11 @@ a {
   color: inherit;
 }
 
+
+.single-topic{
+  margin: 50px;
+}
+
 .image-card-center{
   width: 100%;
   justify-content: center;
@@ -15,8 +20,20 @@ a {
   width: 100%;
 }
 
-.single-topic{
-  margin: 20px;
+.single-topic-group{
+  padding: 24px;
+}
+
+.single-topic-group > div{
+  width: 100%;
+}
+
+.single-topic-headerline{
+  width: 100%;
+  margin-bottom:0px !important;
+  display:flex !important;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .article-block{
@@ -38,6 +55,8 @@ a {
 .article-card {
   margin: 20px 20px 20px 0px;
   width: 25%;
+  display: flex !important;
+  flex-flow: column !important;
 }
 
 .source-position-logo{
@@ -52,7 +71,20 @@ a {
   object-fit: cover;
 }
 
-@media(max-width: 680px) {
+.categories-row{
+  display: flex !important;
+  flex:1;
+  flex-flow: row wrap;
+  align-content: end !important;
+}
+
+.category-button{
+  align-self: end;
+  margin: 5px !important;
+  font-size: 12px;
+}
+
+@media(max-width: 850px) {
   .article-card{
     width:100%;
     margin: 20px 0px 0px 0px;

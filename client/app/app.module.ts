@@ -37,6 +37,7 @@ import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
+import { SelectSourcesDialog } from './single-topic/select-sources/select-sources.component';
 
 import { DialogFollowCategories } from './topics/followCategories/followCategoryDialog.component';
 import { CategoryService } from "./services/category.service";
@@ -60,6 +61,7 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     NotFoundComponent,
     DialogEdit,
     DialogAdd,
+    SelectSourcesDialog,
     DialogFollowCategories,
     CategoryFilterPipe,
     ArticleSelectionComponent,
@@ -93,7 +95,8 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
   entryComponents: [
     DialogEdit,
     DialogAdd,
-    DialogFollowCategories
+    DialogFollowCategories,
+    SelectSourcesDialog
   ],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
