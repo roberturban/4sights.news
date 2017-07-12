@@ -41,7 +41,7 @@
 
 <div class="card-block" *ngIf="!isLoading">
 
-  <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
+  <md-card class="topic-card" *ngFor="let topic of topics">
     <img md-card-image src="{{topic.image}}" style="height:200px">
     <md-card-title-group>
       <md-card-title>

@@ -23,7 +23,6 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { CategoryFilterPipe } from './services/category-filter.pipe';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
 import { DialogFollowCategories } from './topics/followCategories/followCategoryDialog.component';
 import {CategoryService} from "./services/category.service";
@@ -46,7 +45,6 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     DialogEdit,
     DialogAdd,
     DialogFollowCategories,
-    CategoryFilterPipe,
     ArticleSelectionComponent,
     ArticleFilterPipe
   ],
