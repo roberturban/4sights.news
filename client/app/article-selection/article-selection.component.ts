@@ -49,6 +49,7 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     console.log("Number of articles to update: " + this.changed_articles.length);
+    //TODO: this should be removed and called from parent component
     this.saveChanges();
   }
 
@@ -57,7 +58,8 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     for (var i = 0; i < this.changed_articles.length; i++) {
       this.articleService.editArticle(this.changed_articles[i]).subscribe(
         res => {
-          console.log("Article saved on server: " + this.changed_articles[i].title);
+          console.log("Article saved on server: ");
+          console.log(res);
         },
         error => console.log(error)
       );
