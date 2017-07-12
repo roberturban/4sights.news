@@ -8,13 +8,15 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SingleTopicComponent } from './single-topic/single-topic.component';
 
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 
 const routes: Routes = [
-  { path: '', component: TopicsComponent },
+  { path: '', redirectTo: 'topics', pathMatch: 'full' },
   { path: 'topics', component: TopicsComponent },
+  { path: 'topics/:id', component: SingleTopicComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },

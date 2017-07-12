@@ -47,13 +47,10 @@
         <md-option value="admin">Admin</md-option>
       </md-select>
     </div>
-
-    <div class="input-container">
-      <md-select multiple class="input-full-width special-input-wrapper" name="categories" formControlName="categories" placeholder="Categories" required>
-        <md-option *ngFor="let category of categoriesAvailable" value="{{ category._id }}">{{ category.name }}</md-option>
-      </md-select>
+    <div class="follow-box">  
+      <div style="margin: 10px 0;">Follow categories:</div>
+      <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
     </div>
-
     <div class="bottom-row">
       <div style="font-family:Roboto;">
         Already a member? <a routerLink="/login">Log in here</a>

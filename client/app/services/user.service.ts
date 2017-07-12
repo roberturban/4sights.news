@@ -33,10 +33,6 @@ export class UserService {
     return this.http.get('/api/users', this.getOptions()).map(res => res.json());
   }
 
-  countUsers(): Observable<any> {
-    return this.http.get('/api/users/count', this.getOptions()).map(res => res.json());
-  }
-
   addUser(user): Observable<any> {
     return this.http.post('/api/users', JSON.stringify(user), this.getOptions());
   }

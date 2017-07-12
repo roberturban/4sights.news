@@ -1,6 +1,6 @@
-<div class="manipulation-form">
-  <h2>Add Topic</h2>
-    <form class="form-inner" [formGroup]="addTopicForm" (ngSubmit)="dialogRef.close(addTopicForm)">
+<div class="manipulation-form" style="font-family:Roboto; !important">
+  <div class="header-title">Add Topic</div>
+    <form class="form-inner" [formGroup]="addTopicForm" (ngSubmit)="submitTopic()">
       <div class="input-container">
         <md-input-container class="input-full-width">
           <input mdInput class="input-full-width" type="text" name="title" formControlName="title" placeholder="title">
@@ -27,9 +27,8 @@
         </md-input-container>
       </div>
       <div class="input-container">
-        <md-select multiple class="input-full-width special-input-wrapper" name="topics" formControlName="categories" placeholder="Categories">
-          <md-option *ngFor="let category of categoriesAvailable" [value]="category">{{ category.name }}</md-option>
-        </md-select>
+        <div>Categories:</div>
+        <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
       </div>
       <div class="bottom-row">
         <button md-raised-button color="primary" type="submit" [disabled]="!addTopicForm.valid"><md-icon>save</md-icon> Add</button>

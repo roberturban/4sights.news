@@ -1,3 +1,9 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .count{
   height: 24px;
   width: 24px;
@@ -25,7 +31,15 @@
 
 .categories-row{
   display: flex;
-  margin:10px 0px 16px 0px;
+  flex:1;
+  flex-flow: row wrap;
+  align-content: end;
+}
+
+.category-button{
+  align-self: end;
+  margin: 5px !important;
+  font-size: 12px;
 }
 
 .table td, .table th {
@@ -37,12 +51,30 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-  margin: 0px 50px;
+  align-content: stretch;
+  margin: 50px 50px;
 }
 
 .topic-card {
-	width: 300px;
+	flex: 1 0 200px;
 	margin: 20px;
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topic-card-empty{
+  height:0;
+  margin: 20px;
+  boder:none;
+  flex: 1 0 200px;
+  box-shadow: none !important;
+}
+
+@media(max-width: 680px){
+  .topic-card-empty{
+    display:none;
+  }
 }
 
 .header-content{
