@@ -46,7 +46,6 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
         this.topic = data;
         this.articles = this.topic["news_articles"];
         this.first_articles = this.articles.slice(0,4);
-
       },
       error => console.log(error),
       () => {
