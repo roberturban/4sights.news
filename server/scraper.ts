@@ -39,22 +39,58 @@ export function startTimedScraping() {
 
 export function requestAll() {
     const aljazeeraGET = "/v1/articles?source=al-jazeera-english&sortBy=top&apiKey=" + apikey;
-    const breitbartGET = "/v1/articles?source=breitbart-news&sortBy=top&apiKey=" + apikey;
-    const cnnGET = "/v1/articles?source=cnn&sortBy=top&apiKey=" + apikey;
-    const bbcGET = "/v1/articles?source=bbc-news&sortBy=top&apiKey=" + apikey;
-    const timesIndiaGET = "/v1/articles?source=the-times-of-india&sortBy=top&apiKey=" + apikey;
-    const hinduGET = "/v1/articles?source=the-hindu&sortBy=top&apiKey=" + apikey;
-    const nytGET = "/v1/articles?source=the-new-york-times&sortBy=top&apiKey=" + apikey;
-    const washingtonPostGET = "/v1/articles?source=the-washington-post&sortBy=top&apiKey=" + apikey;
-
     requestSource(aljazeeraGET, "Aljazeera");
+
+    const breitbartGET = "/v1/articles?source=breitbart-news&sortBy=top&apiKey=" + apikey;
     requestSource(breitbartGET, "Breitbart");
+
+    const cnnGET = "/v1/articles?source=cnn&sortBy=top&apiKey=" + apikey;
     requestSource(cnnGET, "CNN");
+
+    const bbcGET = "/v1/articles?source=bbc-news&sortBy=top&apiKey=" + apikey;
     requestSource(bbcGET, "BBC");
+
+    const timesIndiaGET = "/v1/articles?source=the-times-of-india&sortBy=top&apiKey=" + apikey;
     requestSource(timesIndiaGET, "Times of India");
+
+    const hinduGET = "/v1/articles?source=the-hindu&sortBy=top&apiKey=" + apikey;
     requestSource(hinduGET, "The Hindu");
+
+    const nytGET = "/v1/articles?source=the-new-york-times&sortBy=top&apiKey=" + apikey;
     requestSource(nytGET, "The New York Times");
+
+    const washingtonPostGET = "/v1/articles?source=the-washington-post&sortBy=top&apiKey=" + apikey;
     requestSource(washingtonPostGET, "Washington Post");
+
+    //const abcGET = "https://newsapi.org/v1/articles?source=abc-news-au&sortBy=top&apiKey=" + apiKey;
+    //requestSource(abcGET, "ABC News");
+
+    //const arsTechnicaGET = "https://newsapi.org/v1/articles?source=ars-technica&sortBy=top&apiKey=" + apiKey;
+    //requestSource(arsTechnicaGET, "ARS Technica");
+
+    //const bbcSportsGET = "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=" + apiKey;
+    //requestSource(bbcSportsGET, "BBC Sport");
+
+    //const bloombergGET = "https://newsapi.org/v1/articles?source=bloomberg&sortBy=top&apiKey=" + apiKey;
+    //requestSource(bloombergGET, "Bloomberg");
+
+    //const businessInsiderGET = "https://newsapi.org/v1/articles?source=business-insider&sortBy=top&apiKey=" + apiKey;
+    //requestSource(businessInsiderGET, "Bussiness Insider");
+
+    //const engadgetGET = "https://newsapi.org/v1/articles?source=engadget&sortBy=top&apiKey=" + apiKey;
+    //requestSource(engadgetGET, "Engadget");
+
+    //const financialTimesGET = "https://newsapi.org/v1/articles?source=financial-times&sortBy=top&apiKey=" + apiKey;
+    //requestSource(financialTimesGET, "Financial Times");
+
+    //const techCrunchGET = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apiKey;
+    //requestSource(techCrunchGET, "TechCrunch");
+
+    //const economistGET = "https://newsapi.org/v1/articles?source=the-economist&sortBy=top&apiKey=" + apiKey;
+    //requestSource(economistGET, "Economist");
+
+    //const theVergeGET = "https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey=" + apiKey;
+    //requestSource(theVergeGET, "The Verge");
 }
 
 function requestSource(param, sourceName) {
@@ -105,7 +141,7 @@ function saveData(responseObj, sourceName) {
             const urlToImage = article["urlToImage"];
             const publishedAt = article["publishedAt"] ? article["publishedAt"] : Date.now();
 
-            var instance = new Article({
+            const instance = new Article({
                 title: title,
                 description: description,
                 image: urlToImage,
@@ -116,21 +152,16 @@ function saveData(responseObj, sourceName) {
                 source: source
             });
 
-            // Article.count({"url": url}, function(err, count){
-            //     if(err) return console.log("Error counting the number of existing articles");
-            //     if(count > 0) return console.log("Already stored (" + sourceName + "): \"" + title + "\"");
-
-                instance.save((err, item) => {
-                    // 11000 is the code for duplicate key error
-                    if (err && err.code === 11000) {
-                        console.error("Item duplicated");
-                    }
-                    if (err) {
-                        console.error(err);
-                    }
-                    console.log("Item saved (" + sourceName + "): \"" + title + "\"");
-                });
-            // });
+            instance.save((err, item) => {
+                // 11000 is the code for duplicate key error
+                if (err && err.code === 11000) {
+                    console.error("Item duplicated");
+                }
+                if (err) {
+                    console.error(err);
+                }
+                console.log("Item saved (" + sourceName + "): \"" + title + "\"");
+            });
         }
     });
 }
