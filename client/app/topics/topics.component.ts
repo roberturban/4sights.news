@@ -33,7 +33,11 @@ export class TopicsComponent implements OnInit {
               private categoryService: CategoryService) { }
 
   ngOnInit() {
-    this.getTopics();
+    if(this.auth.loggedIn) {
+      this.getTopics(this.auth.currentUser);
+    } else {
+      this.getTopics();
+    }
     /*set initial preferences to full, will be checked afterwards*/
     this.loadAvailableCategories();
   }
@@ -95,8 +99,8 @@ export class TopicsComponent implements OnInit {
     }
   }
 
-  getTopics() {
-    this.topicService.getTopics().subscribe(
+  getTopics(user = null) {
+    this.topicService.getTopics(null, user).subscribe(
       data => this.topics = data,
       error => console.log(error),
       () => {
