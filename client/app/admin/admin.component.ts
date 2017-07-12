@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter, NgZone } from '@angular/core';
 
 import { ToastComponent } from '../shared/toast/toast.component';
 import { AuthService } from '../services/auth.service';
@@ -6,9 +6,8 @@ import { UserService } from '../services/user.service';
 import { TopicsService } from '../services/topics.service';
 import { CategoryService } from "../services/category.service";
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
-import { DataSource } from '@angular/cdk';
 
-
+import { ViewCell, LocalDataSource } from 'ng2-smart-table';
 import { DialogEdit } from '../topics/manipulateTopics/manipulateDialog.component';
 
 
@@ -24,61 +23,97 @@ export class AdminComponent implements OnInit {
   topics = [];
   topic = {};
   isLoading = true;
-  isEditing = false;
+  isEditing_topics = false;
+  isEditing_users = true;
   isEditing_topic = false;
   dialogRef: MdDialogRef<any>;
   categoriesAvailable = [];
+  source: LocalDataSource;
+
+  //user table settings
+  settings = {
+      columns: {
+        name: {
+          title: 'Name',
+          filter: false
+        },
+        surname: {
+          title: 'Surname',
+          filter: false
+        },
+        email: {
+          title: 'Email',
+          filter: false
+        },
+        role: {
+          title: 'Role',
+          filter: false
+        },
+        button: {
+          title: 'Delete',
+          type: 'custom',
+          filter: false,
+          renderComponent: ButtonViewComponent
+        }
+       },
+       hideSubHeader: true,
+       actions:{
+         add: false,
+         edit: false,
+         delete: false
+       }
+  };
 
   constructor(public auth: AuthService,
               public toast: ToastComponent,
               private userService: UserService,
               private topicService: TopicsService,
               private categoryService: CategoryService,
-              public dialogEdit: MdDialog) { }
+              public dialogEdit: MdDialog,
+              private zone: NgZone) 
+              {
+                 // listens on 
+                 this.userService.getUsers().subscribe((state) => {
+                    this.zone.run(() => {
+                    console.log('user source has been changed.');
+                    });
+                 });
+
+              }
 
   ngOnInit() {
     this.getUsers();
+    this.getTopics();
     this.loadAvailableCategories();
   }
 
   getUsers() {
     this.userService.getUsers().subscribe(
-      data => this.users = data,
+      data => {
+        this.users = data,
+        this.source = new LocalDataSource(this.users)
+      },
       error => console.log(error),
       () => this.isLoading = false
     );
   }
 
-  deleteUser(user) {
-    if (window.confirm('Are you sure you want to permanently delete this user?')) {
-      this.userService.deleteUser(user).subscribe(
-        data => this.toast.setMessage('user deleted successfully.', 'success'),
-        error => console.log(error),
-        () => this.getUsers()
-      );
-    } 
-  }
-
   deleteTopic(topic) {
     if (window.confirm('Are you sure you want to permanently delete this item?')) {
-      this.topicService.deleteTopic(topic).subscribe(
-        res => {
-          const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
-          this.topics.splice(pos, 1);
-          this.toast.setMessage('item deleted successfully.', 'success');
-        },
-        error => console.log(error)
-      );
-    }
+        this.topicService.deleteTopic(topic).subscribe(
+          res => {
+            const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
+            this.topics.splice(pos, 1);
+            this.toast.setMessage('item deleted successfully.', 'success');
+          },
+          error => console.log(error)
+        );
+      }
   }
 
   getTopics() {
     this.topicService.getTopics().subscribe(
-      data => {
-         this.topics = data,
-         this.isEditing = true,
-         console.log(this.topics)
-       },
+      data => this.topics = data,
       error => console.log(error)
     );
   }
@@ -104,12 +139,53 @@ export class AdminComponent implements OnInit {
     );
   }
 
-  save_reordering(){
-    console.log(this.topics);
+  close_editing(form){
+    if(form == 'user'){
+      this.isEditing_users = false;
+    } else {
+      this.isEditing_topics = false;      
+    }
   }
 
+  open_editing(form){
+    if(form == 'user'){
+      this.isEditing_users = true;
+    } else {
+      this.isEditing_topics = true;
+    }
+  }
+
+  onSearch(query: string = '') {
+    if(query.length == 0){
+        this.source.setFilter([]);
+    } else {
+    this.source.setFilter([
+      // fields we want to include in the search
+      {
+        field: 'name',
+        search: query
+      },
+      {
+        field: 'surname',
+        search: query
+      },
+      {
+        field: 'email',
+        search: query
+      },
+      {
+        field: 'role',
+        search: query
+      }
+    ], false); }
+  // second parameter specifying whether to perform 'AND' or 'OR' search 
+  // (meaning all columns should contain search query or at least one)
+  // 'AND' by default, so changing to 'OR' by setting false here
+  }
+
+
     // Dialog for editing topics
-  open_edit(del_topic) {
+  open_edit_topic(del_topic) {
     this.dialogRef = this.dialogEdit.open(dialogEdit);
     this.isEditing_topic = true;
     this.topic = del_topic;
@@ -134,3 +210,46 @@ export class AdminComponent implements OnInit {
 
 
 const dialogEdit = DialogEdit;
+
+
+
+@Component({
+  selector: 'button-view',
+  template: `
+    <button md-button (click)="onClick()" [disabled]="auth.currentUser._id === rowData._id"> 
+                      <i class="material-icons">delete</i> 
+    </button>
+  `,
+})
+export class ButtonViewComponent implements ViewCell, OnInit {
+  renderValue: string;
+
+  @Input() value: string | number;
+  @Input() rowData: any;
+
+  constructor(
+    public userService: UserService,
+    public toast: ToastComponent,
+    public admin: AdminComponent,
+    public auth: AuthService){}
+
+  ngOnInit() {
+    this.renderValue = this.value.toString().toUpperCase();
+  }
+
+  onClick() {
+    this.deleteUser(this.rowData);
+  }
+
+  deleteUser(user) {
+      if (window.confirm('Are you sure you want to permanently delete this user?')) {
+        this.userService.deleteUser(user).subscribe(
+          data => {
+            this.toast.setMessage('user deleted successfully.', 'success'),
+            this.admin.getUsers()
+        },
+          error => console.log(error)
+        );
+      } 
+  }
+}

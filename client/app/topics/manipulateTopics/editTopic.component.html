@@ -1,7 +1,8 @@
+<md-dialog-content>
 <div class="manipulation-form" style="font-family:Roboto; !important">
   <div class="header-title"> Edit Topic</div>
-  <div>
-   <img src="{{dialog_topic.image}}" width="50%" height="50%">
+  <div class="image-box">
+   <img src="{{dialog_topic.image}}">
   </div>
   <form class="form-inner" #form="ngForm" (ngSubmit)="submitChanges()">
     <div class="input-container">
@@ -29,7 +30,8 @@
         <input mdInput class="input-full-width" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="Location" required>
       </md-input-container>
     </div>
-    <div><div>Categories:</div>
+    <label style="margin:15px 0px"> Categories: </label>
+    <div class="checkboxes">
      <md-checkbox *ngFor="let category of categoriesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
     </div>
     <div class="bottom-row">
@@ -38,3 +40,4 @@
     </div>
   </form>
 </div>
+</md-dialog-content>

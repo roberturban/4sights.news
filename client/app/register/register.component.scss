@@ -1,23 +1,49 @@
-.registration-form{
-  width: 100%;
-  margin-top:100px;
+.register-container{
+  margin: 50px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form-inner{
-  width: 100%;
-  padding: 0px 25%;
+.header-title{
+  width: 85%;
+  margin: 30px 0 10px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: center
 }
 
-@media (max-width: 600px){
-  .form-inner{
-    width: 80%;
-    padding: 0px 50px;
-  }
+
+.register-form{
+  padding: 30px;  
+  width: 70%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
 }
+
+.checkboxes{
+  display: flex;
+  flex-direction: column;
+}
+
+.single_box{
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin: 5px 0;
+  justify-content: space-between;
+}
+
+:host /deep/ .mat-checkbox-label{
+    width: 400px;
+}
+
+:host /deep/ .mat-checkbox-inner-container {
+  margin-right: 40px !important;
+  margin-left: 10px;
+}
+
 
 .input-full-width{
   width: 100%;

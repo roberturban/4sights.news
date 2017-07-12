@@ -37,7 +37,6 @@ export class ManipulationService {
 	        }
 	        //this.pushObject = {"category": this.categoriesAvailable[x], "value": false};
 	    }
-	    console.log(this.categoriesMap);
 	    return this.categoriesMap;
   	}
 
