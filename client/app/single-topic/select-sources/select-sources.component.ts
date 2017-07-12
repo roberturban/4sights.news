@@ -12,10 +12,11 @@ export class SelectSourcesDialog implements OnInit {
   constructor(private formBuilder_topic: FormBuilder,
               public dialofRef: MdDialogRef<any>) { }
 
+  allSources = [];
+  currentSources = [];
+
   ngOnInit(){
-
+    console.log(this.allSources);
   }
-
-
 
 }

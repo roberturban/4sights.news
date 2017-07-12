@@ -16,7 +16,6 @@ export class DialogEdit implements OnInit {
   public categoriesAvailable;
   public categoriesMap =[];
   public topicCategories = [];
-  pushObject = {};
 
 
   constructor(public dialogRef: MdDialogRef<any>,
@@ -64,8 +63,6 @@ export class DialogAdd implements OnInit {
   categoriesSelected = [];
   //Necessary for mapping categoriesAvailable Objects with boolean
   categoriesMap =[];
-
-  pushObject = {};
 
   title = new FormControl('', Validators.required);
   timestamp = new FormControl('', Validators.required);
