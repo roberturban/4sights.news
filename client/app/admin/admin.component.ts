@@ -7,7 +7,7 @@ import { TopicService } from '../services/topic.service';
 import { CategoryService } from "../services/category.service";
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
-import { ViewCell } from 'ng2-smart-table';
+import { ViewCell, LocalDataSource } from 'ng2-smart-table';
 import { DialogEdit } from '../topics/manipulateTopics/manipulateDialog.component';
 
 
@@ -28,6 +28,7 @@ export class AdminComponent implements OnInit {
   isEditing_topic = false;
   dialogRef: MdDialogRef<any>;
   categoriesAvailable = [];
+  source: LocalDataSource;
 
   //user table settings
   settings = {
@@ -45,7 +46,7 @@ export class AdminComponent implements OnInit {
           title: 'Role'
         },
         button: {
-          title: 'Button',
+          title: 'Delete',
           type: 'custom',
           renderComponent: ButtonViewComponent,
           onComponentInitFunction(instance) {
@@ -69,7 +70,11 @@ export class AdminComponent implements OnInit {
               private userService: UserService,
               private topicService: TopicService,
               private categoryService: CategoryService,
-              public dialogEdit: MdDialog) { }
+              public dialogEdit: MdDialog) 
+              {
+                 
+
+               }
 
   ngOnInit() {
     this.getUsers();
@@ -79,7 +84,11 @@ export class AdminComponent implements OnInit {
 
   getUsers() {
     this.userService.getUsers().subscribe(
-      data => this.users = data,
+      data => {
+        this.users = data,
+        this.source = new LocalDataSource(this.users),
+        console.log(Object.keys(this.users[0]))
+      },
       error => console.log(error),
       () => this.isLoading = false
     );
@@ -142,6 +151,31 @@ export class AdminComponent implements OnInit {
     }
   }
 
+  onSearch(query: string = '') {
+  this.source.setFilter([
+    // fields we want to include in the search
+    {
+      field: 'name',
+      search: query
+    },
+    {
+      field: 'surname',
+      search: query
+    },
+    {
+      field: 'email',
+      search: query
+    },
+    {
+      field: 'role',
+      search: query
+    }
+  ], false); 
+  // second parameter specifying whether to perform 'AND' or 'OR' search 
+  // (meaning all columns should contain search query or at least one)
+  // 'AND' by default, so changing to 'OR' by setting false here
+}
+
 
     // Dialog for editing topics
   open_edit_topic(del_topic) {
@@ -190,7 +224,8 @@ export class ButtonViewComponent implements ViewCell, OnInit {
 
   constructor(
     public userService: UserService,
-    public toast: ToastComponent){}
+    public toast: ToastComponent,
+    public admin: AdminComponent){}
 
   ngOnInit() {
     this.renderValue = this.value.toString().toUpperCase();
@@ -203,7 +238,10 @@ export class ButtonViewComponent implements ViewCell, OnInit {
   deleteUser(user) {
       if (window.confirm('Are you sure you want to permanently delete this user?')) {
         this.userService.deleteUser(user).subscribe(
-          data => this.toast.setMessage('user deleted successfully.', 'success'),
+          data => {
+            this.toast.setMessage('user deleted successfully.', 'success'),
+            this.admin.getUsers()
+        },
           error => console.log(error)
         );
       } 

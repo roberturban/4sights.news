@@ -21,12 +21,14 @@
         <div class="header-title">
           Registered users ({{users.length}})
         </div>
-        <ng2-smart-table [settings]="settings" [source]="users" class="smart-table"></ng2-smart-table>
+        <input #search class="search-bar" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)" style="margin: 10px">
+        <ng2-smart-table [settings]="settings" [source]="source" class="smart-table"></ng2-smart-table>
 </div>
 <div class="admin-container mat-elevation-z4" *ngIf="isEditing_topics">
   <div class="header-title">Available Topics ({{topics.length}})</div>
+        <input type="text" class="search-bar" placeholder="Search Topics.." #topicFilter (keyup)="0"/> 
         <div *ngIf="isEditing_topics" class="sortable-container" dnd-sortable-container [sortableData]="topics">
-          <div class="editBox" *ngFor="let topic of topics; let i = index" dnd-sortable [sortableIndex]="i" [dragData]="topic">
+          <div class="editBox" *ngFor="let topic of topics | searchPipe: topicFilter.value">
             {{topic.title}}
             <div>
               <button md-button color="accent" class="topic-button" (click)="open_edit_topic(topic)"> 
