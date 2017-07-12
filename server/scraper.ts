@@ -62,35 +62,35 @@ export function requestAll() {
     const washingtonPostGET = "/v1/articles?source=the-washington-post&sortBy=top&apiKey=" + apikey;
     requestSource(washingtonPostGET, "Washington Post");
 
-    //const abcGET = "https://newsapi.org/v1/articles?source=abc-news-au&sortBy=top&apiKey=" + apiKey;
-    //requestSource(abcGET, "ABC News");
+    const abcGET = "https://newsapi.org/v1/articles?source=abc-news-au&sortBy=top&apiKey=" + apikey;
+    requestSource(abcGET, "ABC News");
 
-    //const arsTechnicaGET = "https://newsapi.org/v1/articles?source=ars-technica&sortBy=top&apiKey=" + apiKey;
-    //requestSource(arsTechnicaGET, "ARS Technica");
+    const arsTechnicaGET = "https://newsapi.org/v1/articles?source=ars-technica&sortBy=top&apiKey=" + apikey;
+    requestSource(arsTechnicaGET, "ARS Technica");
 
-    //const bbcSportsGET = "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=" + apiKey;
-    //requestSource(bbcSportsGET, "BBC Sport");
+    const bbcSportsGET = "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=" + apikey;
+    requestSource(bbcSportsGET, "BBC Sport");
 
-    //const bloombergGET = "https://newsapi.org/v1/articles?source=bloomberg&sortBy=top&apiKey=" + apiKey;
-    //requestSource(bloombergGET, "Bloomberg");
+    const bloombergGET = "https://newsapi.org/v1/articles?source=bloomberg&sortBy=top&apiKey=" + apikey;
+    requestSource(bloombergGET, "Bloomberg");
 
-    //const businessInsiderGET = "https://newsapi.org/v1/articles?source=business-insider&sortBy=top&apiKey=" + apiKey;
-    //requestSource(businessInsiderGET, "Bussiness Insider");
+    const businessInsiderGET = "https://newsapi.org/v1/articles?source=business-insider&sortBy=top&apiKey=" + apikey;
+    requestSource(businessInsiderGET, "Bussiness Insider");
 
-    //const engadgetGET = "https://newsapi.org/v1/articles?source=engadget&sortBy=top&apiKey=" + apiKey;
-    //requestSource(engadgetGET, "Engadget");
+    const engadgetGET = "https://newsapi.org/v1/articles?source=engadget&sortBy=top&apiKey=" + apikey;
+    requestSource(engadgetGET, "Engadget");
 
-    //const financialTimesGET = "https://newsapi.org/v1/articles?source=financial-times&sortBy=top&apiKey=" + apiKey;
-    //requestSource(financialTimesGET, "Financial Times");
+    const financialTimesGET = "https://newsapi.org/v1/articles?source=financial-times&sortBy=top&apiKey=" + apikey;
+    requestSource(financialTimesGET, "Financial Times");
 
-    //const techCrunchGET = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apiKey;
-    //requestSource(techCrunchGET, "TechCrunch");
+    const techCrunchGET = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apikey;
+    requestSource(techCrunchGET, "TechCrunch");
 
-    //const economistGET = "https://newsapi.org/v1/articles?source=the-economist&sortBy=top&apiKey=" + apiKey;
-    //requestSource(economistGET, "Economist");
+    const economistGET = "https://newsapi.org/v1/articles?source=the-economist&sortBy=top&apiKey=" + apikey;
+    requestSource(economistGET, "Economist");
 
-    //const theVergeGET = "https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey=" + apiKey;
-    //requestSource(theVergeGET, "The Verge");
+    const theVergeGET = "https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey=" + apikey;
+    requestSource(theVergeGET, "The Verge");
 }
 
 function requestSource(param, sourceName) {
