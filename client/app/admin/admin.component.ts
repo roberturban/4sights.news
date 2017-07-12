@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter, NgZone } from '@angular/core';
 
 import { ToastComponent } from '../shared/toast/toast.component';
 import { AuthService } from '../services/auth.service';
@@ -69,11 +69,17 @@ export class AdminComponent implements OnInit {
               private userService: UserService,
               private topicService: TopicService,
               private categoryService: CategoryService,
-              public dialogEdit: MdDialog) 
+              public dialogEdit: MdDialog,
+              private zone:NgZone) 
               {
-                 
+                 // listens on 
+                 this.userService.getUsers().subscribe((state) => {
+                    this.zone.run(() => {
+                    console.log('user source has been changed.');
+                    });
+                 });
 
-               }
+              }
 
   ngOnInit() {
     this.getUsers();
