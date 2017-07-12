@@ -34,7 +34,7 @@ export class TopicsComponent implements OnInit {
 
   ngOnInit() {
     if(this.auth.loggedIn) {
-      this.getTopics(this.auth.currentUser);
+      this.getTopics(null, this.auth.currentUser);
     } else {
       this.getTopics();
     }
@@ -99,8 +99,8 @@ export class TopicsComponent implements OnInit {
     }
   }
 
-  getTopics(user = null) {
-    this.topicService.getTopics(null, user).subscribe(
+  getTopics(category = null, user = null) {
+    this.topicService.getTopics(category, user).subscribe(
       data => this.topics = data,
       error => console.log(error),
       () => {
