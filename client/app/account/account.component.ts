@@ -22,7 +22,7 @@ export class AccountComponent implements OnInit {
               public toast: ToastComponent,
               private userService: UserService,
               private categoryService: CategoryService,
-              private manipulationService : ManipulationService) { }
+              private manipulationService: ManipulationService) { }
 
   ngOnInit() {
     this.getUser();
@@ -51,7 +51,7 @@ export class AccountComponent implements OnInit {
 
   loadAvailableCategories() {
     this.categoryService.getCategories().subscribe(
-      data => { 
+      data => {
         this.categoriesAvailable = data,
         this.userCategoryPreferencesMap = this.manipulationService.initCategoriesMap(this.auth.currentUser.categories, this.categoriesAvailable)
        },
