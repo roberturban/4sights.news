@@ -5,13 +5,6 @@ import {CategoryService} from "../../services/category.service";
 import {ManipulationService} from "../../services/manipulation.service";
 
 
-// MD Dialog Component -- Maybe better to be refactored to editTopic.component.ts
-
-interface ICategory {
-  _id: String,
-  name: String
-}
-
 @Component({
   selector: 'dialogEdit',
   templateUrl: './editTopic.component.html',
@@ -23,7 +16,6 @@ export class DialogEdit implements OnInit {
   public categoriesAvailable;
   public categoriesMap =[];
   public topicCategories = [];
-  pushObject = {};
 
 
   constructor(public dialogRef: MdDialogRef<any>,
@@ -38,7 +30,7 @@ export class DialogEdit implements OnInit {
 
   submitChanges(){
     this.dialog_topic.categories = this.manipulationService.mapCheckedOptions(this.categoriesMap);
-    this.dialogRef.close(this.dialog_topic); 
+    this.dialogRef.close(this.dialog_topic);
   }
 
   updateCheckedOptions(value,event){
@@ -46,7 +38,7 @@ export class DialogEdit implements OnInit {
   }
 
 
-  
+
 }
 
 // Dialog for Adding of Topic
@@ -67,12 +59,10 @@ export class DialogAdd implements OnInit {
 
   categoriesAvailable = [];
 
-  //Used filter categoriesSelected before registration 
+  //Used filter categoriesSelected before registration
   categoriesSelected = [];
   //Necessary for mapping categoriesAvailable Objects with boolean
   categoriesMap =[];
-
-  pushObject = {};
 
   title = new FormControl('', Validators.required);
   timestamp = new FormControl('', Validators.required);
@@ -108,9 +98,9 @@ export class DialogAdd implements OnInit {
   }
 
 
-    
+
   submitTopic(){
     this.addTopicForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
-    this.dialogRef.close(this.addTopicForm); 
+    this.dialogRef.close(this.addTopicForm);
   }
 }

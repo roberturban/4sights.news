@@ -4,29 +4,29 @@ import {CategoryService} from "./category.service";
 @Injectable()
 export class ManipulationService {
 
-	categoryArray = [];
-	categoriesMap = [];
-	//categoriesAvailable = [];
+  categoryArray = [];
+  categoriesMap = [];
+  //categoriesAvailable = [];
 
 	 constructor(private categoryService: CategoryService) {
 
-  	}
+  }
 
-  	//take mapping back and exclude boolean values
-	mapCheckedOptions(categoriesMapped){
+  //take mapping back and exclude boolean values
+  mapCheckedOptions(categoriesMapped) {
 
-	 this.categoryArray = [];
+    this.categoryArray = [];
 
-     for (var x=0; x < categoriesMapped.length; x++){
-      if(categoriesMapped[x].value){
+    for (var x = 0; x < categoriesMapped.length; x++) {
+      if (categoriesMapped[x].value) {
         this.categoryArray.push(categoriesMapped[x].category);
-      	}
-     }
-     return this.categoryArray;
-  	}
+      }
+    }
+    return this.categoryArray;
+  }
 
-  	//set all categories with boolean values
-  	initCategoriesMap(toMapCategories,categoriesAvailable) {
+  //set all categories with boolean values
+  initCategoriesMap(toMapCategories, categoriesAvailable) {
   		this.categoriesMap = [];
 
 	    for (var x = 0; x<categoriesAvailable.length; x++) {

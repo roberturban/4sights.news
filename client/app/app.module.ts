@@ -39,6 +39,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoryFilterPipe } from './services/category-filter.pipe';
 import { SearchPipe } from './services/search.pipe';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
+import { SelectSourcesDialog } from './single-topic/select-sources/select-sources.component';
 
 import { DialogFollowCategories } from './topics/followCategories/followCategoryDialog.component';
 import { CategoryService } from "./services/category.service";
@@ -62,6 +63,7 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     NotFoundComponent,
     DialogEdit,
     DialogAdd,
+    SelectSourcesDialog,
     DialogFollowCategories,
     CategoryFilterPipe,
     SearchPipe,
@@ -99,6 +101,7 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     DialogEdit,
     DialogAdd,
     DialogFollowCategories,
+    SelectSourcesDialog,
     ButtonViewComponent
   ],
 
