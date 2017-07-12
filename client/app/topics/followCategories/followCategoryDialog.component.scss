@@ -2,4 +2,40 @@
   margin: 10px;
   border-radius: 5px;
   padding: 10px;
+  font-family:Roboto !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.checkboxes{
+  display: flex;
+  flex-direction: column;
+}
+
+.single_box{
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin: 5px 0;
+  justify-content: space-between;
+  width: 400px;
+}
+
+
+:host /deep/ .mat-checkbox-label{
+	width: 300px !important;	
+}
+
+
+.button-bottom{
+	margin: 20px 20px 0 20px;
+	align-items: center;
+}
+
+:host /deep/ .mat-checkbox-inner-container {
+	margin-right: 40px;
+	margin-left: 20px;
 }
