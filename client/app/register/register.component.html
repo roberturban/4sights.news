@@ -1,8 +1,11 @@
 <app-toast [message]="toast.message"></app-toast>
 
 
-<div class="registration-form">
-  <form class="form-inner" [formGroup]="registerForm" (ngSubmit)="register()">
+<div class="register-container mat-elevation-z4">
+  
+  <div class="header-title">Register
+    </div>
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="register()">
 
     <div class="input-container">
       <md-input-container class="input-full-width">
@@ -47,13 +50,10 @@
         <md-option value="admin">Admin</md-option>
       </md-select>
     </div>
-
-    <div class="input-container">
-      <md-select multiple class="input-full-width special-input-wrapper" name="categories" formControlName="categories" placeholder="Categories" required>
-        <md-option *ngFor="let category of categoriesAvailable" value="{{ category._id }}">{{ category.name }}</md-option>
-      </md-select>
+    <label style="margin-bottom:15px"> Follow your categories: </label>
+    <div class="checkboxes">
+      <md-checkbox class="single_box" *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
     </div>
-
     <div class="bottom-row">
       <div style="font-family:Roboto;">
         Already a member? <a routerLink="/login">Log in here</a>

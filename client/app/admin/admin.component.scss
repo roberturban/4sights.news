@@ -1,118 +1,62 @@
-.card-admin{
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-}
 
-.demo-table-container {
-  margin:50px;
+.admin-container {
+  margin: 25px 50px;
   display: flex;
   flex-direction: column;
-  padding:30px;
-  max-height: 800px;
-  background: white;
-
-  // Table fills in the remaining area with a scroll
-  .cdk-table {
-    flex: 1 1 auto;
-    overflow: auto;
-  }
-}
-
-/* Structure */
-.demo-table-container {
-  display: flex;
-  flex-direction: column;
-  max-height: 800px;
-  background: white;
-
-  // Table fills in the remaining area with a scroll
-  .cdk-table {
-    flex: 1 1 auto;
-    overflow: auto;
-  }
-}
-
-/*
- * Styles to make the demo's cdk-table match the material design spec
- * https://material.io/guidelines/components/data-tables.html
- */
-.cdk-table {
-  display: block;
-}
-
-.cdk-row, .cdk-header-row {
-  display: flex;
-  border-bottom: 1px solid #ccc;
   align-items: center;
-  height: 48px;
-  padding: 0 8px;
 }
 
-.cdk-cell, .cdk-header-cell {
-  width: 150px;
-  padding: 10px;
-  position: relative;
-  flex: 1;
+.smart-table{
+  margin-bottom: 30px;
 }
 
-.cdk-header-cell {
-  font-size: 12px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.54);
-}
-
-.cdk-cell {
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-/* Column and cell styles */
-.cdk-column-userId {
-  max-width: 32px;
-}
-
-.cdk-column-userName {
-  max-width: 80px;
-}
-
-.cdk-column-progress {
-  &.cdk-cell {
+.editBox{
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 800px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
     display: flex;
-    position: relative;
-
-    .demo-progress-stat {
-      width: 32px;
-      padding-right: 8px;
-    }
-
-    .demo-progress-indicator-container {
-      position: relative;
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-    }
-    .demo-progress-indicator {
-      border-radius: 8px;
-      height: 8px;
-    }
-  }
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
 }
 
-.cdk-column-color {
-  max-width: 160px;
-
-  &.cdk-cell {
-    font-weight: bold;
-    font-size: 16px;
-    font-family: cursive;
-  }
+.sortable-container{
+  width: 100%;
+  margin: 10px auto;
 }
+
+td{
+  padding: 20px;
+}
+
+.button-bar{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.topic-button{
+  padding: 0 !important;
+}
+
+.header-title{
+  width: 85%;
+  margin: 30px 0 10px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: center
+}
+
+.search-bar{
+  margin: 4px 4px 0;
+  width: 257px;
+  height: 28px;
+  font-size: 15px;
+  padding-left: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+

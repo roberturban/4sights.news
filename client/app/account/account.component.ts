@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { ToastComponent } from '../shared/toast/toast.component';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 import { CategoryService } from '../services/category.service';
+import { ManipulationService } from '../services/manipulation.service';
 
 @Component({
   selector: 'app-account',
@@ -14,17 +15,20 @@ export class AccountComponent implements OnInit {
   user = {};
   isLoading = true;
   categoriesAvailable = [];
-  userCategoryPreferences = [];
+  userCategoryPreferencesMap = [];
+
 
   constructor(private auth: AuthService,
               public toast: ToastComponent,
               private userService: UserService,
-              private categoryService: CategoryService) { }
+              private categoryService: CategoryService,
+              private manipulationService : ManipulationService,
+              private zone: NgZone) {
+               }
 
   ngOnInit() {
     this.getUser();
     this.loadAvailableCategories();
-    this.userCategoryPreferences = this.auth.currentUser.categories;
   }
 
   getUser() {
@@ -36,18 +40,33 @@ export class AccountComponent implements OnInit {
   }
 
   save(user) {
+    user.categories = this.manipulationService.mapCheckedOptions(this.userCategoryPreferencesMap);
     this.userService.editUser(user).subscribe(
-      res => this.toast.setMessage('account settings saved!', 'success'),
+      res => {
+        this.toast.setMessage('account settings saved!', 'success');
+        this.auth.updateUser(res.json().token);
+        this.getUser()
+      },
       error => console.log(error)
     );
   }
 
   loadAvailableCategories() {
     this.categoryService.getCategories().subscribe(
-      data => this.categoriesAvailable = data,
+      data => { 
+        this.categoriesAvailable = data,
+        this.userCategoryPreferencesMap = this.manipulationService.initCategoriesMap(this.auth.currentUser.categories, this.categoriesAvailable)
+       },
       error => console.log(error),
       () => console.log('categories loaded')
     );
   }
+
+  updateCheckedOptions(value,event){
+      value.value = event.checked;
+  }
+
+
+
 
 }
