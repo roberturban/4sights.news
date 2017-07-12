@@ -14,6 +14,7 @@ import {  MaterialModule,
           MdProgressSpinnerModule,
            } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { DndModule } from 'ng2-dnd';
 
 
 import { RoutingModule } from './routing.module';
@@ -80,6 +81,7 @@ import { ManipulationService } from "./services/manipulation.service";
     SingleTopicService,
     CategoryService,
     ManipulationService,
+    DndModule
   ],
   entryComponents: [
     DialogEdit,
