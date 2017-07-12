@@ -1,15 +1,449 @@
-[
-    {"_id":{"$oid":"5946967147fbb80b00a7d744"},"title":"Trump says he is being investigated over Comey firing","timestamp":{"$date":"2017-06-18T00:00:00.000Z"},"image":"http://i2.cdn.cnn.com/cnnnext/dam/assets/170616110924-trump-confirm-obstruction-investigation-jones-nr-00002505-exlarge-169.jpg","news_article_count":5,"location":"Washington, USA","categories":[{"$oid":"5946923f73f7de4aa41ae512"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d745"},"title":"Resedential tower in London on fire","timestamp":{"$date":"2017-06-14T00:00:00.000Z"},"image":"http://www.irishtimes.com/polopoly_fs/1.3119811.1497462575!/image/image.jpg_gen/derivatives/landscape_685/image.jpg","news_article_count":5,"location":"London, UK","categories":[{"$oid":"5946923f73f7de4aa41ae517"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d746"},"title":"Helmut Kohl dies at age of 87","timestamp":{"$date":"2017-06-15T00:00:00.000Z"},"image":"http://schmid.welt.de/files/2014/10/dpa1992-2.jpg","news_article_count":5,"location":"Ludwigshafen, GER","categories":[{"$oid":"5946923f73f7de4aa41ae517"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d747"},"title":"La République en Marche wins election in France","timestamp":{"$date":"2017-06-18T00:00:00.000Z"},"image":"https://ichef.bbci.co.uk/news/660/cpsprodpb/3C36/production/_96441451_039995603.jpg","news_article_count":5,"location":"Paris, FR","categories":[{"$oid":"5946923f73f7de4aa41ae513"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d748"},"title":"Forest Fire in Portugal Kills at Least 62","timestamp":{"$date":"2017-06-16T00:00:00.000Z"},"image":"https://static01.nyt.com/images/2017/06/18/world/europe/fire-img/fire-img-largeHorizontal375.jpg","news_article_count":5,"location":"Lisbon, PR","categories":[{"$oid":"5946923f73f7de4aa41ae517"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d749"},"title":"Amazon aquires WholeFoods","timestamp":{"$date":"2017-06-17T00:00:00.000Z"},"image":"http://bilder.bild.de/fotos-skaliert/whole-foods-wird-noch-in-diesem-jahr-von-amazon-uebernommen-200419390-52218066/2,w=993,q=high,c=0.bild.jpg","news_article_count":5,"location":"Seatle, USA","categories":[{"$oid":"5946923f73f7de4aa41ae513"},{"$oid":"5946923f73f7de4aa41ae514"},{"$oid":"5946923f73f7de4aa41ae516"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d750"},"title":"Microsoft presents Xbox One X at E3","timestamp":{"$date":"2017-06-15T00:00:00.000Z"},"image":"http://www.xboxdynasty.de/app/uploads/2016/06/xbox-one-x-6-640x360.jpg","news_article_count":5,"location":"Los Angeles, USA","categories":[{"$oid":"5946923f73f7de4aa41ae514"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d751"},"title":"China launches its first X-ray space telescope","timestamp":{"$date":"2017-06-17T00:00:00.000Z"},"image":"https://c.tribune.com.pk/2017/06/1436081-chinaspacesatellitex-1497504955-706-640x480.jpg","news_article_count":5,"location":"Beijing, RPC","categories":[{"$oid":"5946923f73f7de4aa41ae512"},{"$oid":"5946923f73f7de4aa41ae518"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d752"},"title":"Google releases new TensorFlow Object Detection API","timestamp":{"$date":"2017-06-18T00:00:00.000Z"},"image":"https://tctechcrunch2011.files.wordpress.com/2017/06/image1.jpg","news_article_count":5,"location":"San Fransisco, USA","categories":[{"$oid":"5946923f73f7de4aa41ae514"},{"$oid":"5946923f73f7de4aa41ae518"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d753"},"title":"A 2,600 year old request for wine revealed in Israel","timestamp":{"$date":"2017-06-14T00:00:00.000Z"},"image":"https://static01.nyt.com/images/2017/06/17/science/17TB-pottery/17TB-pottery-superJumbo.jpg","news_article_count":5,"location":"Jerusalem, Israel","categories":[{"$oid":"5946923f73f7de4aa41ae517"},{"$oid":"5946923f73f7de4aa41ae518"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d754"},"title":"Internet censorship is rising in India","timestamp":{"$date":"2017-06-16T00:00:00.000Z"},"image":"http://s.wsj.net/public/resources/images/OB-UK945_ificci_G_20120905052355.jpg","news_article_count":5,"location":"New Delhi, India","categories":[{"$oid":"5946923f73f7de4aa41ae517"},{"$oid":"5946923f73f7de4aa41ae513"}],"__v":0},
-    {"_id":{"$oid":"5946967147fbb80b00a7d755"},"title":"Golden State Warriors win NBA","timestamp":{"$date":"2017-06-14T00:00:00.000Z"},"image":"http://media.philstar.com/images/the-philippine-star/sports/20150617/warriors-win-nba-title.jpg","news_article_count":5,"location":"San Fransisco, USA","categories":[{"$oid":"5946923f73f7de4aa41ae515"}],"__v":0},
-    {"_id":{"$oid":"595f4cb05ac9420ef61ba279"},"title":"G20 - First Meeting of Trump and Putin","timestamp":{"$date":"1970-01-01T00:00:00.020Z"},"image":"assets/img/trump-putin.jpg","news_article_count":4,"location":"Hamburg","news_articles":[{"$oid":"595f47820a92730f0a8db460"},{"$oid":"595f47820a92730f0a8db457"},{"$oid":"595f47820a92730f0a8db456"},{"$oid":"595f47820a92730f0a8db458"}],"categories":[{"$oid":"5946923f73f7de4aa41ae512"}],"__v":0}
-]
+[{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d744"
+	},
+	"title": "Trump says he is being investigated over Comey firing",
+	"timestamp": {
+		"$date": "2017-06-18T00:00:00.000Z"
+	},
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170616110924-trump-confirm-obstruction-investigation-jones-nr-00002505-exlarge-169.jpg",
+	"news_article_count": 5,
+	"location": "Washington, USA",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d745"
+	},
+	"title": "Resedential tower in London on fire",
+	"timestamp": {
+		"$date": "2017-06-14T00:00:00.000Z"
+	},
+	"image": "http://www.irishtimes.com/polopoly_fs/1.3119811.1497462575!/image/image.jpg_gen/derivatives/landscape_685/image.jpg",
+	"news_article_count": 5,
+	"location": "London, UK",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d746"
+	},
+	"title": "Helmut Kohl dies at age of 87",
+	"timestamp": {
+		"$date": "2017-06-15T00:00:00.000Z"
+	},
+	"image": "http://schmid.welt.de/files/2014/10/dpa1992-2.jpg",
+	"news_article_count": 5,
+	"location": "Ludwigshafen, GER",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d747"
+	},
+	"title": "La République en Marche wins election in France",
+	"timestamp": {
+		"$date": "2017-06-18T00:00:00.000Z"
+	},
+	"image": "https://ichef.bbci.co.uk/news/660/cpsprodpb/3C36/production/_96441451_039995603.jpg",
+	"news_article_count": 5,
+	"location": "Paris, FR",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae513"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d748"
+	},
+	"title": "Forest Fire in Portugal Kills at Least 62",
+	"timestamp": {
+		"$date": "2017-06-16T00:00:00.000Z"
+	},
+	"image": "https://static01.nyt.com/images/2017/06/18/world/europe/fire-img/fire-img-largeHorizontal375.jpg",
+	"news_article_count": 5,
+	"location": "Lisbon, PR",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d749"
+	},
+	"title": "Amazon aquires WholeFoods",
+	"timestamp": {
+		"$date": "2017-06-17T00:00:00.000Z"
+	},
+	"image": "http://bilder.bild.de/fotos-skaliert/whole-foods-wird-noch-in-diesem-jahr-von-amazon-uebernommen-200419390-52218066/2,w=993,q=high,c=0.bild.jpg",
+	"news_article_count": 5,
+	"location": "Seatle, USA",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae513"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae514"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae516"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d750"
+	},
+	"title": "Microsoft presents Xbox One X at E3",
+	"timestamp": {
+		"$date": "2017-06-15T00:00:00.000Z"
+	},
+	"image": "http://www.xboxdynasty.de/app/uploads/2016/06/xbox-one-x-6-640x360.jpg",
+	"news_article_count": 5,
+	"location": "Los Angeles, USA",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae514"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d751"
+	},
+	"title": "China launches its first X-ray space telescope",
+	"timestamp": {
+		"$date": "2017-06-17T00:00:00.000Z"
+	},
+	"image": "https://c.tribune.com.pk/2017/06/1436081-chinaspacesatellitex-1497504955-706-640x480.jpg",
+	"news_article_count": 5,
+	"location": "Beijing, RPC",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae518"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d752"
+	},
+	"title": "Google releases new TensorFlow Object Detection API",
+	"timestamp": {
+		"$date": "2017-06-18T00:00:00.000Z"
+	},
+	"image": "https://tctechcrunch2011.files.wordpress.com/2017/06/image1.jpg",
+	"news_article_count": 5,
+	"location": "San Fransisco, USA",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae514"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae518"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d753"
+	},
+	"title": "A 2,600 year old request for wine revealed in Israel",
+	"timestamp": {
+		"$date": "2017-06-14T00:00:00.000Z"
+	},
+	"image": "https://static01.nyt.com/images/2017/06/17/science/17TB-pottery/17TB-pottery-superJumbo.jpg",
+	"news_article_count": 5,
+	"location": "Jerusalem, Israel",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae518"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d754"
+	},
+	"title": "Internet censorship is rising in India",
+	"timestamp": {
+		"$date": "2017-06-16T00:00:00.000Z"
+	},
+	"image": "http://s.wsj.net/public/resources/images/OB-UK945_ificci_G_20120905052355.jpg",
+	"news_article_count": 5,
+	"location": "New Delhi, India",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae513"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5946967147fbb80b00a7d755"
+	},
+	"title": "Golden State Warriors win NBA",
+	"timestamp": {
+		"$date": "2017-06-14T00:00:00.000Z"
+	},
+	"image": "http://media.philstar.com/images/the-philippine-star/sports/20150617/warriors-win-nba-title.jpg",
+	"news_article_count": 5,
+	"location": "San Fransisco, USA",
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae515"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "595f4cb05ac9420ef61ba279"
+	},
+	"title": "G20 - First Meeting of Trump and Putin",
+	"timestamp": {
+		"$date": "1970-01-01T00:00:00.020Z"
+	},
+	"image": "assets/img/trump-putin.jpg",
+	"news_article_count": 4,
+	"location": "Hamburg",
+	"news_articles": [
+		{
+			"$oid": "595f47820a92730f0a8db460"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db457"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db456"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db458"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5965e528f9109d0b167d598d"
+	},
+	"title": "Trump Jr.'s facing Problems because of Email Affair",
+	"timestamp": {
+		"$date": "2016-07-09T22:00:00.000Z"
+	},
+	"image": "http://a.abcnews.com/images/Politics/AP-TrumpJr-Russia-Probe-hb-170711_12x5_1600.jpg",
+	"news_article_count": 11,
+	"location": "Washington",
+	"news_articles": [
+		{
+			"$oid": "5965e49adc10940b1fe2f0d7"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0f0"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0e2"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f101"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f112"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0d8"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0db"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0dd"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0f4"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0e0"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f110"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5965e6caf9109d0b167d598e"
+	},
+	"title": "Trump Jr.'s Meeting with Russian Lawyer",
+	"timestamp": {
+		"$date": "2017-07-09T22:00:00.000Z"
+	},
+	"image": "https://thenypost.files.wordpress.com/2017/07/170710-trump-russian-lawyer-embed.jpg?quality=90\u0026strip=all\u0026w=300\u0026strip=all",
+	"news_article_count": 14,
+	"location": "Washington, Moscow",
+	"news_articles": [
+		{
+			"$oid": "5965e49adc10940b1fe2f0da"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0ef"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0e3"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f111"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f103"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0d9"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0de"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f106"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f116"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0ee"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f104"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0ff"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f105"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0e1"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5965e738f9109d0b167d598f"
+	},
+	"title": "G20 Summit in Hambug",
+	"timestamp": {
+		"$date": "2017-07-07T22:00:00.000Z"
+	},
+	"image": "http://www.hamburg.de/contentblob/7551724/a4cf84151e0d329ef0d43120d2e5c2a3/data/logo-g20.jpg",
+	"news_article_count": 5,
+	"location": "Hamburg",
+	"news_articles": [
+		{
+			"$oid": "595f47820a92730f0a8db486"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db49f"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db471"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db493"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db484"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5965e86bf9109d0b167d5990"
+	},
+	"title": "Gulf Crisis: Sanctions on Qatar",
+	"timestamp": {
+		"$date": "2017-06-04T22:00:00.000Z"
+	},
+	"image": "http://www.straitstimes.com/sites/default/files/articles/2017/06/05/qatarmap0506.jpg",
+	"news_article_count": 4,
+	"location": "test",
+	"news_articles": [
+		{
+			"$oid": "595f47820a92730f0a8db487"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db48e"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db488"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0fc"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		}
+	],
+	"__v": 0
+}]
+

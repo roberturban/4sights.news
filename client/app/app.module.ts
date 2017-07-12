@@ -41,6 +41,9 @@ import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialo
 import { DialogFollowCategories } from './topics/followCategories/followCategoryDialog.component';
 import { CategoryService } from "./services/category.service";
 import { ManipulationService } from "./services/manipulation.service";
+import {ArticleSelectionComponent} from './article-selection/article-selection.component';
+import { ArticleService } from "./services/article.service";
+import { ArticleFilterPipe } from './article-selection/article-search-filter.pipe';
 
 
 
@@ -58,7 +61,9 @@ import { ManipulationService } from "./services/manipulation.service";
     DialogEdit,
     DialogAdd,
     DialogFollowCategories,
-    CategoryFilterPipe
+    CategoryFilterPipe,
+    ArticleSelectionComponent,
+    ArticleFilterPipe
   ],
   imports: [
     RoutingModule,
@@ -81,7 +86,9 @@ import { ManipulationService } from "./services/manipulation.service";
     TopicsService,
     SingleTopicService,
     CategoryService,
-    ManipulationService
+    ManipulationService,
+    DndModule,
+    ArticleService
   ],
   entryComponents: [
     DialogEdit,

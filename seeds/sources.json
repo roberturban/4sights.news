@@ -1,10 +1,65 @@
-[
-    {"_id":{"$oid":"595393ffd8b18b5d02211ef2"},"name":"Washington Post","logoUrl":"assets/img/logo_washington_post.jpg","homepage":"https://www.washingtonpost.com"},
-    {"_id":{"$oid":"59539417d8b18b5d02211ef3"},"name":"The New York Times","logoUrl":"assets/img/logo_nyt.jpg","homepage":"https://www.nytimes.com"},
-    {"_id":{"$oid":"59539422d8b18b5d02211ef4"},"name":"The Hindu","logoUrl":"assets/img/logo_hindu.png","homepage":"http://www.thehindu.com"},
-    {"_id":{"$oid":"5953942bd8b18b5d02211ef5"},"name":"Times of India","logoUrl":"assets/img/logo_times_india.png","homepage":"http://timesofindia.indiatimes.com"},
-    {"_id":{"$oid":"59539436d8b18b5d02211ef6"},"name":"BBC","logoUrl":"assets/img/logo_bbc.gif","homepage":"http://www.bbc.com"},
-    {"_id":{"$oid":"5953943fd8b18b5d02211ef7"},"name":"CNN","logoUrl":"assets/img/logo_cnn.png","homepage":"http://edition.cnn.com"},
-    {"_id":{"$oid":"59539457d8b18b5d02211ef8"},"name":"Breitbart","logoUrl":"assets/img/logo_breitbart.jpg","homepage":"http://www.breitbart.com"},
-    {"_id":{"$oid":"59539462d8b18b5d02211ef9"},"name":"Aljazeera","logoUrl":"assets/img/logo_aljazeera.jpg","homepage":"http://www.aljazeera.net/portal"}
+[{
+    "_id": {
+      "$oid": "595393ffd8b18b5d02211ef2"
+    },
+    "name": "Washington Post",
+    "logoUrl": "assets/img/logo_washington_post.jpg",
+    "homepage": "https://www.washingtonpost.com"
+  },
+  {
+    "_id": {
+      "$oid": "59539417d8b18b5d02211ef3"
+    },
+    "name": "The New York Times",
+    "logoUrl": "assets/img/logo_nyt.jpg",
+    "homepage": "https://www.nytimes.com"
+  },
+  {
+    "_id": {
+      "$oid": "59539422d8b18b5d02211ef4"
+    },
+    "name": "The Hindu",
+    "logoUrl": "assets/img/logo_hindu.jpg",
+    "homepage": "http://www.thehindu.com"
+  },
+  {
+    "_id": {
+      "$oid": "5953942bd8b18b5d02211ef5"
+    },
+    "name": "Times of India",
+    "logoUrl": "assets/img/logo_times_india.png",
+    "homepage": "http://timesofindia.indiatimes.com"
+  },
+  {
+    "_id": {
+      "$oid": "59539436d8b18b5d02211ef6"
+    },
+    "name": "BBC",
+    "logoUrl": "assets/img/logo_bbc.gif",
+    "homepage": "http://www.bbc.com"
+  },
+  {
+    "_id": {
+      "$oid": "5953943fd8b18b5d02211ef7"
+    },
+    "name": "CNN",
+    "logoUrl": "assets/img/logo_cnn.png",
+    "homepage": "http://edition.cnn.com"
+  },
+  {
+    "_id": {
+      "$oid": "59539457d8b18b5d02211ef8"
+    },
+    "name": "Breitbart",
+    "logoUrl": "assets/img/logo_breitbart.jpg",
+    "homepage": "http://www.breitbart.com"
+  },
+  {
+    "_id": {
+      "$oid": "59539462d8b18b5d02211ef9"
+    },
+    "name": "Aljazeera",
+    "logoUrl": "assets/img/logo_aljazeera.jpg",
+    "homepage": "http://www.aljazeera.net/portal"
+  }
 ]
