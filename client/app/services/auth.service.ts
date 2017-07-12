@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {Router} from '@angular/router';
-import {JwtHelper} from 'angular2-jwt';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { JwtHelper } from 'angular2-jwt';
 
-import {UserService} from '../services/user.service';
+import { UserService } from '../services/user.service';
 
 @Injectable()
 export class AuthService {
@@ -11,13 +11,7 @@ export class AuthService {
 
   jwtHelper: JwtHelper = new JwtHelper();
 
-  currentUser = {
-    _id: '',
-    name: '',
-    surname: '',
-    role: '',
-    categories: []
-  };
+  currentUser = <any>{};
 
   constructor(private userService: UserService,
               private router: Router) {
@@ -43,13 +37,7 @@ export class AuthService {
     localStorage.removeItem('token');
     this.loggedIn = false;
     this.isAdmin = false;
-    this.currentUser = {
-      _id: '',
-      name: '',
-      surname: '',
-      role: '',
-      categories: []
-    };
+    this.currentUser = <any>{};
     this.router.navigate(['/']);
   }
 

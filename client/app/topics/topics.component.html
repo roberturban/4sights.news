@@ -17,7 +17,7 @@
 </header>
 
 <md-toolbar class="categories-toolbar">
-  <button md-button color="primary" (click)="getTopics_category('Home')">Home</button>
+  <button md-button color="primary" (click)="getTopics_category()">Home</button>
   <div *ngIf='!menuButton'>
     <button *ngFor="let category of categoriesAvailable"  md-button color="primary" (click)="getTopics_category(category)">
       {{category.name}}

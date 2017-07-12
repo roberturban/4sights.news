@@ -27,11 +27,7 @@ export class TopicsComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.auth.loggedIn) {
-      this.getTopics(null, this.auth.currentUser);
-    } else {
-      this.getTopics();
-    }
+    this.getTopics(null, this.auth.currentUser);
     /*set initial preferences to full, will be checked afterwards*/
     this.loadAvailableCategories();
   }
@@ -158,18 +154,13 @@ export class TopicsComponent implements OnInit {
     this.getUserCategoryPreferences();
   }
 
-  getTopics_category(value) {
-    if (value == 'Home') {
-      this.setInitialPage();
-    } else {
-      this.getTopics(value);
-      this.userCategoryPreferences = [value];
-    }
+  getTopics_category(category?) {
+    this.getTopics(category, this.auth.currentUser);
   }
 
   getUserCategoryPreferences() {
     //initiate with full
-    if (this.auth.currentUser.categories.length > 0) {
+    if (this.auth.loggedIn && this.auth.currentUser.categories.length > 0) {
       this.userCategoryPreferences = this.auth.currentUser.categories;
       this.userHasPreferences = true;
     }
