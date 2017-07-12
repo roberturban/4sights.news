@@ -2,15 +2,19 @@ import * as https from 'https';
 import Article from './article/articleModel';
 import Source from './source/sourceModel';
 import * as mongoose from 'mongoose';
+import * as dotenv from 'dotenv';
+import * as express from 'express';
 const util = require('util');
 
 module.exports = {
   startTimedScraping: startTimedScraping,
-  test: test,
   requestAll: requestAll
 };
 
-mongoose.connect("mongodb://localhost:27017/team26");
+const app = express();
+dotenv.load({ path: '.env' });
+app.set('port', (process.env.PORT || 3000));
+mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection;
 (<any>mongoose).Promise = global.Promise;
 
@@ -26,18 +30,11 @@ const apikey = "11358ca80a144ea79d32c7879dd4332c"
 export function startTimedScraping() {
     console.log("Scraper Interval set")
 
+    requestAll();
     setInterval(function() {
         console.log("<<<<<<<requestAll>>>>>>>>");
         requestAll();
-    }, 1000 * 30);
-}
-
-export function test() {
-    console.log("Test function called");
-
-    const aljazeeraGET = "/v1/articles?source=al-jazeera-english&sortBy=top&apiKey=" + apikey;
-
-    requestSource(aljazeeraGET, "Aljazeera");
+    }, 1000 * 60 * 60); //1 hour
 }
 
 export function requestAll() {
@@ -106,7 +103,7 @@ function saveData(responseObj, sourceName) {
             const description = article["description"];
             const url = article["url"];
             const urlToImage = article["urlToImage"];
-            const publishedAt = article["publishedAt"];
+            const publishedAt = article["publishedAt"] ? article["publishedAt"] : Date.now();
 
             var instance = new Article({
                 title: title,
