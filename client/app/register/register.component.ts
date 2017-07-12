@@ -80,7 +80,6 @@ export class RegisterComponent implements OnInit {
 
   register() {
     this.registerForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
-    console.log(this.registerForm.value);
     this.userService.register(this.registerForm.value).subscribe(
       res => {
         this.toast.setMessage('you successfully registered!', 'success');

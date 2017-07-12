@@ -70,7 +70,7 @@ export class AdminComponent implements OnInit {
               private topicService: TopicService,
               private categoryService: CategoryService,
               public dialogEdit: MdDialog,
-              private zone:NgZone) 
+              private zone: NgZone) 
               {
                  // listens on 
                  this.userService.getUsers().subscribe((state) => {
@@ -226,8 +226,6 @@ export class ButtonViewComponent implements ViewCell, OnInit {
 
   @Input() value: string | number;
   @Input() rowData: any;
-
-  @Output() save: EventEmitter<any> = new EventEmitter();
 
   constructor(
     public userService: UserService,

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelper } from 'angular2-jwt';
 
@@ -20,6 +20,7 @@ export class AuthService {
 
   constructor(private userService: UserService,
               private router: Router) {
+
     const token = localStorage.getItem('token');
     if (token) {
       const decodedUser = this.decodeUserFromToken(token);
@@ -31,6 +32,8 @@ export class AuthService {
     return this.userService.login(emailAndPassword).map(res => res.json()).map(
       res => {
         localStorage.setItem('token', res.token);
+        console.log(localStorage);
+
         const decodedUser = this.decodeUserFromToken(res.token);
         this.setCurrentUser(decodedUser);
         return this.loggedIn;
@@ -63,7 +66,8 @@ export class AuthService {
     this.currentUser.role = decodedUser.role;
     this.currentUser.categories = decodedUser.categories;
     decodedUser.role === 'admin' ? this.isAdmin = true : this.isAdmin = false;
-    delete decodedUser.role;
+    delete decodedUser.role;    
   }
+
 
 }
