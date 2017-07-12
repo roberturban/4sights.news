@@ -1,8 +1,11 @@
 <app-toast [message]="toast.message"></app-toast>
 
 
-<div class="registration-form">
-  <form class="form-inner" [formGroup]="registerForm" (ngSubmit)="register()">
+<div class="register-container mat-elevation-z4">
+  
+  <div class="header-title">Register
+    </div>
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="register()">
 
     <div class="input-container">
       <md-input-container class="input-full-width">
@@ -47,9 +50,9 @@
         <md-option value="admin">Admin</md-option>
       </md-select>
     </div>
-    <div class="follow-box">  
-      <div style="margin: 10px 0;">Follow categories:</div>
-      <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
+    <label style="margin-bottom:15px"> Follow your categories: </label>
+    <div class="checkboxes">
+      <md-checkbox class="single_box" *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
     </div>
     <div class="bottom-row">
       <div style="font-family:Roboto;">

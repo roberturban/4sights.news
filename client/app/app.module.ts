@@ -15,7 +15,7 @@ import {  MaterialModule,
            } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { DndModule } from 'ng2-dnd';
-
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -25,7 +25,6 @@ import { TopicsService } from './services/topics.service';
 import { SingleTopicService } from './services/single-topic.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
-import { CategoryFilterPipe } from './services/category-filter.pipe';
 
 import { AppComponent } from './app.component';
 import { TopicsComponent } from './topics/topics.component';
@@ -35,7 +34,10 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
+import { ButtonViewComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CategoryFilterPipe } from './services/category-filter.pipe';
+import { SearchPipe } from './services/search.pipe';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
 import { SelectSourcesDialog } from './single-topic/select-sources/select-sources.component';
 
@@ -64,6 +66,8 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     SelectSourcesDialog,
     DialogFollowCategories,
     CategoryFilterPipe,
+    SearchPipe,
+    ButtonViewComponent,
     ArticleSelectionComponent,
     ArticleFilterPipe
   ],
@@ -77,8 +81,9 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     MdListModule,
     MdExpansionModule,
     MdGridListModule,
-    RouterModule,
-    DndModule.forRoot()
+    DndModule.forRoot(),
+    Ng2SmartTableModule,
+    RouterModule
   ],
   providers: [
     AuthService,
@@ -96,7 +101,8 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     DialogEdit,
     DialogAdd,
     DialogFollowCategories,
-    SelectSourcesDialog
+    SelectSourcesDialog,
+    ButtonViewComponent
   ],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

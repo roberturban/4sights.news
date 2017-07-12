@@ -10,7 +10,6 @@ export default class UserCtrl extends BaseController {
   model = User;
 
   login = (req, res) => {
-    console.log("Login (UserController): " + req.headers);
     this.model.findOne({email: req.body.email})
       .populate('categories')
       .exec(function (err, user) {
@@ -42,6 +41,16 @@ export default class UserCtrl extends BaseController {
       .exec(function (err, docs) {
         if (err) { return console.error(err); }
         res.json(docs);
+      });
+  };
+
+  // Update by id
+  update = (req, res) => {
+    this.model.findOneAndUpdate({ _id: req.params.id })
+      .populate('categories')
+      .exec(function (err, user) {
+        const token = jwt.sign({user: user}, process.env.SECRET_TOKEN); // , { expiresIn: 10 } seconds
+        res.status(200).json({token: token});
       });
   };
 }

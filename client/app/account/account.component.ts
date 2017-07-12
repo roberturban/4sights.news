@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { ToastComponent } from '../shared/toast/toast.component';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
@@ -22,7 +22,9 @@ export class AccountComponent implements OnInit {
               public toast: ToastComponent,
               private userService: UserService,
               private categoryService: CategoryService,
-              private manipulationService : ManipulationService) { }
+              private manipulationService : ManipulationService,
+              private zone: NgZone) {
+               }
 
   ngOnInit() {
     this.getUser();
@@ -39,11 +41,11 @@ export class AccountComponent implements OnInit {
 
   save(user) {
     user.categories = this.manipulationService.mapCheckedOptions(this.userCategoryPreferencesMap);
-    console.log(this.userCategoryPreferencesMap);
-    console.log(user.categories);
     this.userService.editUser(user).subscribe(
       res => {
-        this.toast.setMessage('account settings saved!', 'success')
+        this.toast.setMessage('account settings saved!', 'success');
+        this.auth.updateUser(res.json().token);
+        this.getUser()
       },
       error => console.log(error)
     );
