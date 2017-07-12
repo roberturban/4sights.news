@@ -21,7 +21,7 @@
         <div class="header-title">
           Registered users ({{users.length}})
         </div>
-        <input #search class="search-bar" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)" style="margin: 10px">
+        <input #search class="search-bar" type="text" placeholder="Search..." (keyup)="onSearch(search.value)" style="margin: 10px">
         <ng2-smart-table [settings]="settings" [source]="source" class="smart-table"></ng2-smart-table>
 </div>
 <div class="admin-container mat-elevation-z4" *ngIf="isEditing_topics">

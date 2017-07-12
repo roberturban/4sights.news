@@ -34,27 +34,26 @@ export class AdminComponent implements OnInit {
   settings = {
       columns: {
         name: {
-          title: 'Name'
+          title: 'Name',
+          filter: false
         },
         surname: {
-          title: 'Surname'
+          title: 'Surname',
+          filter: false
         },
         email: {
-          title: 'Email'
+          title: 'Email',
+          filter: false
         },
         role: {
-          title: 'Role'
+          title: 'Role',
+          filter: false
         },
         button: {
           title: 'Delete',
           type: 'custom',
-          renderComponent: ButtonViewComponent,
-          onComponentInitFunction(instance) {
-            instance.save.subscribe(user => {
-              console.log(instance);
-              console.log(user);
-            });
-          }
+          filter: false,
+          renderComponent: ButtonViewComponent
         }
        },
        hideSubHeader: true,
@@ -86,8 +85,7 @@ export class AdminComponent implements OnInit {
     this.userService.getUsers().subscribe(
       data => {
         this.users = data,
-        this.source = new LocalDataSource(this.users),
-        console.log(Object.keys(this.users[0]))
+        this.source = new LocalDataSource(this.users)
       },
       error => console.log(error),
       () => this.isLoading = false
@@ -152,29 +150,32 @@ export class AdminComponent implements OnInit {
   }
 
   onSearch(query: string = '') {
-  this.source.setFilter([
-    // fields we want to include in the search
-    {
-      field: 'name',
-      search: query
-    },
-    {
-      field: 'surname',
-      search: query
-    },
-    {
-      field: 'email',
-      search: query
-    },
-    {
-      field: 'role',
-      search: query
-    }
-  ], false); 
+    if(query.length == 0){
+        this.source.setFilter([]);
+    } else {
+    this.source.setFilter([
+      // fields we want to include in the search
+      {
+        field: 'name',
+        search: query
+      },
+      {
+        field: 'surname',
+        search: query
+      },
+      {
+        field: 'email',
+        search: query
+      },
+      {
+        field: 'role',
+        search: query
+      }
+    ], false); }
   // second parameter specifying whether to perform 'AND' or 'OR' search 
   // (meaning all columns should contain search query or at least one)
   // 'AND' by default, so changing to 'OR' by setting false here
-}
+  }
 
 
     // Dialog for editing topics
@@ -209,7 +210,7 @@ const dialogEdit = DialogEdit;
 @Component({
   selector: 'button-view',
   template: `
-    <button md-button (click)="onClick()"> 
+    <button md-button (click)="onClick()" [disabled]="auth.currentUser._id === rowData._id"> 
                       <i class="material-icons">delete</i> 
     </button>
   `,
@@ -225,7 +226,8 @@ export class ButtonViewComponent implements ViewCell, OnInit {
   constructor(
     public userService: UserService,
     public toast: ToastComponent,
-    public admin: AdminComponent){}
+    public admin: AdminComponent,
+    public auth: AuthService){}
 
   ngOnInit() {
     this.renderValue = this.value.toString().toUpperCase();
