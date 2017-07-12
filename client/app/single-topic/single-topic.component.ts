@@ -23,6 +23,8 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
               private route: ActivatedRoute) { }
 
   topic: {};
+  articles: [any];
+  first_articles = [];
   sub: any;
   topicID: any;
   isLoading_singleTopic = false;
@@ -38,14 +40,20 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
   }
 
   getSingleTopic() {
-    console.log("start", this.topic);
     this.isLoading_singleTopic = true;
     this.singleTopicService.getSingleTopic(this.topicID).subscribe(
-      data => this.topic = data,
+      data => {
+        this.topic = data;
+        this.articles = this.topic["news_articles"];
+        this.first_articles = this.articles.slice(0,4);
+
+      },
       error => console.log(error),
-      () => this.isLoading_singleTopic = false
+      () => {
+        this.isLoading_singleTopic = false;
+        console.log('topic loaded', this.topic, this.articles, this.first_articles);
+      }
     );
-    console.log("end", this.topic);
   }
 
 }

@@ -22,7 +22,6 @@ export class SingleTopicService {
   constructor(private http: Http) { }
 
   getSingleTopic(topicID): Observable<any> {
-    console.log(this.http.get(`/api/topics/${topicID}`, this.getOptions()).map(res => res.json()));
     return this.http.get(`/api/topics/${topicID}`, this.getOptions()).map(res => res.json());
   }
 

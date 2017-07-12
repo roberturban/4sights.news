@@ -38,6 +38,7 @@ export class TopicsComponent implements OnInit {
   }
 
   loadAvailableCategories() {
+    console.log(this.categoryService.getCategories());
     this.categoryService.getCategories().subscribe(
       data => {
         this.categoriesAvailable = data;

@@ -71,6 +71,7 @@ import { ManipulationService } from "./services/manipulation.service";
     MdExpansionModule,
     MdGridListModule,
     RouterModule,
+    DndModule.forRoot()
   ],
   providers: [
     AuthService,
@@ -80,8 +81,7 @@ import { ManipulationService } from "./services/manipulation.service";
     TopicsService,
     SingleTopicService,
     CategoryService,
-    ManipulationService,
-    DndModule
+    ManipulationService
   ],
   entryComponents: [
     DialogEdit,

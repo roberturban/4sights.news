@@ -43,7 +43,7 @@
 
   <md-card class="topic-card" *ngFor="let topic of topics | filterCategories:userCategoryPreferences">
     <a [routerLink]="['/topics', topic._id]">
-      <img md-card-image src="{{topic.image}}">
+      <img style="height:150px; object-fit:cover" md-card-image src="{{topic.image}}">
     </a>
     <md-card-title-group>
       <md-card-title>

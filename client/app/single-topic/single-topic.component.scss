@@ -3,6 +3,65 @@ a {
   color: inherit;
 }
 
+.image-card-center{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.image-card{
+  padding:0px !important;
+  max-width: 1000px;
+  width: 100%;
+}
+
 .single-topic{
   margin: 20px;
+}
+
+.article-block{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.article-block > :last-child{
+  margin-right: 0px !important;
+}
+
+.article-picture {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.article-card {
+  margin: 20px 20px 20px 0px;
+  width: 25%;
+}
+
+.source-position-logo{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.source-logo{
+  height: 100px;
+  object-fit: cover;
+}
+
+@media(max-width: 680px) {
+  .article-card{
+    width:100%;
+    margin: 20px 0px 0px 0px;
+  }
+  .article-block{
+    flex-wrap: wrap;
+  }
+  .article-block > :last-child{
+    margin-bottom: 20px !important;
+  }
+
 }
