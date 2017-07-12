@@ -32,8 +32,6 @@ export class AuthService {
     return this.userService.login(emailAndPassword).map(res => res.json()).map(
       res => {
         localStorage.setItem('token', res.token);
-        console.log(localStorage);
-
         const decodedUser = this.decodeUserFromToken(res.token);
         this.setCurrentUser(decodedUser);
         return this.loggedIn;
@@ -67,6 +65,13 @@ export class AuthService {
     this.currentUser.categories = decodedUser.categories;
     decodedUser.role === 'admin' ? this.isAdmin = true : this.isAdmin = false;
     delete decodedUser.role;    
+  }
+
+  updateUser(token){
+      localStorage.setItem('token', token);
+      const decodedUser = this.decodeUserFromToken(token);
+      this.setCurrentUser(decodedUser);
+      console.log(this.currentUser);
   }
 
 
