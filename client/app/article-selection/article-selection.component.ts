@@ -24,7 +24,7 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
   changed_articles = [];
 
   ngOnInit() {
-    this.topicService.getSingleTopic(this.exttopic).subscribe(
+    this.topicService.getSingleTopic(this.exttopic._id).subscribe(
       data => {
         this.topic = data;
         console.log(data);
@@ -86,7 +86,6 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
   }
 
   setOrigTopic() {
-    //for some reason the topic provided from via input() does not have the article documents
     var arr = [];
     for (var i = 0; i < this.topic.news_articles.length; i++) {
       arr.push(this.topic.news_articles[i]._id);
@@ -146,19 +145,6 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
   }
 
   addToChanged(article) {
-    /*
-    const transformed = this.changed_articles.map((x) => {
-      x._id;
-    });
-    console.log(transformed);
-    const index = this.changed_articles.map((x) => {x._id;}).indexOf(article._id);
-    console.log("index: " + index);
-    if(index < 0) {
-      this.changed_articles.push(article);
-      console.log("article added to changed array");
-      console.log(article);
-    }
-    */
     for (var i = 0; i < this.changed_articles.length; i++) {
       if(this.changed_articles[i]._id == article._id) {
         return;
