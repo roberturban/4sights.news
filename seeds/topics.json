@@ -445,5 +445,34 @@
 		}
 	],
 	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5968d3f49d92fe185e961653"
+	},
+	"title": "Tech Firms unite for Net Neutrality",
+	"timestamp": {
+		"$date": "2017-07-12T00:00:00.000Z"
+	},
+	"image": "https://media2.s-nbcnews.com/j/newscms/2014_29/565096/140715-fcc-net-neutrality-protest-148p_064204a0e90ad83ebdc7e9a541372e5d.nbcnews-fp-1200-800.jpg",
+	"news_article_count": 3,
+	"location": "USA",
+	"news_articles": [
+		{
+			"$oid": "5965e49adc10940b1fe2f0e7"
+		},
+		{
+			"$oid": "5966199d6fbe7b2311cd5964"
+		},
+		{
+			"$oid": "5966199d6fbe7b2311cd5953"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae514"
+		}
+	],
+	"__v": 0
 }]
 
