@@ -2,7 +2,7 @@
     <div *ngIf="isLoadingTopic">Loading topic</div>
     <div *ngIf="!isLoadingTopic">
         <div class="header-title">Articles selected for this topic ({{topic.news_articles.length}})</div>
-        <div style="height: 130px; overflow-y: scroll;">
+        <div class="scrollable" style="height: 130px">
             <table class="table table-striped">
                 <tr class="info" *ngFor="let article of topic.news_articles">
                     <td>{{article.source.name}}</td>
@@ -19,6 +19,10 @@
     <div *ngIf="isLoadingArticles">Loading articles</div>
     <div *ngIf="!isLoadingArticles">
         <div class="header-title">Articles available ({{all_articles.length}})</div>
+        <div class="info cards infoBox" *ngIf="!isLoadingArticles"> <!--TODO: why does flex layout not work here?-->
+            <div>Articles from already selected sources are hidden: </div>
+            <div *ngFor="let article of topic.news_articles">"{{article.source.name}}" </div>
+        </div>
         <form class="form-inner">
             <div class="input-container">
             <md-input-container class="input-full-width">
@@ -26,11 +30,7 @@
             </md-input-container>
             </div>
         </form>
-        <div class="info cards" *ngIf="!isLoadingArticles"> <!--TODO: why does flex layout not work here?-->
-            <div>Articles from already selected sources are hidden: </div>
-            <div *ngFor="let article of topic.news_articles">"{{article.source.name}}" </div>
-        </div>
-        <div style="height: 180px; overflow-y: scroll;">
+        <div class="scrollable" style="height: 180px;">
             <table class="table table-striped">
                 <tr class="info" *ngFor="let article of all_articles | filterArticles:searchterm:topic.news_articles">
                     <td>{{article.source.name}}</td>
