@@ -5,6 +5,7 @@
         <div class="scrollable" style="height: 130px">
             <table class="table table-striped">
                 <tr class="info" *ngFor="let article of topic.news_articles">
+                    <td><img class="icon" src="{{article.source.logoUrl}}"></td>
                     <td>{{article.source.name}}</td>
                     <td>{{article.title}}</td>
                     <td>{{formatDate(article.published)}}</td>
@@ -33,6 +34,7 @@
         <div class="scrollable" style="height: 180px;">
             <table class="table table-striped">
                 <tr class="info" *ngFor="let article of all_articles | filterArticles:searchterm:topic.news_articles">
+                    <td><img class="icon" src="{{article.source.logoUrl}}"></td>
                     <td>{{article.source.name}}</td>
                     <td>{{article.title}}</td>
                     <td>{{formatDate(article.published)}}</td>
