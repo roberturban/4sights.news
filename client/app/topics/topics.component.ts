@@ -116,12 +116,11 @@ export class TopicsComponent implements OnInit {
 
   }
 
-  addTopic(addTopicFormDialog) {
-    this.topicsService.addTopic(addTopicFormDialog.value).subscribe(
+  addTopic(topic) {
+    this.topicsService.addTopic(topic).subscribe(
       res => {
         const newTopic = res.json();
         this.topics.push(newTopic);
-        addTopicFormDialog.reset();
         this.toast.setMessage('item added successfully.', 'success');
       },
       error => console.log(error)

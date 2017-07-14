@@ -77,10 +77,11 @@ export class DialogAdd implements OnInit {
   title = new FormControl('', Validators.required);
   timestamp = new FormControl('', Validators.required);
   image = new FormControl('', Validators.required);
-  news_article_count = new FormControl('', Validators.required);
+  //news_article_count = new FormControl('', Validators.required);
   location = new FormControl('', Validators.required);
   categories = new FormControl('', Validators.required);
   news_articles: any = {};
+  news_article_count = 0;
 
   ngOnInit() {
 
@@ -90,8 +91,7 @@ export class DialogAdd implements OnInit {
       image: this.image,
       news_article_count: this.news_article_count,
       location: this.location,
-      categories: this.categories,
-      //news_articles: this.news_articles
+      categories: this.categories
     });
     this.loadAvailableCategories();
   }
@@ -110,32 +110,19 @@ export class DialogAdd implements OnInit {
   }
 
   selectedArticlesChanged(articles) {
-    console.log("Changes adapted in parent component");
     this.news_articles = articles;
-    this.news_article_count = articles.lenght;
+    this.news_article_count = articles.length;
   }
 
-  submitTopic(){
-    const topic = {
-      title: this.title.value,
-      timestamp: this.timestamp.value,
-      image: this.image.value,
-      news_article_count: this.news_article_count,
-      location: this.location.value,
-      categories: this.categories.value,
-      news_articles: this.news_articles
-    }
+  submitTopic() {
+    this.addTopicForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
 
-    console.log("Save topic");
-    console.log(topic);
+    var topic = this.addTopicForm.value;
+    topic.news_articles = this.news_articles;
+    topic.news_article_count = this.news_article_count;
 
-    this.topicsService.addTopic(topic).subscribe(
-      res => console.log("saved"),
-      error => console.log("error")
-    );
-
-    //this.addTopicForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
-    this.dialogRef.close(this.addTopicForm);
+    this.dialogRef.close(topic);
     this.articleselection.saveArticleChangesOnServer();
+    this.addTopicForm.reset();
   }
 }

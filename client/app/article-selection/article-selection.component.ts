@@ -63,8 +63,7 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     for (var i = 0; i < this.changed_articles.length; i++) {
       this.articleService.editArticle(this.changed_articles[i]).subscribe(
         res => {
-          console.log("Article saved on server: ");
-          console.log(res);
+          
         },
         error => console.log(error)
       );
