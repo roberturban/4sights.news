@@ -2,8 +2,8 @@
     <div *ngIf="isLoadingTopic">Loading topic</div>
     <div *ngIf="!isLoadingTopic">
         <div class="header-title">Articles selected for this topic ({{topic.news_articles.length}})</div>
-        <div class="scrollable" style="height: 130px">
-            <table class="table table-striped">
+        <div class="scrollable" style="height: 150px">
+            <table class="table">
                 <tr class="info" *ngFor="let article of topic.news_articles">
                     <td><img class="icon" src="{{article.source.logoUrl}}"></td>
                     <td>{{article.source.name}}</td>
@@ -32,7 +32,7 @@
             </div>
         </form>
         <div class="scrollable" style="height: 180px;">
-            <table class="table table-striped">
+            <table class="table">
                 <tr class="info" *ngFor="let article of all_articles | filterArticles:searchterm:topic.news_articles">
                     <td><img class="icon" src="{{article.source.logoUrl}}"></td>
                     <td>{{article.source.name}}</td>

@@ -1,8 +1,10 @@
-import {Component, OnInit, Inject} from '@angular/core';
+import {Component, OnInit, Inject, ViewChild} from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {MdDialog, MdDialogConfig, MdDialogRef} from '@angular/material';
 import {CategoryService} from "../../services/category.service";
 import {ManipulationService} from "../../services/manipulation.service";
+import {TopicsService} from "../../services/topics.service";
+import {ArticleSelectionComponent} from "./../../article-selection/article-selection.component";
 
 
 @Component({
@@ -11,6 +13,7 @@ import {ManipulationService} from "../../services/manipulation.service";
   styleUrls: ['./manipulateDialog.component.scss']
 })
 export class DialogEdit implements OnInit {
+  @ViewChild(ArticleSelectionComponent) articleselection:ArticleSelectionComponent;
 
   public dialog_topic;
   public categoriesAvailable;
@@ -31,13 +34,17 @@ export class DialogEdit implements OnInit {
   submitChanges(){
     this.dialog_topic.categories = this.manipulationService.mapCheckedOptions(this.categoriesMap);
     this.dialogRef.close(this.dialog_topic);
+    this.articleselection.saveArticleChangesOnServer();
   }
 
   updateCheckedOptions(value,event){
       value.value = event.checked;
   }
 
-
+  selectedArticlesChanged(articles) {
+    this.dialog_topic.news_articles = articles;
+    this.dialog_topic.news_article_count = articles.lenght;
+  }
 
 }
 
@@ -52,8 +59,11 @@ export class DialogAdd implements OnInit {
   constructor(public dialogRef: MdDialogRef<any>,
               private formBuilder_topic: FormBuilder,
               private categoryService: CategoryService,
-              private manipulationService: ManipulationService) {
+              private manipulationService: ManipulationService,
+              private topicsService: TopicsService) {
   }
+
+  @ViewChild(ArticleSelectionComponent) articleselection:ArticleSelectionComponent;
 
   addTopicForm: FormGroup;
 
@@ -70,6 +80,7 @@ export class DialogAdd implements OnInit {
   news_article_count = new FormControl('', Validators.required);
   location = new FormControl('', Validators.required);
   categories = new FormControl('', Validators.required);
+  news_articles: any = {};
 
   ngOnInit() {
 
@@ -79,7 +90,8 @@ export class DialogAdd implements OnInit {
       image: this.image,
       news_article_count: this.news_article_count,
       location: this.location,
-      categories: this.categories
+      categories: this.categories,
+      //news_articles: this.news_articles
     });
     this.loadAvailableCategories();
   }
@@ -97,10 +109,33 @@ export class DialogAdd implements OnInit {
       value.value = event.checked;
   }
 
-
+  selectedArticlesChanged(articles) {
+    console.log("Changes adapted in parent component");
+    this.news_articles = articles;
+    this.news_article_count = articles.lenght;
+  }
 
   submitTopic(){
-    this.addTopicForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
+    const topic = {
+      title: this.title.value,
+      timestamp: this.timestamp.value,
+      image: this.image.value,
+      news_article_count: this.news_article_count,
+      location: this.location.value,
+      categories: this.categories.value,
+      news_articles: this.news_articles
+    }
+
+    console.log("Save topic");
+    console.log(topic);
+
+    this.topicsService.addTopic(topic).subscribe(
+      res => console.log("saved"),
+      error => console.log("error")
+    );
+
+    //this.addTopicForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
     this.dialogRef.close(this.addTopicForm);
+    this.articleselection.saveArticleChangesOnServer();
   }
 }

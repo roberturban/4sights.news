@@ -1,3 +1,4 @@
+<md-dialog-content>
 <div class="manipulation-form" style="font-family:Roboto; !important">
   <div class="header-title">Add Topic</div>
     <form class="form-inner" [formGroup]="addTopicForm" (ngSubmit)="submitTopic()">
@@ -30,9 +31,11 @@
         <div>Categories:</div>
         <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
       </div>
+      <app-article-selection (onSelectionChange)="selectedArticlesChanged($event)"></app-article-selection> 
       <div class="bottom-row">
         <button md-raised-button color="primary" type="submit" [disabled]="!addTopicForm.valid"><md-icon>save</md-icon> Add</button>
         <button md-raised-button color="warn" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
       </div>
     </form>
 </div>
+</md-dialog-content>

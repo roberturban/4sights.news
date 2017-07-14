@@ -34,6 +34,7 @@
     <div class="checkboxes">
      <md-checkbox *ngFor="let category of categoriesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
     </div>
+    <app-article-selection [exttopic]="dialog_topic" (onSelectionChange)="selectedArticlesChanged($event)"></app-article-selection> 
     <div class="bottom-row">
       <button md-raised-button color="primary" type="submit" [disabled]="!form.form.valid"><md-icon>save</md-icon> Save</button>
       <button md-raised-button color="warn" style="margin-left:10px; color: #fff;" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
