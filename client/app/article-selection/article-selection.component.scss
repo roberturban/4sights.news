@@ -1,0 +1,70 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 6px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover{background-color:#f5f5f5}
+
+.header-title{
+  width: 100%;
+  margin: 30px 0 0 0;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.infoBox {
+  margin: 15px 0 15px 0;
+}
+
+.icon {
+    max-height: 25px;
+    max-width: 50px;
+}
+
+.scrollable {
+   overflow-y: scroll;
+}
+
+.info {
+  font-size: 80%;
+}
+
+.input-full-width{
+  width: 100%;
+}
+
+.input-container{
+  margin-bottom: 10px;
+}
+
+.clickable-cell {
+  cursor: pointer;
+  color: #f2545b;
+}
+
+.form-inner{
+  width: 100%;
+  /*padding: 0px 10%;*/
+}
+
+/*
+This example is from: https://codepen.io/anon/pen/Wxqydv
+I do not know why it does not work...
+*/
+md-checkbox.md-checkbox-small {
+  .md-icon {
+    transform: scale(0.8);
+  }
+  .md-label {
+    margin-left: 40px;
+  }
+}

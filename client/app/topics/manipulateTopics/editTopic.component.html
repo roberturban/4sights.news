@@ -2,7 +2,7 @@
 <div class="manipulation-form" style="font-family:Roboto; !important">
   <div class="header-title"> Edit Topic</div>
   <div class="image-box">
-   <img src="{{dialog_topic.image}}">
+   <img class="titleimage" src="{{dialog_topic.image}}">
   </div>
   <form class="form-inner" #form="ngForm" (ngSubmit)="submitChanges()">
     <div class="input-container">
@@ -22,11 +22,6 @@
     </div>
     <div class="input-container">
       <md-input-container class="input-full-width">
-        <input mdInput class="input-full-width" type="number" name="news_article_count" [(ngModel)]="dialog_topic.news_article_count" placeholder="News Article Count" step="any" min="0" required>
-      </md-input-container>
-    </div>
-    <div class="input-container">
-      <md-input-container class="input-full-width">
         <input mdInput class="input-full-width" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="Location" required>
       </md-input-container>
     </div>
@@ -34,6 +29,7 @@
     <div class="checkboxes">
      <md-checkbox *ngFor="let category of categoriesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
     </div>
+    <app-article-selection [exttopic]="dialog_topic" (onSelectionChange)="selectedArticlesChanged($event)"></app-article-selection> 
     <div class="bottom-row">
       <button md-raised-button color="primary" type="submit" [disabled]="!form.form.valid"><md-icon>save</md-icon> Save</button>
       <button md-raised-button color="warn" style="margin-left:10px; color: #fff;" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
