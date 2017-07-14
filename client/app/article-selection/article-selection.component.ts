@@ -20,7 +20,6 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
   all_articles = [];
   isLoadingTopic = true;
   isLoadingArticles = true;
-  isLoading = true;
   changed_articles = [];
 
   ngOnInit() {
@@ -29,19 +28,16 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
         this.topic = data;
         console.log(data);
         this.isLoadingTopic = false;
-        this.checkLoading();
       },
       error => console.log(error),
       () => console.log('Topic updated')
     );
     this.articleService.getArticles().subscribe(
       data => {
-        //console.log("Total number: " + data.length);
         this.all_articles = data;
         console.log(data);
         console.log(this.all_articles);
         this.isLoadingArticles = false;
-        this.checkLoading();
       },
       error => console.log(error),
       () => console.log('articles loaded')
@@ -49,13 +45,14 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    console.log("Number of articles to update: " + this.changed_articles.length);
     //TODO: this should be removed and called from parent component
-    this.saveChanges();
+    this.saveArticleChangesOnServer();
   }
 
   //TODO: should be called from parent component
-  saveChanges() {
+  saveArticleChangesOnServer() {
+    //consider new endpoint for bulk savings
+    console.log("Number of articles to update: " + this.changed_articles.length);
     for (var i = 0; i < this.changed_articles.length; i++) {
       this.articleService.editArticle(this.changed_articles[i]).subscribe(
         res => {
@@ -64,12 +61,6 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
         },
         error => console.log(error)
       );
-    }
-  }
-
-  checkLoading() {
-    if (!this.isLoadingArticles && !this.isLoadingTopic) {
-      this.isLoading = false;
     }
   }
 
@@ -94,6 +85,10 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     this.exttopic.news_article_count = arr.length;
   }
 
+  removeSelectedCheck(value, event) {
+      this.uncheck(value);
+  }
+
   uncheck(article) {
     for (var i = 0; i < this.topic.news_articles.length; i++) {
       if(this.topic.news_articles[i]._id == article._id) {
@@ -105,6 +100,10 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     this.all_articles.push(article);
     this.setOrigTopic();
     this.addToChanged(article);
+  }
+
+  addSelectedCheck(value, event) {
+      this.check(value);
   }
 
   check(article) {
@@ -151,7 +150,5 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
       }
     }
     this.changed_articles.push(article);
-    console.log("pushed");
-    console.log(this.changed_articles);
   }
 }

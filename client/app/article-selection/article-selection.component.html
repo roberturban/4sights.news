@@ -1,37 +1,39 @@
 <div class="manipulation-form" style="font-family:Roboto; !important" >
-    <div style="width: 100%;" class="header-title">Articles selected for this topic ({{topic.news_articles.length}})</div>
     <div *ngIf="isLoadingTopic">Loading topic</div>
     <div *ngIf="!isLoadingTopic">
-        <div style="height: 150px; overflow-y: scroll;">
+        <div class="header-title">Articles selected for this topic ({{topic.news_articles.length}})</div>
+        <div style="height: 130px; overflow-y: scroll;">
             <table class="table table-striped">
                 <tr *ngFor="let article of topic.news_articles">
                     <td>{{article.source.name}}</td>
                     <td>{{article.title}}</td>
                     <td>{{formatDate(article.published)}}</td>
-                    <td><input type="checkbox" checked (change)="uncheck(article)"></td>
-                    <td (click)="moveup(article)">&#x25B2;</td>
-                    <td (click)="movedown(article)">&#x25BC;</td>
+                    <!--<td><input type="checkbox" checked (change)="uncheck(article)"></td>-->
+                    <td><md-checkbox class="md-checkbox-small" [checked]="true" (change)="removeSelectedCheck(article, $event)"></md-checkbox></td>
+                    <td class="clickable-cell" (click)="moveup(article)">&#x25B2;</td>
+                    <td class="clickable-cell" (click)="movedown(article)">&#x25BC;</td>
                 </tr>
             </table>
         </div>
     </div>
-    <div style="width: 100%;" class="header-title">Articles available ({{all_articles.length}})</div>
-    <form style="width: 100%;" class="form-inner" #form="ngForm" (ngSubmit)="submitChanges()">
-        <div style="width: 100%;" class="input-container">
-          <md-input-container style="width: 100%;" class="input-full-width">
-            <input style="width: 100%;" mdInput class="input-full-width"  type="text" name="searchterm" [(ngModel)]="searchterm" placeholder="Search">
-          </md-input-container>
-        </div>
-    </form>
     <div *ngIf="isLoadingArticles">Loading articles</div>
     <div *ngIf="!isLoadingArticles">
-        <div style="height: 200px; overflow-y: scroll;">
+        <div class="header-title">Articles available ({{all_articles.length}})</div>
+        <form class="form-inner">
+            <div class="input-container">
+            <md-input-container class="input-full-width">
+                <input mdInput class="input-full-width"  type="text" name="searchterm" [(ngModel)]="searchterm" placeholder="Search">
+            </md-input-container>
+            </div>
+        </form>
+        <div style="height: 180px; overflow-y: scroll;">
             <table class="table table-striped">
                 <tr *ngFor="let article of all_articles | filterArticles:searchterm">
                     <td>{{article.source.name}}</td>
                     <td>{{article.title}}</td>
                     <td>{{formatDate(article.published)}}</td>
-                    <td><input type="checkbox" (change)="check(article)"></td>
+                    <!--<td><input type="checkbox" (change)="check(article)"></td>-->
+                    <td><md-checkbox class="md-checkbox-small" [checked]="false" (change)="addSelectedCheck(article, $event)"></md-checkbox></td>
                 </tr>
             </table>
         </div>
