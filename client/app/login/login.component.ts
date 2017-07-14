@@ -3,9 +3,8 @@ import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
 
+import { SnackBarService } from '../services/snackbar.service';
 import { AuthService } from '../services/auth.service';
-import { ToastComponent } from '../shared/toast/toast.component';
-
 
 @Component({
   selector: 'app-login',
@@ -17,7 +16,6 @@ export class LoginComponent implements OnInit {
   constructor(private auth: AuthService,
               private formBuilder: FormBuilder,
               private router: Router,
-              public toast: ToastComponent,
               public snackBar: MdSnackBar) { }
 
   loginForm: FormGroup;
@@ -25,19 +23,7 @@ export class LoginComponent implements OnInit {
   password = new FormControl('', [Validators.required, Validators.minLength(6)]);
 
   // SnackBar config
-  errorText = "";
-  label: boolean;
-  labelText = "";
-  addExtraClass = true;
-
-  createSnackBar(errorText, label, labelText, addExtraClass){
-    let config = new MdSnackBarConfig();
-    config.extraClasses = this.addExtraClass ? ['addExtraClass'] : null;
-    this.errorText = errorText;
-    this.label = label;
-    this.labelText = labelText;
-    this.snackBar.open(this.errorText, this.label && this.labelText, config);
-  }
+  snackBarService = new SnackBarService(this.snackBar);
 
   ngOnInit() {
     if (this.auth.loggedIn) {
@@ -51,8 +37,11 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.auth.login(this.loginForm.value).subscribe(
-      res => this.router.navigate(['/']),
-      error => this.createSnackBar('Invalid email or password!', true, 'Ok', '')
+      res => {
+        this.router.navigate(['/']);
+        this.snackBarService.createSnackBar('Successfully logged in', false, '','', 1000)
+      },
+      error => this.snackBarService.createSnackBar('Invalid email or password', true, 'Ok','', 3000)
     );
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter, NgZone } from '@angular/core';
+import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
 
-import { ToastComponent } from '../shared/toast/toast.component';
+import { SnackBarService } from '../services/snackbar.service';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 import { TopicsService } from '../services/topics.service';
@@ -18,6 +19,25 @@ import { DialogEdit } from '../topics/manipulateTopics/manipulateDialog.componen
   encapsulation: ViewEncapsulation.None,
 })
 export class AdminComponent implements OnInit {
+
+  constructor(public auth: AuthService,
+    public snackBar: MdSnackBar,
+    private userService: UserService,
+    private topicService: TopicsService,
+    private categoryService: CategoryService,
+    public dialogEdit: MdDialog,
+    private zone: NgZone)
+  {
+    // listens on
+    this.userService.getUsers().subscribe((state) => {
+      this.zone.run(() => {
+        console.log('user source has been changed.');
+      });
+    });
+  }
+
+  // SnackBar config
+  snackBarService = new SnackBarService(this.snackBar);
 
   users = [];
   topics = [];
@@ -64,22 +84,7 @@ export class AdminComponent implements OnInit {
        }
   };
 
-  constructor(public auth: AuthService,
-              public toast: ToastComponent,
-              private userService: UserService,
-              private topicService: TopicsService,
-              private categoryService: CategoryService,
-              public dialogEdit: MdDialog,
-              private zone: NgZone) 
-              {
-                 // listens on 
-                 this.userService.getUsers().subscribe((state) => {
-                    this.zone.run(() => {
-                    console.log('user source has been changed.');
-                    });
-                 });
 
-              }
 
   ngOnInit() {
     this.getUsers();
@@ -104,7 +109,7 @@ export class AdminComponent implements OnInit {
           res => {
             const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
             this.topics.splice(pos, 1);
-            this.toast.setMessage('item deleted successfully.', 'success');
+            this.snackBarService.createSnackBar('Item deleted successfully', true, 'Ok','', 3000)
           },
           error => console.log(error)
         );
@@ -123,7 +128,7 @@ export class AdminComponent implements OnInit {
       res => {
         this.isEditing_topic = false;
         this.topic = topic;
-        this.toast.setMessage('item edited successfully.', 'success');
+        this.snackBarService.createSnackBar('Item edited successfully', true, 'Ok','', 3000)
       },
       error => console.log(error)
     );
@@ -143,7 +148,7 @@ export class AdminComponent implements OnInit {
     if(form == 'user'){
       this.isEditing_users = false;
     } else {
-      this.isEditing_topics = false;      
+      this.isEditing_topics = false;
     }
   }
 
@@ -178,7 +183,7 @@ export class AdminComponent implements OnInit {
         search: query
       }
     ], false); }
-  // second parameter specifying whether to perform 'AND' or 'OR' search 
+  // second parameter specifying whether to perform 'AND' or 'OR' search
   // (meaning all columns should contain search query or at least one)
   // 'AND' by default, so changing to 'OR' by setting false here
   }
@@ -198,10 +203,10 @@ export class AdminComponent implements OnInit {
         this.dialogRef = null;
         if (!result) {
           //this.cancelEditing_topic();
-          this.toast.setMessage('item cancled.', 'warning');
+          this.snackBarService.createSnackBar('Item canceled', true, 'Ok','', 3000)
         } else {
           this.editTopic(result);
-          this.toast.setMessage('item edited successfully.', 'success');
+          this.snackBarService.createSnackBar('Item edited successfully', true, 'Ok','', 3000)
         }
       });
   }
@@ -216,8 +221,8 @@ const dialogEdit = DialogEdit;
 @Component({
   selector: 'button-view',
   template: `
-    <button md-button (click)="onClick()" [disabled]="auth.currentUser._id === rowData._id"> 
-                      <i class="material-icons">delete</i> 
+    <button md-button (click)="onClick()" [disabled]="auth.currentUser._id === rowData._id">
+                      <i class="material-icons">delete</i>
     </button>
   `,
 })
@@ -229,9 +234,12 @@ export class ButtonViewComponent implements ViewCell, OnInit {
 
   constructor(
     public userService: UserService,
-    public toast: ToastComponent,
+    public snackBar: MdSnackBar,
     public admin: AdminComponent,
     public auth: AuthService){}
+
+  // SnackBar config
+  snackBarService = new SnackBarService(this.snackBar);
 
   ngOnInit() {
     this.renderValue = this.value.toString().toUpperCase();
@@ -245,11 +253,11 @@ export class ButtonViewComponent implements ViewCell, OnInit {
       if (window.confirm('Are you sure you want to permanently delete this user?')) {
         this.userService.deleteUser(user).subscribe(
           data => {
-            this.toast.setMessage('user deleted successfully.', 'success'),
+            this.snackBarService.createSnackBar('User deleted successfully', true, 'Ok','', 3000)
             this.admin.getUsers()
         },
           error => console.log(error)
         );
-      } 
+      }
   }
 }
