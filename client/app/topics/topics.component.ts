@@ -1,16 +1,15 @@
-import { Component, OnInit, HostListener, Inject, Optional, Input} from '@angular/core';
+import { Component, OnInit, HostListener, Inject, Optional, Input, Pipe} from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 
-import { ToastComponent } from '../shared/toast/toast.component';
 import { TopicsService } from '../services/topics.service';
 import { AuthService } from '../services/auth.service';
 import { CategoryService } from "../services/category.service";
 import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
 import { DialogFollowCategories } from './followCategories/followCategoryDialog.component';
-
+import { CategoryFilterPipe } from '../services/category-filter.pipe';
 
 
 @Component({
@@ -21,7 +20,6 @@ import { DialogFollowCategories } from './followCategories/followCategoryDialog.
 export class TopicsComponent implements OnInit {
 
   constructor(private http: Http,
-              public toast: ToastComponent,
               private topicsService: TopicsService,
               private formBuilder_topic: FormBuilder,
               public dialogEdit: MdDialog,
@@ -29,7 +27,33 @@ export class TopicsComponent implements OnInit {
               public dialogFollow: MdDialog,
               public auth: AuthService,
               private route: ActivatedRoute,
-              private categoryService: CategoryService) { }
+              private categoryService: CategoryService) {}
+
+  // Topics and Cards
+  topic = {};
+  topics = [];
+  filteredTopics = [];
+  isLoading_topic = true;
+  isEditing_topic = false;
+
+  // Dialog for Manipulation
+  dialogRef: MdDialogRef<any>;
+
+  // Categories
+  userHasPreferences = false;
+  active_category: String;
+  categoriesAvailable = [];
+  userCategoryPreferences = [];
+  filterPipe = new CategoryFilterPipe();
+
+  // Menu for Toolbar
+  selected = '';
+  menuButton: boolean;
+
+  // Flexbox Grid css fix
+  windowWidth: number;
+  missingItems: number;
+  missingItemsArray = [];
 
   ngOnInit() {
     this.getTopics();
@@ -38,7 +62,6 @@ export class TopicsComponent implements OnInit {
   }
 
   loadAvailableCategories() {
-    console.log(this.categoryService.getCategories());
     this.categoryService.getCategories().subscribe(
       data => {
         this.categoriesAvailable = data;
@@ -49,33 +72,7 @@ export class TopicsComponent implements OnInit {
     );
   }
 
-  //Topics
-  topic = {};
-  topics = [];
-  filter_topics = [];
-
-  topic_cancel = {};
-  isLoading_topic = true;
-  isEditing_topic = false;
-  userHasPreferences = false;
-
-  active_category: String;
-  private sub: any;
-
-  dialogRef: MdDialogRef<any>;
-
-  categoriesAvailable = [];
-  userCategoryPreferences = [];
-
-  // Menu for Toolbar
-  selected = '';
-  menuButton: boolean;
-
-  // Flexbox
-  windowWidth: number;
-  missingItems: number;
-  missingItemsArray = [];
-
+  // Listens to resize events and calculates blank items to sustain a grid in flexbox
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.windowWidth = event.target.innerWidth;
@@ -84,7 +81,9 @@ export class TopicsComponent implements OnInit {
   }
 
   calculateLastRowItems(){
-    this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.topics.length % Math.floor((this.windowWidth - 100) / 288);
+    this.filteredTopics = this.filterPipe.transform(this.topics, this.userCategoryPreferences);
+    this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.filteredTopics.length % Math.floor((this.windowWidth - 100) / 288);
+    console.log(((this.windowWidth - 100) / 288), this.filteredTopics, this.filteredTopics.length, (this.filteredTopics.length % Math.floor((this.windowWidth - 100) / 288)), this.missingItems);
     this.missingItemsArray = Array.from(Array(this.missingItems),(x,i)=>i);
   }
 
@@ -106,14 +105,13 @@ export class TopicsComponent implements OnInit {
         this.topics.map(tp => {
           tp.timestamp = new Date(Date.parse(tp.timestamp)).toDateString();
         })
-        // Calculate CSS Flexbo Last Row Items
+        // Calculate CSS Flexbox Last Row Items
         this.windowWidth = window.innerWidth;
         this.calculateLastRowItems();
         this.calculateMenuButton();
         ;
       }
     );
-
   }
 
   addTopic(topic) {
@@ -121,7 +119,7 @@ export class TopicsComponent implements OnInit {
       res => {
         const newTopic = res.json();
         this.topics.push(newTopic);
-        this.toast.setMessage('item added successfully.', 'success');
+        console.log('item added successfully.', 'success');
       },
       error => console.log(error)
     );
@@ -132,7 +130,7 @@ export class TopicsComponent implements OnInit {
       res => {
         this.isEditing_topic = false;
         this.topic = topic;
-        this.toast.setMessage('item edited successfully.', 'success');
+        console.log('item edited successfully.', 'success');
       },
       error => console.log(error)
     );
@@ -142,7 +140,7 @@ export class TopicsComponent implements OnInit {
     this.isEditing_topic = false;
     this.topic = {};
     this.topics = [];
-    this.toast.setMessage('item editing cancelled.', 'warning');
+    console.log('item editing cancelled.', 'warning');
     // reload the Topics to reset the editing
     this.getTopics();
   }
@@ -153,13 +151,12 @@ export class TopicsComponent implements OnInit {
         res => {
           const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
           this.topics.splice(pos, 1);
-          this.toast.setMessage('item deleted successfully.', 'success');
+          console.log('item deleted successfully.', 'success');
         },
         error => console.log(error)
       );
     }
   }
-
 
   setInitialPage(){
     this.userCategoryPreferences = this.categoriesAvailable;
@@ -173,6 +170,8 @@ export class TopicsComponent implements OnInit {
       this.active_category = value;
       this.userCategoryPreferences = [value];
     }
+    this.calculateLastRowItems();
+    this.calculateMenuButton();
   }
 
   getUserCategoryPreferences(){
@@ -182,7 +181,6 @@ export class TopicsComponent implements OnInit {
       this.userHasPreferences = true;
     }
   }
-
 
   // Dialog windows
   // Dialog for editing topics
@@ -199,10 +197,10 @@ export class TopicsComponent implements OnInit {
         this.dialogRef = null;
         if (!result) {
           this.cancelEditing_topic();
-          this.toast.setMessage('item cancled.', 'warning');
+          console.log('item cancled.', 'warning');
         } else {
           this.editTopic(result);
-          this.toast.setMessage('item edited successfully.', 'success');
+          console.log('item edited successfully.', 'success');
         }
       });
   }
@@ -216,13 +214,13 @@ export class TopicsComponent implements OnInit {
         this.dialogRef = null;
         if (!result) {
           this.cancelEditing_topic();
-          this.toast.setMessage('item cancled.', 'warning');
+          console.log('item cancled.', 'warning');
         } else {
           this.addTopic(result);
           this.getTopics();
-          this.toast.setMessage('item edited successfully.', 'success');
+          console.log("reloading");
+          console.log('item edited successfully.', 'success');
         }
-
     });
   }
 
@@ -237,15 +235,12 @@ export class TopicsComponent implements OnInit {
       result => {
         this.dialogRef = null;
         if (!result) {
-          this.toast.setMessage('subscription was not updated!.', 'warning');
+          console.log('subscription was not updated!.', 'warning');
         } else {
-          this.toast.setMessage('subscription updated successfully.', 'success');
+          console.log('subscription updated successfully.', 'success');
         }
       });
     }
-
-
-
 }
 
 const dialogEdit = DialogEdit;

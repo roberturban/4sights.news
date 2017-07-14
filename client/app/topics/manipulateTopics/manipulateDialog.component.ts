@@ -84,7 +84,6 @@ export class DialogAdd implements OnInit {
   news_article_count = 0;
 
   ngOnInit() {
-
     this.addTopicForm = this.formBuilder_topic.group({
       title: this.title,
       timestamp: this.timestamp,
