@@ -1,12 +1,10 @@
 <app-loading [condition]="isLoading"></app-loading>
 
-<app-toast [message]="toast.message"></app-toast>
-
   <div class="account-container mat-elevation-z4">
     <div class="header-title">Account Settings
     </div>
     <form class="account-form" #accountForm="ngForm" (ngSubmit)="save(user)">
-      
+
       <div class="input-container">
         <md-input-container class="input-full-width">
             <input mdInput class="input-full-width" type="text" name="name" [(ngModel)]="user.name" placeholder="Name" required>
@@ -34,12 +32,12 @@
       <div class="checkboxes">
         <md-checkbox class="single_box" *ngFor="let category of userCategoryPreferencesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)">{{category.category.name}}</md-checkbox>
       </div>
-      
+
       <button class="bottom-row" md-raised-button color="primary" style="color:#fff" type="submit" [disabled]="!accountForm.form.valid">
           <md-icon>save</md-icon> Save
       </button>
-      
-      
+
+
     </form>
-    
+
   </div>

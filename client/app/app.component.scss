@@ -2,6 +2,20 @@ html {
   font-family: Roboto, sans-serif !important;
 }
 
+#cdk-overlay-0{
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.custom-overlay-pane-class{
+  max-height: 90%;
+  overflow-y: scroll;
+}
+.bbb{
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
 .app{
   font-family: Roboto, sans-serif !important;
   display: flex;

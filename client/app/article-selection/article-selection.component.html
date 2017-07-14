@@ -2,7 +2,7 @@
     <div *ngIf="isLoadingTopic">Loading topic</div>
     <div *ngIf="!isLoadingTopic">
         <div class="header-title">Articles selected for this topic ({{topic.news_articles.length}})</div>
-        <div class="scrollable" style="height: 150px">
+        <div class="scrollable" style="max-height: 300px">
             <table class="table">
                 <tr class="info" *ngFor="let article of topic.news_articles">
                     <td><img class="icon" src="{{article.source.logoUrl}}"></td>
@@ -31,7 +31,7 @@
             </md-input-container>
             </div>
         </form>
-        <div class="scrollable" style="height: 180px;">
+        <div class="scrollable" style="height: 300px;">
             <table class="table">
                 <tr class="info" *ngFor="let article of all_articles | filterArticles:searchterm:topic.news_articles">
                     <td><img class="icon" src="{{article.source.logoUrl}}"></td>

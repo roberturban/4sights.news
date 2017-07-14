@@ -3,6 +3,32 @@ a {
   color: inherit;
 }
 
+#cdk-overlay-0{
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.custom-overlay-pane-class{
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.bbb{
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.chip{
+  margin-top: 3px !important;
+}
+
+.chip:hover{
+  cursor: pointer !important;
+}
+
+.chip:active{
+  text-decoration: none !important;
+}
 
 .count{
   height: 24px;

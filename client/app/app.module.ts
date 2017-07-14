@@ -13,6 +13,7 @@ import {  MaterialModule,
           MdProgressBarModule,
           MdProgressSpinnerModule,
           MdSnackBarModule,
+          MdChipsModule,
            } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { DndModule } from 'ng2-dnd';
@@ -83,6 +84,7 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     MdExpansionModule,
     MdGridListModule,
     MdSnackBarModule,
+    MdChipsModule,
     DndModule.forRoot(),
     Ng2SmartTableModule,
     RouterModule

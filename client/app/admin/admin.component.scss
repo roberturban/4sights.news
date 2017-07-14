@@ -42,11 +42,12 @@ td{
 }
 
 .header-title{
-  width: 85%;
-  margin: 30px 0 10px 0;
+  width: 100%;
+  margin: 30px 0 0 0;
+  padding-top: 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid #ccc;
-  text-align: center
+  text-align: left;
 }
 
 .search-bar{
@@ -59,4 +60,3 @@ td{
   border: 1px solid #ccc;
   outline: none;
 }
-
