@@ -4,7 +4,7 @@
         <div class="header-title">Articles selected for this topic ({{topic.news_articles.length}})</div>
         <div style="height: 130px; overflow-y: scroll;">
             <table class="table table-striped">
-                <tr *ngFor="let article of topic.news_articles">
+                <tr class="info" *ngFor="let article of topic.news_articles">
                     <td>{{article.source.name}}</td>
                     <td>{{article.title}}</td>
                     <td>{{formatDate(article.published)}}</td>
@@ -26,9 +26,13 @@
             </md-input-container>
             </div>
         </form>
+        <div class="info cards" *ngIf="!isLoadingArticles"> <!--TODO: why does flex layout not work here?-->
+            <div>Articles from already selected sources are hidden: </div>
+            <div *ngFor="let article of topic.news_articles">"{{article.source.name}}" </div>
+        </div>
         <div style="height: 180px; overflow-y: scroll;">
             <table class="table table-striped">
-                <tr *ngFor="let article of all_articles | filterArticles:searchterm">
+                <tr class="info" *ngFor="let article of all_articles | filterArticles:searchterm:topic.news_articles">
                     <td>{{article.source.name}}</td>
                     <td>{{article.title}}</td>
                     <td>{{formatDate(article.published)}}</td>

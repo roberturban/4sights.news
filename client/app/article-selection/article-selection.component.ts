@@ -26,7 +26,6 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     this.topicService.getSingleTopic(this.exttopic._id).subscribe(
       data => {
         this.topic = data;
-        console.log(data);
         this.isLoadingTopic = false;
       },
       error => console.log(error),
@@ -35,8 +34,6 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     this.articleService.getArticles().subscribe(
       data => {
         this.all_articles = data;
-        console.log(data);
-        console.log(this.all_articles);
         this.isLoadingArticles = false;
       },
       error => console.log(error),
