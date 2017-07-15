@@ -1,16 +1,16 @@
-import { Component, OnInit, HostListener, Inject, Optional, Input, Pipe, ViewEncapsulation} from '@angular/core';
-import { Http } from '@angular/http';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
-import { ActivatedRoute } from '@angular/router';
-import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+import {Component, OnInit, HostListener, Inject, Optional, Input, Pipe, ViewEncapsulation} from '@angular/core';
+import {Http} from '@angular/http';
+import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import {MdDialog, MdDialogConfig, MdDialogRef} from '@angular/material';
+import {ActivatedRoute} from '@angular/router';
+import {MdSnackBar, MdSnackBarConfig} from '@angular/material';
 
-import { SnackBarService } from '../services/snackbar.service';
-import { TopicsService } from '../services/topics.service';
-import { AuthService } from '../services/auth.service';
-import { CategoryService } from "../services/category.service";
-import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
-import { DialogFollowCategories } from './followCategories/followCategoryDialog.component';
+import {SnackBarService} from '../services/snackbar.service';
+import {TopicsService} from '../services/topics.service';
+import {AuthService} from '../services/auth.service';
+import {CategoryService} from "../services/category.service";
+import {DialogAdd, DialogEdit} from './manipulateTopics/manipulateDialog.component';
+import {DialogFollowCategories} from './followCategories/followCategoryDialog.component';
 
 
 @Component({
@@ -21,18 +21,17 @@ import { DialogFollowCategories } from './followCategories/followCategoryDialog.
 })
 export class TopicsComponent implements OnInit {
 
-  constructor(
-    private http: Http,
-    private topicsService: TopicsService,
-    private formBuilder_topic: FormBuilder,
-    public dialogEdit: MdDialog,
-    public dialogAdd: MdDialog,
-    public dialogFollow: MdDialog,
-    public auth: AuthService,
-    private route: ActivatedRoute,
-    private categoryService: CategoryService,
-    public snackBar: MdSnackBar
-  ) {}
+  constructor(private http: Http,
+              private topicsService: TopicsService,
+              private formBuilder_topic: FormBuilder,
+              public dialogEdit: MdDialog,
+              public dialogAdd: MdDialog,
+              public dialogFollow: MdDialog,
+              public auth: AuthService,
+              private route: ActivatedRoute,
+              private categoryService: CategoryService,
+              public snackBar: MdSnackBar) {
+  }
 
   // Topics and Cards
   topic = {};
@@ -62,7 +61,7 @@ export class TopicsComponent implements OnInit {
   snackBarService = new SnackBarService(this.snackBar);
 
   ngOnInit() {
-    if(this.auth.loggedIn) {
+    if (this.auth.loggedIn) {
       this.getTopics(null, this.auth.currentUser);
     } else {
       this.getTopics();
@@ -90,14 +89,14 @@ export class TopicsComponent implements OnInit {
     this.calculateMenuButton();
   }
 
-  calculateLastRowItems(){
+  calculateLastRowItems() {
     // Calculates number of blank items
     this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.topics.length % Math.floor((this.windowWidth - 100) / 288);
-    this.missingItemsArray = Array.from(Array(this.missingItems),(x,i)=>i);
+    this.missingItemsArray = Array.from(Array(this.missingItems), (x, i) => i);
   }
 
-  calculateMenuButton(){
-    if (this.windowWidth < 800){
+  calculateMenuButton() {
+    if (this.windowWidth < 800) {
       this.menuButton = true;
     } else {
       this.menuButton = false;
@@ -128,7 +127,7 @@ export class TopicsComponent implements OnInit {
       res => {
         const newTopic = res.json();
         this.topics.push(newTopic);
-        this.snackBarService.createSnackBar('Item added successfully', true, 'Ok','', 3000)
+        this.snackBarService.createSnackBar('Item added successfully', true, 'Ok', '', 3000)
       },
       error => console.log(error)
     );
@@ -139,7 +138,7 @@ export class TopicsComponent implements OnInit {
       res => {
         this.isEditing_topic = false;
         this.topic = topic;
-        this.snackBarService.createSnackBar('Item edited', true, 'Ok','', 3000)
+        this.snackBarService.createSnackBar('Item edited', true, 'Ok', '', 3000)
       },
       error => console.log(error)
     );
@@ -149,7 +148,7 @@ export class TopicsComponent implements OnInit {
     this.isEditing_topic = false;
     this.topic = {};
     this.topics = [];
-    this.snackBarService.createSnackBar('Editing cancelled', true, 'Ok','', 3000)
+    this.snackBarService.createSnackBar('Editing cancelled', true, 'Ok', '', 3000)
     // reload the Topics to reset the editing
     this.getTopics();
   }
@@ -160,22 +159,22 @@ export class TopicsComponent implements OnInit {
         res => {
           const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
           this.topics.splice(pos, 1);
-          this.snackBarService.createSnackBar('Item deleted', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Item deleted', true, 'Ok', '', 3000)
         },
         error => console.log(error)
       );
     }
   }
 
-  setInitialPage(){
+  setInitialPage() {
     this.userCategoryPreferences = this.categoriesAvailable;
     this.getUserCategoryPreferences();
   }
 
   getTopics_category(value) {
-    if(value=='Home'){
+    if (value == 'Home') {
       this.setInitialPage();
-    } else{
+    } else {
       this.getTopics(value);
       this.userCategoryPreferences = [value];
     }
@@ -183,9 +182,9 @@ export class TopicsComponent implements OnInit {
     this.calculateMenuButton();
   }
 
-  getUserCategoryPreferences(){
+  getUserCategoryPreferences() {
     //initiate with full
-    if(this.auth.currentUser.categories.length > 0){
+    if (this.auth.currentUser.categories.length > 0) {
       this.userCategoryPreferences = this.auth.currentUser.categories;
       this.userHasPreferences = true;
     }
@@ -208,10 +207,10 @@ export class TopicsComponent implements OnInit {
         this.dialogRef = null;
         if (!result) {
           this.cancelEditing_topic();
-          this.snackBarService.createSnackBar('Editing canceled', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Editing canceled', true, 'Ok', '', 3000)
         } else {
           this.editTopic(result);
-          this.snackBarService.createSnackBar('Item edited', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Item edited', true, 'Ok', '', 3000)
         }
       });
   }
@@ -227,14 +226,14 @@ export class TopicsComponent implements OnInit {
         this.dialogRef = null;
         if (!result) {
           this.cancelEditing_topic();
-          this.snackBarService.createSnackBar('Adding cancelled', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Adding cancelled', true, 'Ok', '', 3000)
         } else {
           this.addTopic(result);
           this.getTopics();
           console.log("reloading");
-          this.snackBarService.createSnackBar('Item added', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Item added', true, 'Ok', '', 3000)
         }
-    });
+      });
   }
 
   //Dialog for changing subscription of categories
@@ -250,12 +249,12 @@ export class TopicsComponent implements OnInit {
       result => {
         this.dialogRef = null;
         if (!result) {
-          this.snackBarService.createSnackBar('Subscription not updated', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Subscription not updated', true, 'Ok', '', 3000)
         } else {
-          this.snackBarService.createSnackBar('Updated succesfully', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Updated succesfully', true, 'Ok', '', 3000)
         }
       });
-    }
+  }
 }
 
 const dialogEdit = DialogEdit;
