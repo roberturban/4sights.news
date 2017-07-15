@@ -64,7 +64,11 @@ export class TopicsComponent implements OnInit {
   snackBarService = new SnackBarService(this.snackBar);
 
   ngOnInit() {
-    this.getTopics();
+    if(this.auth.loggedIn) {
+      this.getTopics(this.auth.currentUser);
+    } else {
+      this.getTopics();
+    }
     /*set initial preferences to full, will be checked afterwards*/
     this.loadAvailableCategories();
   }
@@ -104,8 +108,8 @@ export class TopicsComponent implements OnInit {
     }
   }
 
-  getTopics() {
-    this.topicsService.getTopics().subscribe(
+  getTopics(user = null) {
+    this.topicsService.getTopics(null, user).subscribe(
       data => this.topics = data,
       error => console.log(error),
       () => {

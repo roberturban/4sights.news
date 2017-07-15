@@ -21,8 +21,16 @@ export class TopicsService {
 
   constructor(private http: Http) { }
 
-  getTopics(): Observable<any> {
-    return this.http.get('/api/topics', this.getOptions()).map(res => res.json());
+  getTopics(category = null, user = null): Observable<any> {
+    const params = <any>{};
+    if (category) {
+      params.category_id = category._id;
+    }
+    if (user) {
+      params.user_id = user._id;
+    }
+
+    return this.http.get('/api/topics', { params: params }).map(res => res.json());
   }
 
   addTopic(topic): Observable<any> {
