@@ -16,6 +16,8 @@ export default class TopicCtrl extends BaseCtrl {
 
     if (req.query.user_id) {
       query = query.where('categories').in(req.query.user_id.categories)
+    } else if (req.query.category_id) {
+      query = query.where('categories').equals(req.query.category_id)
     }
 
     query.populate('categories')
