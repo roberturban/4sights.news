@@ -25,8 +25,7 @@ export class TopicsService {
     const params = <any>{};
     if (category) {
       params.category_id = category._id;
-    }
-    if (user) {
+    }else if (user) {
       params.user_id = user._id;
     }
 

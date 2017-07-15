@@ -30,7 +30,7 @@
 </md-toolbar>
 
 <md-menu xPosition="before" #posXMenu="mdMenu" class="before">
-  <button md-menu-item *ngFor="let category of categoriesAvailable" [disabled]="category.disabled" (click)="getTopics_category(category)">
+  <button md-menu-item *ngFor="let category of categoriesAvailable" [disabled]="category.disabled" (click)="getTopics_category()">
     {{ category.name }}
   </button>
 </md-menu>
