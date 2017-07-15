@@ -180,6 +180,7 @@ export class TopicsComponent implements OnInit {
     if(value=='Home'){
       this.setInitialPage();
     } else{
+      this.getTopics(value);
       this.userCategoryPreferences = [value];
     }
     this.calculateLastRowItems();
