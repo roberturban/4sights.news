@@ -33,7 +33,6 @@ import { TopicsComponent } from './topics/topics.component';
 import { SingleTopicComponent } from './single-topic/single-topic.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { ButtonViewComponent } from './admin/admin.component';
@@ -58,7 +57,6 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     SingleTopicComponent,
     RegisterComponent,
     LoginComponent,
-    LogoutComponent,
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
