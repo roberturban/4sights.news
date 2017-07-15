@@ -62,7 +62,8 @@
 
 .bottom-row{
   margin: 20px 20px 0 20px;
-  align-items: center;
+  align-self: flex-end;
+  max-width:50px;
 }
 
 md-error{

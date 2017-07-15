@@ -75,7 +75,7 @@ export class DialogAdd implements OnInit {
   categoriesMap =[];
 
   title = new FormControl('', Validators.required);
-  timestamp = new FormControl('', Validators.required);
+  timestamp: Date;
   image = new FormControl('', Validators.required);
   //news_article_count = new FormControl('', Validators.required);
   location = new FormControl('', Validators.required);
@@ -84,9 +84,10 @@ export class DialogAdd implements OnInit {
   news_article_count = 0;
 
   ngOnInit() {
+    console.log(Date.now());
     this.addTopicForm = this.formBuilder_topic.group({
       title: this.title,
-      timestamp: this.timestamp,
+      timestamp: new Date().toISOString(),
       image: this.image,
       news_article_count: this.news_article_count,
       location: this.location,

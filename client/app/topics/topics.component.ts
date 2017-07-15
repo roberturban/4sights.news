@@ -140,7 +140,7 @@ export class TopicsComponent implements OnInit {
       res => {
         this.isEditing_topic = false;
         this.topic = topic;
-        this.snackBarService.createSnackBar('Item edited successfully', true, 'Ok','', 3000)
+        this.snackBarService.createSnackBar('Item edited', true, 'Ok','', 3000)
       },
       error => console.log(error)
     );
@@ -150,7 +150,7 @@ export class TopicsComponent implements OnInit {
     this.isEditing_topic = false;
     this.topic = {};
     this.topics = [];
-    this.snackBarService.createSnackBar('Item editing cancelled', true, 'Ok','', 3000)
+    this.snackBarService.createSnackBar('Editing cancelled', true, 'Ok','', 3000)
     // reload the Topics to reset the editing
     this.getTopics();
   }
@@ -161,7 +161,7 @@ export class TopicsComponent implements OnInit {
         res => {
           const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
           this.topics.splice(pos, 1);
-          this.snackBarService.createSnackBar('Item deleted successfully', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Item deleted', true, 'Ok','', 3000)
         },
         error => console.log(error)
       );
@@ -212,7 +212,7 @@ export class TopicsComponent implements OnInit {
           this.snackBarService.createSnackBar('Editing canceled', true, 'Ok','', 3000)
         } else {
           this.editTopic(result);
-          this.snackBarService.createSnackBar('Item edited successfully', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Item edited', true, 'Ok','', 3000)
         }
       });
   }
@@ -220,7 +220,7 @@ export class TopicsComponent implements OnInit {
   //Dialog for adding topics
   open_add() {
     this.dialogRef = this.dialogAdd.open(dialogAdd, {
-      panelClass: 'custom-overlay-pane-class',
+      panelClass: 'bbb',
     });
 
     this.dialogRef.afterClosed().subscribe(
@@ -228,12 +228,12 @@ export class TopicsComponent implements OnInit {
         this.dialogRef = null;
         if (!result) {
           this.cancelEditing_topic();
-          this.snackBarService.createSnackBar('Editing canceled', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Adding cancelled', true, 'Ok','', 3000)
         } else {
           this.addTopic(result);
           this.getTopics();
           console.log("reloading");
-          this.snackBarService.createSnackBar('Item edited successfully', true, 'Ok','', 3000)
+          this.snackBarService.createSnackBar('Item added', true, 'Ok','', 3000)
         }
     });
   }
@@ -241,7 +241,7 @@ export class TopicsComponent implements OnInit {
   //Dialog for changing subscription of categories
   open_followCategories() {
     this.dialogRef = this.dialogFollow.open(dialogFollow, {
-      panelClass: 'custom-overlay-pane-class bbb',
+      panelClass: 'custom-overlay-pane-class',
     });
     this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
     this.dialogRef.componentInstance.user = this.auth.currentUser;

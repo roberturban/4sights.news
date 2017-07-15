@@ -73,6 +73,7 @@ export class AdminComponent implements OnInit {
           title: 'Delete',
           type: 'custom',
           filter: false,
+          class: 'custom-button',
           renderComponent: ButtonViewComponent
         }
        },

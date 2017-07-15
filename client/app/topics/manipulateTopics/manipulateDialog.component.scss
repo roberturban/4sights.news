@@ -3,7 +3,7 @@
 }
 
 .custom-overlay-panel-class{
-  max-height: 90%;
+  height: 90%;
   overflow-y: scroll;
 }
 
@@ -64,6 +64,7 @@
 
 .bottom-row{
   margin-top:20px;
+  margin-bottom: 20px;
   flex-direction: row;
   align-items: flex-end;
   float:right;

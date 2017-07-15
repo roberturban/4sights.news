@@ -1,8 +1,7 @@
 <app-loading [condition]="isLoading"></app-loading>
 
   <div class="account-container mat-elevation-z4">
-    <div class="header-title">Account Settings
-    </div>
+    <md-toolbar style="background:white; display: block; overflow: auto"> Account Settings</md-toolbar>
     <form class="account-form" #accountForm="ngForm" (ngSubmit)="save(user)">
 
       <div class="input-container">
@@ -36,7 +35,6 @@
       <button class="bottom-row" md-raised-button color="primary" style="color:#fff" type="submit" [disabled]="!accountForm.form.valid">
           <md-icon>save</md-icon> Save
       </button>
-
 
     </form>
 
