@@ -61,7 +61,6 @@ export class AuthService {
     localStorage.setItem('token', token);
     const decodedUser = this.decodeUserFromToken(token);
     this.setCurrentUser(decodedUser);
-    console.log(this.currentUser);
   }
 
 

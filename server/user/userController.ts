@@ -44,9 +44,9 @@ export default class UserCtrl extends BaseController {
       });
   };
 
-  // Update by id
+  // // Update by id
   update = (req, res) => {
-    this.model.findOneAndUpdate({ _id: req.params.id })
+    this.model.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
       .populate('categories')
       .exec(function (err, user) {
         const token = jwt.sign({user: user}, process.env.SECRET_TOKEN); // , { expiresIn: 10 } seconds
