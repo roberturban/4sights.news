@@ -11,7 +11,6 @@ import { AuthService } from '../services/auth.service';
 import { CategoryService } from "../services/category.service";
 import { DialogAdd, DialogEdit } from './manipulateTopics/manipulateDialog.component';
 import { DialogFollowCategories } from './followCategories/followCategoryDialog.component';
-import { CategoryFilterPipe } from '../services/category-filter.pipe';
 
 
 @Component({
@@ -49,7 +48,6 @@ export class TopicsComponent implements OnInit {
   userHasPreferences = false;
   categoriesAvailable = [];
   userCategoryPreferences = [];
-  filterPipe = new CategoryFilterPipe();
 
   // Menu for Toolbar
   selected = '';
@@ -93,10 +91,8 @@ export class TopicsComponent implements OnInit {
   }
 
   calculateLastRowItems(){
-    // Checks for filtered topics
-    this.filteredTopics = this.filterPipe.transform(this.topics, this.userCategoryPreferences);
     // Calculates number of blank items
-    this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.filteredTopics.length % Math.floor((this.windowWidth - 100) / 288);
+    this.missingItems = Math.floor((this.windowWidth - 100) / 288) - this.topics.length % Math.floor((this.windowWidth - 100) / 288);
     this.missingItemsArray = Array.from(Array(this.missingItems),(x,i)=>i);
   }
 

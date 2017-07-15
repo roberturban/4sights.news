@@ -38,7 +38,6 @@ import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { ButtonViewComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { CategoryFilterPipe } from './services/category-filter.pipe';
 import { SearchPipe } from './services/search.pipe';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
 import { SelectSourcesDialog } from './single-topic/select-sources/select-sources.component';
@@ -67,7 +66,6 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     DialogAdd,
     SelectSourcesDialog,
     DialogFollowCategories,
-    CategoryFilterPipe,
     SearchPipe,
     ButtonViewComponent,
     ArticleSelectionComponent,
