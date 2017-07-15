@@ -14,7 +14,7 @@
     <button md-button routerLink="/account" routerLinkActive="active" *ngIf="auth.loggedIn">
       Account
     </button>
-    <button md-button routerLink="/logout" routerLinkActive="active" *ngIf="auth.loggedIn">
+    <button md-button (click)="logout()" *ngIf="auth.loggedIn">
       <i class="material-icons">lock_outline</i>
     </button>
   </md-toolbar>

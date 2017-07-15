@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+import {Component, OnInit} from '@angular/core';
+import {MdSnackBar} from '@angular/material';
 
-import { SnackBarService } from '../services/snackbar.service';
-import { AuthService } from '../services/auth.service';
+import {SnackBarService} from '../services/snackbar.service';
+import {AuthService} from '../services/auth.service';
 
 @Component({
   selector: 'app-logout',
@@ -11,16 +11,17 @@ import { AuthService } from '../services/auth.service';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(
-    private auth: AuthService,
-    public snackBar: MdSnackBar) { }
-
   // SnackBar config
   snackBarService = new SnackBarService(this.snackBar);
 
+  constructor(private auth: AuthService,
+              public snackBar: MdSnackBar) {
+  }
+
+
   ngOnInit() {
     this.auth.logout();
-    this.snackBarService.createSnackBar('Logged out', true, 'OK','', 3000)
+    this.snackBarService.createSnackBar('Logged out', true, 'OK', '', 3000)
   }
 
 }
