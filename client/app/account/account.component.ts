@@ -1,11 +1,11 @@
-import { Component, OnInit, NgZone } from '@angular/core';
-import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+import {Component, OnInit, NgZone} from '@angular/core';
+import {MdSnackBar, MdSnackBarConfig} from '@angular/material';
 
-import { SnackBarService } from '../services/snackbar.service';
-import { AuthService } from '../services/auth.service';
-import { UserService } from '../services/user.service';
-import { CategoryService } from '../services/category.service';
-import { ManipulationService } from '../services/manipulation.service';
+import {SnackBarService} from '../services/snackbar.service';
+import {AuthService} from '../services/auth.service';
+import {UserService} from '../services/user.service';
+import {CategoryService} from '../services/category.service';
+import {ManipulationService} from '../services/manipulation.service';
 
 @Component({
   selector: 'app-account',
@@ -18,9 +18,9 @@ export class AccountComponent implements OnInit {
               public snackBar: MdSnackBar,
               private userService: UserService,
               private categoryService: CategoryService,
-              private manipulationService : ManipulationService,
+              private manipulationService: ManipulationService,
               private zone: NgZone) {
-               }
+  }
 
   //SnackBar config
   snackBarService = new SnackBarService(this.snackBar);
@@ -48,7 +48,7 @@ export class AccountComponent implements OnInit {
     user.categories = this.manipulationService.mapCheckedOptions(this.userCategoryPreferencesMap);
     this.userService.editUser(user).subscribe(
       res => {
-        this.snackBarService.createSnackBar('Account settings saved', true, 'Ok','', 3000);
+        this.snackBarService.createSnackBar('Account settings saved', true, 'Ok', '', 3000);
         this.auth.updateUser(res.json().token);
         this.getUser()
       },
@@ -60,18 +60,16 @@ export class AccountComponent implements OnInit {
     this.categoryService.getCategories().subscribe(
       data => {
         this.categoriesAvailable = data,
-        this.userCategoryPreferencesMap = this.manipulationService.initCategoriesMap(this.auth.currentUser.categories, this.categoriesAvailable)
-       },
+          this.userCategoryPreferencesMap = this.manipulationService.initCategoriesMap(this.auth.currentUser.categories, this.categoriesAvailable)
+      },
       error => console.log(error),
       () => console.log('categories loaded')
     );
   }
 
-  updateCheckedOptions(value,event){
-      value.value = event.checked;
+  updateCheckedOptions(value, event) {
+    value.value = event.checked;
   }
-
-
 
 
 }
