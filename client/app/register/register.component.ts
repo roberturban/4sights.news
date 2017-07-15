@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+
+import { SnackBarService } from '../services/snackbar.service';
 import { UserService } from '../services/user.service';
-import { ToastComponent } from '../shared/toast/toast.component';
-import {CategoryService} from '../services/category.service';
-import {ManipulationService} from "../services/manipulation.service";
+import { CategoryService } from '../services/category.service';
+import { ManipulationService } from "../services/manipulation.service";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -41,16 +43,19 @@ export class RegisterComponent implements OnInit {
 
 
   categoriesAvailable = [];
-  //Used filter categoriesSelected before registration 
+  //Used filter categoriesSelected before registration
   categoriesSelected = [];
   //Necessary for mapping categoriesAvailable Objects with boolean
   categoriesMap =[];
 
   pushObject = {};
 
+  // SnackBar config
+  snackBarService = new SnackBarService(this.snackBar);
+
   constructor(private formBuilder: FormBuilder,
               private router: Router,
-              public toast: ToastComponent,
+              public snackBar: MdSnackBar,
               private userService: UserService,
               private categoryService: CategoryService,
               private manipulationService: ManipulationService) { }
@@ -82,10 +87,10 @@ export class RegisterComponent implements OnInit {
     this.registerForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
     this.userService.register(this.registerForm.value).subscribe(
       res => {
-        this.toast.setMessage('you successfully registered!', 'success');
+        this.snackBarService.createSnackBar('Successfully registered', false, '','', 1000)
         this.router.navigate(['/login']);
       },
-      error => this.toast.setMessage('email already exists', 'danger')
+      error => this.snackBarService.createSnackBar('Email already exists', false, '','', 1000)
     );
   }
 

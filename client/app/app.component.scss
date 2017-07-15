@@ -1,5 +1,40 @@
+
 html {
   font-family: Roboto, sans-serif !important;
+}
+
+:host /deep/ ng2-smart-table > table > thead > tr > th > ng2-st-column-title {
+    float: left;
+    color: #19323c !important;
+}
+
+:host /deep/ ng2-smart-table > table > thead > tr > th > ng2-st-column-title > div > ng2-smart-table-title > a{
+    color: #19323c !important;
+}
+
+
+:host /deep/ ng2-smart-table > table > thead > tr > th.button {
+    float: right;
+    margin-right:20px;
+    color: #19323c !important;
+}
+
+:host /deep/ ng2-smart-table > table > tbody > tr > td > ng2-smart-table-cell > table-cell-view-mode > div > custom-view-component > button-view {
+    float: right;
+    color: #f2545b;
+}
+
+// :host /deep/ ng2-smart-table > table {
+//   overflow: scroll;
+// }
+
+.custom-overlay-pane-class{
+  height: 90%;
+  overflow-y: scroll;
+}
+.bbb{
+  height: 90%;
+  overflow-y: scroll;
 }
 
 .app{

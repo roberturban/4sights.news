@@ -1,6 +1,16 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
+body {
+  margin: 0
+}
+
+.bbb{
+  height: 90%;
+  overflow-y: scroll;
+}
+
+
 $md-4sightsprimary: (
     50 : #e3e6e8,
     100 : #bac2c5,

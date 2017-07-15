@@ -1,39 +1,44 @@
-<md-dialog-content>
-<div class="manipulation-form" style="font-family:Roboto; !important">
-  <div class="header-title"> Edit Topic</div>
-  <div class="image-box">
-   <img class="titleimage" src="{{dialog_topic.image}}">
+<md-dialog-content style="max-height:none;">
+
+  <div class="manipulation-form" style="font-family:Roboto; !important">
+    <md-toolbar style="background:white;">Edit Topic</md-toolbar>
+    <div class="image-box">
+     <img class="titleimage" src="{{dialog_topic.image}}">
+    </div>
+
+    <form style="margin-top:40px" class="form-inner" #form="ngForm" (ngSubmit)="submitChanges()">
+      <div class="input-container">
+         <md-input-container class="input-full-width">
+          <input mdInput class="input-full-width"  type="text" name="title" [(ngModel)]="dialog_topic.title" placeholder="Title" required>
+        </md-input-container>
+      </div>
+      <!-- <div class="input-container">
+        <md-input-container class="input-full-width">
+          <input mdInput class="input-full-width"  type="date" name="timestamp" [(ngModel)]="dialog_topic.timestamp" placeholder="Date" required>
+        </md-input-container>
+      </div> -->
+      <div class="input-container">
+        <md-input-container class="input-full-width">
+          <input mdInput class="input-full-width" type="text" name="image" [(ngModel)]="dialog_topic.image" placeholder="URL" required>
+        </md-input-container>
+      </div>
+      <div class="input-container">
+        <md-input-container class="input-full-width">
+          <input mdInput class="input-full-width" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="Location" required>
+        </md-input-container>
+      </div>
+
+      <div class="header-title">Categories</div>
+      <div class="checkboxes">
+       <md-checkbox style="margin:10px" *ngFor="let category of categoriesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
+      </div>
+
+      <app-article-selection style="min-height:400px"[exttopic]="dialog_topic" (onSelectionChange)="selectedArticlesChanged($event)"></app-article-selection>
+      <div class="bottom-row">
+        <button md-raised-button color="primary" type="submit" [disabled]="!form.form.valid"><md-icon>save</md-icon> Save</button>
+        <button md-raised-button color="warn" style="margin-left:10px; color: #fff;" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
+      </div>
+    </form>
   </div>
-  <form class="form-inner" #form="ngForm" (ngSubmit)="submitChanges()">
-    <div class="input-container">
-       <md-input-container class="input-full-width">
-        <input mdInput class="input-full-width"  type="text" name="title" [(ngModel)]="dialog_topic.title" placeholder="Title" required>
-      </md-input-container>
-    </div>
-    <div class="input-container">
-      <md-input-container class="input-full-width">
-        <input mdInput class="input-full-width"  type="date" name="timestamp" [(ngModel)]="dialog_topic.timestamp" placeholder="Date" required>
-      </md-input-container>
-    </div>
-    <div class="input-container">
-      <md-input-container class="input-full-width">
-        <input mdInput class="input-full-width" type="text" name="image" [(ngModel)]="dialog_topic.image" placeholder="assets/img/" required>
-      </md-input-container>
-    </div>
-    <div class="input-container">
-      <md-input-container class="input-full-width">
-        <input mdInput class="input-full-width" type="text" name="location" [(ngModel)]="dialog_topic.location"  placeholder="Location" required>
-      </md-input-container>
-    </div>
-    <label style="margin:15px 0px"> Categories: </label>
-    <div class="checkboxes">
-     <md-checkbox *ngFor="let category of categoriesMap" [checked]="category.value" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
-    </div>
-    <app-article-selection [exttopic]="dialog_topic" (onSelectionChange)="selectedArticlesChanged($event)"></app-article-selection> 
-    <div class="bottom-row">
-      <button md-raised-button color="primary" type="submit" [disabled]="!form.form.valid"><md-icon>save</md-icon> Save</button>
-      <button md-raised-button color="warn" style="margin-left:10px; color: #fff;" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
-    </div>
-  </form>
-</div>
+
 </md-dialog-content>

@@ -1,5 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { ToastComponent } from '../shared/toast/toast.component';
+import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+
+import { SnackBarService } from '../services/snackbar.service';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 import { CategoryService } from '../services/category.service';
@@ -12,19 +14,22 @@ import { ManipulationService } from '../services/manipulation.service';
 })
 export class AccountComponent implements OnInit {
 
-  user = {};
-  isLoading = true;
-  categoriesAvailable = [];
-  userCategoryPreferencesMap = [];
-
-
   constructor(private auth: AuthService,
-              public toast: ToastComponent,
+              public snackBar: MdSnackBar,
               private userService: UserService,
               private categoryService: CategoryService,
               private manipulationService : ManipulationService,
               private zone: NgZone) {
                }
+
+  //SnackBar config
+  snackBarService = new SnackBarService(this.snackBar);
+
+  // User handling
+  user = {};
+  isLoading = true;
+  categoriesAvailable = [];
+  userCategoryPreferencesMap = [];
 
   ngOnInit() {
     this.getUser();
@@ -43,7 +48,7 @@ export class AccountComponent implements OnInit {
     user.categories = this.manipulationService.mapCheckedOptions(this.userCategoryPreferencesMap);
     this.userService.editUser(user).subscribe(
       res => {
-        this.toast.setMessage('account settings saved!', 'success');
+        this.snackBarService.createSnackBar('Account settings saved', true, 'Ok','', 3000);
         this.auth.updateUser(res.json().token);
         this.getUser()
       },
@@ -53,7 +58,7 @@ export class AccountComponent implements OnInit {
 
   loadAvailableCategories() {
     this.categoryService.getCategories().subscribe(
-      data => { 
+      data => {
         this.categoriesAvailable = data,
         this.userCategoryPreferencesMap = this.manipulationService.initCategoriesMap(this.auth.currentUser.categories, this.categoriesAvailable)
        },

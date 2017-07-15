@@ -1,4 +1,4 @@
-<app-toast [message]="toast.message"></app-toast>
+
 
 <div class="login-form">
   <form class="form-inner" [formGroup]="loginForm" (ngSubmit)="login()">
@@ -20,6 +20,10 @@
         Enter correct password
       </md-error>
     </div>
+
+    <md-error *ngIf="error">
+      {{error}}
+    </md-error>
 
     <div class="bottom-row">
       <div style="font-family:Roboto;">

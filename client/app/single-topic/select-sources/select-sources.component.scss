@@ -1,23 +1,15 @@
 .selection-dialog{
   width: 400px;
-  margin-top:10px;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: column;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .custom-overlay-pane-class{
-  max-height: 90%;
+  height: 90%;
   overflow-y: scroll;
-}
-
-.header-title{
-  margin: 30px 0 10px 0;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ccc;
-  text-align: center
 }
 
 .article-logo {
@@ -29,4 +21,13 @@
 .image-container{
   display: flex;
   flex-flow: column;
+}
+
+.header-title{
+  width: 100%;
+  margin: 30px 0 0 0;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
 }

@@ -62,8 +62,8 @@ export class SingleTopicComponent implements OnInit, OnDestroy {
   }
 
   visitExternalLink(link){
-    console.log(link.url);
-    window.location.href=link.url;
+    console.log(link.url, 'href');
+     window.open(link.url, '_blank');
   }
 
   selectSources(){

@@ -26,7 +26,8 @@ export class DialogFollowCategories implements OnInit {
   }
 
   ngOnInit() {
-    this.userCategoryPreferencesMap = this.manipulationService.initCategoriesMap(this.userCategoryPreferences,this.categoriesAvailable);
+    this.userCategoryPreferencesMap
+      = this.manipulationService.initCategoriesMap(this.userCategoryPreferences,this.categoriesAvailable);
   }
 
 
@@ -43,5 +44,5 @@ export class DialogFollowCategories implements OnInit {
   }
 
 
-  
+
 }

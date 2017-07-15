@@ -13,7 +13,6 @@ interface ICategory {
   name: String,
 }
 
-
 @Pipe({
     name: 'filterCategories',
     pure: false
@@ -37,4 +36,3 @@ export class CategoryFilterPipe implements PipeTransform {
 
     }
 }
-

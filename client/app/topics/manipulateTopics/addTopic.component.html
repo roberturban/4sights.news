@@ -1,36 +1,40 @@
-<md-dialog-content>
-<div class="manipulation-form" style="font-family:Roboto; !important">
-  <div class="header-title">Add Topic</div>
-    <form class="form-inner" [formGroup]="addTopicForm" (ngSubmit)="submitTopic()">
-      <div class="input-container">
-        <md-input-container class="input-full-width">
-          <input mdInput class="input-full-width" type="text" name="title" formControlName="title" placeholder="title">
-        </md-input-container>
-      </div>
-      <div class="input-container">
-        <md-input-container class="input-full-width">
-          <input mdInput class="input-full-width" type="date" name="timestamp" formControlName="timestamp" placeholder="timestamp">
-        </md-input-container>
-      </div>
-      <div class="input-container">
-        <md-input-container class="input-full-width">
-          <input mdInput class="input-full-width" type="text" name="image" formControlName="image" placeholder="assets/img/">
-        </md-input-container>
-      </div>
-      <div class="input-container">
-        <md-input-container class="input-full-width">
-          <input mdInput class="input-full-width" type="text" name="location" formControlName="location" placeholder="location">
-        </md-input-container>
-      </div>
-      <div class="input-container">
-        <div>Categories:</div>
-        <md-checkbox *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
-      </div>
-      <app-article-selection (onSelectionChange)="selectedArticlesChanged($event)"></app-article-selection> 
-      <div class="bottom-row">
-        <button md-raised-button color="primary" type="submit" [disabled]="!addTopicForm.valid"><md-icon>save</md-icon> Add</button>
-        <button md-raised-button color="warn" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
-      </div>
-    </form>
-</div>
+<md-dialog-content style="max-height:none;">
+
+  <div class="manipulation-form" style="font-family:Roboto; !important">
+    <md-toolbar style="background:white;">Add Topic</md-toolbar>
+      <form class="form-inner" [formGroup]="addTopicForm" (ngSubmit)="submitTopic()">
+        <div class="input-container">
+          <md-input-container class="input-full-width">
+            <input mdInput class="input-full-width" type="text" name="title" formControlName="title" placeholder="Title">
+          </md-input-container>
+        </div>
+        <!-- <div class="input-container">
+          <md-input-container class="input-full-width">
+            <input mdInput class="input-full-width" type="date" name="timestamp" formControlName="timestamp" placeholder="timestamp">
+          </md-input-container>
+        </div> -->
+        <div class="input-container">
+          <md-input-container class="input-full-width">
+            <input mdInput class="input-full-width" type="text" name="image" formControlName="image" placeholder="URL">
+          </md-input-container>
+        </div>
+        <div class="input-container">
+          <md-input-container class="input-full-width">
+            <input mdInput class="input-full-width" type="text" name="location" formControlName="location" placeholder="Location">
+          </md-input-container>
+        </div>
+
+        <div class="header-title">Categories</div>
+        <div class="checkboxes">
+         <md-checkbox style="margin:10px" *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
+        </div>
+
+        <app-article-selection (onSelectionChange)="selectedArticlesChanged($event)">
+        </app-article-selection>
+        <div class="bottom-row">
+          <button md-raised-button style="color:white" color="primary" type="submit" [disabled]="!addTopicForm.valid"><md-icon>save</md-icon> Add</button>
+          <button md-raised-button style="color:white" color="warn" type="button" (click)="dialogRef.close(false)"><md-icon>cancel</md-icon> Cancel</button>
+        </div>
+      </form>
+  </div>
 </md-dialog-content>

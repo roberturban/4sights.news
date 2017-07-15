@@ -3,6 +3,27 @@ a {
   color: inherit;
 }
 
+.custom-overlay-pane-class{
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.bbb{
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.chip{
+  margin-top: 3px !important;
+}
+
+.chip:hover{
+  cursor: pointer !important;
+}
+
+.chip:active{
+  text-decoration: none !important;
+}
 
 .count{
   height: 24px;

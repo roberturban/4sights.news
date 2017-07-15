@@ -9,7 +9,8 @@ import { TopicsService } from './services/topics.service';
 })
 export class AppComponent {
 
-  constructor(public auth: AuthService,
+  constructor(
+    public auth: AuthService,
   	public topicsService : TopicsService) { }
 
   //needs to be modified to get initial view when clicked on logo
