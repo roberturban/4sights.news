@@ -47,7 +47,6 @@ export class TopicsComponent implements OnInit {
 
   // Categories
   userHasPreferences = false;
-  active_category: String;
   categoriesAvailable = [];
   userCategoryPreferences = [];
   filterPipe = new CategoryFilterPipe();
@@ -177,7 +176,6 @@ export class TopicsComponent implements OnInit {
     if(value=='Home'){
       this.setInitialPage();
     } else{
-      this.active_category = value;
       this.userCategoryPreferences = [value];
     }
     this.calculateLastRowItems();
