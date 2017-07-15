@@ -1,8 +1,8 @@
-import { Injectable, NgZone } from '@angular/core';
-import { Router } from '@angular/router';
-import { JwtHelper } from 'angular2-jwt';
+import {Injectable, NgZone} from '@angular/core';
+import {Router} from '@angular/router';
+import {JwtHelper} from 'angular2-jwt';
 
-import { UserService } from '../services/user.service';
+import {UserService} from '../services/user.service';
 
 @Injectable()
 export class AuthService {
@@ -11,12 +11,13 @@ export class AuthService {
 
   jwtHelper: JwtHelper = new JwtHelper();
 
-  currentUser = { 
-     _id: '', 
-     name: '', 
-     surname: '', 
-     role: '',
-     categories: [] };
+  currentUser = {
+    _id: '',
+    name: '',
+    surname: '',
+    role: '',
+    categories: []
+  };
 
   constructor(private userService: UserService,
               private router: Router) {
@@ -44,11 +45,12 @@ export class AuthService {
     this.loggedIn = false;
     this.isAdmin = false;
     this.currentUser = {
-      _id: '', 
-      name: '', 
-      surname: '', 
+      _id: '',
+      name: '',
+      surname: '',
       role: '',
-      categories: [] };
+      categories: []
+    };
     this.router.navigate(['/']);
   }
 
@@ -64,14 +66,14 @@ export class AuthService {
     this.currentUser.role = decodedUser.role;
     this.currentUser.categories = decodedUser.categories;
     decodedUser.role === 'admin' ? this.isAdmin = true : this.isAdmin = false;
-    delete decodedUser.role;    
+    delete decodedUser.role;
   }
 
-  updateUser(token){
-      localStorage.setItem('token', token);
-      const decodedUser = this.decodeUserFromToken(token);
-      this.setCurrentUser(decodedUser);
-      console.log(this.currentUser);
+  updateUser(token) {
+    localStorage.setItem('token', token);
+    const decodedUser = this.decodeUserFromToken(token);
+    this.setCurrentUser(decodedUser);
+    console.log(this.currentUser);
   }
 
 
