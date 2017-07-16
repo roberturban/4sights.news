@@ -28,12 +28,12 @@
         <input style="margin-bottom: 20px;" type="text" class="search-bar" placeholder="Search Topics.." #topicFilter (keyup)="0"/>
         <div *ngIf="isEditing_topics" class="sortable-container" dnd-sortable-container [sortableData]="topics">
           <div class="editBox" *ngFor="let topic of topics | searchPipe: topicFilter.value">
-            {{topic.title}}
+            <div> {{topic.title}} </div>
             <div>
-              <button md-button color="accent" class="topic-button" (click)="open_edit_topic(topic)">
+              <button style="float:right" md-button color="accent" class="topic-button" (click)="open_edit_topic(topic)">
                   <i class="material-icons">edit</i>
               </button>
-              <button md-button color="accent" class="topic-button" (click)="deleteTopic(topic)">
+              <button style="float:right" md-button color="accent" class="topic-button" (click)="deleteTopic(topic)">
                   <i class="material-icons">delete</i>
              </button>
             </div>
