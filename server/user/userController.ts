@@ -44,6 +44,23 @@ export default class UserCtrl extends BaseController {
       });
   };
 
+  // Insert
+  insert = (req, res) => {
+    const obj = new this.model(req.body);
+    obj.save((err, user) => {
+      // 11000 is the code for duplicate key error
+      if (err && err.code === 11000) {
+        res.sendStatus(400);
+      }
+      if (err) {
+        return console.error(err);
+      }
+      user = user.toJSON();
+      user.token = jwt.sign({user: user}, process.env.SECRET_TOKEN);
+      res.status(200).json(user);
+    });
+  };
+
   // // Update by id
   update = (req, res) => {
     if (req.payload.user.role !== 'admin') {
