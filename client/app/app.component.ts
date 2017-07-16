@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { AuthService } from './services/auth.service';
-import { TopicsService } from './services/topics.service';
+import {Component} from '@angular/core';
+import {MdSnackBar} from '@angular/material';
+import {AuthService} from './services/auth.service';
+import {SnackBarService} from './services/snackbar.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,14 @@ import { TopicsService } from './services/topics.service';
 })
 export class AppComponent {
 
-  constructor(
-    public auth: AuthService,
-  	public topicsService : TopicsService) { }
+  snackBarService = new SnackBarService(this.snackBar);
 
-  //needs to be modified to get initial view when clicked on logo
-  initialView(){
-
+  constructor(private auth: AuthService,
+              private snackBar: MdSnackBar) {
   }
 
-
+  logout() {
+    this.auth.logout();
+    this.snackBarService.createSnackBar('Logged out', true, 'OK', '', 3000)
+  }
 }

@@ -14,7 +14,9 @@ export default class TopicCtrl extends BaseCtrl {
   getAll = (req, res) => {
     let query = this.model.find();
 
-    if (req.query.user_id) {
+    if (req.query.category_id) {
+      query = query.where('categories').equals(req.query.category_id)
+    } else if (req.query.user_id) {
       query = query.where('categories').in(req.query.user_id.categories)
     }
 
