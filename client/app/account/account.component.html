@@ -20,7 +20,7 @@
       </md-input-container>
       </div>
       <div class="input-container">
-          <md-select name="role" class="input-full-width special-input-wrapper" [(ngModel)]="user.role" placeholder="Role">
+          <md-select name="role" class="input-full-width special-input-wrapper" [(ngModel)]="user.role" placeholder="Role" *ngIf="auth.isAdmin">
             <md-option value="" disabled>Role</md-option>
             <md-option value="user">User</md-option>
             <md-option value="admin">Admin</md-option>
