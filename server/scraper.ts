@@ -157,7 +157,10 @@ function saveData(responseObj, sourceName) {
                 if (err && err.code === 11000) {
                     console.error("Item duplicated");
                 }
-                if (err) {
+                else if (err.errors.url.kind && err.errors.url.kind == "unique") {
+                    console.error("Duplicated URL");
+                }
+                else if (err) {
                     console.error(err);
                 }
                 console.log("Item saved (" + sourceName + "): \"" + title + "\"");
