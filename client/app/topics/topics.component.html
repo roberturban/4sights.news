@@ -55,7 +55,9 @@
       <md-card-subtitle>{{topic.location}}, {{topic.timestamp}}</md-card-subtitle>
     </md-card-title-group>
 
-    <md-card-actions class="categories-row">
+    <md-card-actions class="categories-row" style="    display: flex !important;
+    justify-content: flex-end;
+    flex-flow: inherit;">
       <md-chip-list>
         <md-chip class="chip" *ngFor="let category of topic.categories" (click)="getTopics_category(category)">
           {{category.name}}
