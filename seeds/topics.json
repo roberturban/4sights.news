@@ -1,56 +1,36 @@
 [{
 	"_id": {
-		"$oid": "5946967147fbb80b00a7d744"
-	},
-	"title": "Trump says he is being investigated over Comey firing",
-	"timestamp": {
-		"$date": "2017-06-18T00:00:00.000Z"
-	},
-	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170616110924-trump-confirm-obstruction-investigation-jones-nr-00002505-exlarge-169.jpg",
-	"news_article_count": 5,
-	"location": "Washington, USA",
-	"categories": [
-		{
-			"$oid": "5946923f73f7de4aa41ae512"
-		}
-	],
-	"__v": 0
-},
-{
-	"_id": {
-		"$oid": "5946967147fbb80b00a7d745"
-	},
-	"title": "Resedential tower in London on fire",
-	"timestamp": {
-		"$date": "2017-06-14T00:00:00.000Z"
-	},
-	"image": "http://www.irishtimes.com/polopoly_fs/1.3119811.1497462575!/image/image.jpg_gen/derivatives/landscape_685/image.jpg",
-	"news_article_count": 5,
-	"location": "London, UK",
-	"categories": [
-		{
-			"$oid": "5946923f73f7de4aa41ae517"
-		}
-	],
-	"__v": 0
-},
-{
-	"_id": {
 		"$oid": "5946967147fbb80b00a7d746"
 	},
 	"title": "Helmut Kohl dies at age of 87",
 	"timestamp": {
-		"$date": "2017-06-15T00:00:00.000Z"
+		"$date": "2017-06-14T22:00:00.000Z"
 	},
 	"image": "http://schmid.welt.de/files/2014/10/dpa1992-2.jpg",
-	"news_article_count": 5,
 	"location": "Ludwigshafen, GER",
 	"categories": [
 		{
 			"$oid": "5946923f73f7de4aa41ae517"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa020"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa021"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa022"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa023"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa024"
+		}
+	]
 },
 {
 	"_id": {
@@ -58,46 +38,43 @@
 	},
 	"title": "La République en Marche wins election in France",
 	"timestamp": {
-		"$date": "2017-06-18T00:00:00.000Z"
+		"$date": "2017-06-17T22:00:00.000Z"
 	},
 	"image": "https://ichef.bbci.co.uk/news/660/cpsprodpb/3C36/production/_96441451_039995603.jpg",
-	"news_article_count": 5,
 	"location": "Paris, FR",
 	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
 		{
 			"$oid": "5946923f73f7de4aa41ae513"
 		}
 	],
-	"__v": 0
-},
-{
-	"_id": {
-		"$oid": "5946967147fbb80b00a7d748"
-	},
-	"title": "Forest Fire in Portugal Kills at Least 62",
-	"timestamp": {
-		"$date": "2017-06-16T00:00:00.000Z"
-	},
-	"image": "https://static01.nyt.com/images/2017/06/18/world/europe/fire-img/fire-img-largeHorizontal375.jpg",
-	"news_article_count": 5,
-	"location": "Lisbon, PR",
-	"categories": [
+	"__v": 0,
+	"news_articles": [
 		{
-			"$oid": "5946923f73f7de4aa41ae517"
+			"$oid": "596baa6e16918044e4aaa000"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa002"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa001"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa003"
 		}
-	],
-	"__v": 0
+	]
 },
 {
 	"_id": {
 		"$oid": "5946967147fbb80b00a7d749"
 	},
-	"title": "Amazon aquires WholeFoods",
+	"title": "Amazon acquires WholeFoods",
 	"timestamp": {
-		"$date": "2017-06-17T00:00:00.000Z"
+		"$date": "2017-06-16T22:00:00.000Z"
 	},
-	"image": "http://bilder.bild.de/fotos-skaliert/whole-foods-wird-noch-in-diesem-jahr-von-amazon-uebernommen-200419390-52218066/2,w=993,q=high,c=0.bild.jpg",
-	"news_article_count": 5,
+	"image": "http://i2.cdn.turner.com/money/dam/assets/170616141515-amazon-whole-foods-jeff-bezos-grocery-brick-and-mortar-00001001-1024x576.jpg",
 	"location": "Seatle, USA",
 	"categories": [
 		{
@@ -110,7 +87,21 @@
 			"$oid": "5946923f73f7de4aa41ae516"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa004"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa007"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa005"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa006"
+		}
+	]
 },
 {
 	"_id": {
@@ -121,14 +112,27 @@
 		"$date": "2017-06-15T00:00:00.000Z"
 	},
 	"image": "http://www.xboxdynasty.de/app/uploads/2016/06/xbox-one-x-6-640x360.jpg",
-	"news_article_count": 5,
 	"location": "Los Angeles, USA",
 	"categories": [
 		{
 			"$oid": "5946923f73f7de4aa41ae514"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa011"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa010"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa009"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa008"
+		}
+	]
 },
 {
 	"_id": {
@@ -136,33 +140,14 @@
 	},
 	"title": "China launches its first X-ray space telescope",
 	"timestamp": {
-		"$date": "2017-06-17T00:00:00.000Z"
+		"$date": "2017-06-16T22:00:00.000Z"
 	},
 	"image": "https://c.tribune.com.pk/2017/06/1436081-chinaspacesatellitex-1497504955-706-640x480.jpg",
-	"news_article_count": 5,
 	"location": "Beijing, RPC",
 	"categories": [
 		{
 			"$oid": "5946923f73f7de4aa41ae512"
 		},
-		{
-			"$oid": "5946923f73f7de4aa41ae518"
-		}
-	],
-	"__v": 0
-},
-{
-	"_id": {
-		"$oid": "5946967147fbb80b00a7d752"
-	},
-	"title": "Google releases new TensorFlow Object Detection API",
-	"timestamp": {
-		"$date": "2017-06-18T00:00:00.000Z"
-	},
-	"image": "https://tctechcrunch2011.files.wordpress.com/2017/06/image1.jpg",
-	"news_article_count": 5,
-	"location": "San Fransisco, USA",
-	"categories": [
 		{
 			"$oid": "5946923f73f7de4aa41ae514"
 		},
@@ -170,28 +155,21 @@
 			"$oid": "5946923f73f7de4aa41ae518"
 		}
 	],
-	"__v": 0
-},
-{
-	"_id": {
-		"$oid": "5946967147fbb80b00a7d753"
-	},
-	"title": "A 2,600 year old request for wine revealed in Israel",
-	"timestamp": {
-		"$date": "2017-06-14T00:00:00.000Z"
-	},
-	"image": "https://static01.nyt.com/images/2017/06/17/science/17TB-pottery/17TB-pottery-superJumbo.jpg",
-	"news_article_count": 5,
-	"location": "Jerusalem, Israel",
-	"categories": [
+	"__v": 0,
+	"news_articles": [
 		{
-			"$oid": "5946923f73f7de4aa41ae517"
+			"$oid": "596baa6e16918044e4aaa012"
 		},
 		{
-			"$oid": "5946923f73f7de4aa41ae518"
+			"$oid": "596baa6e16918044e4aaa014"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa015"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa013"
 		}
-	],
-	"__v": 0
+	]
 },
 {
 	"_id": {
@@ -199,20 +177,33 @@
 	},
 	"title": "Internet censorship is rising in India",
 	"timestamp": {
-		"$date": "2017-06-16T00:00:00.000Z"
+		"$date": "2017-06-15T22:00:00.000Z"
 	},
 	"image": "http://s.wsj.net/public/resources/images/OB-UK945_ificci_G_20120905052355.jpg",
-	"news_article_count": 5,
 	"location": "New Delhi, India",
 	"categories": [
 		{
-			"$oid": "5946923f73f7de4aa41ae517"
+			"$oid": "5946923f73f7de4aa41ae513"
 		},
 		{
-			"$oid": "5946923f73f7de4aa41ae513"
+			"$oid": "5946923f73f7de4aa41ae517"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa017"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa019"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa016"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa018"
+		}
+	]
 },
 {
 	"_id": {
@@ -220,17 +211,33 @@
 	},
 	"title": "Golden State Warriors win NBA",
 	"timestamp": {
-		"$date": "2017-06-14T00:00:00.000Z"
+		"$date": "2017-06-13T22:00:00.000Z"
 	},
 	"image": "http://media.philstar.com/images/the-philippine-star/sports/20150617/warriors-win-nba-title.jpg",
-	"news_article_count": 5,
 	"location": "San Fransisco, USA",
 	"categories": [
 		{
 			"$oid": "5946923f73f7de4aa41ae515"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa026"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa029"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa030"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa028"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa027"
+		}
+	]
 },
 {
 	"_id": {
@@ -241,7 +248,6 @@
 		"$date": "1970-01-01T00:00:00.020Z"
 	},
 	"image": "assets/img/trump-putin.jpg",
-	"news_article_count": 4,
 	"location": "Hamburg",
 	"news_articles": [
 		{
@@ -273,14 +279,10 @@
 		"$date": "2016-07-09T22:00:00.000Z"
 	},
 	"image": "http://a.abcnews.com/images/Politics/AP-TrumpJr-Russia-Probe-hb-170711_12x5_1600.jpg",
-	"news_article_count": 11,
 	"location": "Washington",
 	"news_articles": [
 		{
 			"$oid": "5965e49adc10940b1fe2f0d7"
-		},
-		{
-			"$oid": "5965e49adc10940b1fe2f0f0"
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f0e2"
@@ -290,6 +292,9 @@
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f112"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0f0"
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f0d8"
@@ -326,14 +331,10 @@
 		"$date": "2017-07-09T22:00:00.000Z"
 	},
 	"image": "https://thenypost.files.wordpress.com/2017/07/170710-trump-russian-lawyer-embed.jpg?quality=90\u0026strip=all\u0026w=300\u0026strip=all",
-	"news_article_count": 14,
 	"location": "Washington, Moscow",
 	"news_articles": [
 		{
 			"$oid": "5965e49adc10940b1fe2f0da"
-		},
-		{
-			"$oid": "5965e49adc10940b1fe2f0ef"
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f0e3"
@@ -343,6 +344,9 @@
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f103"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0ef"
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f0d9"
@@ -388,7 +392,6 @@
 		"$date": "2017-07-07T22:00:00.000Z"
 	},
 	"image": "http://www.hamburg.de/contentblob/7551724/a4cf84151e0d329ef0d43120d2e5c2a3/data/logo-g20.jpg",
-	"news_article_count": 5,
 	"location": "Hamburg",
 	"news_articles": [
 		{
@@ -416,38 +419,6 @@
 },
 {
 	"_id": {
-		"$oid": "5965e86bf9109d0b167d5990"
-	},
-	"title": "Gulf Crisis: Sanctions on Qatar",
-	"timestamp": {
-		"$date": "2017-06-04T22:00:00.000Z"
-	},
-	"image": "http://www.straitstimes.com/sites/default/files/articles/2017/06/05/qatarmap0506.jpg",
-	"news_article_count": 4,
-	"location": "test",
-	"news_articles": [
-		{
-			"$oid": "595f47820a92730f0a8db487"
-		},
-		{
-			"$oid": "595f47820a92730f0a8db48e"
-		},
-		{
-			"$oid": "595f47820a92730f0a8db488"
-		},
-		{
-			"$oid": "5965e49adc10940b1fe2f0fc"
-		}
-	],
-	"categories": [
-		{
-			"$oid": "5946923f73f7de4aa41ae512"
-		}
-	],
-	"__v": 0
-},
-{
-	"_id": {
 		"$oid": "5968d3f49d92fe185e961653"
 	},
 	"title": "Tech Firms unite for Net Neutrality",
@@ -455,7 +426,6 @@
 		"$date": "2017-07-12T00:00:00.000Z"
 	},
 	"image": "https://media2.s-nbcnews.com/j/newscms/2014_29/565096/140715-fcc-net-neutrality-protest-148p_064204a0e90ad83ebdc7e9a541372e5d.nbcnews-fp-1200-800.jpg",
-	"news_article_count": 3,
 	"location": "USA",
 	"news_articles": [
 		{
@@ -471,6 +441,160 @@
 	"categories": [
 		{
 			"$oid": "5946923f73f7de4aa41ae514"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596babdbec27844549ec3680"
+	},
+	"title": "New Health-Care Law lacks Votes",
+	"timestamp": {
+		"$date": "2017-07-16T18:06:59.065Z"
+	},
+	"image": "http://g8fip1kplyr33r3krz5b97d1.wpengine.netdna-cdn.com/wp-content/uploads/2017/03/GettyImages-649341364-714x476.jpg",
+	"location": "Washington, USA",
+	"news_articles": [
+		{
+			"$oid": "595f47820a92730f0a8db490"
+		},
+		{
+			"$oid": "5968d2a83de1741f64189555"
+		},
+		{
+			"$oid": "5968d2a83de1741f6418955c"
+		},
+		{
+			"$oid": "5968d2a93de1741f641895e8"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac1a"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac7b"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae513"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae516"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596bad65ec27844549ec3681"
+	},
+	"title": "Human Rights Activist Liu Xiaobo dies",
+	"timestamp": {
+		"$date": "2017-07-16T18:12:17.241Z"
+	},
+	"image": "http://static6.businessinsider.com/image/54d2a19a6da811852ad7885d-2200-1589/liuxiaobo2.jpg",
+	"location": "China",
+	"news_articles": [
+		{
+			"$oid": "5968d2a83de1741f64189582"
+		},
+		{
+			"$oid": "5968d2a83de1741f641895b9"
+		},
+		{
+			"$oid": "5968d2a93de1741f641895e4"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac10"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596bae10ec27844549ec3682"
+	},
+	"title": "Ambiguities in Trump's Travel Ban",
+	"timestamp": {
+		"$date": "2017-07-16T18:16:33.956Z"
+	},
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170129105148-donald-trump-extreme-vetting-executive-order-01-27-2017-large-169.jpg",
+	"location": "Washington, USA",
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaac7e"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db497"
+		},
+		{
+			"$oid": "5968d2a83de1741f641895aa"
+		},
+		{
+			"$oid": "5968d2a83de1741f641895c7"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596bb063ec27844549ec3683"
+	},
+	"title": "Trump and Macron meet in Paris",
+	"timestamp": {
+		"$date": "2017-07-15T22:00:00.000Z"
+	},
+	"image": "https://image.stern.de/7537764/16x9-1200-675/aea6a7104ce83926ee59bb4fcbb62155/oU/trump-macron-fauxpas.jpg",
+	"location": "Paris, FR",
+	"news_articles": [
+		{
+			"$oid": "5968d2a83de1741f64189562"
+		},
+		{
+			"$oid": "5968d2a83de1741f64189553"
+		},
+		{
+			"$oid": "5968d2a83de1741f641895c5"
+		},
+		{
+			"$oid": "5968d2a93de1741f641895e2"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac31"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac39"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
 		}
 	],
 	"__v": 0

@@ -234,7 +234,6 @@ export class TopicsComponent implements OnInit {
     });
     this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
     this.dialogRef.componentInstance.user = this.auth.currentUser;
-    this.dialogRef.componentInstance.userCategoryPreferences = this.userCategoryPreferences;
 
     this.dialogRef.afterClosed().subscribe(
       result => {

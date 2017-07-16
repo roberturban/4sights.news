@@ -1,9 +1,10 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
-import { CategoryService } from "../../services/category.service";
-import { ManipulationService } from "../../services/manipulation.service";
-import { UserService } from '../../services/user.service';
+import {Component, OnInit, Inject} from '@angular/core';
+import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import {MdDialog, MdDialogConfig, MdDialogRef} from '@angular/material';
+import {CategoryService} from "../../services/category.service";
+import {ManipulationService} from "../../services/manipulation.service";
+import {UserService} from '../../services/user.service';
+import {AuthService} from '../../services/auth.service';
 
 
 @Component({
@@ -15,34 +16,35 @@ export class DialogFollowCategories implements OnInit {
 
   categoriesAvailable = [];
   userCategoryPreferencesMap = [];
-  userCategoryPreferences = [];
   user = {};
 
 
-  constructor(public dialogRef: MdDialogRef<any>,
+  constructor(private auth: AuthService,
+              public dialogRef: MdDialogRef<any>,
               private categoryService: CategoryService,
-              private manipulationService : ManipulationService,
-              private userService : UserService ) {
+              private manipulationService: ManipulationService,
+              private userService: UserService) {
   }
 
   ngOnInit() {
     this.userCategoryPreferencesMap
-      = this.manipulationService.initCategoriesMap(this.userCategoryPreferences,this.categoriesAvailable);
+      = this.manipulationService.initCategoriesMap(this.auth.currentUser.categories, this.categoriesAvailable);
   }
 
-
-  updateCheckedOptions(value,event){
-      value.value = event.checked;
+  updateCheckedOptions(value, event) {
+    value.value = event.checked;
   }
 
   save(user) {
     user.categories = this.manipulationService.mapCheckedOptions(this.userCategoryPreferencesMap);
     this.userService.editUser(user).subscribe(
-      res => this.dialogRef.close(true),
+      res => {
+        this.auth.updateUser(res.json().token);
+        this.dialogRef.close(true)
+      },
       error => console.log(error)
     );
   }
-
 
 
 }

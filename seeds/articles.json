@@ -7123,5 +7123,3224 @@
 		"$oid": "5966167f5534f01f952f7454"
 	},
 	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe2"
+	},
+	"title": "Brexit: Hammond warns of UK investment uncertainty",
+	"description": "The chancellor says firms want more clarity about what the future relationship will be with Europe.",
+	"image": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/10BF1/production/_96839586_qashqaisunderland_getty.jpg",
+	"url": "http://www.bbc.co.uk/news/business-40623473",
+	"author": "BBC News",
+	"published": {
+		"$date": "2017-07-16T14:40:26.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabea"
+	},
+	"title": "The Trump Jr. Russia controversy -- what we know",
+	"description": "New revelations about Donald Trump Jr.'s meeting last summer with a Russian lawyer are continuing to surface a week after the revelation rocketed the President's eldest son to the center of allegations of collusion with Russia.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170711055507-donald-trump-jr-trump-tower-super-tease.jpg",
+	"url": "http://www.cnn.com/2017/07/15/politics/russia-donald-trump-jr-meeting/index.html",
+	"author": "Jeremy Diamond, CNN",
+	"published": {
+		"$date": "2017-07-16T00:17:17.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe7"
+	},
+	"title": "Ryan Lochte: Court dismisses robbery claim charges against US swimmer",
+	"description": "A court in Brazil dismisses charges against US swimmer Ryan Lochte relating to false robbery claims he made at the Rio Olympics.",
+	"image": "http://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/3D00/production/_96961651_lochte.jpg",
+	"url": "http://www.bbc.co.uk/sport/swimming/40623647",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T11:44:10.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabfe"
+	},
+	"title": "Elect the best minds, says Sonia",
+	"description": "‘This poll represents a clash of ideas, a conflict of disparate values’",
+	"image": "http://www.thehindu.com/news/national/article18586281.ece/ALTERNATES/LANDSCAPE_615/Sonia%20Gandhi",
+	"url": "http://www.thehindu.com/news/national/elect-the-best-minds-says-sonia/article19289933.ece",
+	"author": "Special Correspondent",
+	"published": {
+		"$date": "2017-07-16T18:03:26.711Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabef"
+	},
+	"title": "Roger Federer Beats Marin Cilic to Win Record 8th Wimbledon Men's Final",
+	"description": "Roger Federer  has added another achievement to his illustrious career.     The tennis legend won his 19th Grand Slam title and his eighth at Wimbledon on Sunday, defeating  Marin Cilic  6-3, 6-1, 6-4 in London...",
+	"image": "https://img.bleacherreport.net/img/images/photos/003/684/134/hi-res-09bb999cf7832619167426556828ab22_crop_exact.jpg?w=1200\u0026h=1200\u0026q=75",
+	"url": "http://bleacherreport.com/articles/2721945-roger-federer-beats-marin-cilic-to-win-record-8th-wimbledon-mens-final",
+	"author": "Timothy Rapp",
+	"published": {
+		"$date": "2017-07-16T14:54:41.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac17"
+	},
+	"title": "The Lawyer, the Addict",
+	"description": "A high-powered Silicon Valley attorney dies. His ex-wife investigates, and finds a web of drug abuse in his profession.",
+	"image": "https://static01.nyt.com/images/2017/06/19/business/16LAWYER0/16LAWYER0-facebookJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/07/15/business/lawyers-addiction-mental-health.html",
+	"author": "Eilene Zimmerman",
+	"published": {
+		"$date": "2017-07-16T14:40:54.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac08"
+	},
+	"title": "Presidential polls: PM Modi congratulates NDA candidate Ram Nath Kovind 'in advance' - Times of India",
+	"description": "Prime Minister Narendra Modi on Sunday congratulated NDA presidential candidate Ram Nath Kovind \"in advance\" and assured him of his government's support, a day before the election to the top constitutional post.",
+	"image": "http://timesofindia.indiatimes.com/photo/msid-59622335/59622335.jpg?148743",
+	"url": "http://timesofindia.indiatimes.com/india/presidential-polls-pm-modi-congratulates-nda-candidate-ram-nath-kovind-in-advance/articleshow/59622379.cms",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T17:14:00.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac30"
+	},
+	"title": "‘Planet of the Apes’ Topples ‘Spider-Man’ in Weekend Debut",
+	"description": "“War for the Planet of the Apes,” 20th Century Fox’s third installment in the dystopian film series about a war between man and simian, opened as the No. 1 movie in North America this weekend, toppling Sony Corp.’s superhero feature “Spider-Man: Homecoming.”",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGqIlqS7VsWI/v0/1200x675.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/-planet-of-the-apes-swings-to-no-1-in-u-s-box-office-debut",
+	"author": "Reade Pickert",
+	"published": {
+		"$date": "2017-07-16T15:29:24.705Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac21"
+	},
+	"title": "Poll finds Trump’s standing weakened since springtime",
+	"description": "President’s standing is buffeted by sense of little progress, perceptions of decline in American leadership abroad and concerns about health-care bill.",
+	"image": "https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/07/16/National-Politics/Images/AFP_QM7EM.jpg?t=20170517",
+	"url": "https://www.washingtonpost.com/politics/poll-finds-trump-standing-weakened-since-springtime/2017/07/15/2decf03a-68d2-11e7-9928-22d00a47778f_story.html",
+	"author": "Scott Clement, Dan Balz, Scott Clement, Dan Balz",
+	"published": {
+		"$date": "2017-07-16T17:01:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf4"
+	},
+	"title": "POLLAK: NeverTrump Loves the Russia Conspiracy Theory",
+	"description": "The movement once known as \"NeverTrump\" faded as President Donald Trump took office, but has resurrected itself through the various media controversies surrounding the Trump administration, especially the Russia conspiracy theory.",
+	"image": "http://media.breitbart.com/media/2016/06/Never-Trump-bumper-sticker.jpg",
+	"url": "http://www.breitbart.com/big-government/2017/07/16/nevertrump-loves-russia-conspiracy-theory/",
+	"author": "Joel B. Pollak",
+	"published": {
+		"$date": "2017-07-16T06:03:09.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac3a"
+	},
+	"title": "Skeletal remains found in Tasmania identified as Thomas Münger: brother",
+	"description": "The mystery over whose human remains were found in the Tasmanian bush appears to be solved, but it would not have happened if not for a stroke of luck.",
+	"image": "http://www.abc.net.au/news/image/1710312-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-16/skeletal-remains-identified-as-thomas-m%C3%BCnger,-brother-says/8713342",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T07:16:58.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac0d"
+	},
+	"title": "Palestinians reject Israel security measures in al-Aqsa",
+	"description": "Dozens of worshippers gathered to pray at an entrance to the compound after new measures introduced at holy site.",
+	"image": "http://www.aljazeera.com/mritems/Images/2017/7/16/d45073126e5749bc9ebc66c0a1dd3645_18.jpg",
+	"url": "http://www.aljazeera.com/news/2017/07/israel-reopens-al-aqsa-mosque-compound-170716101448094.html",
+	"author": "Al Jazeera",
+	"published": {
+		"$date": "2017-07-16T15:29:00.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf9"
+	},
+	"title": "Emeritus Pope Benedict XVI: Church Is ‘on the Verge of Capsizing’",
+	"description": "The Catholic Church is a boat “on the verge of capsizing,” said Pope Emeritus Benedict XVI in a personal message for the funeral Mass of his close friend, Cardinal Joachim Meisner on Saturday.",
+	"image": "http://media.breitbart.com/media/2017/07/Francis-and-Benedict.jpg",
+	"url": "http://www.breitbart.com/national-security/2017/07/16/emeritus-pope-benedict-xvi-church-is-on-the-verge-of-capsizing/",
+	"author": "Thomas D. Williams, Ph.D.",
+	"published": {
+		"$date": "2017-07-16T04:04:43.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac26"
+	},
+	"title": "GOP opponents to Senate health-care bill see vote delay as an advantage",
+	"description": "McConnell won’t call vote on the bill this week due to McCain’s surgery.",
+	"image": "https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/07/16/National-Politics/Images/Congress_Health_Overhaul_93849-26ca1.jpg?t=20170517",
+	"url": "https://www.washingtonpost.com/powerpost/gop-opponents-to-senate-health-care-bill-see-vote-delay-as-an-advantage/2017/07/16/3e5516fa-6a21-11e7-96ab-5f38140b38cc_story.html",
+	"author": "Elise Viebeck, Sean Sullivan, Elise Viebeck, Sean Sullivan",
+	"published": {
+		"$date": "2017-07-16T15:50:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac12"
+	},
+	"title": "Turkey's failed coup attempt: All you need to know",
+	"description": "An in-depth look at the key issues surrounding the deadly coup attempt that shook Turkey in July 2016.",
+	"image": "http://www.aljazeera.com/mritems/Images/2016/12/17/3295487428bc4903b908d14ccda30033_18.jpg",
+	"url": "http://www.aljazeera.com/news/2016/12/turkey-failed-coup-attempt-161217032345594.html",
+	"author": "Al Jazeera",
+	"published": {
+		"$date": "2017-07-15T08:31:00.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac03"
+	},
+	"title": "Union Science and Technology Minister to head panchgavya panel with RSS, VHP members",
+	"description": "Vijay Bhatkar, president of RSS-affiliated Vijnana Bharati, to co-chair the Scientific Validation and Research on Panchgavya project; CSIR ex-chief R.A. Mashelkar and IIT-Delhi Director V. Ramgopal Rao to be other members.",
+	"image": "http://www.thehindu.com/news/national/article19289222.ece/ALTERNATES/LANDSCAPE_615/GOSHALA",
+	"url": "http://www.thehindu.com/news/national/benefits-of-cow-urine-science-technology-minister-to-head-panel-with-rss-vhp-members/article19289223.ece",
+	"author": "PTI",
+	"published": {
+		"$date": "2017-07-16T18:03:26.715Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac2b"
+	},
+	"title": "McConnell Delays Health Bill as McCain Recovers From Surgery",
+	"description": "Senate Majority Leader Mitch McConnell said late Saturday that he’s delaying plans to begin debating a controversial health-care bill next week, after Republican Senator John McCain said he’ll be home in Arizona recovering from unexpected surgery.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLHsIAhz.liA/v0/1200x800.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/mcconnell-delays-health-debate-as-mccain-recovers-from-surgery",
+	"author": "Laura Litvan",
+	"published": {
+		"$date": "2017-07-16T03:35:47.955Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac1c"
+	},
+	"title": "Inquiry Into Bernie Sanders’s Wife May Tarnish His Liberal Luster",
+	"description": "The senator’s supporters say the U.S. investigation into a Vermont land deal involving Jane Sanders is political, but they worry about its impact.",
+	"image": "https://static01.nyt.com/images/2017/07/16/us/16dc-sanders1/16dc-sanders1-facebookJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/07/15/us/politics/bernie-sanders-jane-sanders-investigation-burlington-college.html",
+	"author": "Yamiche Alcindor",
+	"published": {
+		"$date": "2017-07-16T15:08:00.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac35"
+	},
+	"title": "Did a French charm offensive soften Trump's stance on climate change?",
+	"description": "French President Emmanuel Macron says his glamorous Paris charm offensive on Donald Trump might have changed the US President's mind about climate change.",
+	"image": "http://www.abc.net.au/news/image/8713856-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-16/donald-trump-climate-change-stance-be-softener-after-paris/8713488",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T13:02:33.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabde"
+	},
+	"title": "Netanyahu in Paris to commemorate Vel d'Hiv deportation of Jews",
+	"description": "The Israeli PM joins President Macron to commemorate a mass arrest of Jews in Nazi-occupied France.",
+	"image": "https://ichef.bbci.co.uk/images/ic/1024x576/p058v1qq.jpg",
+	"url": "http://www.bbc.co.uk/news/world-europe-40622845",
+	"author": "BBC News",
+	"published": {
+		"$date": "2017-07-16T14:33:14.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe3"
+	},
+	"title": "Disney's cartoon princesses gather in real life",
+	"description": "From Pocahontas to Moana, the voices of cartoon princesses spanning three decades have met.",
+	"image": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/A498/production/_96963124_f1287f61-2b1c-4a6b-8971-e29ac06add5a.jpg",
+	"url": "http://www.bbc.co.uk/news/world-us-canada-40624063",
+	"author": "BBC News",
+	"published": {
+		"$date": "2017-07-16T13:16:19.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabeb"
+	},
+	"title": "Some prominent conservative voices doubt Trump over Russia",
+	"description": "Several have spoken out against the president over the Russia investigation since Donald Jr. released his emails, writes Julian Zelizer",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170714113316-krauthammer-trump-jr-split-super-tease.jpg",
+	"url": "http://www.cnn.com/2017/07/16/opinions/conservative-media-doubts-about-trump-zelizer/index.html",
+	"author": "Julian Zelizer, CNN Political Analyst",
+	"published": {
+		"$date": "2017-07-16T17:43:46.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf0"
+	},
+	"title": "'Planet of the Apes' wins box office war with 'Spider-Man: Homecoming'",
+	"description": "\"War for the Planet of the Apes\" won the box office battle this weekend, beating \"Spider-Man: Homecoming.\"",
+	"image": "http://i2.cdn.turner.com/money/dam/assets/170713101047-war-for-the-planet-of-the-apes-780x439.jpg",
+	"url": "http://money.cnn.com/2017/07/16/media/war-for-the-planet-of-the-apes-spiderman-box-office/index.html",
+	"author": "Frank Pallotta",
+	"published": {
+		"$date": "2017-07-16T11:28:53.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabff"
+	},
+	"title": "16 Amarnath pilgrims killed in J\u0026K road accident",
+	"description": "Sixteen Amarnath pilgrims were killed and 19 others, including eight minors, were injured as a bus they were travelling in rolled down a gorge on the Jammu-Srinagar National Highway on Sunday afternoo",
+	"image": "http://www.thehindu.com/news/article19289469.ece/ALTERNATES/LANDSCAPE_615/VBK-AMARNATHACCIDENT",
+	"url": "http://www.thehindu.com/news/national/many-amarnath-pilgrims-killed-in-ramban-road-accident/article19289230.ece",
+	"author": "Peerzada Ashiq",
+	"published": {
+		"$date": "2017-07-16T18:03:26.712Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf5"
+	},
+	"title": "Ex-Goldman Partner: Globalist Gary Cohn Vowed to Block Trump’s Nationalist Agenda",
+	"description": "President Donald Trump’s National Economic Council director Gary Cohn reportedly vowed to a former Goldman Sachs partner that he would block Trump’s nationalist agenda from being implemented.",
+	"image": "http://media.breitbart.com/media/2017/04/wi/ap/28/24bktoj-e1495821686462.jpg",
+	"url": "http://www.breitbart.com/big-government/2017/07/15/gary-cohn-vowed-to-block-trumps-nationalist-agenda/",
+	"author": "Tony Lee",
+	"published": {
+		"$date": "2017-07-15T15:07:03.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabfa"
+	},
+	"title": "Low California Birthrate Endangers Welfare State",
+	"description": "A new report in the Los Angeles Daily News details the many dangers that California's record-low birthrate holds for a state where there is constant political pressure to expand welfare spending, and where the cost of living continues to outpace inflation.",
+	"image": "http://media.breitbart.com/media/2017/07/California-pregnant-yoga-Flickr.jpg",
+	"url": "http://www.breitbart.com/california/2017/07/16/low-california-birth-rate-endangers-welfare-state/",
+	"author": "Joel B. Pollak",
+	"published": {
+		"$date": "2017-07-16T06:43:28.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac04"
+	},
+	"title": "Freedom’s echoes, Laila’s story",
+	"description": "Rereading ‘Sunlight on a Broken Column’ ahead of the Independence Day",
+	"image": "http://www.thehindu.com/opinion/columns/article19286358.ece/ALTERNATES/LANDSCAPE_615/Th16-I%20Day%203",
+	"url": "http://www.thehindu.com/opinion/columns/freedoms-echoes-lailas-story/article19286360.ece",
+	"author": "Mini Kapoor",
+	"published": {
+		"$date": "2017-07-16T18:03:26.716Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac09"
+	},
+	"title": "Presidential poll a fight against narrow-minded communal vision, says Sonia Gandhi - Times of India",
+	"description": "The presidential poll is a fight against narrow-minded communal vision, Congress President Sonia Gandhi said on Sunday at a meeting of opposition parties.",
+	"image": "http://timesofindia.indiatimes.com/photo/msid-59619880/59619880.jpg?55675",
+	"url": "http://timesofindia.indiatimes.com/india/presidential-poll-a-fight-against-narrow-minded-communal-vision-says-sonia-gandhi/articleshow/59619900.cms",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T13:55:00.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac0e"
+	},
+	"title": "France urges resumption of Israel-Palestine peace talks",
+	"description": "President Macron says France is ready to apply diplomatic levers towards renewed negotiations, but gives no specifics.",
+	"image": "http://www.aljazeera.com/mritems/Images/2017/7/16/ba67bebdc56b426eb521db9a800cf2d2_18.jpg",
+	"url": "http://www.aljazeera.com/news/2017/07/france-urges-resumption-israel-palestine-peace-talks-170716144833879.html",
+	"author": "Al Jazeera",
+	"published": {
+		"$date": "2017-07-16T15:16:00.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac1d"
+	},
+	"title": "At a Luxury Complex in India, the Maids and the Madams Go to War",
+	"description": "A dispute between a maid and her employer led to a full-blown riot, an unusual boiling over of resentment between rich and poor in India.",
+	"image": "https://static01.nyt.com/images/2017/07/16/world/16MAIDS-01print/16MAIDS-01print-facebookJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/07/15/world/asia/at-a-luxury-complex-in-india-the-maids-and-the-madams-go-to-war.html",
+	"author": "Suhasini Raj and Ellen Barry",
+	"published": {
+		"$date": "2017-07-16T14:00:27.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac22"
+	},
+	"title": "Trump defends his son — drawing a contrast with Clinton — and says media are ‘distorting democracy’",
+	"description": "Tweeting from his private golf club in Bedminster, N.J., the president lashed out at the media for coverage of the disclosure that his oldest son and namesake held a meeting last year with a Kremlin-connected Russian lawyer who offered damaging information about Hillary Clinton.",
+	"image": "https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/07/16/Production/Daily/Sports/Images/815142118-1589.jpg?t=20170517",
+	"url": "https://www.washingtonpost.com/news/post-politics/wp/2017/07/16/trump-defends-his-son-drawing-a-contrast-with-clinton-and-says-media-are-distorting-democracy/",
+	"author": "Philip Rucker, Philip Rucker",
+	"published": {
+		"$date": "2017-07-16T12:48:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac27"
+	},
+	"title": "Several pastors prayed over President Trump. Another one says they bordered on ‘heresy.’",
+	"description": "Rev. William Barber II said religious leaders should be challenging Trump and his administration, not laying hands on him.",
+	"image": "https://images.washingtonpost.com/?url=http://img.washingtonpost.com/news/acts-of-faith/wp-content/uploads/sites/45/2017/07/layhands.jpg\u0026w=1484\u0026op=resize\u0026opt=1\u0026filter=antialias\u0026t=20170517",
+	"url": "https://www.washingtonpost.com/news/acts-of-faith/wp/2017/07/16/several-pastors-prayed-over-president-trump-another-one-says-they-bordered-on-heresy/",
+	"author": "Cleve R. Wootson Jr., Cleve R. Wootson Jr.",
+	"published": {
+		"$date": "2017-07-16T06:03:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac2c"
+	},
+	"title": "Hedge Funds Are Losing Faith in Precious Metals",
+	"description": "Gold is out of favor with money managers and it’s not the only precious metal facing investor exodus.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.DgZeZCiVKE/v0/1200x672.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/three-charts-showing-hedge-funds-losing-precious-metals-faith",
+	"author": "Luzi-Ann Javier",
+	"published": {
+		"$date": "2017-07-16T09:00:00.000Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac13"
+	},
+	"title": "Northern Nigeria: Refuge for IDPs fleeing Boko Haram",
+	"description": "Al Jazeera meets three host families to see how they've opened their homes to fellow Nigerians fleeing from Boko Haram.",
+	"image": "http://www.aljazeera.com/mritems/Images/2017/6/26/92f7e9c824cc49b79ff6d65973ba4250_18.jpg",
+	"url": "http://www.aljazeera.com/indepth/features/2017/06/northern-nigeria-refuge-idps-fleeing-boko-haram-170629130042962.html",
+	"author": "Femke van Zeijl",
+	"published": {
+		"$date": "2017-07-16T08:35:00.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac36"
+	},
+	"title": "'Be adults': Turnbull and Abbott told to end feud or face election loss",
+	"description": "The new president of the Liberal Party urges Malcolm Turnbull and Tony Abbott to be adults and put an end to tense infighting.",
+	"image": "http://www.abc.net.au/news/image/8713442-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-16/turnbull-abbott-liberal-infighting-election-loss-nick-greiner/8713240",
+	"author": "http://www.abc.net.au/news/jane-norman/5873958",
+	"published": {
+		"$date": "2017-07-16T05:16:36.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac3b"
+	},
+	"title": "Clean break unlikely as British look to Brexit transition",
+	"description": "Theresa May's Cabinet is increasingly convinced of the need for a Brexit transition period of at least two years, Finance Minister Philip Hammond says.",
+	"image": "http://www.abc.net.au/news/image/8395954-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-16/brexit-transition-period-increasingly-likely-philip-hammond-says/8713434",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T13:18:34.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac31"
+	},
+	"title": "Trump May Seek Solution on Climate Change, Macron Tells JDD",
+	"description": "French President Emmanuel Macron, who welcomed Donald Trump to Paris two days ago to participate in Bastille Day celebrations, said the U.S. president may seek a solution over the next months for the fight against global warming.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iHtVy1Omp5jU/v0/1200x800.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/trump-may-seek-solution-on-climate-change-macron-tells-jdd",
+	"author": "Fabio Benedetti Valentini",
+	"published": {
+		"$date": "2017-07-16T10:39:02.358Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe0"
+	},
+	"title": "Wimbledon 2017: Roger Federer beats Marin Cilic to win record eighth title",
+	"description": "Roger Federer becomes the first man to win Wimbledon eight times and extends his record to 19 Grand Slam titles with victory over Croatia's Marin Cilic.",
+	"image": "http://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/2D24/production/_96965511_fed3_getty.jpg",
+	"url": "http://www.bbc.co.uk/sport/tennis/40625069",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T16:41:15.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe5"
+	},
+	"title": "Wildfires rage across Europe",
+	"description": "Firefighters have been tackling blazes in France, Italy and Croatia.",
+	"image": "https://ichef-1.bbci.co.uk/news/1024/cpsprodpb/1221A/production/_96966247_p058vqp0.jpg",
+	"url": "http://www.bbc.co.uk/news/av/world-europe-40625324/wildfires-rage-across-europe",
+	"author": "BBC News",
+	"published": {
+		"$date": "2017-07-16T17:47:56.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabed"
+	},
+	"title": "Grisly murders stun bucolic Pennsylvania community",
+	"description": "Susan Coleman and her husband were enjoying a quiet afternoon in the pool last week when their bucolic stretch of Pennsylvania reverberated with gunfire.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170713104256-03-pennsylvania-missing-men-super-tease.jpg",
+	"url": "http://www.cnn.com/2017/07/16/us/pennsylvania-missing-men-community/index.html",
+	"author": "Ray Sanchez, CNN",
+	"published": {
+		"$date": "2017-07-16T12:46:03.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe8"
+	},
+	"title": "Warner: 'Unbelievable' Trump wasn't told about meeting",
+	"description": "The top Democrat on the Senate intelligence committee said Sunday he did not believe no one told President Donald Trump about a meeting last year between top members of his campaign and a Russian lawyer.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170522172038-mark-warner-senate-intel-03-30-2017-super-tease.jpg",
+	"url": "http://www.cnn.com/2017/07/16/politics/mark-warner-jay-sekulow-donald-trump-jr/index.html",
+	"author": "Eli Watkins, CNN",
+	"published": {
+		"$date": "2017-07-16T15:55:15.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf2"
+	},
+	"title": "Media Fail: Just 9% of Rs Think Team Trump Colluded w/ Russia (Down from 18% in April)",
+	"description": "Despite the legacy media’s wall-to-wall coverage of various Russia-related “scandals” involving President Donald Trump’s associates since April, “the number of Republicans and Republican-leaning independents who think that the Russians sought to influence the election, and that the Trump team intentionally helped them,” has plummeted from 18 percent in April to nine percent, according to the latest ABC News/Washington Post poll released on Sunday.",
+	"image": "http://media.breitbart.com/media/2017/07/Natalia-and-Don-Jr..jpg",
+	"url": "http://www.breitbart.com/big-government/2017/07/16/just-nine-percent-republicans-think-trump-russia-collusion-abc-wash-post-poll/",
+	"author": "Tony Lee",
+	"published": {
+		"$date": "2017-07-16T03:00:49.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabfc"
+	},
+	"title": "Fantastic Federer wins record eighth Wimbledon title",
+	"description": "This is Federer's 19th overall Grand Slam title.",
+	"image": "http://www.thehindu.com/sport/tennis/article19289802.ece/ALTERNATES/LANDSCAPE_615/FED%202jpg",
+	"url": "http://www.thehindu.com/sport/tennis/roger-federer-wins-record-eighth-wimbledon-title/article19289767.ece",
+	"author": "Mukund Padmanabhan",
+	"published": {
+		"$date": "2017-07-16T18:03:26.711Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac01"
+	},
+	"title": "MPs, MLAs can’t carry their own pens inside voting chamber",
+	"description": "Following the ink controversy in the Rajya Sabha polls in Haryana in 2016, the Election Commission has decided to use special pens for the electors in the presidential and vice-presidential polls.",
+	"image": "http://www.thehindu.com/news/national/article19289457.ece/ALTERNATES/LANDSCAPE_615/PRESIDENTIALVOTE",
+	"url": "http://www.thehindu.com/news/national/indian-presidential-election-2017-mps-mlas-cant-carry-their-own-pens-inside-voting-chamber/article19289461.ece",
+	"author": "PTI",
+	"published": {
+		"$date": "2017-07-16T18:03:26.715Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac0b"
+	},
+	"title": "Rain fury: 9 dead in Gujarat, Assam toll mounts to 60; flash floods in Odisha - Times of India",
+	"description": "Rain fury continued across the country claiming nine lives in Gujarat and causing flash floods in Odisha, while in Assam the death toll touched 60 on Sunday though the flood situation there has eased.",
+	"image": "http://timesofindia.indiatimes.com/photo/msid-59621939/59621939.jpg?415654",
+	"url": "http://timesofindia.indiatimes.com/india/rain-fury-9-dead-in-gujarat-assam-toll-mounts-to-60-flash-floods-in-odisha/articleshow/59621789.cms",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T16:34:00.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf7"
+	},
+	"title": "9 Ways Sarah Palin Was a Trailblazer for Donald Trump",
+	"description": "President Donald Trump may not be in the White House had former Alaska Governor Sarah Palin not blazed the trail for him. Bernie Quigley wrote this week it was Palin who \"brought the reawakened spirit of Andrew Jackson, today associated with the rise of Trump.” Here are the top nine ways Palin was a prelude to Trump:",
+	"image": "http://media.breitbart.com/media/2017/07/Trump-Palin-Iowa-.jpg",
+	"url": "http://www.breitbart.com/big-government/2017/07/15/9-ways-palin-trailblazer-for-donald-trump-rise/",
+	"author": "Tony Lee",
+	"published": {
+		"$date": "2017-07-15T19:32:27.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac06"
+	},
+	"title": "'Total budget for education in UP is 25.4% higher': Adityanath government refutes Rahul Gandhi's claim - Times of India",
+	"description": "The Yogi Adityanath government on Sunday dismissed Rahul Gandhi's charge of cutting down budgetary allocation for education and said that money allocated for the sector has in fact been increased by 25 per cent.",
+	"image": "http://timesofindia.indiatimes.com/photo/msid-59621089/59621089.jpg?97953",
+	"url": "http://timesofindia.indiatimes.com/india/total-budget-for-education-in-up-is-25-4-higher-adityanath-government-refutes-rahul-gandhis-claim/articleshow/59620996.cms",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T15:27:00.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac1a"
+	},
+	"title": "McCain’s Surgery Will Delay Senate Votes on Health Care Bill",
+	"description": "With John McCain’s absence, Republicans would have only 49 votes to move ahead with the legislation; all Democrats and the two independent senators oppose it.",
+	"image": "https://static01.nyt.com/images/2017/07/16/us/16SENATE/16SENATE-facebookJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/07/15/us/mccains-surgery-will-delay-senate-votes-on-health-care-bill.html",
+	"author": "Robert Pear",
+	"published": {
+		"$date": "2017-07-16T17:32:30.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac24"
+	},
+	"title": "Roger Federer, at 35, wins Wimbledon for a record eighth time",
+	"description": "The Swiss star not only surpassed all other male Wimbledon champions with his eight titles, but became the oldest champion in the Open Era.",
+	"image": "https://img.washingtonpost.com/rf/image_1484w/2010-2019/Wires/Images/2017-07-16/Bloomberg/06091246.jpg?t=20170517",
+	"url": "https://www.washingtonpost.com/news/sports/wp/2017/07/16/roger-federer-at-35-wins-wimbledon-for-an-eighth-time/",
+	"author": "Chuck Culpepper, Chuck Culpepper",
+	"published": {
+		"$date": "2017-07-16T16:01:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac10"
+	},
+	"title": "Is China afraid of Liu Xiaobo's legacy?",
+	"description": "Nobel Peace Prize-winning dissident Liu Xiaobo is no more, but his writings and his ideas will survive.",
+	"image": "http://www.aljazeera.com/mritems/Images/2017/7/16/327bb4a51a144adfa37480783c886b05_18.jpg",
+	"url": "http://www.aljazeera.com/blogs/asia/2017/07/china-afraid-liu-xiaobo-legacy-170716103035881.html",
+	"author": "Florence Looi",
+	"published": {
+		"$date": "2017-07-16T12:19:00.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac1f"
+	},
+	"title": "How Well Do You Know the World?",
+	"description": "Try your hand at identifying some of the places the New York Times Travel section thought were the top places to visit in 2017.",
+	"image": "https://static01.nyt.com/images/2017/07/15/us/places-to-go-globe-promo/places-to-go-globe-promo-facebookJumbo-v3.png",
+	"url": "https://www.nytimes.com/interactive/2017/07/14/travel/places-to-go-quiz.html",
+	"author": "",
+	"published": {
+		"$date": "2017-07-15T16:21:04.004Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac29"
+	},
+	"title": "Macron hosts Netanyahu, condemns anti-Zionism as anti-Semitism",
+	"description": "In a symbolic meeting, the French president said, “We will never surrender to the messages of hate.”",
+	"image": "https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/07/16/Foreign/Images/AFP_QN38E.jpg?t=20170517",
+	"url": "https://www.washingtonpost.com/world/europe/macron-hosts-netanyahu-condemns-anti-zionism-as-anti-semitism/2017/07/16/dfba544a-ca1f-40f9-82e6-98575393798c_story.html",
+	"author": "James McAuley, James McAuley",
+	"published": {
+		"$date": "2017-07-16T17:10:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac33"
+	},
+	"title": "China Ex-Chongqing Party Chief Under Investigation",
+	"description": "Sun Zhengcai, who was abruptly replaced as Communist Party chief of the Chinese city of Chongqing, is under investigation for violating party regulations, according to four officials with knowledge of the matter.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJaBFbKtMOsc/v0/1200x767.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/china-ex-chongqing-party-chief-said-to-be-under-investigation",
+	"author": "Keith Zhai, Ting Shi",
+	"published": {
+		"$date": "2017-07-16T12:10:18.383Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac3d"
+	},
+	"title": "Sydney father of seven stabbed to death hailed as 'good Samaritan'",
+	"description": "A father of seven who was stabbed to death while trying to stop a domestic incident in Sydney's west is described as a hero, as his alleged murderer is denied bail in a brief court appearance.",
+	"image": "http://www.abc.net.au/news/image/8713362-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-16/sydney-father-stabbed-to-death-hailed-as-good-samaritan/8713018",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T13:42:38.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac38"
+	},
+	"title": "Skydivers' final moments captured on camera",
+	"description": "The final moments of two skydivers, who plunged to their deaths in a harrowing incident near Sydney, are captured on camera.",
+	"image": "http://www.abc.net.au/news/image/8712884-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-16/skydivers-final-moments-captured-on-camera/8712748",
+	"author": "http://www.abc.net.au/news/riley-stuart/8151366",
+	"published": {
+		"$date": "2017-07-16T13:39:27.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac2e"
+	},
+	"title": "Federer Wins 8th Wimbledon Title, Beating Cilic in Final",
+	"description": "London (AP) -- Roger Federer's wait for No. 8 at Wimbledon is over.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikaJyEwzBsIw/v0/1200x799.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/federer-going-for-no-8-at-wimbledon-against-marin-cilic",
+	"author": "",
+	"published": {
+		"$date": "2017-07-16T11:57:32.568Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabdf"
+	},
+	"title": "Poles rally against controversial reform of judiciary",
+	"description": "The bill gives politicians the power to appoint judges without consulting judicial circles.",
+	"image": "https://ichef.bbci.co.uk/images/ic/1024x576/p058vfvf.jpg",
+	"url": "http://www.bbc.co.uk/news/world-europe-40622896",
+	"author": "BBC News",
+	"published": {
+		"$date": "2017-07-16T15:28:56.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe6"
+	},
+	"title": "Iranian President Hassan Rouhani's brother detained",
+	"description": "Hossein Ferydoun failed to meet bail terms on unspecified financial issues, the judiciary says.",
+	"image": "https://ichef-1.bbci.co.uk/news/1024/cpsprodpb/FA2E/production/_96964046_mediaitem96964043.jpg",
+	"url": "http://www.bbc.co.uk/news/world-middle-east-40624813",
+	"author": "BBC News",
+	"published": {
+		"$date": "2017-07-16T13:00:53.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe9"
+	},
+	"title": "Trump defends Donald Trump Jr. in tweet",
+	"description": "President Donald Trump defended his eldest son, Donald Trump Jr., on Twitter Sunday morning amid mounting questions about his son's meeting with a Russian lawyer during the 2016 campaign, implying a media double standard in its treatment of Hillary Clinton.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170711075452-03-donald-trump-and-donald-trump-jr-super-tease.jpg",
+	"url": "http://www.cnn.com/2017/07/16/politics/trump-defends-trump-jr-twitter/index.html",
+	"author": "Matt Korade",
+	"published": {
+		"$date": "2017-07-16T15:02:04.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabee"
+	},
+	"title": "'Doctor Who' to get first female lead",
+	"description": "Jodie Whittaker, star of 'Broadchurch,' will be the Thirteenth Doctor.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170716090845-jodie-whittaker-doctor-who-super-tease.jpg",
+	"url": "http://www.cnn.com/2017/07/16/entertainment/doctor-who-jodie-whittaker/index.html",
+	"author": "Sandra Gonzalez, CNN",
+	"published": {
+		"$date": "2017-07-16T16:48:48.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf3"
+	},
+	"title": "New York Times: No One Cares About Russia in the World Breitbart Made",
+	"description": "in a New York Times article, Joshua Green describes the significant role Breitbart News played shaping the framework of current events, which brought Donald Trump continued success on the campaign trail and now that he resides in the Oval Office.",
+	"image": "http://media.breitbart.com/media/2017/07/joshua-green-master768.jpg",
+	"url": "http://www.breitbart.com/big-journalism/2017/07/15/new-york-times-no-one-cares-russia-world-breitbart-made/",
+	"author": "Breitbart News",
+	"published": {
+		"$date": "2017-07-15T15:54:50.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac07"
+	},
+	"title": "Pakistan army chief 'analysing' evidence against Kulbhushan Jadhav: ISPR - Times of India",
+	"description": "Pakistan army said on Sunday its chief general Qamar Javed Bajwa was \"analysing\" the evidence against Indian national Kulbhushan Jadhav who was sentenced to death by a military court.",
+	"image": "http://timesofindia.indiatimes.com/photo/msid-59619241/59619241.jpg?32101",
+	"url": "http://timesofindia.indiatimes.com/india/pakistan-army-chief-analysing-evidence-against-kulbhushan-jadhav/articleshow/59619248.cms",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T14:50:00.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf8"
+	},
+	"title": "Republican Congress Putting Pork Back in Trump’s Budget",
+	"description": "The U.S. House Appropriations Committee continues to restore pork to President Trump’s proposed 2018 budget, recently voting to restore a second National Tsunami Warning System Center to save 40 federal government jobs.",
+	"image": "http://media.breitbart.com/media/2015/02/pork-consumption.jpg",
+	"url": "http://www.breitbart.com/california/2017/07/16/republican-congress-putting-pork-back-in-trumps-budget/",
+	"author": "Chriss W. Street",
+	"published": {
+		"$date": "2017-07-16T06:29:26.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabfd"
+	},
+	"title": "Opportune time to restart talks with separatists, says J\u0026K Chief Minister Mehbooba Mufti",
+	"description": "Jammu \u0026 Kashmir Chief Minister says dialogue or engagement should not be confused with appeasement as the exercise is for reconciliation",
+	"image": "http://www.thehindu.com/news/national/article19289887.ece/ALTERNATES/LANDSCAPE_615/MEHBOOBA%20MUFTI",
+	"url": "http://www.thehindu.com/news/national/in-conversation-with-jammu-and-kashmir-chief-minister-mehbooba-mufti/article19289888.ece",
+	"author": "Suhasini Haidar",
+	"published": {
+		"$date": "2017-07-16T18:03:26.711Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac02"
+	},
+	"title": "Modi warns cow vigilantes again",
+	"description": "The widespread belief that cow is like mother should not let people take law in their own hands, the Prime Minister says.",
+	"image": "http://www.thehindu.com/news/national/article19289157.ece/ALTERNATES/LANDSCAPE_615/Modi-oppn",
+	"url": "http://www.thehindu.com/news/national/states-should-take-stringent-action-modi-on-cow-vigilantism/article19289158.ece",
+	"author": "PTI",
+	"published": {
+		"$date": "2017-07-16T18:03:26.715Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac0c"
+	},
+	"title": "J\u0026K: 16 Amarnath pilgrims killed, several seriously injured in bus accident - Times of India",
+	"description": "At least sixteen Amarnath pilgrims were killed and 26 seriously injured when the bus in which they were travelling plunged into a gorge in Jammu and Kashmir's Ramban district on Sunday, police said.",
+	"image": "http://timesofindia.indiatimes.com/photo/msid-59620610/59620610.jpg?98300",
+	"url": "http://timesofindia.indiatimes.com/india/jk-16-amarnath-pilgrims-killed-several-seriously-injured-in-bus-accident/articleshow/59620599.cms",
+	"author": "Muhammad Zulqarnain Zulfi",
+	"published": {
+		"$date": "2017-07-16T15:46:00.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac25"
+	},
+	"title": "White House unveils ‘Made in America’ week, though many Trump products are made overseas",
+	"description": "In keeping with the “America First” theme of Trump's inauguration, the administration will highlight U.S. manufacturing in the coming week, the latest of its theme weeks orchestrated by aides to bring discipline to the White House and focus Trump's schedule and message on a set of policies.",
+	"image": "https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/07/15/Foreign/Images/2017-07-15T192413Z_289553534_RC112CA0CDD0_RTRMADP_3_USA-TRUMP.jpg?t=20170517",
+	"url": "https://www.washingtonpost.com/news/post-politics/wp/2017/07/16/white-house-unveils-made-in-america-week-though-many-trump-products-are-made-overseas/",
+	"author": "Philip Rucker, Philip Rucker",
+	"published": {
+		"$date": "2017-07-16T17:11:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac16"
+	},
+	"title": "Lebanon's history in one building: The Palmyra Hotel",
+	"description": "The hotel is a relic that bears testament to almost 150 years of local, regional and global events.",
+	"image": "http://www.aljazeera.com/mritems/Images/2017/3/12/36f2b9620d1e4ea99d4bb5c11ea2b8bb_18.jpg",
+	"url": "http://www.aljazeera.com/indepth/features/2017/03/lebanon-history-building-palmyra-hotel-170307074849483.html",
+	"author": "India Stoughton",
+	"published": {
+		"$date": "2017-07-14T07:46:00.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac11"
+	},
+	"title": "Refugees in limbo after Tunisia shuts desert camp",
+	"description": "Four years after the UN ceased operations at Choucha camp, authorities have cleared out the remaining men.",
+	"image": "http://www.aljazeera.com/mritems/Images/2017/7/14/a1820c3f9ca04c2296ff341a3b83daa2_18.jpg",
+	"url": "http://www.aljazeera.com/indepth/features/2017/07/refugees-limbo-tunisia-shuts-desert-camp-170714132119335.html",
+	"author": "Thessa Lageman",
+	"published": {
+		"$date": "2017-07-16T07:26:00.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac1b"
+	},
+	"title": "Oops! A Gallery Selfie Gone Wrong Causes $200,000 in Damage.",
+	"description": "A woman knocked over 11 crowned pedestals while taking a selfie at a Simon Birch show in Los Angeles — leading to a cascading domino effect.",
+	"image": "https://static01.nyt.com/images/2017/07/14/arts/15selfiegonewrong/15selfiegonewrong-facebookJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/07/14/arts/design/oops-a-museum-selfie-gone-wrong-causes-200000-in-damage.html",
+	"author": "Sopan Deb",
+	"published": {
+		"$date": "2017-07-15T05:48:28.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac2a"
+	},
+	"title": "Warner Wants More Investigation Into Trump Digital Campaign Role",
+	"description": "The top Democrat on the Senate Intelligence Committee called for more investigation into the digital activities of Donald Trump’s campaign, amid concerns about Russian-directed misinformation efforts to influence the election, even as the president’s lawyer vigorously defended his client.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iAsF55PQ5QBo/v0/1200x775.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/warner-wants-more-investigation-into-trump-digital-campaign-role",
+	"author": "Mark Niquette, Alan Bjerga",
+	"published": {
+		"$date": "2017-07-16T16:36:32.815Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac34"
+	},
+	"title": "Defence Force to take greater role in responding to domestic terrorism",
+	"description": "It will be easier to deploy troops on Australian soil, under a proposed expansion of the ADF's role in responding to domestic terrorism, to be unveiled today.",
+	"image": "http://www.abc.net.au/news/image/8534242-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-17/defence-to-take-greater-role-in-domestic-terrorism-response/8713868",
+	"author": "http://www.abc.net.au/news/andrew-greene/4827818",
+	"published": {
+		"$date": "2017-07-16T14:09:11.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac2f"
+	},
+	"title": "San Francisco's VC Boom Is Over",
+	"description": "But tech investment is still rolling along in the rest of the country.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8hKcebiwH0A/v2/1200x797.jpg",
+	"url": "https://www.bloomberg.com/view/articles/2017-07-16/san-francisco-s-vc-boom-is-over",
+	"author": "Justin Fox",
+	"published": {
+		"$date": "2017-07-16T14:00:16.246Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac39"
+	},
+	"title": "'Could she say the same of him?': Bishop throws shade on Trump's Macron praise",
+	"description": "If Donald Trump told Foreign Minister Julie Bishop that she was in such good physical shape what would her reaction be?",
+	"image": "http://www.abc.net.au/news/image/8713060-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-16/julie-bishop-would-be-taken-aback-by-donald-trump-body-comments/8712790",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T02:01:52.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe4"
+	},
+	"title": "Venezuelans vote in unofficial poll over new constituent body",
+	"description": "The unofficial vote is on government plans for a new assembly that could change the constitution.",
+	"image": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/AA10/production/_96963534_mediaitem96963533.jpg",
+	"url": "http://www.bbc.co.uk/news/world-latin-america-40624313",
+	"author": "BBC News",
+	"published": {
+		"$date": "2017-07-16T11:50:52.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabe1"
+	},
+	"title": "Senegal football stadium crush kills eight",
+	"description": "Football fans describe the moment eight people died at a Senegal stadium.",
+	"image": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/A2AE/production/_96964614_p058vbpg.jpg",
+	"url": "http://www.bbc.co.uk/news/av/world-africa-40622765/senegal-football-stadium-crush-kills-eight",
+	"author": "BBC News",
+	"published": {
+		"$date": "2017-07-16T13:24:20.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabec"
+	},
+	"title": "Bernstein on Trump: We know there's a cover-up - CNN Video",
+	"description": "Carl Bernstein, who was one of the reporters who uncovered the Watergate scandal, says that while we don't know if there is collusion or obstruction of justice committed by the Trump family, they seem to be open to subversion of the American electoral process.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170712112559-trumps-russian-web-of-ties---teaser-image-super-tease.png",
+	"url": "http://www.cnn.com/videos/politics/2017/07/16/bernstein-trump-we-know-there-is-a-coverup-sot-rs.cnn",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.691Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf1"
+	},
+	"title": "ISIS wife: It was like Tinder - CNN Video",
+	"description": "CNN's Nick Paton Walsh speaks with the wives of ISIS in Syria. The women have been rounded up and are being held as ISIS sympathizers, but have not been charged with crimes.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170716082645-isis-brides-raqqa-syria-paton-walsh-pkg-00000000-super-tease.jpg",
+	"url": "http://www.cnn.com/videos/world/2017/07/16/isis-brides-raqqa-syria-paton-walsh-pkg.cnn",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.692Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabf6"
+	},
+	"title": "Jake Tapper's Religious Attack on Trump: 'Observing the Sabbath as Only He Can'",
+	"description": "CNN's Jake Tapper launched a bizarre religious attack on President Donald Trump during State of the Union on Sunday morning, commenting that the president had begun the day by tweeting, \"observing the Sabbath as only he can.\"",
+	"image": "http://media.breitbart.com/media/2017/06/Jake-Tapper-Pained-Twitter@MarkDice-.jpg",
+	"url": "http://www.breitbart.com/big-journalism/2017/07/16/jake-tapper-religious-attack-trump-observing-sabbath-can/",
+	"author": "Joel B. Pollak",
+	"published": {
+		"$date": "2017-07-16T06:21:42.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac00"
+	},
+	"title": "Pakistan Army Chief to decide Kulbhushan Jadhav’s appeal ‘on merit’",
+	"description": "General Qamar Javed Bajwa stated to be “analysing” the evidence after Military Appellate Court rejected the plea.",
+	"image": "http://www.thehindu.com/news/international/article18955917.ece/ALTERNATES/LANDSCAPE_615/PAKISTAN",
+	"url": "http://www.thehindu.com/news/international/pak-army-chief-to-decide-jadhavs-appeal-on-merit/article19289447.ece",
+	"author": "PTI",
+	"published": {
+		"$date": "2017-07-16T18:03:26.715Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaabfb"
+	},
+	"title": "‘Whose Child Is He? The State Is Holding Charlie Gard Prisoner,’ Says Family Spokesman",
+	"description": "The Gard family's spokesman Alasdair Seton-Marsden has said ill baby Charlie is \"effectively being taken prisoner by the NHS and by the State”.",
+	"image": "http://media.breitbart.com/media/2017/07/charlie-gard-new.png",
+	"url": "http://www.breitbart.com/london/2017/07/15/state-nhs-holding-charlie-gard-prisoner-says-family-spokesman/",
+	"author": "Victoria Friedman",
+	"published": {
+		"$date": "2017-07-15T08:45:01.000Z"
+	},
+	"source": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac05"
+	},
+	"title": "No humour please, we are Indian",
+	"description": "Politicians need to remember this: in cities, towns and villages, people are making fun of them, and it is their right",
+	"image": "http://www.thehindu.com/opinion/columns/article19286299.ece/ALTERNATES/LANDSCAPE_615/Th16-Ruchir-Freedom%20of%20expression",
+	"url": "http://www.thehindu.com/opinion/columns/no-humour-please-we-are-indian/article19286300.ece",
+	"author": "Ruchir Joshi",
+	"published": {
+		"$date": "2017-07-16T18:03:26.716Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac0a"
+	},
+	"title": "Live: Women's Hockey World League Semi-Final India vs Argentina - The Times of India",
+	"description": "Get live score updates of Women's Hockey World League Semi-Final Pool B match between India vs Argentina on Times of India",
+	"image": "http://timesofindia.indiatimes.com/photo/msid-59619467/59619467.jpg?144757",
+	"url": "http://timesofindia.indiatimes.com/sports/hockey/india-vs-argentina-womens-hockey-world-league-semi-final/liveblog/59619467.cms",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T17:36:11.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac1e"
+	},
+	"title": "Iran Dominates in Iraq After U.S. ‘Handed the Country Over’",
+	"description": "The United States spent more than $1 trillion and lost about 4,500 troops in the effort to make Iraq the cornerstone of a Western-facing Middle East. But today, Iran’s influence is paramount.",
+	"image": "https://static01.nyt.com/images/2017/07/14/world/middleeast/IranPower-slide-4KJF/IranPower-slide-4KJF-facebookJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/07/15/world/middleeast/iran-iraq-iranian-power.html",
+	"author": "Tim Arango",
+	"published": {
+		"$date": "2017-07-16T15:03:55.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac14"
+	},
+	"title": "How scared is China's government of political dissent?",
+	"description": "China's most prominent dissident Liu Xiaobo died of liver cancer but many hold the Chinese government responsible.",
+	"image": "http://www.aljazeera.com/mritems/Images/2017/7/15/8c8f2ae4acbb426f8391535b778455b7_18.jpg",
+	"url": "http://www.aljazeera.com/programmes/insidestory/2017/07/scared-china-government-political-dissent-170715173228422.html",
+	"author": "Inside Story",
+	"published": {
+		"$date": "2017-07-15T19:24:00.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac28"
+	},
+	"title": "Ann Coulter had to switch seats on a Delta flight. Then came the tirade.",
+	"description": "\"It appears her new seat was in the same row,” a Delta spokesman wrote after Coulter blasted angry tweets to her 1.6 million followers. “Just not the exact seat she had selected.\"",
+	"image": "https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/09/08/Style/Images/596737750-2422.jpg?t=20170517",
+	"url": "https://www.washingtonpost.com/news/dr-gridlock/wp/2017/07/16/ann-coulter-had-to-switch-seats-on-a-delta-flight-then-came-the-tirade/",
+	"author": "Avi Selk, Avi Selk",
+	"published": {
+		"$date": "2017-07-16T06:47:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac19"
+	},
+	"title": "After 4 Suburban Lives Are Lost, 2 Cousins Are Charged in Pennsylvania Killings",
+	"description": "The complaint says the men lured the victims to a remote farm, shot them, ran one over with a backhoe and tried to burn three bodies in a “pig roaster.”",
+	"image": "https://static01.nyt.com/images/2017/07/15/us/15Bucks-County-1/15Bucks-County-1-facebookJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/07/14/us/pennsylvania-bucks-county-cosmo-dinardo-sean-kratz.html",
+	"author": "Trip Gabriel, Richard Pérez-Peña and Matthew Haag",
+	"published": {
+		"$date": "2017-07-16T00:15:08.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac23"
+	},
+	"title": "President’s lawyer insists nothing ‘nefarious’ in Donald Trump Jr.’s meeting with Russians",
+	"description": "“If this was nefarious, why did the Secret Service allow these people in?” Jay Sekulow said.",
+	"image": "https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/07/11/National-Politics/Images/Trump_Russia_Probe_97043-75ef5-4245.jpg?t=20170517",
+	"url": "https://www.washingtonpost.com/news/post-politics/wp/2017/07/16/presidents-lawyer-insists-nothing-nefarious-in-donald-trump-jr-s-meeting-with-russians/",
+	"author": "Greg Jaffe, Greg Jaffe",
+	"published": {
+		"$date": "2017-07-16T15:17:00.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac37"
+	},
+	"title": "Roger Federer beats Marin Cilic to win record eighth Wimbledon title",
+	"description": "Swiss marvel Roger Federer becomes the oldest Wimbledon men's singles champion since 1930 after claiming a record eighth title.",
+	"image": "http://www.abc.net.au/news/image/8713898-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-17/roger-federer-wins-wimbledon/8713896",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T15:06:47.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac2d"
+	},
+	"title": "Trump Holding Theme-Week Events to Turn Focus to Economic Agenda",
+	"description": "President Donald Trump will seek to highlight his economic agenda with a series of theme weeks focused on domestic policy, part of an effort to shift focus by a White House besieged by the investigations into Russian election meddling and struggling to pass a health-care bill.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iwOQN8Vb2wlQ/v0/1200x675.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/trump-holding-theme-week-events-to-turn-focus-to-economic-agenda",
+	"author": "Justin Sink",
+	"published": {
+		"$date": "2017-07-16T16:39:36.102Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac32"
+	},
+	"title": "Dollar Bears' Case Grows Stronger as Wagers on Fed Hikes Fade",
+	"description": "The dollar’s deepening slide is making a winner of hedge funds and other speculators who are the most bearish in four years.",
+	"image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/io7BWWK_QYz8/v0/1200x800.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-07-16/dollar-bears-case-grows-stronger-as-wagers-on-fed-hikes-fade",
+	"author": "Lananh Nguyen, Katherine Greifeld",
+	"published": {
+		"$date": "2017-07-16T04:01:00.000Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac3c"
+	},
+	"title": "Build, buy or bust? Finding a home in a mad market",
+	"description": "Should you sacrifice your lifestyle to buy and build? What's wrong with renting forever? Are there smarter ways to beat the market? As the housing game gets harder to win, the ABC speaks to the players and experts.",
+	"image": "http://www.abc.net.au/news/image/8693658-1x1-700x700.jpg",
+	"url": "http://www.abc.net.au/news/2017-07-16/housing-affordability-whats-happening-to-great-australian-dream/8694330",
+	"author": "http://www.abc.net.au/news/jane-cowan/166896",
+	"published": {
+		"$date": "2017-07-16T03:44:51.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac47"
+	},
+	"title": "Review: Days of Wonder’s hot new board game, Yamataï",
+	"description": "Boats-and-buildings board game from Days of Wonder brings the fun.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/IMG_1952-760x380.jpg",
+	"url": "https://arstechnica.com/gaming/2017/07/review-days-of-wonders-hot-new-board-game-yamatai/",
+	"author": "Nate Anderson",
+	"published": {
+		"$date": "2017-07-15T13:00:15.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac42"
+	},
+	"title": "Review: Flying the super-small, super-fun DJI Spark",
+	"description": "For those who never thought they’d want a drone, the Spark might change your mind.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/DJI_Spark1-760x380.jpg",
+	"url": "https://arstechnica.com/gadgets/2017/07/review-flying-the-super-small-super-fun-dji-spark/",
+	"author": "Valentina Palladino",
+	"published": {
+		"$date": "2017-07-16T14:00:58.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac4c"
+	},
+	"title": "Nintendo’s New 2DS XL is the closest you’ll ever get to a ‘3DS XL Lite’",
+	"description": "Nintendo's New 2DS XL is a great way to play the company's mobile game library, but it isn't the best way.",
+	"image": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630\u0026quality=80\u0026image_uri=https%3A%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F20d6dd025253553bc19cb31646a2eae9%2F205477149%2FIMG_5288-ed.jpg\u0026client=cbc79c14efcebee57402\u0026signature=a0513bc771116230dccd51e832774a9cfea081c4",
+	"url": "https://www.engadget.com/2017/07/14/new-nintendo-2ds-xl-review/",
+	"author": "Sean Buckley",
+	"published": {
+		"$date": "2017-07-14T14:30:00.000Z"
+	},
+	"source": {
+		"$oid": "596615f258b3661f80fbdce3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac51"
+	},
+	"title": "England v South Africa: Amla, Elgar \u0026 Du Plessis set up tourists' victory bid",
+	"description": "England need another 473 runs for an unlikely victory as South Africa strengthen their grip on the second Test at Trent Bridge.",
+	"image": "http://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/A2C2/production/_96966614_stokesgetty2.jpg",
+	"url": "http://www.bbc.co.uk/sport/cricket/40626417",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T17:49:18.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac5b"
+	},
+	"title": "These animals will live on Earth until the Sun dies",
+	"description": "Nothing is strong enough to kill these hideous creatures",
+	"image": "https://cdn.vox-cdn.com/thumbor/nkFlghq_pP2HMKZqzOxzRkuv2os=/0x154:1024x730/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/55724069/22318923511_b488c15052_b.0.0.jpg",
+	"url": "https://www.theverge.com/2017/7/15/15971918/tarigrade-earth-space-astrophysics-asteriod-apocalypse-survival",
+	"author": "Angela Chen",
+	"published": {
+		"$date": "2017-07-15T13:00:02.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac56"
+	},
+	"title": "Watch Diving World Championships",
+	"description": "Watch live BBC Red Button coverage of the 2017 World Championships from Budapest.",
+	"image": "http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg",
+	"url": "http://www.bbc.co.uk/sport/live/diving/40135489",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T17:55:57.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac60"
+	},
+	"title": "Jodie Whittaker is Doctor Who’s Thirteenth Doctor",
+	"description": "First female actor to play the iconic role",
+	"image": "https://cdn.vox-cdn.com/thumbor/1i5mxhE7bbzbluVcdsWyoovq_yM=/135x0:3097x1666/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/55731309/Screen_Shot_2017_07_16_at_11.39.18_AM.1500219374.png",
+	"url": "https://www.theverge.com/2017/7/16/15973556/jodie-whittaker-bbc-doctor-who-thirteenth-series-eleven-2018-tardis",
+	"author": "Chaim Gartenberg",
+	"published": {
+		"$date": "2017-07-16T15:29:00.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac43"
+	},
+	"title": "You must watch this Star Wars: The Last Jedi behind-the-scenes video",
+	"description": "Not to put too fine a point on it, OMFG it looks really freakin’ awesome.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/star-wars-portfolio-06-2017-ss02-760x380.jpg",
+	"url": "https://arstechnica.com/the-multiverse/2017/07/if-you-crave-star-wars-the-last-jedi-go-behind-the-scenes-with-this-video/",
+	"author": "Annalee Newitz",
+	"published": {
+		"$date": "2017-07-16T00:40:28.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac3e"
+	},
+	"title": "Doctor Who: Jodie Whittaker spectacularly unveiled as the 13th Doctor",
+	"description": "New showrunner Chris Chibnall picks the Broadchurch star to play the next Time Lord.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/Screen-Shot-2017-07-16-at-16.30.30-760x380.png",
+	"url": "https://arstechnica.com/the-multiverse/2017/07/doctor-who-jodie-whittaker-13th-doctor/",
+	"author": "Kelly Fiveash",
+	"published": {
+		"$date": "2017-07-16T17:15:48.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac48"
+	},
+	"title": "How Valve inspired Neill Blomkamp to start his own movie studio",
+	"description": "From 'Chappie' to indie.",
+	"image": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630\u0026quality=80\u0026image_uri=https%3A%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F19cfcd794ba862a2075dcd58333978c4%2F205478390%2Fzygote.jpg\u0026client=cbc79c14efcebee57402\u0026signature=1a1527b3be6f4f139716248d663a2865eb641208",
+	"url": "https://www.engadget.com/2017/07/15/how-valve-inspired-neill-blomkamp-to-start-his-own-movie-studio/",
+	"author": "Tom Regan",
+	"published": {
+		"$date": "2017-07-15T14:00:00.000Z"
+	},
+	"source": {
+		"$oid": "596615f258b3661f80fbdce3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac52"
+	},
+	"title": "Wimbledon 2017: Jamie Murray \u0026 Martina Hingis win mixed doubles title",
+	"description": "Jamie Murray and Martina Hingis beat defending champions Heather Watson and Henri Kontinen to win the Wimbledon mixed doubles title.",
+	"image": "http://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/D526/production/_96966545_murray_hingis_rex.jpg",
+	"url": "http://www.bbc.co.uk/sport/tennis/40626378",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T17:36:43.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac66"
+	},
+	"title": "A key player in China and the EU's 'third industrial revolution' describes the economy of tomorrow",
+	"description": "Jeremy Rifkin is an adviser to the EU...",
+	"image": "http://static6.businessinsider.com/image/5967a355552be550008b47e8-1190-625/a-key-player-in-china-and-the-eus-third-industrial-revolution-describes-the-economy-of-tomorrow.jpg",
+	"url": "http://www.businessinsider.com/jeremy-rifkin-interview-2017-6",
+	"author": "Elena Holodny",
+	"published": {
+		"$date": "2017-07-16T17:13:00.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac61"
+	},
+	"title": "'I ask the questions and you answer them': Anchors grill Trump's lawyer in blistering interviews over Trump Jr.'s meeting with a Russian lawyer",
+	"description": "President Donald Trump's lawyer faced difficult...",
+	"image": "http://static4.businessinsider.com/image/596b9deea47cb51c008b490e-1190-625/i-ask-the-questions-and-you-answer-them-anchors-grill-trumps-lawyer-in-blistering-interviews-over-trump-jrs-meeting-with-a-russian-lawyer.jpg",
+	"url": "http://www.businessinsider.com/jay-sekulow-interview-trump-jr-full-ginsberg-2017-7",
+	"author": "Maxwell Tani",
+	"published": {
+		"$date": "2017-07-16T17:10:11.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac57"
+	},
+	"title": "Star Wars: The Last Jedi gets a thrilling behind-the-scenes reel",
+	"description": "Watch every frame until your eyes bleed",
+	"image": "https://cdn.vox-cdn.com/thumbor/l2Z4INPEqqFmLG5PvMP9Cp4EprM=/0x0:3051x1716/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/55726419/StarWarsVIII58f1249a1a0da.0.jpg",
+	"url": "https://www.theverge.com/2017/7/15/15297128/star-wars-the-last-jedi-trailer-behind-the-scenes-disney-d23-expo-2017",
+	"author": "Bryan Bishop",
+	"published": {
+		"$date": "2017-07-15T19:10:16.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac6b"
+	},
+	"title": "Gadgets",
+	"description": "Product reviews and demos from our TechCrunch Gadget team",
+	"image": "https://tctechcrunch2011.files.wordpress.com/2013/10/techcrunch-gadgets-icon_rect.png?w=450\u0026h=200\u0026crop=1",
+	"url": "https://techcrunch.com/video/gadgets/",
+	"author": "Felicia Williams",
+	"published": {
+		"$date": "2017-07-14T15:23:08.000Z"
+	},
+	"source": {
+		"$oid": "596617073102961fc6756b98"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac70"
+	},
+	"title": "Chinese purchases of ports top $20bn in past year",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/e00fcfd4-6883-11e7-8526-7b38dcaef614",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.861Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac7f"
+	},
+	"title": "Why the spectre of a hard Brexit has European airlines worried",
+	"description": "The continent’s second-biggest budget airline opens an Austrian subsidiary",
+	"image": "https://cdn.static-economist.com/sites/default/files/20170715_BLP520.jpg",
+	"url": "https://www.economist.com/blogs/gulliver/2017/07/air-pressure-rising",
+	"author": "The Economist",
+	"published": {
+		"$date": "2017-07-14T17:25:42.000Z"
+	},
+	"source": {
+		"$oid": "596617cf8ca2f61ff42816e9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac7a"
+	},
+	"title": "How powerful people use criminal-defamation laws to silence their critics",
+	"description": "In some countries, insulting politicians can lead to jail",
+	"image": "https://cdn.static-economist.com/sites/default/files/images/print-edition/20170715_IRD001_0.jpg",
+	"url": "https://www.economist.com/news/international/21724993-some-countries-insulting-politicians-can-lead-jail-how-powerful-people-use",
+	"author": "The Economist",
+	"published": {
+		"$date": "2017-07-13T15:21:38.000Z"
+	},
+	"source": {
+		"$oid": "596617cf8ca2f61ff42816e9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac75"
+	},
+	"title": "May gains Conservative support to sack ministers",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/31e2193a-6a18-11e7-bfeb-33fe0c5b7eaa",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.862Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac40"
+	},
+	"title": "Pocket brains: Neuromorphic hardware arrives for our brain-inspired algorithms",
+	"description": "IBM's TrueNorth helps usher in design that could again get around Moore's Law limits.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/GettyImages-172686184-760x380.jpg",
+	"url": "https://arstechnica.com/science/2017/07/pocket-brains-neuromorphic-hardware-arrives-for-our-brain-inspired-algorithms/",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T15:30:10.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac45"
+	},
+	"title": "Report: Draft of DOE baseload study says wind, solar don’t threaten reliability",
+	"description": "Trump’s push to support fossil fuels may not be at the expense of renewable energy.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/GettyImages-542334180-760x380.jpg",
+	"url": "https://arstechnica.com/tech-policy/2017/07/report-draft-of-doe-baseload-study-says-wind-solar-dont-threaten-reliability/",
+	"author": "Megan Geuss",
+	"published": {
+		"$date": "2017-07-15T19:00:21.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac4a"
+	},
+	"title": "Life with Bixby is equal parts futuristic and frustrating",
+	"description": "Samsung's Bixby is available as a preview and it's surprisingly impressive... sometimes.",
+	"image": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630\u0026quality=80\u0026image_uri=https%3A%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fdf524099242cf741a88e6287f13f2059%2F205478553%2F_MG_9962.jpg\u0026client=cbc79c14efcebee57402\u0026signature=0c663e1a750275c902d7f307121c6536a945122a",
+	"url": "https://www.engadget.com/2017/07/14/life-with-bixby-is-equal-parts-futuristic-and-frustrating/",
+	"author": "Chris Velazco",
+	"published": {
+		"$date": "2017-07-14T21:03:00.000Z"
+	},
+	"source": {
+		"$oid": "596615f258b3661f80fbdce3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac54"
+	},
+	"title": "Wimbledon 2017: Roger Federer wins record eighth Wimbledon - highlights",
+	"description": "Roger Federer beats Marin Cilic in straight sets to win his eighth Wimbledon title, beating the record he had shared with Pete Sampras.",
+	"image": "http://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/14286/production/_96966528_mmtenwimmensfinalhighlights.10_05_35_08.still001.jpg",
+	"url": "http://www.bbc.co.uk/sport/tennis/40624562",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T16:41:15.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac59"
+	},
+	"title": "Disney wants to build a Westworld for Star Wars fans",
+	"description": "A luxury space hotel in a galaxy far, far away",
+	"image": "https://cdn.vox-cdn.com/thumbor/qRAZrIZ8WX8oM_MiSeoZ0PH1osw=/0x0:1920x1080/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/55731157/Image_WDW_Star_Wars_Themed_Resort.0.jpg",
+	"url": "https://www.theverge.com/2017/7/16/15729120/star-wars-immersive-hotel-westworld-disney-d23-expo-2017",
+	"author": "Bryan Bishop",
+	"published": {
+		"$date": "2017-07-16T15:12:50.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac5e"
+	},
+	"title": "This week’s deaths and births of the mobile world",
+	"description": "The Vergecast, at your service",
+	"image": "https://cdn.vox-cdn.com/thumbor/5WrtoPNKr3THZtpTJQRW2edSaWE=/0x106:2040x1254/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/55715227/jbareham_170216_1466_0070.0.jpg",
+	"url": "https://www.theverge.com/2017/7/14/15964974/vergecast-podcast-265-next-level-net-neutrality-windows-phone-death",
+	"author": "Andrew Marino",
+	"published": {
+		"$date": "2017-07-14T17:07:43.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac4f"
+	},
+	"title": "Drama for Cook as England chase 474 to win - clips, TMS \u0026 updates",
+	"description": "England require a world-record winning total to beat South Africa after a hard-fought third day in the second Test at Trent Bridge.",
+	"image": "http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg",
+	"url": "http://www.bbc.co.uk/sport/live/cricket/38520824",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T17:57:13.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac63"
+	},
+	"title": "Trump slams 'fraudulent reporting' and 'fake news' amid Russia firestorm",
+	"description": "President Donald Trump kicked off Sunday with a...",
+	"image": "http://static6.businessinsider.com/image/5965fc31abc1c819008b4902-1190-625/trump-slams-fraudulent-reporting-and-fake-news-amid-russia-firestorm.jpg",
+	"url": "http://www.businessinsider.com/trump-attacks-fake-news-media-amid-russia-firestorm-2017-7",
+	"author": "Sonam Sheth",
+	"published": {
+		"$date": "2017-07-16T14:47:32.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac6d"
+	},
+	"title": "Disney is opening an immersive Star Wars Hotel where each guest gets a storyline",
+	"description": "AHHHHHHH. Disney just announced something that’s potentially so damned cool that I hardly need complete sentences here: Immersive. Star Wars. Hotel...",
+	"image": "https://tctechcrunch2011.files.wordpress.com/2017/07/ahh2.jpg?w=764\u0026h=400\u0026crop=1",
+	"url": "https://techcrunch.com/2017/07/15/disney-is-opening-an-immersive-star-wars-hotel-where-each-guest-gets-a-storyline/",
+	"author": "Greg Kumparak",
+	"published": {
+		"$date": "2017-07-16T00:29:33.000Z"
+	},
+	"source": {
+		"$oid": "596617073102961fc6756b98"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac72"
+	},
+	"title": "Erdogan recasts failed Turkish coup",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/12e0e6b0-6a36-11e7-bfeb-33fe0c5b7eaa",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.861Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac77"
+	},
+	"title": "How I lost my 25-year battle against corporate claptrap",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/lucycolumn",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.862Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac68"
+	},
+	"title": "ABC aired a show that could have brought America together, but no one noticed until Trump was president",
+	"description": "",
+	"image": "http://static2.businessinsider.com/image/596b7bbca47cb56b008b48cf-1190-625/abc-aired-a-show-that-could-have-brought-america-togetherbut-no-one-noticed-until-trump-was-president.jpg",
+	"url": "http://www.businessinsider.com/television-shows-difficult-issues-niche-the-middle-abc-undividing-america-2017-7",
+	"author": "Jethro Nededog",
+	"published": {
+		"$date": "2017-07-16T13:36:00.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac41"
+	},
+	"title": "Defense of Gwyneth Paltrow’s Goop offers case study on how to sell snake oil",
+	"description": "While trying to hammer a medical blogger, Goop nails the best ways to sell BS.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/GettyImages-694200896-760x380.jpg",
+	"url": "https://arstechnica.com/science/2017/07/defense-of-gwyneth-paltrows-goop-offers-case-study-on-how-to-sell-snake-oil/",
+	"author": "Beth Mole",
+	"published": {
+		"$date": "2017-07-16T15:00:01.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac46"
+	},
+	"title": "Animal rights? Monkey selfie case may undo evolution of the Internet",
+	"description": "Analysis: PETA’s quest for animals to own property is no laughing matter.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/Screen-Shot-2017-07-14-at-1.05.56-PM-760x380.png",
+	"url": "https://arstechnica.com/tech-policy/2017/07/animal-rights-monkey-selfie-case-may-undo-evolution-of-the-internet/",
+	"author": "David Kravets",
+	"published": {
+		"$date": "2017-07-15T15:30:04.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac50"
+	},
+	"title": "Tour de France 2017: Froome retains yellow jersey as Mollema wins stage 15",
+	"description": "Britain's Chris Froome retains his 18-second overall lead at the Tour de France, as Bauke Mollema wins Sunday's 15th stage.",
+	"image": "http://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/F330/production/_96965226_froome.jpg",
+	"url": "http://www.bbc.co.uk/sport/cycling/40625279",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T17:44:05.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac55"
+	},
+	"title": "2017 World Para-athletics Championships",
+	"description": "Follow live text and BBC Radio 5 live commentary of the 2017 World Para-athletics Championships from London Stadium.",
+	"image": "http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg",
+	"url": "http://www.bbc.co.uk/sport/live/disability-sport/40387931",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T17:59:33.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac4b"
+	},
+	"title": "Behind Netflix's Emmy nominations haul are more shows than ever",
+	"description": "Quantity in search of quality.",
+	"image": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630\u0026quality=80\u0026image_uri=https%3A%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fe75cfd79b88e3443b7f92247ae882f89%2F205479592%2Femmy-watercolor-front-side-900x600.jpg\u0026client=cbc79c14efcebee57402\u0026signature=0cc26af3869b5f86c651930a9066b456a035023a",
+	"url": "https://www.engadget.com/2017/07/15/netflix-emmy-nominations-hbo-original-series/",
+	"author": "Chris Ip",
+	"published": {
+		"$date": "2017-07-15T18:00:00.000Z"
+	},
+	"source": {
+		"$oid": "596615f258b3661f80fbdce3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac5f"
+	},
+	"title": "Cory Doctorow on technological immortality, the transporter problem, and fast-moving futures",
+	"description": "The author of Walkaway discusses what’s theoretical and ‘hand-wavey’ about his latest book, and what’s relevant to present politics",
+	"image": "https://cdn.vox-cdn.com/thumbor/fv7ZMjCBMgQFc94T7zWx8DHwN18=/1x0:1400x787/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/55732423/Walkaway_Trim_LRG.0.jpg",
+	"url": "https://www.theverge.com/2017/7/16/15978554/cory-doctorow-interview-walkaway-consciousness-uploads-fast-moving-futures",
+	"author": "Tasha Robinson",
+	"published": {
+		"$date": "2017-07-16T17:36:57.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac5a"
+	},
+	"title": "CanJam is the event where headphone geeks come to meet their heroes",
+	"description": "People who say “never meet your heroes” must have shitty heroes. I’m attending CanJam London this weekend — an event organized by the guys responsible for the Head-Fi audiophile community — and...",
+	"image": "https://cdn.vox-cdn.com/thumbor/Ay51mTxcnkd-e_bO_9IxcWvGGKU=/0x106:2040x1254/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/55730271/canjam_london_2017_vladsavov.0.jpg",
+	"url": "https://www.theverge.com/2017/7/16/15977890/canjam-london-2017-axel-grell-headphones-fandom",
+	"author": "Vlad Savov",
+	"published": {
+		"$date": "2017-07-16T12:15:01.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac69"
+	},
+	"title": "Every department of the federal government is now being run like a Trump business",
+	"description": "The Republican health care bill — a tax...",
+	"image": "http://static1.businessinsider.com/image/5913177c73f2f329008b5197-1190-625/every-department-of-the-federal-government-is-now-being-run-like-a-trump-business.jpg",
+	"url": "http://www.slate.com/articles/news_and_politics/politics/2017/07/trump_s_deregulation_efforts_are_great_for_the_rich.html",
+	"author": "Jamelle Bouie",
+	"published": {
+		"$date": "2017-07-16T17:08:22.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac78"
+	},
+	"title": "US inflation decline is too persistent to ignore",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/cd6a1f41-809d-34c3-b244-356686407643",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.862Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac64"
+	},
+	"title": "Mitch McConnell is stuck between a rock and a hard place on his healthcare bill — but don't count him out",
+	"description": "Senate Majority Leader Mitch McConnell is known...",
+	"image": "http://static1.businessinsider.com/image/5968dbcac50c29c6088b4987-1190-625/mitch-mcconnell-is-stuck-between-a-rock-and-a-hard-place-on-his-healthcare-bill--but-dont-count-him-out.jpg",
+	"url": "http://www.businessinsider.com/mcconnell-senate-republican-health-care-bill-conservative-strategy-2017-7",
+	"author": "Bob Bryan",
+	"published": {
+		"$date": "2017-07-16T12:29:56.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac6e"
+	},
+	"title": "SoundCloud says it’s going to survive, but how?",
+	"description": "SoundCloud says it's not going away. I’m glad to hear that because I can’t lose SoundCloud. Ever. Last week, SoundCloud announced layoffs of 173..",
+	"image": "https://tctechcrunch2011.files.wordpress.com/2017/07/gettyimages-634988228.jpg?w=764\u0026h=400\u0026crop=1",
+	"url": "https://techcrunch.com/2017/07/15/soundcloud-says-its-not-going-anywhere/",
+	"author": "Megan Rose Dickey",
+	"published": {
+		"$date": "2017-07-15T15:49:44.000Z"
+	},
+	"source": {
+		"$oid": "596617073102961fc6756b98"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac73"
+	},
+	"title": "Brexit deal failure risks catastrophe, says industry",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/2d3fa91c-68a9-11e7-8526-7b38dcaef614",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.861Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac7d"
+	},
+	"title": "Why women are so keen on swimming",
+	"description": "All the skinny on dipping",
+	"image": "https://cdn.static-economist.com/sites/default/files/images/2017/07/articles/main/20170715_bkp512.jpg",
+	"url": "https://www.economist.com/news/books-and-arts/21724978-all-skinny-dipping-why-women-are-so-keen-swimming",
+	"author": "The Economist",
+	"published": {
+		"$date": "2017-07-15T00:00:00.000Z"
+	},
+	"source": {
+		"$oid": "596617cf8ca2f61ff42816e9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac3f"
+	},
+	"title": "White House voter commission publishes names, numbers of worried citizens",
+	"description": "Vice president's spokesman dismisses concerns: \"These are public comments.\"",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/GettyImages-624810636-760x380.jpg",
+	"url": "https://arstechnica.com/tech-policy/2017/07/white-house-voter-commission-publishes-names-numbers-of-worried-citizens/",
+	"author": "Cyrus Farivar",
+	"published": {
+		"$date": "2017-07-16T16:00:37.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac44"
+	},
+	"title": "The first shiver-inducing trailer for A Wrinkle in Time is here",
+	"description": "The dark, weird novel gets an adaptation that looks stunning and smart.",
+	"image": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/oprah-winfrey-wrinkle-in-time-760x380.jpg",
+	"url": "https://arstechnica.com/the-multiverse/2017/07/the-first-shiver-inducing-trailer-for-a-wrinkle-in-time-is-here/",
+	"author": "Annalee Newitz",
+	"published": {
+		"$date": "2017-07-16T00:10:58.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac4e"
+	},
+	"title": "Lewis Hamilton wins record-equalling fifth British GP",
+	"description": "Three-time world champion equals record set by Jim Clark and Alain Prost with dominate win at Silverstone.",
+	"image": "http://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/17EA4/production/_96965979_hamilton.jpg",
+	"url": "http://www.bbc.co.uk/sport/formula1/40624508",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T13:37:16.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac53"
+	},
+	"title": "Full time: Netherlands 1-0 Norway - Hosts victorious in Euro 2017 opener",
+	"description": "Live text, images, social media and analysis from the opening Group A match of Women's Euro 2017 between Netherlands and Norway in Utrecht.",
+	"image": "http://newsimg.bbc.co.uk/media/images/67165000/jpg/_67165916_67165915.jpg",
+	"url": "http://www.bbc.co.uk/sport/live/football/40329609",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-07-16T17:58:14.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac62"
+	},
+	"title": "The Fed just edged a step closer to recognizing a major policy misstep",
+	"description": "The Federal Reserve is embarking on an annual...",
+	"image": "http://static2.businessinsider.com/image/59691b86c50c29c6088b4aa4-1190-625/the-fed-just-edged-a-step-closer-to-recognizing-a-major-policy-misstep.jpg",
+	"url": "http://www.businessinsider.com/fed-may-pause-rate-hikes-if-inflation-weakness-persists-2017-7",
+	"author": "Pedro Nicolaci da Costa",
+	"published": {
+		"$date": "2017-07-15T10:02:00.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac58"
+	},
+	"title": "The Strange Case of the Alchemist’s Daughter is the monster mashup we need",
+	"description": "Swashbuckling adventure crossed with literary criticism",
+	"image": "https://cdn0.vox-cdn.com/thumbor/U0qZ8jzAGu6MA1sq-2t3c4uLOZw=/0x236:2040x1304/fit-in/1200x630/cdn0.vox-cdn.com/uploads/chorus_asset/file/8859351/aliptak_170714_1785_0002.jpg",
+	"url": "https://www.theverge.com/2017/7/16/15971884/theodora-goss-the-strange-case-of-the-alchemists-daughter-book-review",
+	"author": "Andrew Liptak",
+	"published": {
+		"$date": "2017-07-16T14:00:02.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac49"
+	},
+	"title": "Lenovo made an augmented reality headset for 'Star Wars' games",
+	"description": "The 'Star Wars' universe is coming to augmented reality with a Lenovo-made headset and mobile apps.",
+	"image": "https://o.aolcdn.com/images/dims?thumbnail=1200%2C630\u0026quality=80\u0026image_uri=https%3A%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F96de0e9b975d96defc0822579cd65f9f%2F205480093%2Fjedi-challenges-augmented-reality-headset.jpg\u0026client=cbc79c14efcebee57402\u0026signature=6eb13516f0386670f8a063002eb2c17762fc1d36",
+	"url": "https://www.engadget.com/2017/07/15/star-wars-augmented-reality-headset/",
+	"author": "Jon Fingas",
+	"published": {
+		"$date": "2017-07-15T20:47:00.000Z"
+	},
+	"source": {
+		"$oid": "596615f258b3661f80fbdce3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac71"
+	},
+	"title": "What you could buy for the price of a London flat",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/87677ee4-6230-11e7-91a7-502f7ee26895",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.861Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0,
+	"topic": null
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac6c"
+	},
+	"title": "Death to C, ++",
+	"description": "The C programming language is terrible. I mean, magnificent, too. Much of the world in which we live was built atop C. It is foundational to almost all..",
+	"image": "https://tctechcrunch2011.files.wordpress.com/2015/04/death_to_smoochy.jpg?w=764\u0026h=400\u0026crop=1",
+	"url": "https://techcrunch.com/2017/07/16/death-to-c/",
+	"author": "Jon Evans",
+	"published": {
+		"$date": "2017-07-16T13:00:32.000Z"
+	},
+	"source": {
+		"$oid": "596617073102961fc6756b98"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac76"
+	},
+	"title": "Overfunding floats Silicon Valley’s bubble economy",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/968f2022-6878-11e7-9a66-93fb352ba1fe",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.862Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac7b"
+	},
+	"title": "Trumpcare, version three",
+	"description": "Is the Senate’s revised health-care proposal a good bill? And will it pass?",
+	"image": "https://cdn.static-economist.com/sites/default/files/20170715_USP507.jpg",
+	"url": "https://www.economist.com/blogs/democracyinamerica/2017/07/senate-s-health-bill",
+	"author": "The Economist",
+	"published": {
+		"$date": "2017-07-14T11:35:54.000Z"
+	},
+	"source": {
+		"$oid": "596617cf8ca2f61ff42816e9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac67"
+	},
+	"title": "America’s largest cities are so expensive that some millennials are crowdfunding their homes",
+	"description": "For many American millennials, buying a new...",
+	"image": "http://static2.businessinsider.com/image/59692e64c50c291d008b4b8e-1190-625/americas-largest-cities-are-so-expensive-that-some-millennials-are-crowdfunding-their-homes.jpg",
+	"url": "http://www.businessinsider.com/millennials-home-buying-crowdfunding-fundrise-efund-2017-7",
+	"author": "Leanna Garfield",
+	"published": {
+		"$date": "2017-07-16T14:00:00.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0,
+	"topic": null
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac65"
+	},
+	"title": "How a Jewish deli run by Muslims became the symbol of a changing neighborhood",
+	"description": "",
+	"image": "http://static4.businessinsider.com/image/5968d187a47cb547008b4617-1190-625/how-a-jewish-deli-run-by-muslims-became-the-symbol-of-a-changing-neighborhood.jpg",
+	"url": "http://www.businessinsider.com/how-a-jewish-deli-run-by-muslims-became-the-symbol-of-a-changing-neighborhood-2017-7",
+	"author": "Sarah Jacobs",
+	"published": {
+		"$date": "2017-07-16T13:22:00.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac6a"
+	},
+	"title": "What caffeine does to your body and brain",
+	"description": "Many of us can't start our day without a jolt...",
+	"image": "http://static5.businessinsider.com/image/5537f4a969beddb12c8fddb2-1190-625/what-caffeine-does-to-your-body-and-brain.jpg",
+	"url": "http://www.businessinsider.com/physical-mental-effects-of-caffeine-2017-7",
+	"author": "Kevin Loria and Erin Brodwin",
+	"published": {
+		"$date": "2017-07-16T14:02:00.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac6f"
+	},
+	"title": "BetterWorks and CEO sued by ex-employee for alleged sexually suggestive assault",
+	"description": "Beatrice Kim is suing her former employer, BetterWorks, and its CEO Kris Duggan for allegedly assaulting her in a sexual manner during a company retreat. The..",
+	"image": "https://tctechcrunch2011.files.wordpress.com/2017/07/betterworks-billboard.jpg?w=764\u0026h=400\u0026crop=1",
+	"url": "https://techcrunch.com/2017/07/14/betterworks-duggan-kim-assault-sexual-manner-lawsuit/",
+	"author": "Josh Constine",
+	"published": {
+		"$date": "2017-07-14T19:53:43.000Z"
+	},
+	"source": {
+		"$oid": "596617073102961fc6756b98"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac79"
+	},
+	"title": "Thousands rally in Poland against move on judges",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/2f746758-6a35-11e7-bfeb-33fe0c5b7eaa",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.862Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac74"
+	},
+	"title": "Winnie the Pooh barred by China’s online censors",
+	"description": null,
+	"image": "https://www.ft.com/__assets/creatives/brand-ft/icons/v2/favicon-194x194.png",
+	"url": "https://www.ft.com/content/cf7fd22e-69d5-11e7-bfeb-33fe0c5b7eaa",
+	"author": null,
+	"published": {
+		"$date": "2017-07-16T18:03:26.861Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaac7e"
+	},
+	"title": "The administration asks the justices for clarity on their travel ban ruling",
+	"description": "The plea shows the fight is about power, not national security",
+	"image": "https://cdn.static-economist.com/sites/default/files/20170722_blp901.jpg",
+	"url": "https://www.economist.com/blogs/democracyinamerica/2017/07/back-supreme-court",
+	"author": "The Economist",
+	"published": {
+		"$date": "2017-07-15T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596617cf8ca2f61ff42816e9"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa000"
+	},
+	"title": "Macron wins presidency as France rejects Le Pen and her right-wing populist tide",
+	"description": "Centrist Emmanuel Macron has won the French presidency. He defeated Marine Le Pen, the leader of France’s far-right National Front, a strongly anti-immigrant populist party.",
+	"image": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://s3.amazonaws.com/posttv-thumbnails-prod/05-07-2017/t_1494176178181_name_macron.jpg\u0026w=800\u0026h=450",
+	"url": "https://www.washingtonpost.com/world/europe/with-europe-on-the-line-polarized-french-voters-choose-between-macron-and-le-pen/2017/05/07/ccf8e5e2-31d9-11e7-9534-00e4656c22aa_story.html?utm_term=.e4ae74a31f25",
+	"author": "Washington Post",
+	"published": {
+		"$date": "2017-06-12T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d747"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa001"
+	},
+	"title": "Emmanuel Macron’s Party and Allies Win Big in France",
+	"description": "President Emmanuel Macron of France won a crucial stamp of approval on Sunday as voters gave him and his allies a decisive majority in parliamentary elections, but a record-low turnout cast a shadow over his victory, pointing to the hurdles he will face as he seeks to revive the country’s economy and confidence.",
+	"image": "https://static01.nyt.com/images/2017/06/18/world/europe/france-img/france-img-superJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/06/18/world/europe/france-parliament-elections-emmanuel-macron.html",
+	"author": "NYT",
+	"published": {
+		"$date": "2017-06-12T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d747"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa002"
+	},
+	"title": "France polls: Macron's party wins clear parliamentary majority",
+	"description": "French President Emmanuel Macron's party has won a clear parliamentary majority, results show, weeks after his own presidential victory.",
+	"image": "https://ichef-1.bbci.co.uk/news/660/cpsprodpb/1CF6/production/_96541470_hi040117934.jpg",
+	"url": "http://www.bbc.com/news/world-europe-40322140",
+	"author": "BBC",
+	"published": {
+		"$date": "2017-06-12T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d747"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa003"
+	},
+	"title": "Macron's party on course for historic gains in French parliamentary election",
+	"description": "Emmanuel Macron's centrist La Republique En Marche is projected to win a huge majority in the French Parliament after a strong showing in Sunday's first round of voting.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170507180300-macron-win---1-exlarge-169.jpg",
+	"url": "http://edition.cnn.com/2017/06/11/europe/french-parliament-election-macron/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-12T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d747"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa004"
+	},
+	"title": "Amazon is buying Whole Foods for $13.7 billion",
+	"description": "Amazon is making a big bet on physical stores and the business of food.",
+	"image": "http://i2.cdn.turner.com/money/dam/assets/170616141515-amazon-whole-foods-jeff-bezos-grocery-brick-and-mortar-00001001-1024x576.jpg",
+	"url": "http://money.cnn.com/2017/06/16/investing/amazon-buying-whole-foods/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-16T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d749"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa005"
+	},
+	"title": "Amazon to Acquire Whole Foods for $13.7 Billion",
+	"description": "Amazon.com Inc. will acquire Whole Foods Market Inc. for $13.7 billion, a bombshell of a deal that catapults the e-commerce giant into hundreds of physical stores and fulfills a long-held goal of selling more groceries.",
+	"image": "http://i2.cdn.turner.com/money/dam/assets/170616141515-amazon-whole-foods-jeff-bezos-grocery-brick-and-mortar-00001001-1024x576.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-06-16/amazon-to-acquire-whole-foods-in-13-7-billion-bet-on-groceries",
+	"author": "Bloomberg",
+	"published": {
+		"$date": "2017-06-16T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d749"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa006"
+	},
+	"title": "Why Amazon is buying Whole Foods",
+	"description": "Amazon swooped in to buy the high-end grocer Whole Foods on Friday, paying $13.7 billion, or $42 a share — a healthy 27% premium on the previous day's closing price.",
+	"image": "http://static1.businessinsider.de/image/594409575d3e4e04aa3187d2-2400/amazonfresh.jpg",
+	"url": "http://www.businessinsider.de/why-amazon-is-buying-whole-foods-2017-6?r=US\u0026IR=T",
+	"author": "Business Insider",
+	"published": {
+		"$date": "2017-06-16T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d749"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa007"
+	},
+	"title": "Whole Foods’ Mackey reveals softer side in Amazon courtship",
+	"description": "John Mackey, the outspoken founder of Whole Foods Market who recently called an activist investor a “greedy bastard”, has revealed his softer side by describing the “blind date” that led to Amazon’s $13.7bn bid for the upmarket grocer as “love at first sight”.",
+	"image": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Ff47bed2e-51c5-11e7-a1f2-db19572361bb?source=next\u0026fit=scale-down\u0026width=700",
+	"url": "https://www.ft.com/content/b1b6b448-5548-11e7-9fed-c19e2700005f?mhq5j=e1",
+	"author": "FT",
+	"published": {
+		"$date": "2017-06-16T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d749"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa008"
+	},
+	"title": "The Xbox One X is Microsoft’s powerful new 4K console",
+	"description": "A full year after first teasing Project Scorpio at its last E3 event, Microsoft finally took the wraps of its new console, now called the Xbox One X.",
+	"image": "https://tctechcrunch2011.files.wordpress.com/2017/06/xboxonex.jpg?w=1318",
+	"url": "https://www.ft.com/content/b1b6b448-5548-11e7-9fed-c19e2700005f?mhq5j=e1",
+	"author": "Techcrunch",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596617073102961fc6756b98"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d750"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa009"
+	},
+	"title": "Xbox One X is Microsoft's next game console, arriving on November 7th for $499",
+	"description": "After months of speculation, Microsoft is unveiling its “Project Scorpio” games console today, and it's officially named Xbox One X.",
+	"image": "https://cdn.vox-cdn.com/thumbor/RmRVxGdiJOK83GsSuScGRp2mntQ=/1600x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8667595/xboxonex.jpg",
+	"url": "https://www.theverge.com/2017/6/11/15774918/microsoft-xbox-one-x-release-date-price-new-console-announced-e3-2017",
+	"author": "The Verge",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d750"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa010"
+	},
+	"title": "The Xbox One X is aspirational in the purest sense of the word",
+	"description": "It's Microsoft's direct response to people saying that the standard Xbox One wasn't powerful enough compared to Sony's PlayStation 4.",
+	"image": "https://o.aolcdn.com/images/dims?thumbnail=640%2C\u0026quality=80\u0026image_uri=https%3A%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fc62f0505d53b71bef598dfbb93bc4d6e%2F205374192%2Fdsc00984-1.jpg\u0026client=cbc79c14efcebee57402\u0026signature=12090c915df45a3123b1c3b960128f7e9d2660c6",
+	"url": "https://www.engadget.com/2017/06/13/the-xbox-one-x-is-aspirational-in-the-purest-sense-of-the-word/",
+	"author": "Engadget",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596615f258b3661f80fbdce3"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d750"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa011"
+	},
+	"title": "First impressions: Xbox One X doesn’t quite bring the “wow!” factor",
+	"description": "For a year now, we've been hearing about how Project Scorpio will bring ''true 4K'' gaming to the living-room masses with enhanced versions of the same software that runs on the Xbox One.",
+	"image": "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_arstechnica.png,fl_progressive,g_face,h_450,q_80,w_800/v1497404143/arstechnica_gaming-on-microsoft-s-new-xbox-one-x.jpg",
+	"url": "https://arstechnica.com/gaming/2017/06/first-impressions-xbox-one-x-doesnt-quite-bring-the-wow-factor/",
+	"author": "ARS Technica",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d750"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa012"
+	},
+	"title": "China launches its first X-ray space telescope",
+	"description": "China successfully launched on Thursday its first X-ray space telescope to study black holes, pulsars and gamma-ray bursts, state media reported.",
+	"image": "http://timesofindia.indiatimes.com/thumb/msid-59159006,width-400,resizemode-4/59159006.jpg",
+	"url": "http://timesofindia.indiatimes.com/home/science/china-launches-its-first-x-ray-space-telescope/articleshow/59155741.cms",
+	"author": "Times of India",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d751"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa013"
+	},
+	"title": "X-ray space telescope launched",
+	"description": "China launched on Thursday its first X-ray space telescope to study black holes, pulsars and gamma-ray bursts, state media reported.",
+	"url": "http://www.thehindu.com/todays-paper/tp-national/x-ray-space-telescope-launched/article19078592.ece",
+	"author": "The Hindu",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d751"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa014"
+	},
+	"title": "China's colossal radio telescope begins testing",
+	"description": "Chinese scientists report that the giant dish, which measures 500m (1,640ft) across, is complete and has received its first signals from space.",
+	"url": "http://www.bbc.com/news/science-environment-37453933",
+	"author": "BBC",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d751"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa015"
+	},
+	"title": "China Hunts for Scientific Glory, and Aliens, With New Telescope",
+	"description": "When hundreds of engineers and builders began clambering up a jagged hill in southwestern China to assemble a giant telescope in a deep, bowl-shaped basin, poor villagers sometimes crept over the sheer slopes to glimpse the country’s latest technological wonder.",
+	"url": "https://www.nytimes.com/2016/09/26/world/asia/china-telescope-fast-space-seti.html",
+	"author": "NYT",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d751"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa016"
+	},
+	"title": "Internet freedom in India improves slightly",
+	"description": "India is only “partly free” with a rank of 30 out of 65 countries in Internet freedom but as of May this year, it has improved its score, a new report says.",
+	"url": "http://www.thehindu.com/sci-tech/technology/internet-freedom-in-india-improves-slightly/article6662477.ece",
+	"author": "The Hindu",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d754"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa017"
+	},
+	"title": "Internet censorship in India is on the rise",
+	"description": "The nation has shut down the internet in various regions 20 times in the first five months of this year, according to a report from Human Rights Watch. Four of those blackouts have taken place this month, all in states where violent protests took place.",
+	"url": "http://money.cnn.com/2017/06/16/technology/internet-censorship-india-human-rights-watch/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d754"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa018"
+	},
+	"title": "Mind your netiquette, or we'll mind it for you",
+	"description": "IN NOVEMBER, Pakistan's telecoms regulator gave its staff a rather unusual yet entertaining assignment: to draw up a list of undesirable words in Urdu and English which would later be blocked from offensive text messages.",
+	"url": "https://www.economist.com/blogs/babbage/2011/12/web-censorship-india",
+	"author": "Economist",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596617cf8ca2f61ff42816e9"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d754"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa019"
+	},
+	"title": "Criticism mounts over India censorship",
+	"description": "India’s government is facing fierce criticism from privacy groups, political opponents and irate internet users accusing it of an excessive and poorly targeted censorship drive as it seeks to contain social alarm triggered by communal unrest.",
+	"url": "https://www.ft.com/content/7660233c-ede4-11e1-a9d7-00144feab49a?mhq5j=e1",
+	"author": "Financial Times",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d754"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa020"
+	},
+	"title": "Helmut Kohl, German statesman who united his country after Cold War, dies at 87",
+	"description": "Helmut Kohl, the West German political leader who became an unlikely international statesman when he helped unite communist East Germany with the West after the fall of the Berlin Wall in 1989 and served as chancellor of a unified Germany for much of the 1990s, died June 16 at his home in Ludwigshafen.",
+	"url": "https://www.washingtonpost.com/local/obituaries/helmut-kohl-german-statesman-who-united-his-country-after-cold-war-dies-at-87/2017/06/16/873ee8ea-52a8-11e7-91eb-9611861a988f_story.html?utm_term=.b15580d90414",
+	"author": "Washtington Post",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa021"
+	},
+	"title": "Ex-German Chancellor Helmut Kohl dies aged 87",
+	"description": "Germany's longest-serving post-war chancellor, from 1982 to 1998, was credited with German reunification.",
+	"url": "http://www.aljazeera.com/news/2017/06/german-chancellor-helmut-kohl-dies-aged-87-170616154051147.html",
+	"author": "Aljazeera",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa022"
+	},
+	"title": "Former German Chancellor Helmut Kohl dies",
+	"description": "German statesman Helmut Kohl, the architect of German reunification after the end of the Cold War, has died, his Christian Democratic Union party announced Friday. He was 87.",
+	"url": "http://edition.cnn.com/2017/06/16/europe/obit-helmut-kohl/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa023"
+	},
+	"title": "German reunification architect Helmut Kohl dies at 87",
+	"description": "Kohl led Germany for 16 years (from 1982 to 1998). He is credited with bringing East and West Germany together after the fall of the Berlin Wall.",
+	"url": "http://www.bbc.com/news/world-europe-40307918",
+	"author": "BBC",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa024"
+	},
+	"title": "Former German chancellor Helmut Kohl dies aged 87",
+	"description": "Former chancellor Helmut Kohl, who presided over Germany’s reunification at the end of the Cold War, has died at the age of 87.",
+	"url": "https://www.ft.com/content/703eaf54-52a8-11e7-a1f2-db19572361bb?mhq5j=e1",
+	"author": "Financial Times",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa025"
+	},
+	"title": "Warriors Win N.B.A. Title, Avenging Themselves Against the Cavaliers",
+	"description": "The Golden State Warriors will forever be known as one of the most talented teams in the history of the N.B.A., along with a hefty set of other superlatives: most dominant, most dazzling, most adept at hitting shots from distant galaxies.",
+	"url": "https://www.nytimes.com/2017/06/13/sports/golden-state-warriors-win-nba-championship.html",
+	"author": "NYT",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa026"
+	},
+	"title": "NBA Finals: Golden State Warriors beat Cleveland Cavaliers in game two",
+	"description": "Golden State Warriors took a 2-0 lead in the NBA Finals with a dominant 132-113 victory over Cleveland Cavaliers.",
+	"url": "http://www.bbc.com/sport/basketball/40156419",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa027"
+	},
+	"title": "Warriors dethrone Cavaliers for second title in three years",
+	"description": "The Golden State Warriors celebrate with the Larry O'Brien Championship Trophy after winning Game 5 of the NBA Finals on Monday, June 12. Golden State won 129-120 to collect its secont title in three years",
+	"url": "http://edition.cnn.com/2017/06/12/us/2017-nba-finals-game-5-cavaliers-warriors/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa028"
+	},
+	"title": "Golden State Warriors Are Closing In on History",
+	"description": "With a 118-113 N.B.A. finals Game 3 victory over the Cleveland Cavaliers Wednesday night, the Golden State Warriors closed in on the N.B.A. championship.",
+	"url": "https://www.nytimes.com/2017/06/09/sports/basketball/golden-state-warriors-nba-finals.html",
+	"author": "NYT",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa029"
+	},
+	"title": "The Warriors are making the NBA Finals noncompetitive. That’s scary for the league.",
+	"description": "There is a sign posted on the wall inside the Golden State Warriors locker room, high above the corner stall belonging to Kevin Durant. It keeps with the tradition of cheesy team slogans, meant to convey the importance of the group above all else.",
+	"url": "https://www.washingtonpost.com/news/sports/wp/2017/06/05/the-warriors-are-making-the-nba-finals-non-competitive-thats-scary-for-the-league/?utm_term=.7740f5e06941",
+	"author": "Washington Post",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa030"
+	},
+	"title": "NBA Finals: Golden State Warriors beat Cleveland Cavaliers to clinch fifth title",
+	"description": "The Golden State Warriors have surged past the Cleveland Cavaliers to clinch a fifth NBA championship.",
+	"url": "http://www.abc.net.au/news/2017-06-13/golden-state-warriors-win-nba-title-beating-cleveland-cavaliers/8613544",
+	"author": "ABC",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
 }]
 
