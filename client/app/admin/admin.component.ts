@@ -223,7 +223,9 @@ export class AdminComponent implements OnInit {
 
   // Dialog for editing topics
   open_edit_topic(del_topic) {
-    this.dialogRef = this.dialogEdit.open(dialogEdit);
+    this.dialogRef = this.dialogEdit.open(dialogEdit, {
+      panelClass: 'bbb',
+    });
     this.isEditing_topic = true;
     this.topic = del_topic;
     this.dialogRef.componentInstance.dialog_topic = del_topic;
