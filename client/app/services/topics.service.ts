@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class TopicService {
+export class TopicsService {
 
   private getHeaders = function() {
     return new Headers({
@@ -21,20 +21,19 @@ export class TopicService {
 
   constructor(private http: Http) { }
 
-  getTopics(): Observable<any> {
-    return this.http.get('/api/topics', this.getOptions()).map(res => res.json());
-  }
+  getTopics(category = null, user = null): Observable<any> {
+    const params = <any>{};
+    if (category) {
+      params.category_id = category._id;
+    }else if (user) {
+      params.user_id = user._id;
+    }
 
-  countTopics(): Observable<any> {
-    return this.http.get('/api/topics/count', this.getOptions()).map(res => res.json());
+    return this.http.get('/api/topics', { params: params }).map(res => res.json());
   }
 
   addTopic(topic): Observable<any> {
     return this.http.post('/api/topics', JSON.stringify(topic), this.getOptions());
-  }
-
-  getTopic(topic): Observable<any> {
-    return this.http.get(`/api/topics/${topic._id}`, this.getOptions()).map(res => res.json());
   }
 
   editTopic(topic): Observable<any> {
@@ -47,4 +46,3 @@ export class TopicService {
 
 
 }
-

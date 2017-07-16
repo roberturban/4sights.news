@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+
+import { SnackBarService } from '../services/snackbar.service';
 import { UserService } from '../services/user.service';
-import { ToastComponent } from '../shared/toast/toast.component';
-import {CategoryService} from '../services/category.service';
+import { CategoryService } from '../services/category.service';
+import { ManipulationService } from "../services/manipulation.service";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -34,17 +37,26 @@ export class RegisterComponent implements OnInit {
   password = new FormControl('', [Validators.required,
                                   Validators.minLength(6)]);
 
-  role = new FormControl('', [Validators.required]);
-
   categories = new FormControl('', [Validators.required]);
 
+
   categoriesAvailable = [];
+  //Used filter categoriesSelected before registration
+  categoriesSelected = [];
+  //Necessary for mapping categoriesAvailable Objects with boolean
+  categoriesMap =[];
+
+  pushObject = {};
+
+  // SnackBar config
+  snackBarService = new SnackBarService(this.snackBar);
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
-              public toast: ToastComponent,
+              public snackBar: MdSnackBar,
               private userService: UserService,
-              private categoryService: CategoryService) { }
+              private categoryService: CategoryService,
+              private manipulationService: ManipulationService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -52,7 +64,6 @@ export class RegisterComponent implements OnInit {
       surname: this.surname,
       email: this.email,
       password: this.password,
-      role: this.role,
       categories: this.categories
     });
     this.loadAvailableCategories();
@@ -60,19 +71,28 @@ export class RegisterComponent implements OnInit {
 
   loadAvailableCategories() {
     this.categoryService.getCategories().subscribe(
-      data => this.categoriesAvailable = data,
+      data => {
+        this.categoriesAvailable = data,
+        this.categoriesMap = this.manipulationService.initCategoriesMap([],this.categoriesAvailable)
+      },
       error => console.log(error),
       () => console.log('categories loaded')
     );
   }
 
   register() {
+    this.registerForm.controls['categories'].setValue(this.manipulationService.mapCheckedOptions(this.categoriesMap));
     this.userService.register(this.registerForm.value).subscribe(
       res => {
-        this.toast.setMessage('you successfully registered!', 'success');
+        this.snackBarService.createSnackBar('Successfully registered', false, '','', 1000)
         this.router.navigate(['/login']);
       },
-      error => this.toast.setMessage('email already exists', 'danger')
+      error => this.snackBarService.createSnackBar('Email already exists', false, '','', 1000)
     );
   }
+
+  updateCheckedOptions(value,event){
+      value.value = event.checked;
+  }
+
 }

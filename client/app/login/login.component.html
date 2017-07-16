@@ -1,4 +1,4 @@
-<app-toast [message]="toast.message"></app-toast>
+
 
 <div class="login-form">
   <form class="form-inner" [formGroup]="loginForm" (ngSubmit)="login()">
@@ -21,9 +21,13 @@
       </md-error>
     </div>
 
+    <md-error *ngIf="error">
+      {{error}}
+    </md-error>
+
     <div class="bottom-row">
       <div style="font-family:Roboto;">
-        <a routerLink="/login">Forgot Password?</a>
+        <a routerLink="/login" style="margin-right: 20px">Forgot Password?</a>
       </div>
       <button md-raised-button color="accent" style="color:#fff" type="submit" [disabled]="!loginForm.valid">
           Log In

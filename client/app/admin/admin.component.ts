@@ -1,8 +1,16 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter, NgZone} from '@angular/core';
+import {MdSnackBar, MdSnackBarConfig} from '@angular/material';
 
-import { ToastComponent } from '../shared/toast/toast.component';
-import { AuthService } from '../services/auth.service';
-import { UserService } from '../services/user.service';
+import {SnackBarService} from '../services/snackbar.service';
+import {AuthService} from '../services/auth.service';
+import {UserService} from '../services/user.service';
+import {TopicsService} from '../services/topics.service';
+import {CategoryService} from '../services/category.service';
+import {MdDialog, MdDialogConfig, MdDialogRef} from '@angular/material';
+
+import {ViewCell, LocalDataSource} from 'ng2-smart-table';
+import {DialogEdit} from '../topics/manipulateTopics/manipulateDialog.component';
+
 
 @Component({
   selector: 'app-admin',
@@ -12,31 +20,230 @@ import { UserService } from '../services/user.service';
 })
 export class AdminComponent implements OnInit {
 
+  snackBarService = new SnackBarService(this.snackBar);
+
   users = [];
+  topics = [];
+  topic = {};
   isLoading = true;
+  isEditing_topics = false;
+  isEditing_users = true;
+  isEditing_topic = false;
+  dialogRef: MdDialogRef<any>;
+  categoriesAvailable = [];
+  source: LocalDataSource;
+
+  settings = {
+    columns: {
+      name: {
+        title: 'Name',
+        filter: false
+      },
+      surname: {
+        title: 'Surname',
+        filter: false
+      },
+      email: {
+        title: 'Email',
+        filter: false
+      },
+      role: {
+        title: 'Role',
+        filter: false
+      }
+    },
+    hideSubHeader: true,
+    edit: {
+      editButtonContent: `
+          <button md-button><i class="material-icons">edit</i></button>
+      `,
+      confirmSave: true,
+    },
+    delete: {
+      deleteButtonContent: `
+          <button md-button><i class="material-icons red600">delete</i></button>
+      `,
+      confirmDelete: true
+    },
+    actions: {
+      position: 'right',
+      add: false,
+      edit: true,
+      delete: true
+    }
+  };
 
   constructor(public auth: AuthService,
-              public toast: ToastComponent,
-              private userService: UserService) { }
+              public snackBar: MdSnackBar,
+              private userService: UserService,
+              private topicService: TopicsService,
+              private categoryService: CategoryService,
+              public dialogEdit: MdDialog,
+              private zone: NgZone) {
+    // listens on
+    this.userService.getUsers().subscribe((state) => {
+      this.zone.run(() => {
+        console.log('user source has been changed.');
+      });
+    });
+  }
 
   ngOnInit() {
     this.getUsers();
+    this.getTopics();
+    this.loadAvailableCategories();
   }
+
+  onDeleteConfirm(event) {
+    if (window.confirm('Are you sure you want to permanently delete ' + event.data.surname + ' ' + event.data.name)) {
+      event.confirm.resolve();
+      this.userService.deleteUser(event.data).subscribe(
+        data => {
+          this.snackBarService.createSnackBar(event.data.surname + ' ' + event.data.name + ' deleted successfully', true, 'Ok', '', 3000)
+        },
+        error => console.log(error)
+      );
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  onSaveConfirm(event) {
+    if (window.confirm('Are you sure you want to update ' + event.data.surname + ' ' + event.data.name)) {
+      event.confirm.resolve();
+      this.userService.editUser(event.newData).subscribe(
+        data => {
+          this.snackBarService.createSnackBar(event.newData.surname + ' ' + event.newData.name + ' updated successfully', true, 'Ok', '', 3000)
+        },
+        error => console.log(error)
+      );
+    } else {
+      event.confirm.reject();
+    }
+  }
+
 
   getUsers() {
     this.userService.getUsers().subscribe(
-      data => this.users = data,
+      data => {
+        this.users = data;
+        this.source = new LocalDataSource(data);
+      },
       error => console.log(error),
       () => this.isLoading = false
     );
   }
 
-  deleteUser(user) {
-    this.userService.deleteUser(user).subscribe(
-      data => this.toast.setMessage('user deleted successfully.', 'success'),
-      error => console.log(error),
-      () => this.getUsers()
+  deleteTopic(topic) {
+    if (window.confirm('Are you sure you want to permanently delete this item?')) {
+      this.topicService.deleteTopic(topic).subscribe(
+        res => {
+          const pos = this.topics.map(elem => elem._id).indexOf(topic._id);
+          this.topics.splice(pos, 1);
+          this.snackBarService.createSnackBar('Item deleted successfully', true, 'Ok', '', 3000)
+        },
+        error => console.log(error)
+      );
+    }
+  }
+
+  getTopics() {
+    this.topicService.getTopics().subscribe(
+      data => this.topics = data,
+      error => console.log(error)
     );
   }
 
+  editTopic(topic) {
+    this.topicService.editTopic(topic).subscribe(
+      res => {
+        this.isEditing_topic = false;
+        this.topic = topic;
+        this.snackBarService.createSnackBar('Item edited successfully', true, 'Ok', '', 3000)
+      },
+      error => console.log(error)
+    );
+  }
+
+  loadAvailableCategories() {
+    this.categoryService.getCategories().subscribe(
+      data => {
+        this.categoriesAvailable = data;
+      },
+      error => console.log(error),
+      () => console.log('categories loaded')
+    );
+  }
+
+  close_editing(form) {
+    if (form == 'user') {
+      this.isEditing_users = false;
+    } else {
+      this.isEditing_topics = false;
+    }
+  }
+
+  open_editing(form) {
+    if (form == 'user') {
+      this.isEditing_users = true;
+    } else {
+      this.isEditing_topics = true;
+    }
+  }
+
+  onSearch(query: string = '') {
+    if (query.length == 0) {
+      this.source.setFilter([]);
+    } else {
+      this.source.setFilter([
+        // fields we want to include in the search
+        {
+          field: 'name',
+          search: query
+        },
+        {
+          field: 'surname',
+          search: query
+        },
+        {
+          field: 'email',
+          search: query
+        },
+        {
+          field: 'role',
+          search: query
+        }
+      ], false);
+    }
+    // second parameter specifying whether to perform 'AND' or 'OR' search
+    // (meaning all columns should contain search query or at least one)
+    // 'AND' by default, so changing to 'OR' by setting false here
+  }
+
+
+  // Dialog for editing topics
+  open_edit_topic(del_topic) {
+    this.dialogRef = this.dialogEdit.open(dialogEdit);
+    this.isEditing_topic = true;
+    this.topic = del_topic;
+    this.dialogRef.componentInstance.dialog_topic = del_topic;
+    this.dialogRef.componentInstance.categoriesAvailable = this.categoriesAvailable;
+    this.dialogRef.componentInstance.topicCategories = del_topic.categories;
+
+    this.dialogRef.afterClosed().subscribe(
+      result => {
+        this.dialogRef = null;
+        if (!result) {
+          //this.cancelEditing_topic();
+          this.snackBarService.createSnackBar('Item canceled', true, 'Ok', '', 3000)
+        } else {
+          this.editTopic(result);
+          this.snackBarService.createSnackBar('Item edited successfully', true, 'Ok', '', 3000)
+        }
+      });
+  }
+
 }
+
+
+const dialogEdit = DialogEdit;

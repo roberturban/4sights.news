@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
 
+import { SnackBarService } from '../services/snackbar.service';
 import { AuthService } from '../services/auth.service';
-import { ToastComponent } from '../shared/toast/toast.component';
 
 @Component({
   selector: 'app-login',
@@ -12,17 +13,17 @@ import { ToastComponent } from '../shared/toast/toast.component';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup;
-  email = new FormControl('', [Validators.required,
-                                       Validators.minLength(3),
-                                       Validators.maxLength(100)]);
-  password = new FormControl('', [Validators.required,
-                                          Validators.minLength(6)]);
-
   constructor(private auth: AuthService,
               private formBuilder: FormBuilder,
               private router: Router,
-              public toast: ToastComponent) { }
+              public snackBar: MdSnackBar) { }
+
+  loginForm: FormGroup;
+  email = new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(100)]);
+  password = new FormControl('', [Validators.required, Validators.minLength(6)]);
+
+  // SnackBar config
+  snackBarService = new SnackBarService(this.snackBar);
 
   ngOnInit() {
     if (this.auth.loggedIn) {
@@ -36,8 +37,11 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.auth.login(this.loginForm.value).subscribe(
-      res => this.router.navigate(['/']),
-      error => this.toast.setMessage('invalid email or password!', 'danger')
+      res => {
+        this.router.navigate(['/']);
+        this.snackBarService.createSnackBar('Successfully logged in', false, '','', 1000)
+      },
+      error => this.snackBarService.createSnackBar('Invalid email or password', true, 'Ok','', 3000)
     );
   }
 

@@ -1,0 +1,47 @@
+<div class="manipulation-form" style="font-family:Roboto; !important" >
+    <div *ngIf="isLoadingTopic">Loading topic</div>
+    <div *ngIf="!isLoadingTopic">
+        <div class="header-title">Articles selected for this topic ({{topic.news_articles.length}})</div>
+        <div class="scrollable" style="max-height: 300px">
+            <table class="table">
+                <tr class="info" *ngFor="let article of topic.news_articles">
+                    <td><img class="icon" src="{{article.source.logoUrl}}"></td>
+                    <td>{{article.source.name}}</td>
+                    <td>{{article.title}}</td>
+                    <td>{{formatDate(article.published)}}</td>
+                    <!--<td><input type="checkbox" checked (change)="uncheck(article)"></td>-->
+                    <td><md-checkbox class="md-checkbox-small" [checked]="true" (change)="removeSelectedCheck(article, $event)"></md-checkbox></td>
+                    <td class="clickable-cell" (click)="moveup(article)">&#x25B2;</td>
+                    <td class="clickable-cell" (click)="movedown(article)">&#x25BC;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div *ngIf="isLoadingArticles">Loading articles</div>
+    <div *ngIf="!isLoadingArticles">
+        <div class="header-title">Articles available ({{all_articles.length}})</div>
+        <div class="info cards infoBox" *ngIf="!isLoadingArticles"> <!--TODO: why does flex layout not work here?-->
+            <div>Articles from already selected sources are hidden: </div>
+            <div *ngFor="let article of topic.news_articles">"{{article.source.name}}" </div>
+        </div>
+        <form class="form-inner">
+            <div class="input-container">
+            <md-input-container class="input-full-width">
+                <input mdInput class="input-full-width"  type="text" name="searchterm" [(ngModel)]="searchterm" placeholder="Search">
+            </md-input-container>
+            </div>
+        </form>
+        <div class="scrollable" style="height: 300px;">
+            <table class="table">
+                <tr class="info" *ngFor="let article of all_articles | filterArticles:searchterm:topic.news_articles">
+                    <td><img class="icon" src="{{article.source.logoUrl}}"></td>
+                    <td>{{article.source.name}}</td>
+                    <td>{{article.title}}</td>
+                    <td>{{formatDate(article.published)}}</td>
+                    <!--<td><input type="checkbox" (change)="check(article)"></td>-->
+                    <td><md-checkbox class="md-checkbox-small" [checked]="false" (change)="addSelectedCheck(article, $event)"></md-checkbox></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

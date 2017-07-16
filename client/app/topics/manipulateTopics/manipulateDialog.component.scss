@@ -1,3 +1,17 @@
+.checkboxes{
+  padding-top: 10px;
+}
+
+.custom-overlay-panel-class{
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.image-box{
+  width: 100%;
+  margin: 0px 20px;
+}
+
 .manipulation-form{
   width: 45em;
   margin-top:10px;
@@ -5,6 +19,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+}
+
+.header-title{
+  width: 100%;
+  margin: 30px 0 0 0;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
 }
 
 .form-inner{
@@ -32,11 +55,19 @@
   padding-bottom: 6px;
 }
 
+.titleimage {
+  width:100%;
+  object-fit: cover;
+  max-height: 300px;
+  margin: 20px 0px;
+}
 
 .bottom-row{
   margin-top:20px;
+  margin-bottom: 20px;
   flex-direction: row;
   align-items: flex-end;
+  float:right;
 }
 
 md-error{

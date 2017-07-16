@@ -1,0 +1,155 @@
+[{
+	"_id": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"name": "Washington Post",
+	"logoUrl": "assets/img/logo_washington_post.jpg",
+	"homepage": "https://www.washingtonpost.com"
+},
+{
+	"_id": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"name": "The New York Times",
+	"logoUrl": "assets/img/logo_nyt.jpg",
+	"homepage": "https://www.nytimes.com"
+},
+{
+	"_id": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"name": "The Hindu",
+	"logoUrl": "assets/img/logo_hindu.jpg",
+	"homepage": "http://www.thehindu.com"
+},
+{
+	"_id": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"name": "Times of India",
+	"logoUrl": "assets/img/logo_times_india.png",
+	"homepage": "http://timesofindia.indiatimes.com"
+},
+{
+	"_id": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"name": "BBC",
+	"logoUrl": "assets/img/logo_bbc.gif",
+	"homepage": "http://www.bbc.com"
+},
+{
+	"_id": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"name": "CNN",
+	"logoUrl": "assets/img/logo_cnn.png",
+	"homepage": "http://edition.cnn.com"
+},
+{
+	"_id": {
+		"$oid": "59539457d8b18b5d02211ef8"
+	},
+	"name": "Breitbart",
+	"logoUrl": "assets/img/logo_breitbart.jpg",
+	"homepage": "http://www.breitbart.com"
+},
+{
+	"_id": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"name": "Aljazeera",
+	"logoUrl": "assets/img/logo_aljazeera.jpg",
+	"homepage": "http://www.aljazeera.net/portal"
+},
+{
+	"_id": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"name": "ABC News",
+	"logoUrl": "assets/img/abc-news.jpg",
+	"homepage": "http://www.abc.net.au/news/",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"name": "ARS Technica",
+	"logoUrl": "assets/img/ars-technica.png",
+	"homepage": "https://arstechnica.com",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"name": "BBC Sport",
+	"logoUrl": "assets/img/bbc-sport.jpg",
+	"homepage": "http://www.bbc.com/sport",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"name": "Bloomberg",
+	"logoUrl": "assets/img/bloomberg.png",
+	"homepage": "http://bloomberg.com",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"name": "Bussiness Insider",
+	"logoUrl": "assets/img/business-insider.png",
+	"homepage": "http://www.businessinsider.de",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596615f258b3661f80fbdce3"
+	},
+	"name": "Engadget",
+	"logoUrl": "assets/img/engadget.png",
+	"homepage": "https://www.engadget.com",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"name": "Financial Times",
+	"logoUrl": "assets/img/financial-times.jpg",
+	"homepage": "https://www.ft.com/",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596617073102961fc6756b98"
+	},
+	"name": "TechCrunch",
+	"logoUrl": "assets/img/techcrunch.jpg",
+	"homepage": "https://techcrunch.com",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596617cf8ca2f61ff42816e9"
+	},
+	"name": "Economist",
+	"logoUrl": "assets/img/economist.jpg",
+	"homepage": "https://techcrunch.com",
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"name": "The Verge",
+	"logoUrl": "assets/img/the_verge.jpeg",
+	"homepage": "https://www.theverge.com",
+	"__v": 0
+}]
+

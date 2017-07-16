@@ -1,4 +1,4 @@
-<div class="app">
+<div class="app" style="">
 
   <md-toolbar class="custom-toolbar">
     <button class="app-icon-button" style="background:none;border:none;padding: 0px 0px;" routerLink="/topics">
@@ -6,7 +6,7 @@
     </button>
 
     <span class="fill-remaining-space"></span>
-    <button md-button routerLink="/register" routerLinkActive="active" *ngIf="!auth.loggedIn" >Register</button>
+    <button md-button routerLink="/register" routerLinkActive="active" *ngIf="!auth.loggedIn">Register</button>
     <button md-button routerLink="/login" routerLinkActive="active" *ngIf="!auth.loggedIn">Login</button>
     <button md-button routerLink="/admin" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
       <i class="material-icons">perm_identity</i>
@@ -14,11 +14,33 @@
     <button md-button routerLink="/account" routerLinkActive="active" *ngIf="auth.loggedIn">
       Account
     </button>
-    <button md-button routerLink="/logout" routerLinkActive="active" *ngIf="auth.loggedIn">
+    <button md-button (click)="logout()" *ngIf="auth.loggedIn">
       <i class="material-icons">lock_outline</i>
     </button>
   </md-toolbar>
 
-  <router-outlet></router-outlet>
+  <div style="flex:1">
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer>
+    <md-toolbar class="license-footer">
+        <span class="footer-sub">
+
+          <p style="margin-left: 5px"> Made with <i style="font-size:12px; color: #f2545b;" class="material-icons">favorite</i> at TUM </p>
+        </span>
+        <span class="fill-remaining-space"></span>
+        <span class="footer-sub">
+          <i stlye="font-size:12px" class="material-icons">&#xE90C;</i>
+          <p style="margin-left: 5px">
+            <a style="color: #19323c !important; text-decoration:none" href="http://github.com/thebong91">thebong</a>,
+            <a style="color: #19323c !important; text-decoration:none" href="http://github.com/atlan14">atlan14</a>,
+            <a style="color: #19323c !important; text-decoration:none" href="http://github.com/arubacao">arubacao</a>,
+            <a style="color: #19323c !important; text-decoration:none" href="http://github.com/sosvmon">sosvmon</a>
+        </p>
+        </span>
+
+    </md-toolbar>
+  </footer>
 
 </div>
