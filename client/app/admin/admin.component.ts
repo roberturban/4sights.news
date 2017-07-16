@@ -71,6 +71,12 @@ export class AdminComponent implements OnInit {
       }
     },
     hideSubHeader: true,
+    edit: {
+      editButtonContent: `
+          <button md-button><i class="material-icons">edit</i></button>
+      `,
+      confirmSave: true,
+    },
     delete: {
       deleteButtonContent: `
           <button md-button><i class="material-icons red600">delete</i></button>
@@ -80,7 +86,7 @@ export class AdminComponent implements OnInit {
     actions: {
       position: 'right',
       add: false,
-      edit: false,
+      edit: true,
       delete: true
     }
   };
@@ -91,6 +97,20 @@ export class AdminComponent implements OnInit {
       this.userService.deleteUser(event.data).subscribe(
         data => {
           this.snackBarService.createSnackBar(event.data.surname + ' ' + event.data.name + ' deleted successfully', true, 'Ok', '', 3000)
+        },
+        error => console.log(error)
+      );
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  onSaveConfirm(event) {
+    if (window.confirm('Are you sure you want to update ' + event.data.surname + ' ' + event.data.name)) {
+      event.confirm.resolve();
+      this.userService.editUser(event.newData).subscribe(
+        data => {
+          this.snackBarService.createSnackBar(event.newData.surname + ' ' + event.newData.name + ' updated successfully', true, 'Ok', '', 3000)
         },
         error => console.log(error)
       );
