@@ -9,7 +9,7 @@
     <button md-button routerLink="/register" routerLinkActive="active" *ngIf="!auth.loggedIn">Register</button>
     <button md-button routerLink="/login" routerLinkActive="active" *ngIf="!auth.loggedIn">Login</button>
     <button md-button routerLink="/admin" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
-      <i class="material-icons">perm_identity</i>
+      <i class="material-icons">settings</i>
     </button>
     <button md-button routerLink="/account" routerLinkActive="active" *ngIf="auth.loggedIn">
       Account
