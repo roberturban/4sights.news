@@ -40,13 +40,6 @@
       </md-error>
     </div>
 
-    <div class="input-container">
-      <md-select class="input-full-width special-input-wrapper" name="role" formControlName="role" placeholder="Role" required>
-        <md-option value="" selected disabled>Role</md-option>
-        <md-option value="user">User</md-option>
-        <md-option value="admin">Admin</md-option>
-      </md-select>
-    </div>
     <label style="margin-bottom:15px"> Follow your categories: </label>
     <div class="checkboxes">
       <md-checkbox class="single_box" *ngFor="let category of categoriesMap" formControlName="categories" (change)="updateCheckedOptions(category, $event)" required>{{category.category.name}}</md-checkbox>
