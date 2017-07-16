@@ -1,23 +1,5 @@
 [{
 	"_id": {
-		"$oid": "5946967147fbb80b00a7d744"
-	},
-	"title": "Trump says he is being investigated over Comey firing",
-	"timestamp": {
-		"$date": "2017-06-18T00:00:00.000Z"
-	},
-	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170616110924-trump-confirm-obstruction-investigation-jones-nr-00002505-exlarge-169.jpg",
-	"news_article_count": 5,
-	"location": "Washington, USA",
-	"categories": [
-		{
-			"$oid": "5946923f73f7de4aa41ae512"
-		}
-	],
-	"__v": 0
-},
-{
-	"_id": {
 		"$oid": "5946967147fbb80b00a7d745"
 	},
 	"title": "Resedential tower in London on fire",
@@ -212,27 +194,6 @@
 			"$oid": "596baa6e16918044e4aaa013"
 		}
 	]
-},
-{
-	"_id": {
-		"$oid": "5946967147fbb80b00a7d752"
-	},
-	"title": "Google releases new TensorFlow Object Detection API",
-	"timestamp": {
-		"$date": "2017-06-18T00:00:00.000Z"
-	},
-	"image": "https://tctechcrunch2011.files.wordpress.com/2017/06/image1.jpg",
-	"news_article_count": 5,
-	"location": "San Fransisco, USA",
-	"categories": [
-		{
-			"$oid": "5946923f73f7de4aa41ae514"
-		},
-		{
-			"$oid": "5946923f73f7de4aa41ae518"
-		}
-	],
-	"__v": 0
 },
 {
 	"_id": {
