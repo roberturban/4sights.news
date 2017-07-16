@@ -280,9 +280,6 @@
 			"$oid": "5965e49adc10940b1fe2f0d7"
 		},
 		{
-			"$oid": "5965e49adc10940b1fe2f0f0"
-		},
-		{
 			"$oid": "5965e49adc10940b1fe2f0e2"
 		},
 		{
@@ -290,6 +287,9 @@
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f112"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0f0"
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f0d8"
@@ -333,9 +333,6 @@
 			"$oid": "5965e49adc10940b1fe2f0da"
 		},
 		{
-			"$oid": "5965e49adc10940b1fe2f0ef"
-		},
-		{
 			"$oid": "5965e49adc10940b1fe2f0e3"
 		},
 		{
@@ -343,6 +340,9 @@
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f103"
+		},
+		{
+			"$oid": "5965e49adc10940b1fe2f0ef"
 		},
 		{
 			"$oid": "5965e49adc10940b1fe2f0d9"
@@ -471,6 +471,164 @@
 	"categories": [
 		{
 			"$oid": "5946923f73f7de4aa41ae514"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596babdbec27844549ec3680"
+	},
+	"title": "New Health-Care Law lacks Votes",
+	"timestamp": {
+		"$date": "2017-07-16T18:06:59.065Z"
+	},
+	"image": "http://g8fip1kplyr33r3krz5b97d1.wpengine.netdna-cdn.com/wp-content/uploads/2017/03/GettyImages-649341364-714x476.jpg",
+	"news_article_count": 6,
+	"location": "Washington, USA",
+	"news_articles": [
+		{
+			"$oid": "595f47820a92730f0a8db490"
+		},
+		{
+			"$oid": "5968d2a83de1741f64189555"
+		},
+		{
+			"$oid": "5968d2a83de1741f6418955c"
+		},
+		{
+			"$oid": "5968d2a93de1741f641895e8"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac1a"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac7b"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae513"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae516"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596bad65ec27844549ec3681"
+	},
+	"title": "Human Rights Activist Liu Xiaobo dies",
+	"timestamp": {
+		"$date": "2017-07-16T18:12:17.241Z"
+	},
+	"image": "http://static6.businessinsider.com/image/54d2a19a6da811852ad7885d-2200-1589/liuxiaobo2.jpg",
+	"news_article_count": 4,
+	"location": "China",
+	"news_articles": [
+		{
+			"$oid": "5968d2a83de1741f64189582"
+		},
+		{
+			"$oid": "5968d2a83de1741f641895b9"
+		},
+		{
+			"$oid": "5968d2a93de1741f641895e4"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac10"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596bae10ec27844549ec3682"
+	},
+	"title": "Ambiguities in Trump's Travel Ban",
+	"timestamp": {
+		"$date": "2017-07-16T18:16:33.956Z"
+	},
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170129105148-donald-trump-extreme-vetting-executive-order-01-27-2017-large-169.jpg",
+	"news_article_count": 4,
+	"location": "Washington, USA",
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaac7e"
+		},
+		{
+			"$oid": "595f47820a92730f0a8db497"
+		},
+		{
+			"$oid": "5968d2a83de1741f641895aa"
+		},
+		{
+			"$oid": "5968d2a83de1741f641895c7"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596bb063ec27844549ec3683"
+	},
+	"title": "Trump and Macron meet in Paris",
+	"timestamp": {
+		"$date": "2017-07-15T22:00:00.000Z"
+	},
+	"image": "https://image.stern.de/7537764/16x9-1200-675/aea6a7104ce83926ee59bb4fcbb62155/oU/trump-macron-fauxpas.jpg",
+	"news_article_count": 6,
+	"location": "Paris, FR",
+	"news_articles": [
+		{
+			"$oid": "5968d2a83de1741f64189562"
+		},
+		{
+			"$oid": "5968d2a83de1741f64189553"
+		},
+		{
+			"$oid": "5968d2a83de1741f641895c5"
+		},
+		{
+			"$oid": "5968d2a93de1741f641895e2"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac31"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaac39"
+		}
+	],
+	"categories": [
+		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
+			"$oid": "5946923f73f7de4aa41ae517"
 		}
 	],
 	"__v": 0
