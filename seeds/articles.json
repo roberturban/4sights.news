@@ -9743,5 +9743,165 @@
 		"$oid": "596617cf8ca2f61ff42816e9"
 	},
 	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa000"
+	},
+	"title": "Macron wins presidency as France rejects Le Pen and her right-wing populist tide",
+	"description": "Centrist Emmanuel Macron has won the French presidency. He defeated Marine Le Pen, the leader of France’s far-right National Front, a strongly anti-immigrant populist party.",
+	"image": "https://img.washingtonpost.com/wp-apps/imrs.php?src=http://s3.amazonaws.com/posttv-thumbnails-prod/05-07-2017/t_1494176178181_name_macron.jpg\u0026w=800\u0026h=450",
+	"url": "https://www.washingtonpost.com/world/europe/with-europe-on-the-line-polarized-french-voters-choose-between-macron-and-le-pen/2017/05/07/ccf8e5e2-31d9-11e7-9534-00e4656c22aa_story.html?utm_term=.e4ae74a31f25",
+	"author": "Washington Post",
+	"published": {
+		"$date": "2017-06-12T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d747"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa001"
+	},
+	"title": "Emmanuel Macron’s Party and Allies Win Big in France",
+	"description": "President Emmanuel Macron of France won a crucial stamp of approval on Sunday as voters gave him and his allies a decisive majority in parliamentary elections, but a record-low turnout cast a shadow over his victory, pointing to the hurdles he will face as he seeks to revive the country’s economy and confidence.",
+	"image": "https://static01.nyt.com/images/2017/06/18/world/europe/france-img/france-img-superJumbo.jpg",
+	"url": "https://www.nytimes.com/2017/06/18/world/europe/france-parliament-elections-emmanuel-macron.html",
+	"author": "NYT",
+	"published": {
+		"$date": "2017-06-12T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d747"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa002"
+	},
+	"title": "France polls: Macron's party wins clear parliamentary majority",
+	"description": "French President Emmanuel Macron's party has won a clear parliamentary majority, results show, weeks after his own presidential victory.",
+	"image": "https://ichef-1.bbci.co.uk/news/660/cpsprodpb/1CF6/production/_96541470_hi040117934.jpg",
+	"url": "http://www.bbc.com/news/world-europe-40322140",
+	"author": "BBC",
+	"published": {
+		"$date": "2017-06-12T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d747"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa003"
+	},
+	"title": "Macron's party on course for historic gains in French parliamentary election",
+	"description": "Emmanuel Macron's centrist La Republique En Marche is projected to win a huge majority in the French Parliament after a strong showing in Sunday's first round of voting.",
+	"image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170507180300-macron-win---1-exlarge-169.jpg",
+	"url": "http://edition.cnn.com/2017/06/11/europe/french-parliament-election-macron/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-12T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d747"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa004"
+	},
+	"title": "Amazon is buying Whole Foods for $13.7 billion",
+	"description": "Amazon is making a big bet on physical stores and the business of food.",
+	"image": "http://i2.cdn.turner.com/money/dam/assets/170616141515-amazon-whole-foods-jeff-bezos-grocery-brick-and-mortar-00001001-1024x576.jpg",
+	"url": "http://money.cnn.com/2017/06/16/investing/amazon-buying-whole-foods/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-16T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d749"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa005"
+	},
+	"title": "Amazon to Acquire Whole Foods for $13.7 Billion",
+	"description": "Amazon.com Inc. will acquire Whole Foods Market Inc. for $13.7 billion, a bombshell of a deal that catapults the e-commerce giant into hundreds of physical stores and fulfills a long-held goal of selling more groceries.",
+	"image": "http://i2.cdn.turner.com/money/dam/assets/170616141515-amazon-whole-foods-jeff-bezos-grocery-brick-and-mortar-00001001-1024x576.jpg",
+	"url": "https://www.bloomberg.com/news/articles/2017-06-16/amazon-to-acquire-whole-foods-in-13-7-billion-bet-on-groceries",
+	"author": "Bloomberg",
+	"published": {
+		"$date": "2017-06-16T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596614efbff2981f0fcf0a34"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d749"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa006"
+	},
+	"title": "Why Amazon is buying Whole Foods",
+	"description": "Amazon swooped in to buy the high-end grocer Whole Foods on Friday, paying $13.7 billion, or $42 a share — a healthy 27% premium on the previous day's closing price.",
+	"image": "http://static1.businessinsider.de/image/594409575d3e4e04aa3187d2-2400/amazonfresh.jpg",
+	"url": "http://www.businessinsider.de/why-amazon-is-buying-whole-foods-2017-6?r=US\u0026IR=T",
+	"author": "Business Insider",
+	"published": {
+		"$date": "2017-06-16T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966155c5a2a0d1f3f48d0a0"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d749"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa007"
+	},
+	"title": "Whole Foods’ Mackey reveals softer side in Amazon courtship",
+	"description": "John Mackey, the outspoken founder of Whole Foods Market who recently called an activist investor a “greedy bastard”, has revealed his softer side by describing the “blind date” that led to Amazon’s $13.7bn bid for the upmarket grocer as “love at first sight”.",
+	"image": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Ff47bed2e-51c5-11e7-a1f2-db19572361bb?source=next\u0026fit=scale-down\u0026width=700",
+	"url": "https://www.ft.com/content/b1b6b448-5548-11e7-9fed-c19e2700005f?mhq5j=e1",
+	"author": "FT",
+	"published": {
+		"$date": "2017-06-16T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d749"
+	}
 }]
 

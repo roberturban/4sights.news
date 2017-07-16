@@ -58,17 +58,34 @@
 	},
 	"title": "La République en Marche wins election in France",
 	"timestamp": {
-		"$date": "2017-06-18T00:00:00.000Z"
+		"$date": "2017-06-17T22:00:00.000Z"
 	},
 	"image": "https://ichef.bbci.co.uk/news/660/cpsprodpb/3C36/production/_96441451_039995603.jpg",
 	"news_article_count": 5,
 	"location": "Paris, FR",
 	"categories": [
 		{
+			"$oid": "5946923f73f7de4aa41ae512"
+		},
+		{
 			"$oid": "5946923f73f7de4aa41ae513"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa000"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa002"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa001"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa003"
+		}
+	]
 },
 {
 	"_id": {
@@ -92,11 +109,11 @@
 	"_id": {
 		"$oid": "5946967147fbb80b00a7d749"
 	},
-	"title": "Amazon aquires WholeFoods",
+	"title": "Amazon acquires WholeFoods",
 	"timestamp": {
-		"$date": "2017-06-17T00:00:00.000Z"
+		"$date": "2017-06-16T22:00:00.000Z"
 	},
-	"image": "http://bilder.bild.de/fotos-skaliert/whole-foods-wird-noch-in-diesem-jahr-von-amazon-uebernommen-200419390-52218066/2,w=993,q=high,c=0.bild.jpg",
+	"image": "http://i2.cdn.turner.com/money/dam/assets/170616141515-amazon-whole-foods-jeff-bezos-grocery-brick-and-mortar-00001001-1024x576.jpg",
 	"news_article_count": 5,
 	"location": "Seatle, USA",
 	"categories": [
@@ -110,7 +127,21 @@
 			"$oid": "5946923f73f7de4aa41ae516"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa004"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa007"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa005"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa006"
+		}
+	]
 },
 {
 	"_id": {
