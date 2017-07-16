@@ -10231,5 +10231,116 @@
 	"topic": {
 		"$oid": "5946967147fbb80b00a7d746"
 	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa025"
+	},
+	"title": "Warriors Win N.B.A. Title, Avenging Themselves Against the Cavaliers",
+	"description": "The Golden State Warriors will forever be known as one of the most talented teams in the history of the N.B.A., along with a hefty set of other superlatives: most dominant, most dazzling, most adept at hitting shots from distant galaxies.",
+	"url": "https://www.nytimes.com/2017/06/13/sports/golden-state-warriors-win-nba-championship.html",
+	"author": "NYT",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa026"
+	},
+	"title": "NBA Finals: Golden State Warriors beat Cleveland Cavaliers in game two",
+	"description": "Golden State Warriors took a 2-0 lead in the NBA Finals with a dominant 132-113 victory over Cleveland Cavaliers.",
+	"url": "http://www.bbc.com/sport/basketball/40156419",
+	"author": "BBC Sport",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596614646d6bfa1edd02c613"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa027"
+	},
+	"title": "Warriors dethrone Cavaliers for second title in three years",
+	"description": "The Golden State Warriors celebrate with the Larry O'Brien Championship Trophy after winning Game 5 of the NBA Finals on Monday, June 12. Golden State won 129-120 to collect its secont title in three years",
+	"url": "http://edition.cnn.com/2017/06/12/us/2017-nba-finals-game-5-cavaliers-warriors/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa028"
+	},
+	"title": "Golden State Warriors Are Closing In on History",
+	"description": "With a 118-113 N.B.A. finals Game 3 victory over the Cleveland Cavaliers Wednesday night, the Golden State Warriors closed in on the N.B.A. championship.",
+	"url": "https://www.nytimes.com/2017/06/09/sports/basketball/golden-state-warriors-nba-finals.html",
+	"author": "NYT",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa029"
+	},
+	"title": "The Warriors are making the NBA Finals noncompetitive. That’s scary for the league.",
+	"description": "There is a sign posted on the wall inside the Golden State Warriors locker room, high above the corner stall belonging to Kevin Durant. It keeps with the tradition of cheesy team slogans, meant to convey the importance of the group above all else.",
+	"url": "https://www.washingtonpost.com/news/sports/wp/2017/06/05/the-warriors-are-making-the-nba-finals-non-competitive-thats-scary-for-the-league/?utm_term=.7740f5e06941",
+	"author": "Washington Post",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa030"
+	},
+	"title": "NBA Finals: Golden State Warriors beat Cleveland Cavaliers to clinch fifth title",
+	"description": "The Golden State Warriors have surged past the Cleveland Cavaliers to clinch a fifth NBA championship.",
+	"url": "http://www.abc.net.au/news/2017-06-13/golden-state-warriors-win-nba-title-beating-cleveland-cavaliers/8613544",
+	"author": "ABC",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966137af566b21e958fcc60"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d755"
+	}
 }]
 

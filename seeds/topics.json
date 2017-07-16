@@ -274,7 +274,7 @@
 	},
 	"title": "Golden State Warriors win NBA",
 	"timestamp": {
-		"$date": "2017-06-14T00:00:00.000Z"
+		"$date": "2017-06-13T22:00:00.000Z"
 	},
 	"image": "http://media.philstar.com/images/the-philippine-star/sports/20150617/warriors-win-nba-title.jpg",
 	"news_article_count": 5,
@@ -284,7 +284,24 @@
 			"$oid": "5946923f73f7de4aa41ae515"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa026"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa029"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa030"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa028"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa027"
+		}
+	]
 },
 {
 	"_id": {
