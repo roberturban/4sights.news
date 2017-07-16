@@ -261,20 +261,34 @@
 	},
 	"title": "Internet censorship is rising in India",
 	"timestamp": {
-		"$date": "2017-06-16T00:00:00.000Z"
+		"$date": "2017-06-15T22:00:00.000Z"
 	},
 	"image": "http://s.wsj.net/public/resources/images/OB-UK945_ificci_G_20120905052355.jpg",
 	"news_article_count": 5,
 	"location": "New Delhi, India",
 	"categories": [
 		{
-			"$oid": "5946923f73f7de4aa41ae517"
+			"$oid": "5946923f73f7de4aa41ae513"
 		},
 		{
-			"$oid": "5946923f73f7de4aa41ae513"
+			"$oid": "5946923f73f7de4aa41ae517"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa017"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa019"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa016"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa018"
+		}
+	]
 },
 {
 	"_id": {

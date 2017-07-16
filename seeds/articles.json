@@ -10060,5 +10060,81 @@
 	"topic": {
 		"$oid": "5946967147fbb80b00a7d751"
 	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa016"
+	},
+	"title": "Internet freedom in India improves slightly",
+	"description": "India is only “partly free” with a rank of 30 out of 65 countries in Internet freedom but as of May this year, it has improved its score, a new report says.",
+	"url": "http://www.thehindu.com/sci-tech/technology/internet-freedom-in-india-improves-slightly/article6662477.ece",
+	"author": "The Hindu",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d754"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa017"
+	},
+	"title": "Internet censorship in India is on the rise",
+	"description": "The nation has shut down the internet in various regions 20 times in the first five months of this year, according to a report from Human Rights Watch. Four of those blackouts have taken place this month, all in states where violent protests took place.",
+	"url": "http://money.cnn.com/2017/06/16/technology/internet-censorship-india-human-rights-watch/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d754"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa018"
+	},
+	"title": "Mind your netiquette, or we'll mind it for you",
+	"description": "IN NOVEMBER, Pakistan's telecoms regulator gave its staff a rather unusual yet entertaining assignment: to draw up a list of undesirable words in Urdu and English which would later be blocked from offensive text messages.",
+	"url": "https://www.economist.com/blogs/babbage/2011/12/web-censorship-india",
+	"author": "Economist",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596617cf8ca2f61ff42816e9"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d754"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa019"
+	},
+	"title": "Criticism mounts over India censorship",
+	"description": "India’s government is facing fierce criticism from privacy groups, political opponents and irate internet users accusing it of an excessive and poorly targeted censorship drive as it seeks to contain social alarm triggered by communal unrest.",
+	"url": "https://www.ft.com/content/7660233c-ede4-11e1-a9d7-00144feab49a?mhq5j=e1",
+	"author": "Financial Times",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d754"
+	}
 }]
 
