@@ -19,7 +19,7 @@
     <md-toolbar style="background:white; display: block; overflow: auto">Registered users ({{users.length}})</md-toolbar>
     <input #search class="search-bar" type="text" placeholder="Search..." (keyup)="onSearch(search.value)" style="margin: 10px">
     <div style="width:100%; overflow: auto; display:block; margin-bottom: 20px;">
-      <ng2-smart-table [settings]="settings" [source]="source" class="smart-table"></ng2-smart-table>
+      <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)" class="smart-table"></ng2-smart-table>
     </div>
 </div>
 

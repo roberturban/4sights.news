@@ -52,39 +52,52 @@ export class AdminComponent implements OnInit {
 
   //user table settings
   settings = {
-      columns: {
-        name: {
-          title: 'Name',
-          filter: false
-        },
-        surname: {
-          title: 'Surname',
-          filter: false
-        },
-        email: {
-          title: 'Email',
-          filter: false
-        },
-        role: {
-          title: 'Role',
-          filter: false
-        },
-        button: {
-          title: 'Delete',
-          type: 'custom',
-          filter: false,
-          class: 'custom-button',
-          renderComponent: ButtonViewComponent
-        }
-       },
-       hideSubHeader: true,
-       actions:{
-         add: false,
-         edit: false,
-         delete: false
-       }
+    columns: {
+      name: {
+        title: 'Name',
+        filter: false
+      },
+      surname: {
+        title: 'Surname',
+        filter: false
+      },
+      email: {
+        title: 'Email',
+        filter: false
+      },
+      role: {
+        title: 'Role',
+        filter: false
+      }
+    },
+    hideSubHeader: true,
+    delete: {
+      deleteButtonContent: `
+          <button md-button><i class="material-icons red600">delete</i></button>
+      `,
+      confirmDelete: true
+    },
+    actions: {
+      position: 'right',
+      add: false,
+      edit: false,
+      delete: true
+    }
   };
 
+  onDeleteConfirm(event) {
+    if (window.confirm('Are you sure you want to permanently delete ' + event.data.surname + ' ' + event.data.name)) {
+      event.confirm.resolve();
+      this.userService.deleteUser(event.data).subscribe(
+        data => {
+          this.snackBarService.createSnackBar(event.data.surname + ' ' + event.data.name + ' deleted successfully', true, 'Ok', '', 3000)
+        },
+        error => console.log(error)
+      );
+    } else {
+      event.confirm.reject();
+    }
+  }
 
 
   ngOnInit() {
@@ -96,8 +109,8 @@ export class AdminComponent implements OnInit {
   getUsers() {
     this.userService.getUsers().subscribe(
       data => {
-        this.users = data,
-        this.source = new LocalDataSource(this.users)
+        this.users = data;
+        this.source = new LocalDataSource(data);
       },
       error => console.log(error),
       () => this.isLoading = false
@@ -216,49 +229,3 @@ export class AdminComponent implements OnInit {
 
 
 const dialogEdit = DialogEdit;
-
-
-
-@Component({
-  selector: 'button-view',
-  template: `
-    <button md-button (click)="onClick()" [disabled]="auth.currentUser._id === rowData._id">
-                      <i class="material-icons">delete</i>
-    </button>
-  `,
-})
-export class ButtonViewComponent implements ViewCell, OnInit {
-  renderValue: string;
-
-  @Input() value: string | number;
-  @Input() rowData: any;
-
-  constructor(
-    public userService: UserService,
-    public snackBar: MdSnackBar,
-    public admin: AdminComponent,
-    public auth: AuthService){}
-
-  // SnackBar config
-  snackBarService = new SnackBarService(this.snackBar);
-
-  ngOnInit() {
-    this.renderValue = this.value.toString().toUpperCase();
-  }
-
-  onClick() {
-    this.deleteUser(this.rowData);
-  }
-
-  deleteUser(user) {
-      if (window.confirm('Are you sure you want to permanently delete this user?')) {
-        this.userService.deleteUser(user).subscribe(
-          data => {
-            this.snackBarService.createSnackBar('User deleted successfully', true, 'Ok','', 3000)
-            this.admin.getUsers()
-        },
-          error => console.log(error)
-        );
-      }
-  }
-}
