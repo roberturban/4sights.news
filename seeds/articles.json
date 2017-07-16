@@ -10136,5 +10136,100 @@
 	"topic": {
 		"$oid": "5946967147fbb80b00a7d754"
 	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa020"
+	},
+	"title": "Helmut Kohl, German statesman who united his country after Cold War, dies at 87",
+	"description": "Helmut Kohl, the West German political leader who became an unlikely international statesman when he helped unite communist East Germany with the West after the fall of the Berlin Wall in 1989 and served as chancellor of a unified Germany for much of the 1990s, died June 16 at his home in Ludwigshafen.",
+	"url": "https://www.washingtonpost.com/local/obituaries/helmut-kohl-german-statesman-who-united-his-country-after-cold-war-dies-at-87/2017/06/16/873ee8ea-52a8-11e7-91eb-9611861a988f_story.html?utm_term=.b15580d90414",
+	"author": "Washtington Post",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "595393ffd8b18b5d02211ef2"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa021"
+	},
+	"title": "Ex-German Chancellor Helmut Kohl dies aged 87",
+	"description": "Germany's longest-serving post-war chancellor, from 1982 to 1998, was credited with German reunification.",
+	"url": "http://www.aljazeera.com/news/2017/06/german-chancellor-helmut-kohl-dies-aged-87-170616154051147.html",
+	"author": "Aljazeera",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539462d8b18b5d02211ef9"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa022"
+	},
+	"title": "Former German Chancellor Helmut Kohl dies",
+	"description": "German statesman Helmut Kohl, the architect of German reunification after the end of the Cold War, has died, his Christian Democratic Union party announced Friday. He was 87.",
+	"url": "http://edition.cnn.com/2017/06/16/europe/obit-helmut-kohl/index.html",
+	"author": "CNN",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953943fd8b18b5d02211ef7"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa023"
+	},
+	"title": "German reunification architect Helmut Kohl dies at 87",
+	"description": "Kohl led Germany for 16 years (from 1982 to 1998). He is credited with bringing East and West Germany together after the fall of the Berlin Wall.",
+	"url": "http://www.bbc.com/news/world-europe-40307918",
+	"author": "BBC",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa024"
+	},
+	"title": "Former German chancellor Helmut Kohl dies aged 87",
+	"description": "Former chancellor Helmut Kohl, who presided over Germany’s reunification at the end of the Cold War, has died at the age of 87.",
+	"url": "https://www.ft.com/content/703eaf54-52a8-11e7-a1f2-db19572361bb?mhq5j=e1",
+	"author": "Financial Times",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5966167f5534f01f952f7454"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d746"
+	}
 }]
 

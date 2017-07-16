@@ -22,7 +22,7 @@
 	},
 	"title": "Helmut Kohl dies at age of 87",
 	"timestamp": {
-		"$date": "2017-06-15T00:00:00.000Z"
+		"$date": "2017-06-14T22:00:00.000Z"
 	},
 	"image": "http://schmid.welt.de/files/2014/10/dpa1992-2.jpg",
 	"news_article_count": 5,
@@ -32,7 +32,24 @@
 			"$oid": "5946923f73f7de4aa41ae517"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa020"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa021"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa022"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa023"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa024"
+		}
+	]
 },
 {
 	"_id": {
