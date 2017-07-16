@@ -47,7 +47,7 @@ export default class UserCtrl extends BaseController {
   // Insert
   insert = (req, res) => {
     const obj = new this.model(req.body);
-    obj.save((err, user) => {
+    obj.save((err, savedUser) => {
       // 11000 is the code for duplicate key error
       if (err && err.code === 11000) {
         res.sendStatus(400);
@@ -55,9 +55,11 @@ export default class UserCtrl extends BaseController {
       if (err) {
         return console.error(err);
       }
-      user = user.toJSON();
-      user.token = jwt.sign({user: user}, process.env.SECRET_TOKEN);
-      res.status(200).json(user);
+      savedUser.populate('categories', function (populatedErr, populatedUser) {
+        populatedUser = populatedUser.toJSON();
+        populatedUser.token = jwt.sign({user: populatedUser}, process.env.SECRET_TOKEN);
+        res.status(200).json(populatedUser);
+      });
     });
   };
 
@@ -70,8 +72,9 @@ export default class UserCtrl extends BaseController {
     this.model.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
       .populate('categories')
       .exec(function (err, user) {
-        const token = jwt.sign({user: user}, process.env.SECRET_TOKEN); // , { expiresIn: 10 } seconds
-        res.status(200).json({token: token});
+        user = user.toJSON();
+        user.token = jwt.sign({user: user}, process.env.SECRET_TOKEN);
+        res.status(200).json(user);
       });
   };
 }
