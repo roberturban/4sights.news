@@ -35,7 +35,6 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
-import { ButtonViewComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchPipe } from './services/search.pipe';
 import { DialogEdit, DialogAdd } from './topics/manipulateTopics/manipulateDialog.component';
@@ -65,7 +64,6 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     SelectSourcesDialog,
     DialogFollowCategories,
     SearchPipe,
-    ButtonViewComponent,
     ArticleSelectionComponent,
     ArticleFilterPipe
   ],
@@ -102,7 +100,6 @@ import { ArticleFilterPipe } from './article-selection/article-search-filter.pip
     DialogAdd,
     DialogFollowCategories,
     SelectSourcesDialog,
-    ButtonViewComponent
   ],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

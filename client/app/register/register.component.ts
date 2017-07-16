@@ -37,8 +37,6 @@ export class RegisterComponent implements OnInit {
   password = new FormControl('', [Validators.required,
                                   Validators.minLength(6)]);
 
-  role = new FormControl('', [Validators.required]);
-
   categories = new FormControl('', [Validators.required]);
 
 
@@ -66,7 +64,6 @@ export class RegisterComponent implements OnInit {
       surname: this.surname,
       email: this.email,
       password: this.password,
-      role: this.role,
       categories: this.categories
     });
     this.loadAvailableCategories();
