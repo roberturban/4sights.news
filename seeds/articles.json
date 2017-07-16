@@ -9903,5 +9903,85 @@
 	"topic": {
 		"$oid": "5946967147fbb80b00a7d749"
 	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa008"
+	},
+	"title": "The Xbox One X is Microsoft’s powerful new 4K console",
+	"description": "A full year after first teasing Project Scorpio at its last E3 event, Microsoft finally took the wraps of its new console, now called the Xbox One X.",
+	"image": "https://tctechcrunch2011.files.wordpress.com/2017/06/xboxonex.jpg?w=1318",
+	"url": "https://www.ft.com/content/b1b6b448-5548-11e7-9fed-c19e2700005f?mhq5j=e1",
+	"author": "Techcrunch",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596617073102961fc6756b98"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d750"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa009"
+	},
+	"title": "Xbox One X is Microsoft's next game console, arriving on November 7th for $499",
+	"description": "After months of speculation, Microsoft is unveiling its “Project Scorpio” games console today, and it's officially named Xbox One X.",
+	"image": "https://cdn.vox-cdn.com/thumbor/RmRVxGdiJOK83GsSuScGRp2mntQ=/1600x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8667595/xboxonex.jpg",
+	"url": "https://www.theverge.com/2017/6/11/15774918/microsoft-xbox-one-x-release-date-price-new-console-announced-e3-2017",
+	"author": "The Verge",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59661843032f03202f1d2be1"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d750"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa010"
+	},
+	"title": "The Xbox One X is aspirational in the purest sense of the word",
+	"description": "It's Microsoft's direct response to people saying that the standard Xbox One wasn't powerful enough compared to Sony's PlayStation 4.",
+	"image": "https://o.aolcdn.com/images/dims?thumbnail=640%2C\u0026quality=80\u0026image_uri=https%3A%2F%2Fs.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fc62f0505d53b71bef598dfbb93bc4d6e%2F205374192%2Fdsc00984-1.jpg\u0026client=cbc79c14efcebee57402\u0026signature=12090c915df45a3123b1c3b960128f7e9d2660c6",
+	"url": "https://www.engadget.com/2017/06/13/the-xbox-one-x-is-aspirational-in-the-purest-sense-of-the-word/",
+	"author": "Engadget",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596615f258b3661f80fbdce3"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d750"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa011"
+	},
+	"title": "First impressions: Xbox One X doesn’t quite bring the “wow!” factor",
+	"description": "For a year now, we've been hearing about how Project Scorpio will bring ''true 4K'' gaming to the living-room masses with enhanced versions of the same software that runs on the Xbox One.",
+	"image": "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_arstechnica.png,fl_progressive,g_face,h_450,q_80,w_800/v1497404143/arstechnica_gaming-on-microsoft-s-new-xbox-one-x.jpg",
+	"url": "https://arstechnica.com/gaming/2017/06/first-impressions-xbox-one-x-doesnt-quite-bring-the-wow-factor/",
+	"author": "ARS Technica",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "596613f714b6361ec66567d2"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d750"
+	}
 }]
 
