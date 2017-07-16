@@ -11,7 +11,7 @@ const admin = require('../middleware/admin');
 const user = require('../middleware/user');
 
 router.route('/').get(auth.required, admin.isAdmin, userController.getAll);
-router.route('/').post(userController.insert);
+router.route('/').post(user.removeRole, userController.insert);
 
 router.route('/:id').get(auth.required, user.isSelfOrAdmin, userController.get);
 router.route('/:id').put(auth.required, user.isSelfOrAdmin, userController.update);

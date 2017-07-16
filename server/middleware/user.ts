@@ -2,6 +2,10 @@
  * Created by Christopher on 28.06.2017.
  */
 const user = {
+  removeRole: (req, res, next) => {
+    delete req.body.role;
+    next();
+  },
   isSelf: (req, res, next) => {
     if (req.payload.user._id !== req.params.id) {
       return res.status(405).json({
