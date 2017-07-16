@@ -35,8 +35,6 @@
   </button>
 </md-menu>
 
-<!-- <div *ngIf="userHasPreferences"> Your preferences: <button md-button *ngFor="let preference of userCategoryPreferences">{{preference.name}}</button></div> -->
-
 <div class="card-block" *ngIf="!isLoading">
 
   <md-card class="topic-card" *ngFor="let topic of topics">
@@ -52,7 +50,7 @@
           <!-- <p class="count mat-fab mat-primary" *ngIf="auth.loggedIn && auth.isAdmin">  {{topic.news_article_count}} </p> -->
         </div>
       </md-card-title>
-      <md-card-subtitle>{{topic.location}}, {{topic.timestamp}}</md-card-subtitle>
+      <md-card-subtitle>{{topic.location}}, {{topic.timestamp}} || {{topic.news_article_count}} Articles</md-card-subtitle>
     </md-card-title-group>
 
     <md-card-actions class="categories-row" style="    display: flex !important;
