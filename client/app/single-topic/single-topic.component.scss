@@ -72,7 +72,8 @@ a {
 
 .source-logo{
   height: 100px;
-  object-fit: cover;
+  object-fit: contain;
+  max-width: 80%;
 }
 
 .categories-row{
