@@ -18,10 +18,6 @@ const topicSchema = new Schema({
     type: String,
     required: true
   },
-  news_article_count: {
-    type: Number,
-    required: true,
-  },
   categories: [
     {
       type: Schema.Types.ObjectId,
@@ -34,6 +30,13 @@ const topicSchema = new Schema({
       ref: 'Article'
     }
   ]
+});
+
+topicSchema.set('toJSON', {
+  transform: function(doc, topic, options) {
+    topic.news_article_count = topic.news_articles.length;
+    return topic;
+  }
 });
 
 const Topic = mongoose.model('Topic', topicSchema);
