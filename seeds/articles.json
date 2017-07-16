@@ -9983,5 +9983,82 @@
 	"topic": {
 		"$oid": "5946967147fbb80b00a7d750"
 	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa012"
+	},
+	"title": "China launches its first X-ray space telescope",
+	"description": "China successfully launched on Thursday its first X-ray space telescope to study black holes, pulsars and gamma-ray bursts, state media reported.",
+	"image": "http://timesofindia.indiatimes.com/thumb/msid-59159006,width-400,resizemode-4/59159006.jpg",
+	"url": "http://timesofindia.indiatimes.com/home/science/china-launches-its-first-x-ray-space-telescope/articleshow/59155741.cms",
+	"author": "Times of India",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "5953942bd8b18b5d02211ef5"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d751"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa013"
+	},
+	"title": "X-ray space telescope launched",
+	"description": "China launched on Thursday its first X-ray space telescope to study black holes, pulsars and gamma-ray bursts, state media reported.",
+	"url": "http://www.thehindu.com/todays-paper/tp-national/x-ray-space-telescope-launched/article19078592.ece",
+	"author": "The Hindu",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539422d8b18b5d02211ef4"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d751"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa014"
+	},
+	"title": "China's colossal radio telescope begins testing",
+	"description": "Chinese scientists report that the giant dish, which measures 500m (1,640ft) across, is complete and has received its first signals from space.",
+	"url": "http://www.bbc.com/news/science-environment-37453933",
+	"author": "BBC",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539436d8b18b5d02211ef6"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d751"
+	}
+},
+{
+	"_id": {
+		"$oid": "596baa6e16918044e4aaa015"
+	},
+	"title": "China Hunts for Scientific Glory, and Aliens, With New Telescope",
+	"description": "When hundreds of engineers and builders began clambering up a jagged hill in southwestern China to assemble a giant telescope in a deep, bowl-shaped basin, poor villagers sometimes crept over the sheer slopes to glimpse the country’s latest technological wonder.",
+	"url": "https://www.nytimes.com/2016/09/26/world/asia/china-telescope-fast-space-seti.html",
+	"author": "NYT",
+	"published": {
+		"$date": "2017-06-11T16:20:40.000Z"
+	},
+	"source": {
+		"$oid": "59539417d8b18b5d02211ef3"
+	},
+	"__v": 0,
+	"topic": {
+		"$oid": "5946967147fbb80b00a7d751"
+	}
 }]
 

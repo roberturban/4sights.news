@@ -181,7 +181,7 @@
 	},
 	"title": "China launches its first X-ray space telescope",
 	"timestamp": {
-		"$date": "2017-06-17T00:00:00.000Z"
+		"$date": "2017-06-16T22:00:00.000Z"
 	},
 	"image": "https://c.tribune.com.pk/2017/06/1436081-chinaspacesatellitex-1497504955-706-640x480.jpg",
 	"news_article_count": 5,
@@ -191,10 +191,27 @@
 			"$oid": "5946923f73f7de4aa41ae512"
 		},
 		{
+			"$oid": "5946923f73f7de4aa41ae514"
+		},
+		{
 			"$oid": "5946923f73f7de4aa41ae518"
 		}
 	],
-	"__v": 0
+	"__v": 0,
+	"news_articles": [
+		{
+			"$oid": "596baa6e16918044e4aaa012"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa014"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa015"
+		},
+		{
+			"$oid": "596baa6e16918044e4aaa013"
+		}
+	]
 },
 {
 	"_id": {
