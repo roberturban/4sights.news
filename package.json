@@ -4,6 +4,10 @@
   "license": "",
   "author": "SEBA Team 26",
   "description": "4sights.news application based on SEBA Master course at TUM",
+  "engines": {
+    "node": "8.1.x",
+    "npm": "5.3.x"
+  },
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
@@ -15,7 +19,8 @@
     "lint": "ng lint",
     "lintbe": "tslint server/**/**.ts{,x}",
     "db:seed": "seed",
-    "scraper": "node dist/server/scraper.js"
+    "scraper": "node dist/server/scraper.js",
+    "postinstall": "ng build -aot -prod"
   },
   "private": true,
   "dependencies": {

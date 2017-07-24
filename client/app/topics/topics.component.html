@@ -21,7 +21,8 @@
       {{category.name}}
     </button>
   </div>
-  <button md-button (click)="open_followCategories()" *ngIf="auth.loggedIn && auth.isAdmin">
+  <!--<button md-button (click)="open_followCategories()" *ngIf="auth.loggedIn && auth.isAdmin">-->
+  <button md-button (click)="open_followCategories()" *ngIf="auth.loggedIn">
       <i class="material-icons">edit</i>
   </button>
   <button *ngIf="menuButton" md-icon-button [mdMenuTriggerFor]="posXMenu" aria-label="Open x-positioned menu">
