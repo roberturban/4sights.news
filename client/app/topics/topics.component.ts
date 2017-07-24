@@ -21,15 +21,15 @@ import {DialogFollowCategories} from './followCategories/followCategoryDialog.co
 })
 export class TopicsComponent implements OnInit {
 
-  constructor(private http: Http,
-              private topicsService: TopicsService,
-              private formBuilder_topic: FormBuilder,
+  constructor(public http: Http,
+              public topicsService: TopicsService,
+              public formBuilder_topic: FormBuilder,
               public dialogEdit: MdDialog,
               public dialogAdd: MdDialog,
               public dialogFollow: MdDialog,
               public auth: AuthService,
-              private route: ActivatedRoute,
-              private categoryService: CategoryService,
+              public route: ActivatedRoute,
+              public categoryService: CategoryService,
               public snackBar: MdSnackBar) {
   }
 

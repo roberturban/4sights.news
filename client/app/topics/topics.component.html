@@ -1,4 +1,4 @@
-<app-loading [condition]="isLoading"></app-loading>
+<app-loading [condition]="isLoading_topic"></app-loading>
 
 <header class="header-content" color="primary" *ngIf="!auth.loggedIn">
   <img src="../assets/img/logo.png" class="main-logo" />
@@ -36,7 +36,7 @@
   </button>
 </md-menu>
 
-<div class="card-block" *ngIf="!isLoading">
+<div class="card-block" *ngIf="!isLoading_topic">
 
   <md-card class="topic-card" *ngFor="let topic of topics">
     <a [routerLink]="['/topics', topic._id]">
@@ -96,4 +96,4 @@
 
 </div>
 
-<li *ngFor="let item of items"> {{item}} </li>
+<!--<li *ngFor="let item of items"> {{item}} </li>-->

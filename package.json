@@ -20,7 +20,7 @@
     "lintbe": "tslint server/**/**.ts{,x}",
     "db:seed": "seed",
     "scraper": "node dist/server/scraper.js",
-    "postinstall": "ng build -aot -prod"
+    "postinstall": "ng build -aot -prod && tsc -p server"
   },
   "private": true,
   "dependencies": {

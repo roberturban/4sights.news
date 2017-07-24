@@ -14,19 +14,19 @@ import {ManipulationService} from '../services/manipulation.service';
 })
 export class AccountComponent implements OnInit {
 
-  constructor(private auth: AuthService,
+  constructor(public auth: AuthService,
               public snackBar: MdSnackBar,
-              private userService: UserService,
-              private categoryService: CategoryService,
-              private manipulationService: ManipulationService,
-              private zone: NgZone) {
+              public userService: UserService,
+              public categoryService: CategoryService,
+              public manipulationService: ManipulationService,
+              public zone: NgZone) {
   }
 
   //SnackBar config
   snackBarService = new SnackBarService(this.snackBar);
 
   // User handling
-  user = {};
+  public user = <any>{};
   isLoading = true;
   categoriesAvailable = [];
   userCategoryPreferencesMap = [];

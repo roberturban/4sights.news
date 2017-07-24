@@ -12,7 +12,7 @@ export class AppComponent {
 
   snackBarService = new SnackBarService(this.snackBar);
 
-  constructor(private auth: AuthService,
+  constructor(public auth: AuthService,
               private snackBar: MdSnackBar) {
   }
 

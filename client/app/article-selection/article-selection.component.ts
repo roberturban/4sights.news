@@ -10,20 +10,20 @@ import { SingleTopicService } from "../services/single-topic.service";
 })
 export class ArticleSelectionComponent implements OnInit, OnDestroy {
 
-  constructor(private articleService: ArticleService,
-              private topicService: SingleTopicService
+  constructor(public articleService: ArticleService,
+              public topicService: SingleTopicService
   ) { }
 
   @Input() exttopic: any = {};
 
-  private topic: any = {
+  public topic: any = {
     news_articles: []
   };
-  private searchterm: String = "";
-  private all_articles = [];
-  private isLoadingTopic = true;
-  private isLoadingArticles = true;
-  private changed_articles = [];
+  public searchterm: String = "";
+  public all_articles = [];
+  public isLoadingTopic = true;
+  public isLoadingArticles = true;
+  public changed_articles = [];
 
   @Output() onSelectionChange = new EventEmitter();
 
@@ -63,7 +63,7 @@ export class ArticleSelectionComponent implements OnInit, OnDestroy {
     for (var i = 0; i < this.changed_articles.length; i++) {
       this.articleService.editArticle(this.changed_articles[i]).subscribe(
         res => {
-          
+
         },
         error => console.log(error)
       );
